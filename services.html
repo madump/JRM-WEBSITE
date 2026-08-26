@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fixed-price GoHighLevel service packages for CRM setup, automation, AI receptionist, and AI-powered lead follow-up by Jhim Rick Marco.">
+  <meta name="author" content="Jhim Rick Marco">
+  <meta property="og:title" content="GoHighLevel Service Packages | Jhim Rick Marco">
+  <meta property="og:description" content="Choose a clear GoHighLevel implementation package: Foundation, AI Receptionist, or the complete AI Revenue System.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/meta.png">
+  <link rel="icon" type="image/png" href="assets/images/meta.png">
+  <title>GoHighLevel Service Packages | Jhim Rick Marco</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --red: #d62839;
+      --red-dark: #a91f2d;
+      --ink: #090a0d;
+      --ink-2: #111318;
+      --ink-3: #1b1e25;
+      --white: #ffffff;
+      --off-white: #f6f7f9;
+      --surface: #eceef1;
+      --line: #d4d8df;
+      --line-dark: #30343d;
+      --muted: #626a76;
+      --muted-dark: #b9c0ca;
+      --container: 1240px;
+      --shadow: 0 18px 45px rgba(9,10,13,.12);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Inter", sans-serif;
+      color: var(--ink-2);
+      background: var(--surface);
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+    body.menu-open { overflow: hidden; }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    :focus-visible { outline: 3px solid var(--red); outline-offset: 4px; }
+
+    .container { width: min(calc(100% - 40px), var(--container)); margin-inline: auto; }
+    .section { padding: 104px 0; position: relative; }
+    .section-white { background: var(--white); }
+    .section-light { background: var(--off-white); }
+    .section-dark { background: var(--ink); color: var(--white); }
+    .section-red { background: var(--red); color: var(--white); }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+      color: var(--red);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+    .section-dark .eyebrow,
+    .section-red .eyebrow { color: #fff; }
+    .eyebrow::before { content: ""; width: 28px; height: 3px; background: currentColor; }
+
+    h1, h2, h3 { margin-top: 0; }
+    .display,
+    .section-title,
+    .service-number,
+    .price,
+    .metric strong {
+      font-family: "Oswald", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: -.035em;
+    }
+    .display {
+      max-width: 1060px;
+      margin-bottom: 26px;
+      color: var(--white);
+      font-size: clamp(64px, 9vw, 132px);
+      line-height: .86;
+      text-wrap: balance;
+    }
+    .display .red { color: #ff4657; }
+    .section-title {
+      max-width: 920px;
+      margin-bottom: 20px;
+      font-size: clamp(46px, 6vw, 82px);
+      line-height: .95;
+      text-wrap: balance;
+    }
+    .section-sub {
+      max-width: 760px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 18px;
+    }
+    .section-dark .section-sub { color: var(--muted-dark); }
+    .center { text-align: center; }
+    .center .section-title, .center .section-sub { margin-inline: auto; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 48px;
+      padding: 0 22px;
+      border: 1px solid transparent;
+      border-radius: 2px;
+      background: transparent;
+      color: inherit;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background .2s ease, border-color .2s ease, color .2s ease;
+    }
+    .btn-primary { background: var(--red); color: #fff; border-color: var(--red); }
+    .btn-primary:hover { background: var(--red-dark); border-color: var(--red-dark); }
+    .btn-dark { background: var(--ink-2); color: #fff; border-color: var(--ink-2); }
+    .btn-dark:hover { background: var(--red); border-color: var(--red); }
+    .btn-outline { border-color: rgba(255,255,255,.42); color: #fff; }
+    .btn-outline:hover { background: #fff; color: var(--ink-2); border-color: #fff; }
+
+    /* Main navigation */
+    .site-nav {
+      position: fixed;
+      inset: 0 0 auto;
+      z-index: 1000;
+      background: rgba(7,8,11,.96);
+      border-bottom: 1px solid rgba(214,40,57,.46);
+      backdrop-filter: blur(14px);
+    }
+    .site-nav .container { min-height: 72px; display: flex; align-items: center; gap: 28px; }
+    .nav-logo { display: inline-flex; align-items: center; flex: 0 0 auto; }
+    .nav-logo img { width: 140px; height: 68px; object-fit: contain; }
+    .nav-links { display: flex; gap: 24px; align-items: center; margin: 0 0 0 auto; padding: 0; list-style: none; }
+    .nav-links a {
+      color: #d9dee6;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .10em;
+      text-transform: uppercase;
+    }
+    .nav-links a:hover,
+    .nav-links a.active { color: #ff5362; }
+    .nav-cta { min-height: 42px; padding-inline: 17px; }
+    .hamburger {
+      display: none;
+      margin-left: auto;
+      width: 44px;
+      height: 44px;
+      border: 1px solid #30343c;
+      background: #15171d;
+      cursor: pointer;
+    }
+    .hamburger span { display: block; width: 20px; height: 2px; margin: 5px auto; background: #fff; }
+    .mobile-menu {
+      position: fixed;
+      z-index: 999;
+      top: 72px;
+      left: 0;
+      right: 0;
+      display: none;
+      padding: 18px 20px 24px;
+      background: var(--ink);
+      border-bottom: 1px solid #262a31;
+    }
+    .mobile-menu.open { display: grid; gap: 8px; }
+    .mobile-menu a:not(.btn) { padding: 12px 4px; color: #fff; font-weight: 700; }
+
+    /* Hero */
+    .services-hero {
+      position: relative;
+      overflow: hidden;
+      padding: 152px 0 94px;
+      color: #fff;
+      background:
+        linear-gradient(rgba(255,255,255,.034) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.034) 1px, transparent 1px),
+        radial-gradient(circle at 84% 18%, rgba(214,40,57,.18), transparent 27%),
+        var(--ink);
+      background-size: 52px 52px, 52px 52px, auto, auto;
+    }
+    .services-hero::after {
+      content: "SERVICES / SYSTEMS / CONVERSION";
+      position: absolute;
+      right: -205px;
+      top: 52%;
+      transform: rotate(90deg);
+      color: rgba(255,70,87,.19);
+      font: 700 14px/1 "Oswald", sans-serif;
+      letter-spacing: .32em;
+    }
+    .hero-shell {
+      position: relative;
+      z-index: 1;
+      padding: clamp(38px, 6vw, 76px);
+      border: 1px solid rgba(255,255,255,.16);
+      background: linear-gradient(180deg, rgba(255,255,255,.025), transparent);
+    }
+    .hero-copy { max-width: 760px; margin: 0 0 32px; color: #d1d6de; font-size: 18px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .hero-proof {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0,1fr));
+      margin-top: 38px;
+      border-top: 1px solid rgba(255,255,255,.14);
+    }
+    .proof-item { padding: 24px 22px 0 0; }
+    .proof-item strong { display: block; margin-bottom: 6px; color: #fff; font-size: 14px; }
+    .proof-item span { color: #aeb6c2; font-size: 13px; }
+
+    /* Service anchors */
+    .service-jump { background: #fff; border-bottom: 1px solid var(--line); }
+    .service-jump .container { display: flex; gap: 0; overflow-x: auto; scrollbar-width: none; }
+    .service-jump .container::-webkit-scrollbar { display: none; }
+    .service-jump a {
+      flex: 0 0 auto;
+      padding: 17px 20px;
+      border-right: 1px solid var(--line);
+      color: #3d4450;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .service-jump a:first-child { border-left: 1px solid var(--line); }
+    .service-jump a:hover { color: var(--red); background: #fafafa; }
+
+    /* Outcome strip */
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border: 1px solid var(--line);
+      background: #fff;
+    }
+    .metric { min-height: 178px; padding: 30px; border-right: 1px solid var(--line); }
+    .metric:last-child { border-right: 0; }
+    .metric strong { display: block; margin-bottom: 9px; color: var(--ink-2); font-size: 42px; line-height: 1; }
+    .metric span { color: var(--muted); font-size: 14px; }
+
+    /* Detailed services */
+    .services-stack { display: grid; gap: 16px; margin-top: 52px; }
+    .service-row {
+      display: grid;
+      grid-template-columns: 150px minmax(0, .9fr) minmax(0, 1.1fr);
+      align-items: stretch;
+      border: 1px solid var(--line-dark);
+      background: #121419;
+      color: #fff;
+    }
+    .service-number {
+      display: grid;
+      place-items: center;
+      min-height: 230px;
+      border-right: 1px solid var(--line-dark);
+      color: #ff4657;
+      font-size: 72px;
+      line-height: 1;
+    }
+    .service-summary { padding: 34px; border-right: 1px solid var(--line-dark); }
+    .service-summary h3 { margin-bottom: 12px; font: 700 30px/1.05 "Oswald", sans-serif; text-transform: uppercase; }
+    .service-summary p { margin: 0; color: #b8c0ca; }
+    .service-detail { padding: 34px; display: flex; flex-direction: column; }
+    .service-detail ul { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 24px; margin: 0 0 28px; padding: 0; list-style: none; }
+    .service-detail li { position: relative; padding-left: 20px; color: #e2e6eb; font-size: 14px; }
+    .service-detail li::before { content: ""; position: absolute; left: 0; top: .72em; width: 7px; height: 7px; background: var(--red); }
+    .service-link { display: inline-flex; align-items: center; gap: 10px; width: fit-content; margin-top: auto; color: #fff; font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+    .service-link span { color: #ff5362; font-size: 18px; }
+
+    /* Packages */
+    .package-intro { display: grid; grid-template-columns: 1.08fr .92fr; gap: 60px; align-items: end; margin-bottom: 52px; }
+    .package-note { max-width: 540px; justify-self: end; padding: 24px; border-left: 4px solid var(--red); background: #fff; color: var(--muted); }
+    .package-note strong { color: var(--ink-2); }
+    .package-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); align-items: stretch; }
+    .package-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      padding: 0 30px 30px;
+      border: 1px solid #cfd4db;
+      background: #fff;
+    }
+    .package-card + .package-card { border-left: 0; }
+    .package-card.featured { z-index: 2; border: 2px solid var(--red); box-shadow: 0 22px 60px rgba(9,10,13,.13); }
+    .package-card.featured + .package-card { border-left: 0; }
+    .package-ribbon {
+      margin: 0 -20px 18px;
+      padding: 8px 12px;
+      background: #4a5261;
+      color: #fff;
+      text-align: center;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+    .featured .package-ribbon { background: var(--red); }
+    .package-card:last-child .package-ribbon { background: #111318; }
+    .package-card h3 { margin: 0 0 10px; text-align: center; font-size: 18px; }
+    .price { margin: 0; text-align: center; color: #14214b; font-size: 38px; line-height: 1; }
+    .featured .price { color: var(--red); }
+    .package-label { margin: 10px 0 2px; text-align: center; color: #5e6673; font-size: 9px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+    .turnaround { margin: 0 0 20px; text-align: center; color: #173d84; font-size: 11px; font-weight: 800; }
+    .featured .turnaround { color: var(--red); }
+    .package-desc { margin: 0 0 20px; color: #343a43; text-align: center; font-size: 13px; line-height: 1.55; }
+    .package-card h4 { margin: 0 0 8px; color: #173d84; font-size: 11px; letter-spacing: .02em; text-transform: uppercase; }
+    .featured h4 { color: var(--red); }
+    .package-card ul { display: grid; gap: 7px; margin: 0 0 20px; padding: 0; list-style: none; }
+    .package-card li { position: relative; padding-left: 14px; color: #343a43; font-size: 12px; line-height: 1.45; }
+    .package-card li::before { content: "-"; position: absolute; left: 0; }
+    .scope { margin: 2px 0 16px; color: #5d6673; font-size: 10px; font-weight: 700; line-height: 1.45; }
+    .result { margin-top: auto; padding-top: 16px; border-top: 1px solid var(--line); color: #15181d; font-size: 11px; font-weight: 700; line-height: 1.55; }
+    .result strong { color: #173d84; }
+    .featured .result strong { color: var(--red); }
+    .package-card .btn { width: 100%; margin-top: 20px; }
+    .package-footnotes { margin-top: 18px; color: #68717f; text-align: center; font-size: 10px; line-height: 1.65; }
+
+    /* Best-fit section */
+    .fit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 52px; }
+    .fit-card { padding: 38px; border: 1px solid var(--line); background: #fff; }
+    .fit-card.dark { background: var(--ink-2); border-color: var(--ink-2); color: #fff; }
+    .fit-kicker { display: block; margin-bottom: 18px; color: var(--red); font-size: 11px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    .fit-card h3 { margin-bottom: 16px; font: 700 34px/1.05 "Oswald", sans-serif; text-transform: uppercase; }
+    .fit-card p { margin: 0 0 24px; color: var(--muted); }
+    .fit-card.dark p { color: var(--muted-dark); }
+    .check-list { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
+    .check-list li { position: relative; padding-left: 28px; }
+    .check-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 1px;
+      width: 20px;
+      height: 20px;
+      display: grid;
+      place-items: center;
+      background: var(--red);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+    /* Process */
+    .process-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); margin-top: 52px; border: 1px solid #cfd4db; }
+    .process-card { min-height: 270px; padding: 30px; background: #fff; border-right: 1px solid #cfd4db; }
+    .process-card:last-child { border-right: 0; }
+    .process-card span { display: block; margin-bottom: 46px; color: var(--red); font: 700 52px/1 "Bebas Neue", sans-serif; }
+    .process-card h3 { margin-bottom: 10px; font: 700 24px/1.05 "Oswald", sans-serif; text-transform: uppercase; }
+    .process-card p { margin: 0; color: var(--muted); font-size: 14px; }
+
+    /* FAQ */
+    .faq-wrap { max-width: 920px; margin: 52px auto 0; border-top: 1px solid #343840; }
+    .faq-item { border-bottom: 1px solid #343840; }
+    .faq-question {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 24px 0;
+      border: 0;
+      background: transparent;
+      color: #fff;
+      text-align: left;
+      cursor: pointer;
+    }
+    .faq-question strong { font-size: 17px; }
+    .faq-icon { flex: 0 0 auto; width: 30px; height: 30px; display: grid; place-items: center; border: 1px solid #4a4f59; color: #ff5362; font-size: 20px; }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height .28s ease; }
+    .faq-answer p { max-width: 790px; margin: 0; padding: 0 0 24px; color: #bcc3cd; }
+    .faq-item.open .faq-icon { background: var(--red); border-color: var(--red); color: #fff; }
+
+    /* CTA */
+    .final-cta { position: relative; overflow: hidden; padding: 84px 0; background: var(--red); color: #fff; }
+    .final-cta::after {
+      content: "BUILD";
+      position: absolute;
+      right: -10px;
+      bottom: -52px;
+      color: rgba(255,255,255,.10);
+      font: 700 220px/1 "Bebas Neue", sans-serif;
+      pointer-events: none;
+    }
+    .cta-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr auto; gap: 38px; align-items: end; }
+    .cta-grid h2 { max-width: 860px; margin: 0; font: 700 clamp(52px,7vw,96px)/.93 "Oswald", sans-serif; text-transform: uppercase; letter-spacing: -.035em; }
+    .cta-grid p { max-width: 650px; margin: 20px 0 0; color: rgba(255,255,255,.86); }
+    .cta-actions { display: grid; gap: 10px; min-width: 220px; }
+    .final-cta .btn-primary { background: #fff; border-color: #fff; color: var(--ink-2); }
+    .final-cta .btn-primary:hover { background: var(--ink-2); color: #fff; border-color: var(--ink-2); }
+
+    /* Footer */
+    footer { padding: 36px 0; background: #08090c; color: #b8bec8; border-top: 1px solid #2e3136; }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .footer-logo img { width: 180px; height: 92px; object-fit: contain; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 18px; font-size: 12px; }
+    .footer-links a:hover { color: #ff5362; }
+    .footer-copyright { font-size: 12px; }
+
+    /* Calendar modal */
+    .calendar-popup {
+      position: fixed;
+      inset: 0;
+      z-index: 5000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: rgba(5,6,9,.84);
+      backdrop-filter: blur(10px);
+    }
+    .calendar-popup.is-open { display: flex; }
+    .calendar-dialog {
+      width: min(100%, 980px);
+      height: min(88vh, 820px);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.18);
+      background: #fff;
+      box-shadow: 0 28px 90px rgba(0,0,0,.45);
+    }
+    .calendar-header { min-height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 14px 18px 14px 22px; background: #0b0c10; color: #fff; border-bottom: 3px solid var(--red); }
+    .calendar-header h2 { margin: 0; font: 700 24px/1.1 "Oswald", sans-serif; text-transform: uppercase; }
+    .calendar-close { width: 42px; height: 42px; border: 1px solid #3c414a; background: transparent; color: #fff; font-size: 26px; cursor: pointer; }
+    .calendar-frame { width: 100%; flex: 1; border: 0; background: #fff; }
+
+    /* Motion */
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    @media (max-width: 1050px) {
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: block; }
+      .hero-proof, .metrics { grid-template-columns: repeat(2, minmax(0,1fr)); }
+      .metric:nth-child(2) { border-right: 0; }
+      .metric:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+      .service-row { grid-template-columns: 110px minmax(0,1fr); }
+      .service-detail { grid-column: 1 / -1; border-top: 1px solid var(--line-dark); }
+      .package-intro { grid-template-columns: 1fr; gap: 28px; }
+      .package-note { justify-self: start; }
+      .package-grid { grid-template-columns: 1fr; gap: 16px; }
+      .package-card, .package-card + .package-card, .package-card.featured + .package-card { border: 1px solid #cfd4db; }
+      .package-card.featured { border: 2px solid var(--red); }
+      .process-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+      .process-card:nth-child(2) { border-right: 0; }
+      .process-card:nth-child(-n+2) { border-bottom: 1px solid #cfd4db; }
+      .cta-grid { grid-template-columns: 1fr; align-items: start; }
+      .cta-actions { width: min(100%, 320px); }
+    }
+
+    @media (max-width: 760px) {
+      .container { width: min(calc(100% - 24px), var(--container)); }
+      .section { padding: 72px 0; }
+      .services-hero { padding: 108px 0 58px; }
+      .services-hero::after { display: none; }
+      .hero-shell { padding: 30px 22px; }
+      .display { font-size: clamp(54px, 17vw, 82px); }
+      .section-title { font-size: clamp(42px, 13vw, 62px); }
+      .hero-actions { display: grid; grid-template-columns: 1fr; }
+      .hero-actions .btn { width: 100%; }
+      .hero-proof { grid-template-columns: 1fr; }
+      .proof-item { padding: 18px 0; border-top: 1px solid rgba(255,255,255,.12); }
+      .proof-item:first-child { border-top: 0; }
+      .metrics { grid-template-columns: 1fr; }
+      .metric { min-height: 140px; border-right: 0; border-bottom: 1px solid var(--line); }
+      .metric:last-child { border-bottom: 0; }
+      .service-row { grid-template-columns: 1fr; }
+      .service-number { min-height: 110px; place-items: center start; padding: 24px; border-right: 0; border-bottom: 1px solid var(--line-dark); font-size: 54px; }
+      .service-summary { padding: 26px 24px; border-right: 0; }
+      .service-detail { padding: 26px 24px; }
+      .service-detail ul { grid-template-columns: 1fr; }
+      .package-card { padding-inline: 22px; }
+      .fit-grid { grid-template-columns: 1fr; }
+      .fit-card { padding: 28px 24px; }
+      .process-grid { grid-template-columns: 1fr; }
+      .process-card { min-height: 220px; border-right: 0; border-bottom: 1px solid #cfd4db; }
+      .process-card:last-child { border-bottom: 0; }
+      .footer-inner { align-items: flex-start; flex-direction: column; }
+      .calendar-popup { padding: 10px; }
+      .calendar-dialog { height: 92vh; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .reveal { opacity: 1; transform: none; transition: none; }
+      .faq-answer { transition: none; }
+    }
+
+    /* Offer-first page enhancements */
+    #ghl-packages { scroll-margin-top: 92px; }
+    .offer-bridge {
+      margin: 0 0 28px;
+      padding: 15px 18px;
+      border: 1px solid #cfd4db;
+      border-left: 4px solid var(--red);
+      background: #fff;
+      color: #4f5763;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+    .offer-bridge strong { color: var(--ink-2); }
+  </style>
+</head>
+<body>
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html" class="nav-logo" aria-label="Jhim Rick Marco home">
+        <img src="assets/images/logo.png" alt="Jhim Rick Marco logo" width="140" height="68">
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html#ghl-packages" class="active">Services</a></li>
+        <li><a href="skills-experience.html">Skills &amp; Experience</a></li>
+        <li><a href="https://portfolio.jrmrc.space/" target="_blank" rel="noopener">Proof of Work ↗</a></li>
+      </ul>
+      <button type="button" class="btn btn-primary nav-cta js-calendar">Book a Discovery Call</button>
+      <button class="hamburger" type="button" aria-label="Toggle mobile menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html#ghl-packages">Services</a>
+    <a href="skills-experience.html">Skills &amp; Experience</a>
+    <a href="https://portfolio.jrmrc.space/" target="_blank" rel="noopener">Proof of Work ↗</a>
+    <button type="button" class="btn btn-primary js-calendar">Book a Discovery Call</button>
+  </div>
+
+  <main>
+    <section class="services-hero" id="top">
+      <div class="container">
+        <div class="hero-shell">
+          <div class="eyebrow">Fixed-Price GoHighLevel Implementation</div>
+          <h1 class="display">Choose the GHL system built for <span class="red">your next stage.</span></h1>
+          <p class="hero-copy">Three clear offers. One-time implementation pricing. Start with a clean GoHighLevel foundation, add an AI receptionist for inbound calls, or build a complete AI revenue system that follows up and moves leads toward a booking.</p>
+          <div class="hero-actions">
+            <a href="#ghl-packages" class="btn btn-primary">Compare Packages</a>
+            <button type="button" class="btn btn-outline js-calendar">Book a Discovery Call</button>
+          </div>
+          <div class="hero-proof" aria-label="Offer highlights">
+            <div class="proof-item"><strong>Starting at $799</strong><span>A clear entry point for a conversion-ready GHL foundation.</span></div>
+            <div class="proof-item"><strong>One-Time Pricing</strong><span>Defined implementation scope without hourly guesswork.</span></div>
+            <div class="proof-item"><strong>7–20 Business Days</strong><span>Estimated turnaround based on the package you choose.</span></div>
+            <div class="proof-item"><strong>Post-Launch Support</strong><span>14 to 30 days of support depending on your package.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="service-jump" aria-label="Services page navigation">
+      <div class="container">
+        <a href="#ghl-packages">Packages & Pricing</a>
+        <a href="#fit">Which Package Fits?</a>
+        <a href="#service-list">Other Services</a>
+        <a href="#process">How It Works</a>
+        <a href="#faq">FAQ</a>
+      </div>
+    </div>
+
+
+    <section class="section section-light" id="ghl-packages" aria-labelledby="package-title">
+      <div class="container">
+        <div class="package-intro">
+          <div class="reveal">
+            <span class="eyebrow">Choose Your Package</span>
+            <h2 class="section-title" id="package-title">Three offers. One clear next step.</h2>
+            <p class="section-sub">Pick the implementation level that matches the problem you need solved now. Each package has a fixed one-time implementation price, defined deliverables, and a specific business outcome.</p>
+          </div>
+          <div class="package-note reveal"><strong>Quick choice:</strong> Choose <b>Foundation</b> for a clean CRM and follow-up system. Choose <b>AI Receptionist</b> when missed inbound calls are the problem. Choose the <b>AI Revenue System</b> when you want the system to answer, follow up, qualify, reactivate, and push more leads toward a booking.</div>
+        </div>
+
+        <div class="offer-bridge reveal"><strong>Not an hourly service menu.</strong> These are packaged implementations designed around the outcome you want: build the foundation, stop losing inbound callers, or create a more complete AI-powered lead conversion system.</div>
+
+        <div class="package-grid reveal">
+          <article class="package-card" id="foundation">
+            <div class="package-ribbon">Foundation</div>
+            <h3>GoHighLevel Setup</h3>
+            <p class="price">$799</p>
+            <p class="package-label">One-Time Implementation</p>
+            <p class="turnaround">Estimated turnaround: 7-10 business days</p>
+            <p class="package-desc">Build the foundation your leads depend on—a clean, conversion-ready GHL system that captures, organizes, follows up, and books without the manual chaos.</p>
+            <h4>What You Get</h4>
+            <ul>
+              <li>GHL subaccount settings configuration</li>
+              <li>CRM pipeline + lead management</li>
+              <li>Calendar, forms + lead capture</li>
+              <li>Email & SMS configuration</li>
+              <li>Up to 5 automation workflows</li>
+              <li>Lead nurture + team notifications</li>
+              <li>Modern, responsive landing/booking page</li>
+              <li>1 standard integration + testing</li>
+              <li>Handover + 14-day post-launch support</li>
+            </ul>
+            <p class="result"><strong>RESULT:</strong> A polished GHL system ready to turn new inquiries into organized follow-up and booked appointments.</p>
+            <button type="button" class="btn btn-dark js-calendar">Choose Foundation</button>
+          </article>
+
+          <article class="package-card featured" id="ai-receptionist">
+            <div class="package-ribbon">Most Popular</div>
+            <h3>GHL + AI Receptionist</h3>
+            <p class="price">$1,799</p>
+            <p class="package-label">One-Time Implementation</p>
+            <p class="turnaround">Estimated turnaround: 10-15 business days</p>
+            <p class="package-desc">Never make a caller wait for someone to pick up. Your inbound Voice AI can answer business questions, qualify callers, book appointments, and live-transfer the right opportunities to your team.</p>
+            <h4>What You Get</h4>
+            <ul>
+              <li>Everything in GoHighLevel Setup</li>
+              <li>Inbound Voice AI receptionist</li>
+              <li>Business Q&A + knowledge training</li>
+              <li>Lead qualification + information capture</li>
+              <li>Appointment booking + calendar checks</li>
+              <li>Live transfer + human escalation</li>
+              <li>Up to 10 automation workflows</li>
+              <li>Call testing, tuning + 30-day support</li>
+            </ul>
+            <p class="scope">VOICE AI SCOPE: Inbound phone calls only. It does not reply to SMS, email, chat, or contact responses inside the CRM.</p>
+            <p class="result"><strong>RESULT:</strong> Your business can keep answering, qualifying, and booking inbound callers even when your team cannot pick up.</p>
+            <button type="button" class="btn btn-primary js-calendar">Choose AI Receptionist</button>
+          </article>
+
+          <article class="package-card" id="revenue-system">
+            <div class="package-ribbon">Complete System</div>
+            <h3>GHL AI Revenue System</h3>
+            <p class="price">$2,999</p>
+            <p class="package-label">One-Time Implementation</p>
+            <p class="turnaround">Estimated turnaround: 15-20 business days</p>
+            <p class="package-desc">Turn GHL into an AI-powered conversion engine. Inbound Voice AI handles new calls, while Outbound Voice AI proactively follows up with leads, checks interest, qualifies them, and drives the next step.</p>
+            <h4>What You Get</h4>
+            <ul>
+              <li>Everything in GHL + AI Receptionist</li>
+              <li>Outbound Voice AI outreach + qualification</li>
+              <li>AI replies for CRM/SMS/chat conversations</li>
+              <li>Stale-lead, missed-lead + no-show reactivation</li>
+              <li>Booking, live transfer + advanced lead routing</li>
+              <li>Up to 15 workflows, 2 calendars + 2 pipelines</li>
+              <li>Up to 2 standard integrations</li>
+              <li>30-day optimization + team handover</li>
+            </ul>
+            <p class="result"><strong>RESULT:</strong> Your system does not wait for leads to come back—it answers, follows up, qualifies interest, and moves more opportunities toward a booking automatically.</p>
+            <button type="button" class="btn btn-dark js-calendar">Choose Revenue System</button>
+          </article>
+        </div>
+
+        <div class="package-footnotes">
+          All prices are one-time implementation fees. GoHighLevel subscription, AI usage, phone/SMS charges, and third-party app fees are billed separately.<br>
+          Turnaround starts after required access, intake details, content, and assets are received. Outbound AI outreach must follow applicable consent and calling rules.
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light" aria-labelledby="outcomes-title">
+      <div class="container">
+        <div class="center reveal">
+          <span class="eyebrow">What the work is designed to improve</span>
+          <h2 class="section-title" id="outcomes-title">Less manual work. Faster follow-up. Clearer conversion paths.</h2>
+        </div>
+        <div class="metrics reveal">
+          <div class="metric"><strong>80+</strong><span>Sales funnels built and optimized in GoHighLevel.</span></div>
+          <div class="metric"><strong>80%</strong><span>Reduction in manual follow-up work through automation.</span></div>
+          <div class="metric"><strong>15+</strong><span>Client funnels delivered across multiple industries.</span></div>
+          <div class="metric"><strong>End-to-End</strong><span>Lead capture, nurture, booking, routing, and handover systems.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="service-list" aria-labelledby="service-list-title">
+      <div class="container">
+        <span class="eyebrow reveal">Additional Services</span>
+        <h2 class="section-title reveal" id="service-list-title">Need one specific piece instead of a full package?</h2>
+        <p class="section-sub reveal">If you already have most of your system in place, I can also take on focused implementation work for funnels, workflows, integrations, websites, and content.</p>
+
+        <div class="services-stack">
+          <article class="service-row reveal">
+            <div class="service-number">01</div>
+            <div class="service-summary">
+              <h3>GoHighLevel Setup & Management</h3>
+              <p>Clean account architecture for businesses that need GHL configured correctly from the start—or reorganized after a messy build.</p>
+            </div>
+            <div class="service-detail">
+              <ul>
+                <li>Subaccount and location configuration</li>
+                <li>CRM pipelines and opportunity stages</li>
+                <li>Calendars, forms, surveys, and lead capture</li>
+                <li>Custom fields, tags, and contact organization</li>
+                <li>Email and SMS setup</li>
+                <li>Domains, tracking, and essential settings</li>
+              </ul>
+              <a class="service-link" href="#ghl-packages">See GHL packages <span>↗</span></a>
+            </div>
+          </article>
+
+          <article class="service-row reveal">
+            <div class="service-number">02</div>
+            <div class="service-summary">
+              <h3>CRM & Workflow Automation</h3>
+              <p>Automations that respond faster, reduce repetitive admin, keep leads moving, and give your team a clearer next action.</p>
+            </div>
+            <div class="service-detail">
+              <ul>
+                <li>Lead nurturing and follow-up sequences</li>
+                <li>Appointment reminders and no-show flows</li>
+                <li>Pipeline movement and lead routing</li>
+                <li>Internal notifications and task creation</li>
+                <li>Reactivation and missed-lead workflows</li>
+                <li>Workflow testing and troubleshooting</li>
+              </ul>
+              <button type="button" class="service-link js-calendar">Plan my automation <span>↗</span></button>
+            </div>
+          </article>
+
+          <article class="service-row reveal">
+            <div class="service-number">03</div>
+            <div class="service-summary">
+              <h3>Sales Funnels & Landing Pages</h3>
+              <p>Responsive, conversion-focused pages built around one clear offer, one audience, and one next step.</p>
+            </div>
+            <div class="service-detail">
+              <ul>
+                <li>Lead-generation landing pages</li>
+                <li>Appointment and consultation funnels</li>
+                <li>Sales, payment, and thank-you pages</li>
+                <li>Mobile-first responsive design</li>
+                <li>Form, calendar, and CRM integration</li>
+                <li>Conversion-focused copy and page flow</li>
+              </ul>
+              <a class="service-link" href="index.html#work">View funnel work <span>↗</span></a>
+            </div>
+          </article>
+
+          <article class="service-row reveal">
+            <div class="service-number">04</div>
+            <div class="service-summary">
+              <h3>Zapier, API & Webhooks</h3>
+              <p>Reliable connections between your tools so data reaches the right place without duplicate entry or manual handoffs.</p>
+            </div>
+            <div class="service-detail">
+              <ul>
+                <li>Zapier and Make integrations</li>
+                <li>Webhook triggers and payload mapping</li>
+                <li>API-based workflow connections</li>
+                <li>Field mapping, filters, and routing logic</li>
+                <li>Error testing and data validation</li>
+                <li>Cross-platform automation documentation</li>
+              </ul>
+              <button type="button" class="service-link js-calendar">Connect my tools <span>↗</span></button>
+            </div>
+          </article>
+
+          <article class="service-row reveal">
+            <div class="service-number">05</div>
+            <div class="service-summary">
+              <h3>Website Development</h3>
+              <p>Professional marketing websites designed to look credible, communicate clearly, and guide visitors toward conversion.</p>
+            </div>
+            <div class="service-detail">
+              <ul>
+                <li>Responsive custom layouts</li>
+                <li>HTML, CSS, and JavaScript development</li>
+                <li>GoHighLevel and WordPress builds</li>
+                <li>Conversion-focused navigation and CTAs</li>
+                <li>Performance-conscious front-end structure</li>
+                <li>Forms, tracking, and booking integrations</li>
+              </ul>
+              <a class="service-link" href="index.html#work">View website work <span>↗</span></a>
+            </div>
+          </article>
+
+          <article class="service-row reveal">
+            <div class="service-number">06</div>
+            <div class="service-summary">
+              <h3>Graphic & Video Content</h3>
+              <p>Supporting content for campaigns, funnels, email, and social media when your system needs visual assets to convert.</p>
+            </div>
+            <div class="service-detail">
+              <ul>
+                <li>Canva graphics and campaign assets</li>
+                <li>Email and social creative</li>
+                <li>Short-form vertical video editing</li>
+                <li>Long-form video editing</li>
+                <li>Branded visual consistency</li>
+                <li>Creative resizing for multiple channels</li>
+              </ul>
+              <a class="service-link" href="index.html#contact">Discuss content support <span>↗</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section section-white" id="fit" aria-labelledby="fit-title">
+      <div class="container">
+        <div class="center reveal">
+          <span class="eyebrow">Best Fit</span>
+          <h2 class="section-title" id="fit-title">You do not need every tool. You need the right system.</h2>
+          <p class="section-sub">The best build depends on where leads currently fall through, what your team still does manually, and what action matters most.</p>
+        </div>
+
+        <div class="fit-grid">
+          <article class="fit-card reveal">
+            <span class="fit-kicker">A focused project may be enough if...</span>
+            <h3>You already have the stack. One piece is broken.</h3>
+            <p>Choose a single service when the business is functioning but one part of the customer journey needs improvement.</p>
+            <ul class="check-list">
+              <li>Your funnel needs a stronger design and conversion path.</li>
+              <li>Your workflows are incomplete, duplicated, or unreliable.</li>
+              <li>Your tools need to exchange data automatically.</li>
+              <li>Your GHL account needs cleanup, structure, or optimization.</li>
+            </ul>
+          </article>
+
+          <article class="fit-card dark reveal">
+            <span class="fit-kicker">A complete system makes more sense if...</span>
+            <h3>Leads are getting lost between channels and people.</h3>
+            <p>Combine strategy, GHL, automation, funnels, and integrations when the real problem is the handoff between systems.</p>
+            <ul class="check-list">
+              <li>New inquiries do not receive fast, consistent follow-up.</li>
+              <li>Missed calls and no-shows are creating lost revenue.</li>
+              <li>Your team relies on manual reminders and spreadsheets.</li>
+              <li>You want one trackable journey from lead capture to booking.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light" id="process" aria-labelledby="process-title">
+      <div class="container">
+        <div class="center reveal">
+          <span class="eyebrow">Work Process</span>
+          <h2 class="section-title" id="process-title">Clear from discovery to handover.</h2>
+        </div>
+        <div class="process-grid reveal">
+          <article class="process-card"><span>01</span><h3>Discovery</h3><p>We map your offer, audience, current tools, bottlenecks, and the result the system needs to produce.</p></article>
+          <article class="process-card"><span>02</span><h3>Strategy</h3><p>I define the page flow, CRM structure, workflow logic, integrations, content needs, and implementation scope.</p></article>
+          <article class="process-card"><span>03</span><h3>Build & Test</h3><p>The system is configured, connected, tested with real scenarios, and refined before launch.</p></article>
+          <article class="process-card"><span>04</span><h3>Launch & Handover</h3><p>You receive a working implementation, practical documentation, and a clear understanding of the next steps.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="faq" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="center reveal">
+          <span class="eyebrow">FAQ</span>
+          <h2 class="section-title" id="faq-title">Common questions before we build.</h2>
+        </div>
+
+        <div class="faq-wrap reveal">
+          <div class="faq-item open">
+            <button class="faq-question" type="button" aria-expanded="true"><strong>Do I need to already have a GoHighLevel account?</strong><span class="faq-icon">−</span></button>
+            <div class="faq-answer" style="max-height: 220px;"><p>No. If you are starting from scratch, the account can be configured as part of the implementation. If you already use GHL, I can work inside the existing location and organize the build around what is already there.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false"><strong>Can I hire you for just one funnel or one automation?</strong><span class="faq-icon">+</span></button>
+            <div class="faq-answer"><p>Yes. The service page is intentionally modular. A focused funnel, workflow, integration, or website project can be scoped separately when a full system is unnecessary.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false"><strong>Are software subscriptions included in the package price?</strong><span class="faq-icon">+</span></button>
+            <div class="faq-answer"><p>No. Package pricing covers implementation. Platform subscriptions, phone/SMS usage, AI usage, domains, email services, and paid third-party tools remain separate unless specifically included in a written scope.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false"><strong>Can you work with tools outside GoHighLevel?</strong><span class="faq-icon">+</span></button>
+            <div class="faq-answer"><p>Yes. My work commonly includes Zapier, Make, APIs, webhooks, WordPress, email tools, Google products, and other business platforms when they need to exchange data with your CRM or funnel.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false"><strong>What do you need from me before the project starts?</strong><span class="faq-icon">+</span></button>
+            <div class="faq-answer"><p>Typically: the required platform access, your offer and business details, brand assets, current process information, calendar availability, and any copy or content that must be used. Exact requirements depend on the service.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta" aria-labelledby="cta-title">
+      <div class="container cta-grid">
+        <div>
+          <h2 id="cta-title">Tell me what is slowing your lead flow down.</h2>
+          <p>I will help you identify whether the next move is a funnel, automation, GHL cleanup, integration, website build, AI workflow—or a combination of them.</p>
+        </div>
+        <div class="cta-actions">
+          <button type="button" class="btn btn-primary js-calendar">Book a Discovery Call</button>
+          <a href="mailto:Jhimrickofficial@gmail.com?subject=Project%20Inquiry" class="btn btn-outline">Send Project Inquiry</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <a href="index.html" class="footer-logo" aria-label="Jhim Rick Marco home">
+        <img src="assets/images/logo.png" alt="Jhim Rick Marco logo" width="180" height="92" loading="lazy">
+      </a>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html#ghl-packages">Services</a>
+        <a href="skills-experience.html">Skills &amp; Experience</a>
+        <a href="https://portfolio.jrmrc.space/" target="_blank" rel="noopener">Proof of Work ↗</a>
+      </div>
+      <div class="footer-copyright">© 2026 Jhim Rick Marco</div>
+    </div>
+  </footer>
+
+  <div class="calendar-popup" id="calendar-popup" aria-hidden="true">
+    <div class="calendar-dialog" role="dialog" aria-modal="true" aria-labelledby="calendar-title">
+      <div class="calendar-header">
+        <h2 id="calendar-title">Book an Appointment</h2>
+        <button class="calendar-close" type="button" aria-label="Close calendar popup">&times;</button>
+      </div>
+      <iframe
+        class="calendar-frame"
+        id="calendar-frame"
+        title="Book an appointment"
+        data-src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1s9ZiewEGBX1Z7alvve0D0L3Dcf9KeWCT-qWfswH8RLhlqgSk2J8IrSImAoCV7tNnxlUmfkzgS?gv=true"
+        loading="lazy"></iframe>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const hamburger = document.querySelector('.hamburger');
+      const mobileMenu = document.querySelector('.mobile-menu');
+
+      const closeMenu = () => {
+        if (!hamburger || !mobileMenu) return;
+        mobileMenu.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('menu-open');
+      };
+
+      if (hamburger && mobileMenu) {
+        hamburger.addEventListener('click', () => {
+          const isOpen = mobileMenu.classList.toggle('open');
+          hamburger.setAttribute('aria-expanded', String(isOpen));
+          document.body.classList.toggle('menu-open', isOpen);
+        });
+        mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+      }
+
+      document.querySelectorAll('.faq-question').forEach(button => {
+        button.addEventListener('click', () => {
+          const item = button.closest('.faq-item');
+          const answer = item.querySelector('.faq-answer');
+          const icon = button.querySelector('.faq-icon');
+          const open = item.classList.toggle('open');
+          button.setAttribute('aria-expanded', String(open));
+          icon.textContent = open ? '−' : '+';
+          answer.style.maxHeight = open ? answer.scrollHeight + 'px' : '0px';
+        });
+      });
+
+      const popup = document.getElementById('calendar-popup');
+      const frame = document.getElementById('calendar-frame');
+      const closeButton = document.querySelector('.calendar-close');
+      let lastFocus = null;
+
+      const openCalendar = () => {
+        lastFocus = document.activeElement;
+        if (frame && !frame.src) frame.src = frame.dataset.src;
+        popup.classList.add('is-open');
+        popup.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+        closeButton.focus();
+      };
+      const closeCalendar = () => {
+        popup.classList.remove('is-open');
+        popup.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+        if (lastFocus) lastFocus.focus();
+      };
+
+      document.querySelectorAll('.js-calendar').forEach(button => button.addEventListener('click', () => {
+        closeMenu();
+        openCalendar();
+      }));
+      closeButton.addEventListener('click', closeCalendar);
+      popup.addEventListener('click', event => { if (event.target === popup) closeCalendar(); });
+      document.addEventListener('keydown', event => { if (event.key === 'Escape' && popup.classList.contains('is-open')) closeCalendar(); });
+
+      const reveals = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.1 });
+        reveals.forEach(el => observer.observe(el));
+      } else {
+        reveals.forEach(el => el.classList.add('visible'));
+      }
+    });
+  </script>
+</body>
+</html>
