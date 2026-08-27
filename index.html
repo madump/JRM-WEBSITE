@@ -2345,6 +2345,112 @@ section[aria-labelledby="process-title"] .section-heading p {
 }
 </style>
 
+
+<style data-real-portfolio="true">
+.portfolio-showcase { overflow: hidden; }
+.portfolio-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(320px, .85fr);
+  gap: clamp(36px, 7vw, 90px);
+  align-items: end;
+  margin-bottom: 34px;
+}
+.portfolio-heading h2 {
+  margin: 0;
+  font-size: clamp(3rem, 5.1vw, 5rem);
+  line-height: .94;
+  text-transform: uppercase;
+}
+.portfolio-heading__side { padding-bottom: 5px; }
+.portfolio-heading__side > p { max-width: 470px; margin: 0 0 18px; font-size: .82rem; line-height: 1.65; }
+.portfolio-counts { display: flex; flex-wrap: wrap; gap: 8px; }
+.portfolio-counts span {
+  display: inline-flex; align-items: center; gap: 7px; min-height: 30px; padding: 0 10px;
+  border: 1px solid rgba(255,255,255,.07); border-radius: 999px; background: rgba(255,255,255,.025);
+  color: #7f909b; font-size: .62rem; font-weight: 800;
+}
+.portfolio-counts strong { color: var(--ref-lime, #9dff3e); font-size: .7rem; }
+.portfolio-tabs {
+  display: flex; gap: 7px; margin-bottom: 18px; padding-bottom: 12px; overflow-x: auto; scrollbar-width: none;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+.portfolio-tabs::-webkit-scrollbar { display: none; }
+.portfolio-tab {
+  flex: 0 0 auto; min-height: 40px; display: inline-flex; align-items: center; gap: 9px;
+  padding: 0 14px; border: 1px solid rgba(255,255,255,.075); border-radius: 999px;
+  background: #14242e; color: #97a7b0; cursor: pointer; font-size: .7rem; font-weight: 900;
+  transition: .2s ease;
+}
+.portfolio-tab span { color: #647783; font-size: .58rem; }
+.portfolio-tab:hover { color: #fff; border-color: rgba(157,255,62,.18); }
+.portfolio-tab.is-active { background: var(--ref-lime, #9dff3e); color: #102006; border-color: var(--ref-lime, #9dff3e); }
+.portfolio-tab.is-active span { color: #314f0d; }
+.portfolio-tab:focus-visible { outline: 3px solid rgba(157,255,62,.32); outline-offset: 2px; }
+.portfolio-panel[hidden] { display: none !important; }
+.website-work-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.real-site-card {
+  min-width: 0; overflow: hidden; border: 1px solid rgba(255,255,255,.075); border-radius: 16px;
+  background: #14252f; transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease;
+}
+.real-site-card:hover { transform: translateY(-3px); border-color: rgba(157,255,62,.2); box-shadow: 0 18px 46px rgba(0,0,0,.18); }
+.real-site-visual { padding: 14px; aspect-ratio: 16/10; background: #09141b; }
+.real-site-browser { height: 100%; border: 1px solid rgba(255,255,255,.11); border-radius: 10px; overflow: hidden; background: #172c38; }
+.real-site-browser__top { height: 28px; display: flex; align-items: center; gap: 4px; padding: 0 9px; border-bottom: 1px solid rgba(255,255,255,.08); }
+.real-site-browser__top > span { width: 4px; height: 4px; border-radius: 50%; background: #647984; }
+.real-site-browser__top small { margin-left: 7px; color: #66808d; font-size: .45rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.real-site-browser__body { height: calc(100% - 28px); padding: 10px; display: grid; grid-template-columns: 52px 1fr; gap: 8px; }
+.real-site-nav { padding: 7px; border-radius: 6px; background: #10212b; }
+.real-site-nav b, .real-site-nav i { display: block; height: 4px; margin-bottom: 6px; border-radius: 999px; background: #34515f; }
+.real-site-nav b { width: 62%; background: var(--ref-lime, #9dff3e); }
+.real-site-hero { min-width: 0; padding: 10px; border-radius: 6px; background: #10212b; }
+.real-site-hero em { display: block; margin-bottom: 8px; color: #dbe6ea; font: 800 .58rem/1.2 "Manrope",sans-serif; font-style: normal; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.real-site-hero strong { display: block; height: 5px; width: 86%; margin-bottom: 6px; border-radius: 999px; background: #34515f; }
+.real-site-hero strong:nth-of-type(1) { width: 64%; background: rgba(157,255,62,.72); }
+.real-site-hero button { margin-top: 5px; padding: 4px 7px; border: 0; border-radius: 999px; background: rgba(157,255,62,.13); color: var(--ref-lime, #9dff3e); font-size: .4rem; font-weight: 900; }
+.real-site-content { padding: 17px 18px 18px; }
+.real-site-content .project-meta { justify-content: space-between; margin-bottom: 10px; }
+.project-index { color: #526a76; font-size: .55rem; font-weight: 900; letter-spacing: .08em; }
+.real-site-content h3 { margin: 0 0 5px; color: #f3f7f8; font-size: 1rem; }
+.real-site-content p { margin: 0 0 15px; color: #70838e; font-size: .66rem; }
+.portfolio-link { display: inline-flex; align-items: center; gap: 7px; color: #d9e4e8; font-size: .66rem; font-weight: 900; }
+.portfolio-link span { color: var(--ref-lime, #9dff3e); transition: transform .2s ease; }
+.portfolio-link:hover span { transform: translate(2px,-2px); }
+.automation-work-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; }
+.automation-work-card {
+  min-width: 0; display: grid; grid-template-columns: 42px minmax(0,1fr) 38px; gap: 13px; align-items: center;
+  padding: 17px; border: 1px solid rgba(255,255,255,.075); border-radius: 14px; background: #14252f;
+  transition: .2s ease;
+}
+.automation-work-card:hover { background: #192d38; border-color: rgba(157,255,62,.18); transform: translateY(-2px); }
+.automation-work-card__index { width: 38px; height: 38px; display: grid; place-items: center; border-radius: 11px; background: #0c1a22; color: #617783; font-size: .59rem; font-weight: 900; }
+.automation-work-card__body { min-width: 0; }
+.automation-work-card__body .project-type { margin-bottom: 5px; }
+.automation-work-card h3 { margin: 0 0 5px; color: #f3f7f8; font-size: .94rem; }
+.automation-work-card p { margin: 0 0 9px; color: #7e909a; font-size: .66rem; line-height: 1.5; }
+.automation-work-card .tool-list span { font-size: .54rem; }
+.automation-work-card__link { width: 36px; height: 36px; display: grid; place-items: center; border-radius: 50%; border: 1px solid rgba(157,255,62,.14); background: rgba(157,255,62,.05); color: var(--ref-lime, #9dff3e); font-size: .8rem; transition: .2s ease; }
+.automation-work-card__link:hover { background: var(--ref-lime, #9dff3e); color: #112005; transform: translate(1px,-1px); }
+.portfolio-footer-actions { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 24px; }
+@media (max-width: 980px) {
+  .portfolio-heading { grid-template-columns: 1fr; gap: 18px; }
+  .portfolio-heading__side > p { max-width: 640px; }
+  .website-work-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+@media (max-width: 760px) {
+  .automation-work-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 620px) {
+  .portfolio-heading h2 { font-size: clamp(2.7rem, 13vw, 4rem); }
+  .website-work-grid { grid-template-columns: 1fr; }
+  .real-site-visual { aspect-ratio: 16/9; }
+  .portfolio-counts { gap: 6px; }
+  .portfolio-counts span { font-size: .58rem; }
+  .automation-work-card { grid-template-columns: 36px minmax(0,1fr) 34px; gap: 10px; padding: 14px; }
+  .automation-work-card__index { width: 34px; height: 34px; }
+  .portfolio-footer-actions .btn { width: 100%; }
+}
+</style>
+
 </head>
 <body data-page="home">
 <a class="skip-link" href="#main">Skip to content</a>
@@ -2475,16 +2581,373 @@ section[aria-labelledby="process-title"] .section-heading p {
   </div>
 </div>
 </section>
-<section aria-labelledby="featured-title" class="section section--white">
+<section aria-labelledby="featured-title" class="section section--white portfolio-showcase" id="work">
 <div class="container">
-<div class="section-heading reveal"><div><div class="eyebrow">Featured Portfolio</div><h2 id="featured-title">Selected work.</h2></div><p>Funnels, websites, automations, and creative work—with direct links to more examples.</p></div>
-<div class="work-grid">
-<article class="project-card reveal"><div aria-hidden="true" class="project-card__visual"><div class="project-window"><div class="project-window__top"><i></i><i></i><i></i></div><div class="project-window__body"><div class="mock-sidebar"><div class="mock-line accent"></div><div class="mock-line"></div><div class="mock-line short"></div><div class="mock-line"></div></div><div class="mock-main"><div class="mock-line accent"></div><div class="mock-line"></div><div class="mock-grid"><div class="mock-box"></div><div class="mock-box"></div><div class="mock-box"></div><div class="mock-box"></div></div></div></div></div></div><div class="project-card__content"><div class="project-meta"><span class="project-type">GoHighLevel Funnel</span></div><h3>Lead Generation Funnel</h3><p><strong>Problem:</strong> Leads needed a clearer path to inquiry. <strong>Solution:</strong> A focused landing page with CRM and follow-up integration.</p><div class="tool-list"><span>GoHighLevel</span><span>CRM</span><span>Follow-Up</span></div><div class="project-actions"><a class="btn btn--outline" href="https://drive.google.com/drive/folders/1NuQ4m2-6IXoL3xchVEIE0yacfJlVFNEK?usp=drive_link" rel="noopener noreferrer" target="_blank">View Funnel ↗</a></div></div></article>
-<article class="project-card reveal" data-delay="1"><div aria-hidden="true" class="project-card__visual"><div class="project-window"><div class="project-window__top"><i></i><i></i><i></i></div><div class="project-window__body"><div class="mock-sidebar"><div class="mock-line accent"></div><div class="mock-line"></div><div class="mock-line short"></div><div class="mock-line"></div></div><div class="mock-main"><div class="mock-line accent"></div><div class="mock-line"></div><div class="mock-grid"><div class="mock-box"></div><div class="mock-box"></div><div class="mock-box"></div><div class="mock-box"></div></div></div></div></div></div><div class="project-card__content"><div class="project-meta"><span class="project-type">GHL Automation</span></div><h3>GHL Automation</h3><p><strong>Problem:</strong> Leads needed faster and more consistent follow-up. <strong>Solution:</strong> GoHighLevel workflows for email, SMS, pipeline updates, reminders, and internal notifications.</p><div class="tool-list"><span>GoHighLevel</span><span>Email/SMS</span><span>Pipelines</span></div><div class="project-actions"><a class="btn btn--outline" href="https://drive.google.com/drive/folders/1eS3IPFscSX-aul1YUhHJJxygLBovSRgM?usp=drive_link" rel="noopener noreferrer" target="_blank">View Automation ↗</a></div></div></article>
-<article class="project-card reveal"><div aria-hidden="true" class="project-card__visual"><div class="project-window"><div class="project-window__top"><i></i><i></i><i></i></div><div class="project-window__body"><div class="mock-sidebar"><div class="mock-line accent"></div><div class="mock-line"></div><div class="mock-line short"></div><div class="mock-line"></div></div><div class="mock-main"><div class="mock-line accent"></div><div class="mock-line"></div><div class="mock-grid"><div class="mock-box"></div><div class="mock-box"></div><div class="mock-box"></div><div class="mock-box"></div></div></div></div></div></div><div class="project-card__content"><div class="project-meta"><span class="project-type">n8n Automation</span></div><h3>n8n Automation</h3><p><strong>Problem:</strong> Complex processes required flexible connections between multiple systems. <strong>Solution:</strong> Custom n8n workflows using APIs, webhooks, conditional logic, data transformation, and error handling.</p><div class="tool-list"><span>n8n</span><span>APIs</span><span>Webhooks</span></div><div class="project-actions"><a class="btn btn--outline" href="https://drive.google.com/drive/folders/1TXh0CRfO589icmNbXbfW9EC1-gSs3vcC?usp=drive_link" rel="noopener noreferrer" target="_blank">View n8n Work ↗</a></div></div></article>
-<article class="project-card reveal" data-delay="1"><div aria-hidden="true" class="project-card__visual"><div class="project-window"><div class="project-window__top"><i></i><i></i><i></i></div><div class="project-window__body"><div class="mock-sidebar"><div class="mock-line accent"></div><div class="mock-line"></div><div class="mock-line short"></div><div class="mock-line"></div></div><div class="mock-main"><div class="mock-line accent"></div><div class="mock-line"></div><div class="mock-grid"><div class="mock-box"></div><div class="mock-box"></div><div class="mock-box"></div><div class="mock-box"></div></div></div></div></div></div><div class="project-card__content"><div class="project-meta"><span class="project-type">Make Automation</span></div><h3>Make Automation</h3><p><strong>Problem:</strong> Repetitive data entry slowed down daily operations. <strong>Solution:</strong> Make scenarios that connect apps, map fields, route data, apply filters, and automate multi-step processes.</p><div class="tool-list"><span>Make</span><span>Data Mapping</span><span>Filters</span></div><div class="project-actions"><a class="btn btn--outline" href="https://drive.google.com/drive/folders/1jJMgzNtEVaUsp4U0UzhUJwEpIkdTazAY?usp=drive_link" rel="noopener noreferrer" target="_blank">View Make Work ↗</a></div></div></article>
-</div>
-<div class="button-row" style="margin-top:30px"><a class="btn btn--dark" href="proof-of-work.html">View All Work <span class="btn__arrow">→</span></a><a class="btn btn--outline" href="https://drive.google.com/drive/folders/1u092gy-B4LW8uMC9OKTmoucCMsCnrTej?usp=sharing" rel="noopener noreferrer" target="_blank">Open Full Portfolio ↗</a></div>
+  <div class="portfolio-heading reveal">
+    <div>
+      <div class="eyebrow">Featured Portfolio</div>
+      <h2 id="featured-title">Selected work.</h2>
+    </div>
+    <div class="portfolio-heading__side">
+      <p>Real website builds and automation systems. Browse by category and open each project directly.</p>
+      <div class="portfolio-counts" aria-label="Portfolio totals">
+        <span><strong>9</strong> Websites</span>
+        <span><strong>10</strong> GHL Automations</span>
+        <span><strong>8</strong> n8n Automations</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio-tabs" role="tablist" aria-label="Portfolio categories">
+    <button class="portfolio-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="portfolio-websites" id="tab-websites" data-portfolio-tab="websites">Websites <span>09</span></button>
+    <button class="portfolio-tab" type="button" role="tab" aria-selected="false" aria-controls="portfolio-ghl" id="tab-ghl" data-portfolio-tab="ghl">GHL Automation <span>10</span></button>
+    <button class="portfolio-tab" type="button" role="tab" aria-selected="false" aria-controls="portfolio-n8n" id="tab-n8n" data-portfolio-tab="n8n">n8n Automation <span>08</span></button>
+  </div>
+
+  <div class="portfolio-panel is-active" id="portfolio-websites" role="tabpanel" aria-labelledby="tab-websites" data-portfolio-panel="websites">
+    <div class="website-work-grid">
+      <article class="real-site-card">
+      <div class="real-site-visual" aria-hidden="true">
+        <div class="real-site-browser">
+          <div class="real-site-browser__top"><span></span><span></span><span></span><small>sites.leadconnectorhq.com</small></div>
+          <div class="real-site-browser__body">
+            <div class="real-site-nav"><b></b><i></i><i></i><i></i></div>
+            <div class="real-site-hero"><em>GHL Website Build</em><strong></strong><strong></strong><button type="button" tabindex="-1">View site</button></div>
+          </div>
+        </div>
+      </div>
+      <div class="real-site-content">
+        <div class="project-meta"><span class="project-type">GoHighLevel</span><span class="project-index">01</span></div>
+        <h3>GHL Website Build</h3>
+        <p>sites.leadconnectorhq.com</p>
+        <a class="portfolio-link" href="https://sites.leadconnectorhq.com/preview/ajSxcQgsAqsmKeB7rBDK" target="_blank" rel="noopener noreferrer">Open website <span aria-hidden="true">↗</span></a>
+      </div>
+    </article><article class="real-site-card">
+      <div class="real-site-visual" aria-hidden="true">
+        <div class="real-site-browser">
+          <div class="real-site-browser__top"><span></span><span></span><span></span><small>constructionbycompass.com</small></div>
+          <div class="real-site-browser__body">
+            <div class="real-site-nav"><b></b><i></i><i></i><i></i></div>
+            <div class="real-site-hero"><em>Construction by Compass</em><strong></strong><strong></strong><button type="button" tabindex="-1">View site</button></div>
+          </div>
+        </div>
+      </div>
+      <div class="real-site-content">
+        <div class="project-meta"><span class="project-type">GoHighLevel</span><span class="project-index">02</span></div>
+        <h3>Construction by Compass</h3>
+        <p>constructionbycompass.com</p>
+        <a class="portfolio-link" href="https://constructionbycompass.com/" target="_blank" rel="noopener noreferrer">Open website <span aria-hidden="true">↗</span></a>
+      </div>
+    </article><article class="real-site-card">
+      <div class="real-site-visual" aria-hidden="true">
+        <div class="real-site-browser">
+          <div class="real-site-browser__top"><span></span><span></span><span></span><small>themeeleven.homecaremarketing.com</small></div>
+          <div class="real-site-browser__body">
+            <div class="real-site-nav"><b></b><i></i><i></i><i></i></div>
+            <div class="real-site-hero"><em>Theme Eleven Home Care</em><strong></strong><strong></strong><button type="button" tabindex="-1">View site</button></div>
+          </div>
+        </div>
+      </div>
+      <div class="real-site-content">
+        <div class="project-meta"><span class="project-type">GoHighLevel</span><span class="project-index">03</span></div>
+        <h3>Theme Eleven Home Care</h3>
+        <p>themeeleven.homecaremarketing.com</p>
+        <a class="portfolio-link" href="https://themeeleven.homecaremarketing.com/" target="_blank" rel="noopener noreferrer">Open website <span aria-hidden="true">↗</span></a>
+      </div>
+    </article><article class="real-site-card">
+      <div class="real-site-visual" aria-hidden="true">
+        <div class="real-site-browser">
+          <div class="real-site-browser__top"><span></span><span></span><span></span><small>dodgecitypestcontrol.com</small></div>
+          <div class="real-site-browser__body">
+            <div class="real-site-nav"><b></b><i></i><i></i><i></i></div>
+            <div class="real-site-hero"><em>Dodge City Pest Control</em><strong></strong><strong></strong><button type="button" tabindex="-1">View site</button></div>
+          </div>
+        </div>
+      </div>
+      <div class="real-site-content">
+        <div class="project-meta"><span class="project-type">WordPress</span><span class="project-index">04</span></div>
+        <h3>Dodge City Pest Control</h3>
+        <p>dodgecitypestcontrol.com</p>
+        <a class="portfolio-link" href="https://dodgecitypestcontrol.com/" target="_blank" rel="noopener noreferrer">Open website <span aria-hidden="true">↗</span></a>
+      </div>
+    </article><article class="real-site-card">
+      <div class="real-site-visual" aria-hidden="true">
+        <div class="real-site-browser">
+          <div class="real-site-browser__top"><span></span><span></span><span></span><small>diamondcontractors.com</small></div>
+          <div class="real-site-browser__body">
+            <div class="real-site-nav"><b></b><i></i><i></i><i></i></div>
+            <div class="real-site-hero"><em>Diamond Contractors</em><strong></strong><strong></strong><button type="button" tabindex="-1">View site</button></div>
+          </div>
+        </div>
+      </div>
+      <div class="real-site-content">
+        <div class="project-meta"><span class="project-type">WordPress</span><span class="project-index">05</span></div>
+        <h3>Diamond Contractors</h3>
+        <p>diamondcontractors.com</p>
+        <a class="portfolio-link" href="https://diamondcontractors.com/" target="_blank" rel="noopener noreferrer">Open website <span aria-hidden="true">↗</span></a>
+      </div>
+    </article><article class="real-site-card">
+      <div class="real-site-visual" aria-hidden="true">
+        <div class="real-site-browser">
+          <div class="real-site-browser__top"><span></span><span></span><span></span><small>ivyd.com</small></div>
+          <div class="real-site-browser__body">
+            <div class="real-site-nav"><b></b><i></i><i></i><i></i></div>
+            <div class="real-site-hero"><em>IVYD</em><strong></strong><strong></strong><button type="button" tabindex="-1">View site</button></div>
+          </div>
+        </div>
+      </div>
+      <div class="real-site-content">
+        <div class="project-meta"><span class="project-type">WordPress</span><span class="project-index">06</span></div>
+        <h3>IVYD</h3>
+        <p>ivyd.com</p>
+        <a class="portfolio-link" href="https://ivyd.com/" target="_blank" rel="noopener noreferrer">Open website <span aria-hidden="true">↗</span></a>
+      </div>
+    </article><article class="real-site-card">
+      <div class="real-site-visual" aria-hidden="true">
+        <div class="real-site-browser">
+          <div class="real-site-browser__top"><span></span><span></span><span></span><small>thekuda.com</small></div>
+          <div class="real-site-browser__body">
+            <div class="real-site-nav"><b></b><i></i><i></i><i></i></div>
+            <div class="real-site-hero"><em>The KUDA</em><strong></strong><strong></strong><button type="button" tabindex="-1">View site</button></div>
+          </div>
+        </div>
+      </div>
+      <div class="real-site-content">
+        <div class="project-meta"><span class="project-type">Shopify</span><span class="project-index">07</span></div>
+        <h3>The KUDA</h3>
+        <p>thekuda.com</p>
+        <a class="portfolio-link" href="https://TheKUDA.com/" target="_blank" rel="noopener noreferrer">Open website <span aria-hidden="true">↗</span></a>
+      </div>
+    </article><article class="real-site-card">
+      <div class="real-site-visual" aria-hidden="true">
+        <div class="real-site-browser">
+          <div class="real-site-browser__top"><span></span><span></span><span></span><small>oneswagshop.com</small></div>
+          <div class="real-site-browser__body">
+            <div class="real-site-nav"><b></b><i></i><i></i><i></i></div>
+            <div class="real-site-hero"><em>One Swag Shop</em><strong></strong><strong></strong><button type="button" tabindex="-1">View site</button></div>
+          </div>
+        </div>
+      </div>
+      <div class="real-site-content">
+        <div class="project-meta"><span class="project-type">Shopify</span><span class="project-index">08</span></div>
+        <h3>One Swag Shop</h3>
+        <p>oneswagshop.com</p>
+        <a class="portfolio-link" href="https://oneswagshop.com/" target="_blank" rel="noopener noreferrer">Open website <span aria-hidden="true">↗</span></a>
+      </div>
+    </article><article class="real-site-card">
+      <div class="real-site-visual" aria-hidden="true">
+        <div class="real-site-browser">
+          <div class="real-site-browser__top"><span></span><span></span><span></span><small>solezyhealth.com</small></div>
+          <div class="real-site-browser__body">
+            <div class="real-site-nav"><b></b><i></i><i></i><i></i></div>
+            <div class="real-site-hero"><em>Solezy Health</em><strong></strong><strong></strong><button type="button" tabindex="-1">View site</button></div>
+          </div>
+        </div>
+      </div>
+      <div class="real-site-content">
+        <div class="project-meta"><span class="project-type">Shopify</span><span class="project-index">09</span></div>
+        <h3>Solezy Health</h3>
+        <p>solezyhealth.com</p>
+        <a class="portfolio-link" href="https://solezyhealth.com/" target="_blank" rel="noopener noreferrer">Open website <span aria-hidden="true">↗</span></a>
+      </div>
+    </article>
+    </div>
+  </div>
+
+  <div class="portfolio-panel" id="portfolio-ghl" role="tabpanel" aria-labelledby="tab-ghl" data-portfolio-panel="ghl" hidden>
+    <div class="automation-work-grid">
+      <article class="automation-work-card">
+          <div class="automation-work-card__index">01</div>
+          <div class="automation-work-card__body">
+            <div class="project-type">GHL Automation</div>
+            <h3>Lead Magnet</h3>
+            <p>Lead generation asset and delivery workflow.</p>
+            <div class="tool-list"><span>GoHighLevel</span><span>Automation</span></div>
+          </div>
+          <a class="automation-work-card__link" href="https://drive.google.com/file/d/1gOA3TVy3BiPrQHYVzWqqjxYwGqdyjoZ6/view?usp=drive_link" target="_blank" rel="noopener noreferrer" aria-label="Open Lead Magnet">↗</a>
+        </article>
+<article class="automation-work-card">
+          <div class="automation-work-card__index">02</div>
+          <div class="automation-work-card__body">
+            <div class="project-type">GHL Automation</div>
+            <h3>Lead Capturing Form</h3>
+            <p>Form capture and CRM entry automation.</p>
+            <div class="tool-list"><span>GoHighLevel</span><span>Automation</span></div>
+          </div>
+          <a class="automation-work-card__link" href="https://drive.google.com/file/d/1-1Er_3IfRsB7wrsDvD_8CD28okq_NxCi/view?usp=drive_link" target="_blank" rel="noopener noreferrer" aria-label="Open Lead Capturing Form">↗</a>
+        </article>
+<article class="automation-work-card">
+          <div class="automation-work-card__index">03</div>
+          <div class="automation-work-card__body">
+            <div class="project-type">GHL Automation</div>
+            <h3>Email Sequence</h3>
+            <p>Automated nurture and follow-up sequence.</p>
+            <div class="tool-list"><span>GoHighLevel</span><span>Automation</span></div>
+          </div>
+          <a class="automation-work-card__link" href="https://drive.google.com/file/d/1oPSAKWHFB-HYxNA8yI1r7huhTI4lQw7D/view?usp=drive_link" target="_blank" rel="noopener noreferrer" aria-label="Open Email Sequence">↗</a>
+        </article>
+<article class="automation-work-card">
+          <div class="automation-work-card__index">04</div>
+          <div class="automation-work-card__body">
+            <div class="project-type">GHL Automation</div>
+            <h3>Client Intake Form to Zapier</h3>
+            <p>Intake workflow connecting GHL data to Zapier.</p>
+            <div class="tool-list"><span>GoHighLevel</span><span>Automation</span></div>
+          </div>
+          <a class="automation-work-card__link" href="https://drive.google.com/file/d/1slf1sErUCrJkYSCJL2rpo0giwDSG0eKG/view?usp=drive_link" target="_blank" rel="noopener noreferrer" aria-label="Open Client Intake Form to Zapier">↗</a>
+        </article>
+<article class="automation-work-card">
+          <div class="automation-work-card__index">05</div>
+          <div class="automation-work-card__body">
+            <div class="project-type">GHL Automation</div>
+            <h3>Website + Additional Service Logic</h3>
+            <p>Conditional workflow based on selected client services.</p>
+            <div class="tool-list"><span>GoHighLevel</span><span>Automation</span></div>
+          </div>
+          <a class="automation-work-card__link" href="https://drive.google.com/file/d/1w-A5YWvQ7sOSXerKPmdCc8BkSX4gGeZM/view?usp=drive_link" target="_blank" rel="noopener noreferrer" aria-label="Open Website + Additional Service Logic">↗</a>
+        </article>
+<article class="automation-work-card">
+          <div class="automation-work-card__index">06</div>
+          <div class="automation-work-card__body">
+            <div class="project-type">GHL Automation</div>
+            <h3>Invoice Paid — Elite Website+ (OTF)</h3>
+            <p>Paid-invoice trigger and post-purchase automation.</p>
+            <div class="tool-list"><span>GoHighLevel</span><span>Automation</span></div>
+          </div>
+          <a class="automation-work-card__link" href="https://drive.google.com/file/d/1pfChQoxF8KhJobSgHpj8ibKK9WJkPWae/view?usp=drive_link" target="_blank" rel="noopener noreferrer" aria-label="Open Invoice Paid — Elite Website+ (OTF)">↗</a>
+        </article>
+<article class="automation-work-card">
+          <div class="automation-work-card__index">07</div>
+          <div class="automation-work-card__body">
+            <div class="project-type">GHL Automation</div>
+            <h3>Growth Lead Magnet</h3>
+            <p>Lead magnet workflow for growth-focused campaigns.</p>
+            <div class="tool-list"><span>GoHighLevel</span><span>Automation</span></div>
+          </div>
+          <a class="automation-work-card__link" href="https://drive.google.com/file/d/19GCJCfRYmGvwbqfId1g10JjgEW2s0c_t/view?usp=drive_link" target="_blank" rel="noopener noreferrer" aria-label="Open Growth Lead Magnet">↗</a>
+        </article>
+<article class="automation-work-card">
+          <div class="automation-work-card__index">08</div>
+          <div class="automation-work-card__body">
+            <div class="project-type">GHL Automation</div>
+            <h3>Invoice & Contract</h3>
+            <p>Automated invoice and contract workflow.</p>
+            <div class="tool-list"><span>GoHighLevel</span><span>Automation</span></div>
+          </div>
+          <a class="automation-work-card__link" href="https://drive.google.com/file/d/133AlfX6tg1ugtJvu-EOIwuQmBiZSytLq/view?usp=drive_link" target="_blank" rel="noopener noreferrer" aria-label="Open Invoice & Contract">↗</a>
+        </article>
+<article class="automation-work-card">
+          <div class="automation-work-card__index">09</div>
+          <div class="automation-work-card__body">
+            <div class="project-type">GHL Automation</div>
+            <h3>SEO Value Nurture Newsletter</h3>
+            <p>Existing-client nurture focused on ongoing SEO value.</p>
+            <div class="tool-list"><span>GoHighLevel</span><span>Automation</span></div>
+          </div>
+          <a class="automation-work-card__link" href="https://drive.google.com/file/d/1oD_HKYVLHOaG8vgEAZn69qQTeri4DtWD/view?usp=drive_link" target="_blank" rel="noopener noreferrer" aria-label="Open SEO Value Nurture Newsletter">↗</a>
+        </article>
+<article class="automation-work-card">
+          <div class="automation-work-card__index">10</div>
+          <div class="automation-work-card__body">
+            <div class="project-type">GHL Automation</div>
+            <h3>Social Media Onboarding</h3>
+            <p>Client onboarding workflow for social media services.</p>
+            <div class="tool-list"><span>GoHighLevel</span><span>Automation</span></div>
+          </div>
+          <a class="automation-work-card__link" href="https://drive.google.com/file/d/1t7hnOwj1NpLNa8tKo0F0M03Gw9AVR91N/view?usp=drive_link" target="_blank" rel="noopener noreferrer" aria-label="Open Social Media Onboarding">↗</a>
+        </article>
+    </div>
+  </div>
+
+  <div class="portfolio-panel" id="portfolio-n8n" role="tabpanel" aria-labelledby="tab-n8n" data-portfolio-panel="n8n" hidden>
+    <div class="automation-work-grid">
+      <article class="automation-work-card">
+          <div class="automation-work-card__index">01</div>
+          <div class="automation-work-card__body">
+            <div class="project-type">n8n Automation</div>
+            <h3>YouTube Strategist</h3>
+            <p>Content strategy workflow for YouTube planning.</p>
+            <div class="tool-list"><span>n8n</span><span>Automation</span></div>
+          </div>
+          <a class="automation-work-card__link" href="https://drive.google.com/file/d/1lepCr16W35SHA4ICfaSZWkQOIgOqOMGm/view?usp=drive_link" target="_blank" rel="noopener noreferrer" aria-label="Open YouTube Strategist">↗</a>
+        </article>
+<article class="automation-work-card">
+          <div class="automation-work-card__index">02</div>
+          <div class="automation-work-card__body">
+            <div class="project-type">n8n Automation</div>
+            <h3>Social Media Posting</h3>
+            <p>Automated content distribution workflow.</p>
+            <div class="tool-list"><span>n8n</span><span>Automation</span></div>
+          </div>
+          <a class="automation-work-card__link" href="https://drive.google.com/file/d/16qPH_E2s459ajroQXGVDwScZyHOIL2WG/view?usp=drive_link" target="_blank" rel="noopener noreferrer" aria-label="Open Social Media Posting">↗</a>
+        </article>
+<article class="automation-work-card">
+          <div class="automation-work-card__index">03</div>
+          <div class="automation-work-card__body">
+            <div class="project-type">n8n Automation</div>
+            <h3>SMM Schedule Posting</h3>
+            <p>Scheduled social publishing automation.</p>
+            <div class="tool-list"><span>n8n</span><span>Automation</span></div>
+          </div>
+          <a class="automation-work-card__link" href="https://drive.google.com/file/d/1SKV2nv3rgly4LncSj7JRxexHNIKQA3G9/view?usp=drive_link" target="_blank" rel="noopener noreferrer" aria-label="Open SMM Schedule Posting">↗</a>
+        </article>
+<article class="automation-work-card">
+          <div class="automation-work-card__index">04</div>
+          <div class="automation-work-card__body">
+            <div class="project-type">n8n Automation</div>
+            <h3>Image Generator</h3>
+            <p>Automated image-generation workflow.</p>
+            <div class="tool-list"><span>n8n</span><span>Automation</span></div>
+          </div>
+          <a class="automation-work-card__link" href="https://drive.google.com/file/d/1X-p9qmAVb6Rlm5uvszWnYVTftofbJA20/view?usp=drive_link" target="_blank" rel="noopener noreferrer" aria-label="Open Image Generator">↗</a>
+        </article>
+<article class="automation-work-card">
+          <div class="automation-work-card__index">05</div>
+          <div class="automation-work-card__body">
+            <div class="project-type">n8n Automation</div>
+            <h3>Glass Fruit ASMR</h3>
+            <p>Creative AI media-generation workflow.</p>
+            <div class="tool-list"><span>n8n</span><span>Automation</span></div>
+          </div>
+          <a class="automation-work-card__link" href="https://drive.google.com/file/d/1-brwBFOE2X5VqzFmD8N2wZgJF4ahpfWu/view?usp=drive_link" target="_blank" rel="noopener noreferrer" aria-label="Open Glass Fruit ASMR">↗</a>
+        </article>
+<article class="automation-work-card">
+          <div class="automation-work-card__index">06</div>
+          <div class="automation-work-card__body">
+            <div class="project-type">n8n Automation</div>
+            <h3>Generate Image to Social Post</h3>
+            <p>Creates an image and routes it into social publishing.</p>
+            <div class="tool-list"><span>n8n</span><span>Automation</span></div>
+          </div>
+          <a class="automation-work-card__link" href="https://drive.google.com/file/d/10SQJ7iIIDoWjIVQiD2caS9gGHVc17VB7/view?usp=drive_link" target="_blank" rel="noopener noreferrer" aria-label="Open Generate Image to Social Post">↗</a>
+        </article>
+<article class="automation-work-card">
+          <div class="automation-work-card__index">07</div>
+          <div class="automation-work-card__body">
+            <div class="project-type">n8n Automation</div>
+            <h3>Data Scraping</h3>
+            <p>Automated data collection and transformation workflow.</p>
+            <div class="tool-list"><span>n8n</span><span>Automation</span></div>
+          </div>
+          <a class="automation-work-card__link" href="https://drive.google.com/file/d/1kik-oFl0YbQYnf6E9yvKMt8VUmvGZkb7/view?usp=drive_link" target="_blank" rel="noopener noreferrer" aria-label="Open Data Scraping">↗</a>
+        </article>
+<article class="automation-work-card">
+          <div class="automation-work-card__index">08</div>
+          <div class="automation-work-card__body">
+            <div class="project-type">n8n Automation</div>
+            <h3>Daily Video Posting</h3>
+            <p>Recurring automated video publishing workflow.</p>
+            <div class="tool-list"><span>n8n</span><span>Automation</span></div>
+          </div>
+          <a class="automation-work-card__link" href="https://drive.google.com/file/d/1Pd6hPB0CRAuzhpMBfFa58Gu9LLPO87qM/view?usp=drive_link" target="_blank" rel="noopener noreferrer" aria-label="Open Daily Video Posting">↗</a>
+        </article>
+    </div>
+  </div>
+
+  <div class="portfolio-footer-actions">
+    <a class="btn btn--dark" href="proof-of-work.html">View All Work <span class="btn__arrow">→</span></a>
+    <a class="btn btn--outline" href="https://drive.google.com/drive/folders/1u092gy-B4LW8uMC9OKTmoucCMsCnrTej?usp=sharing" rel="noopener noreferrer" target="_blank">Open Full Portfolio ↗</a>
+  </div>
 </div>
 </section>
 <section aria-labelledby="process-title" class="section">
@@ -2824,5 +3287,43 @@ section[aria-labelledby="process-title"] .section-heading p {
   });
 })();
 </script>
+
+<script data-portfolio-tabs="true">
+(() => {
+  const tabs = Array.from(document.querySelectorAll('[data-portfolio-tab]'));
+  const panels = Array.from(document.querySelectorAll('[data-portfolio-panel]'));
+  if (!tabs.length || !panels.length) return;
+
+  const activate = (name, moveFocus = false) => {
+    tabs.forEach((tab) => {
+      const active = tab.dataset.portfolioTab === name;
+      tab.classList.toggle('is-active', active);
+      tab.setAttribute('aria-selected', active ? 'true' : 'false');
+      tab.tabIndex = active ? 0 : -1;
+      if (active && moveFocus) tab.focus();
+    });
+    panels.forEach((panel) => {
+      const active = panel.dataset.portfolioPanel === name;
+      panel.classList.toggle('is-active', active);
+      panel.hidden = !active;
+    });
+  };
+
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => activate(tab.dataset.portfolioTab));
+    tab.addEventListener('keydown', (event) => {
+      if (!['ArrowRight','ArrowLeft','Home','End'].includes(event.key)) return;
+      event.preventDefault();
+      let next = index;
+      if (event.key === 'ArrowRight') next = (index + 1) % tabs.length;
+      if (event.key === 'ArrowLeft') next = (index - 1 + tabs.length) % tabs.length;
+      if (event.key === 'Home') next = 0;
+      if (event.key === 'End') next = tabs.length - 1;
+      activate(tabs[next].dataset.portfolioTab, true);
+    });
+  });
+})();
+</script>
+
 </body>
 </html>
