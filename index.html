@@ -1412,7 +1412,158 @@ main > section,
 .site-footer {
   background: #05090D !important;
 }
-</style></head>
+</style>
+<style data-specialization-enhancement="true">
+/* ===== HOME / CORE STACK RIBBON ===== */
+.specialization-bar{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 18% 50%, rgba(157,255,62,.09), transparent 28%),
+    linear-gradient(90deg,#213846 0%,#294555 48%,#203744 100%) !important;
+  border-top:1px solid rgba(255,255,255,.07) !important;
+  border-bottom:1px solid rgba(157,255,62,.16) !important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.025), inset 0 -1px 0 rgba(0,0,0,.18);
+}
+.specialization-bar::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+  background:linear-gradient(110deg,transparent 0 38%,rgba(255,255,255,.035) 48%,transparent 58% 100%);
+}
+.specialization-shell{
+  min-height:68px;
+  display:grid;
+  grid-template-columns:auto minmax(0,1fr);
+  align-items:center;
+  gap:28px;
+}
+.specialization-label{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  flex:0 0 auto;
+  padding-right:27px;
+  border-right:1px solid rgba(255,255,255,.13);
+  color:#f5f8f9;
+  font-size:.69rem;
+  font-weight:900;
+  line-height:1;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+.specialization-label i{
+  width:25px;
+  height:25px;
+  display:grid;
+  place-items:center;
+  border:1px solid rgba(157,255,62,.36);
+  border-radius:50%;
+  background:rgba(157,255,62,.08);
+  box-shadow:0 0 0 5px rgba(157,255,62,.035);
+}
+.specialization-label i::before{
+  content:"";
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:var(--ref-lime,#9dff3e);
+  box-shadow:0 0 13px rgba(157,255,62,.7);
+}
+.specialization-list{
+  min-width:0;
+  display:flex !important;
+  align-items:center;
+  justify-content:space-between !important;
+  gap:0 !important;
+  padding:0 !important;
+  overflow-x:auto;
+  scrollbar-width:none;
+}
+.specialization-list::-webkit-scrollbar{display:none;}
+.specialization-list span{
+  position:relative;
+  flex:0 0 auto;
+  min-height:68px;
+  display:inline-flex !important;
+  align-items:center;
+  gap:9px !important;
+  padding:0 17px !important;
+  border:0 !important;
+  border-radius:0 !important;
+  background:transparent !important;
+  color:#d6e0e5 !important;
+  font-size:.69rem !important;
+  font-weight:800 !important;
+  letter-spacing:-.01em;
+  white-space:nowrap;
+  transition:color .2s ease,background-color .2s ease;
+}
+.specialization-list span::before{
+  content:"" !important;
+  width:5px !important;
+  height:5px !important;
+  flex:0 0 5px;
+  border-radius:50% !important;
+  background:var(--ref-lime,#9dff3e) !important;
+  box-shadow:0 0 10px rgba(157,255,62,.42) !important;
+}
+.specialization-list span::after{
+  content:"";
+  position:absolute;
+  right:0;
+  top:22px;
+  bottom:22px;
+  width:1px;
+  background:rgba(255,255,255,.095);
+}
+.specialization-list span:last-child::after{display:none;}
+.specialization-list span:hover{
+  color:#fff !important;
+  background:rgba(255,255,255,.035) !important;
+}
+
+@media (max-width:1180px){
+  .specialization-shell{gap:14px;}
+  .specialization-label{padding-right:18px;}
+  .specialization-list{justify-content:flex-start !important;}
+  .specialization-list span{padding-inline:15px !important;}
+}
+@media (max-width:760px){
+  .specialization-shell{
+    width:100% !important;
+    min-height:0;
+    grid-template-columns:1fr;
+    gap:0;
+  }
+  .specialization-label{
+    width:min(calc(100% - 28px),var(--container));
+    margin:0 auto;
+    padding:12px 0 10px;
+    border-right:0;
+    border-bottom:1px solid rgba(255,255,255,.08);
+    font-size:.63rem;
+  }
+  .specialization-label i{width:21px;height:21px;}
+  .specialization-list{
+    width:100%;
+    padding:0 14px !important;
+    scroll-snap-type:x proximity;
+  }
+  .specialization-list span{
+    min-height:50px;
+    padding-inline:14px !important;
+    font-size:.66rem !important;
+    scroll-snap-align:start;
+  }
+  .specialization-list span::after{top:16px;bottom:16px;}
+}
+</style>
+</head>
 <body data-page="home">
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
@@ -1460,7 +1611,21 @@ main > section,
 </div>
 </div>
 </section>
-<div aria-label="Core specialization" class="specialization-bar"><div class="container specialization-list"><span>GoHighLevel</span><span>CRM Automation</span><span>Sales Funnels</span><span>Websites</span><span>Zapier</span><span>Make</span><span>n8n</span><span>APIs &amp; Webhooks</span></div></div>
+<div aria-label="Core specialization" class="specialization-bar">
+  <div class="container specialization-shell">
+    <div class="specialization-label"><i aria-hidden="true"></i><span>Core Stack</span></div>
+    <div class="specialization-list" role="list">
+      <span role="listitem">GoHighLevel</span>
+      <span role="listitem">CRM Automation</span>
+      <span role="listitem">Sales Funnels</span>
+      <span role="listitem">Websites</span>
+      <span role="listitem">Zapier</span>
+      <span role="listitem">Make</span>
+      <span role="listitem">n8n</span>
+      <span role="listitem">APIs &amp; Webhooks</span>
+    </div>
+  </div>
+</div>
 <section aria-labelledby="services-title" class="section section--white">
 <div class="container">
 <div class="section-heading reveal"><div><div class="eyebrow">Services</div><h2 id="services-title">Digital systems built to support growth.</h2></div><p>From the first landing page visit to the final follow-up, every service is designed to make your customer journey clearer and your operations easier to manage.</p></div>
