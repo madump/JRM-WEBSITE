@@ -2328,52 +2328,139 @@ section[aria-labelledby="process-title"] .section-heading p {
 
 <style data-animated-hero="true">
 /* ==========================================================
-   HERO MEDIA — Google Drive asset supplied by user
-   No recreation, color filter, rotation, perspective, or crop.
-   Supports video/animation first, then image/GIF fallback.
+   HERO MEDIA — enlarged + subtle premium motion
+   The actual asset stays unchanged; animation is CSS/JS only.
    ========================================================== */
 .hero-artwork {
   position: relative;
   z-index: 3;
-  width: min(100%, 780px);
+  width: min(116%, 900px);
   min-width: 0;
-  margin: 0 auto;
+  margin-left: -2%;
+  margin-right: -14%;
+  --hero-scale: 1.18;
+  --parallax-x: 0px;
+  --parallax-y: 0px;
+  isolation: isolate;
 }
+
+/* Soft neon aura behind the automation artwork. */
+.hero-artwork::before {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  inset: 13% 4% 11% 8%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 54% 50%, rgba(157,255,62,.18), rgba(157,255,62,.07) 34%, transparent 68%);
+  filter: blur(34px);
+  opacity: .68;
+  animation: heroAuraPulse 5.8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* Faint moving highlight to make the object feel more dimensional. */
+.hero-artwork::after {
+  content: "";
+  position: absolute;
+  z-index: 4;
+  top: 12%;
+  left: 7%;
+  width: 86%;
+  height: 76%;
+  border-radius: 34px;
+  background: linear-gradient(112deg, transparent 25%, rgba(255,255,255,.07) 45%, transparent 62%);
+  transform: translateX(-42%);
+  opacity: 0;
+  mix-blend-mode: screen;
+  animation: heroSheen 8s ease-in-out infinite;
+  pointer-events: none;
+}
+
 .hero-artwork__inner {
   position: relative;
   width: 100%;
+  overflow: visible;
+  transform: translate3d(var(--parallax-x), var(--parallax-y), 0);
+  transition: transform 260ms cubic-bezier(.2,.8,.2,1);
+  will-change: transform;
 }
+
 .hero-artwork__video,
 .hero-artwork__image {
   display: block;
   width: 100%;
   height: auto;
-  max-width: 100%;
+  max-width: none;
   margin: 0 auto;
   border: 0;
   background: transparent;
   object-fit: contain;
   object-position: center;
   box-shadow: none;
-  filter: none !important;
+  filter: drop-shadow(0 28px 46px rgba(0,0,0,.28)) !important;
   opacity: 1 !important;
-  transform: none !important;
+  transform-origin: center center !important;
+  animation: heroMediaFloat 5.6s ease-in-out infinite;
+  will-change: transform;
 }
-.hero-artwork__video {
-  aspect-ratio: auto;
-}
+
+.hero-artwork__video { aspect-ratio: auto; }
 .hero-artwork__image[hidden],
-.hero-artwork__video[hidden] {
-  display: none !important;
+.hero-artwork__video[hidden] { display: none !important; }
+
+@keyframes heroMediaFloat {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(var(--hero-scale)) rotate(0deg); }
+  50%      { transform: translate3d(0, -14px, 0) scale(var(--hero-scale)) rotate(-.45deg); }
 }
+
+@keyframes heroAuraPulse {
+  0%, 100% { transform: scale(.94); opacity: .46; }
+  50%      { transform: scale(1.08); opacity: .82; }
+}
+
+@keyframes heroSheen {
+  0%, 62%, 100% { transform: translateX(-44%); opacity: 0; }
+  70% { opacity: .34; }
+  84% { transform: translateX(46%); opacity: 0; }
+}
+
 @media (max-width: 1180px) {
-  .hero-artwork { width: min(100%, 720px); }
+  .hero-artwork {
+    width: min(110%, 800px);
+    margin-left: -1%;
+    margin-right: -9%;
+    --hero-scale: 1.12;
+  }
 }
+
 @media (max-width: 900px) {
-  .hero-artwork { width: min(100%, 760px); margin-inline: auto; }
+  .hero-artwork {
+    width: min(100%, 760px);
+    margin-inline: auto;
+    --hero-scale: 1.08;
+  }
+  .hero-artwork::after { display: none; }
 }
+
 @media (max-width: 640px) {
-  .hero-artwork { width: 100%; }
+  .hero-artwork {
+    width: 100%;
+    --hero-scale: 1.03;
+  }
+  @keyframes heroMediaFloat {
+    0%, 100% { transform: translate3d(0,0,0) scale(var(--hero-scale)); }
+    50%      { transform: translate3d(0,-8px,0) scale(var(--hero-scale)); }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-artwork::before,
+  .hero-artwork::after,
+  .hero-artwork__video,
+  .hero-artwork__image { animation: none !important; }
+  .hero-artwork__inner { transform: none !important; transition: none !important; }
+  .hero-artwork__video,
+  .hero-artwork__image { transform: scale(var(--hero-scale)) !important; }
 }
 </style>
 </head>
@@ -2813,6 +2900,29 @@ section[aria-labelledby="process-title"] .section-heading p {
 
 </script>
 
+
+<script data-hero-parallax="true">
+(() => {
+  const artwork = document.querySelector('.hero-artwork');
+  if (!artwork || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!window.matchMedia('(pointer: fine)').matches) return;
+
+  const reset = () => {
+    artwork.style.setProperty('--parallax-x', '0px');
+    artwork.style.setProperty('--parallax-y', '0px');
+  };
+
+  artwork.addEventListener('pointermove', (event) => {
+    const rect = artwork.getBoundingClientRect();
+    const x = (event.clientX - rect.left) / rect.width - .5;
+    const y = (event.clientY - rect.top) / rect.height - .5;
+    artwork.style.setProperty('--parallax-x', `${(x * 14).toFixed(2)}px`);
+    artwork.style.setProperty('--parallax-y', `${(y * 10).toFixed(2)}px`);
+  });
+
+  artwork.addEventListener('pointerleave', reset);
+})();
+</script>
 
 <script data-hero-drive-fallback="true">
 (() => {
