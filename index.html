@@ -2664,6 +2664,158 @@ body.portfolio-modal-open{overflow:hidden}
 }
 </style>
 
+
+<style data-booking-modal-style="true">
+/* ===== GOOGLE CALENDAR BOOKING MODAL ===== */
+body.calendar-modal-open { overflow: hidden; }
+
+.booking-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 5000;
+  display: none;
+  place-items: center;
+  padding: 24px;
+}
+
+.booking-modal.is-open { display: grid; }
+
+.booking-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  background: rgba(3, 8, 12, .82);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  cursor: pointer;
+}
+
+.booking-modal__dialog {
+  position: relative;
+  z-index: 1;
+  width: min(980px, 100%);
+  height: min(790px, calc(100svh - 48px));
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  overflow: hidden;
+  border: 1px solid rgba(157,255,62,.18);
+  border-radius: 24px;
+  background: #0c151d;
+  box-shadow: 0 34px 100px rgba(0,0,0,.5);
+  transform: translateY(14px) scale(.985);
+  opacity: 0;
+  transition: transform .2s ease, opacity .2s ease;
+}
+
+.booking-modal.is-open .booking-modal__dialog {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+.booking-modal__header {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 14px 18px 14px 22px;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+  background: #0a131a;
+}
+
+.booking-modal__title-wrap { min-width: 0; }
+.booking-modal__eyebrow {
+  display: block;
+  margin-bottom: 2px;
+  color: #9dff3e;
+  font-size: .64rem;
+  font-weight: 900;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+}
+.booking-modal__title {
+  margin: 0;
+  color: #f4f7f8;
+  font: 800 1rem/1.25 "Manrope", "Inter", sans-serif;
+  letter-spacing: -.02em;
+}
+
+.booking-modal__close {
+  flex: 0 0 42px;
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 50%;
+  background: #172934;
+  color: #fff;
+  font-size: 1.15rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: transform .2s ease, background-color .2s ease, border-color .2s ease;
+}
+.booking-modal__close:hover {
+  transform: rotate(4deg);
+  background: #203744;
+  border-color: rgba(157,255,62,.28);
+}
+.booking-modal__close:focus-visible {
+  outline: 3px solid rgba(157,255,62,.42);
+  outline-offset: 3px;
+}
+
+.booking-modal__frame-wrap {
+  min-height: 0;
+  background: #fff;
+}
+.booking-modal__frame {
+  width: 100%;
+  height: 100%;
+  min-height: 560px;
+  display: block;
+  border: 0;
+  background: #fff;
+}
+
+.booking-modal__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 18px;
+  border-top: 1px solid rgba(255,255,255,.08);
+  background: #0a131a;
+  color: #8d9ca7;
+  font-size: .72rem;
+}
+.booking-modal__fallback {
+  color: #9dff3e;
+  font-weight: 800;
+  white-space: nowrap;
+}
+.booking-modal__fallback:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .booking-modal { padding: 8px; }
+  .booking-modal__dialog {
+    width: 100%;
+    height: calc(100svh - 16px);
+    border-radius: 16px;
+  }
+  .booking-modal__header { min-height: 62px; padding: 10px 12px 10px 16px; }
+  .booking-modal__title { font-size: .9rem; }
+  .booking-modal__close { width: 40px; height: 40px; flex-basis: 40px; }
+  .booking-modal__frame { min-height: 0; }
+  .booking-modal__footer { padding: 10px 14px; }
+  .booking-modal__footer span { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .booking-modal__dialog { transition: none; }
+}
+</style>
+
 </head>
 <body data-page="home">
 <a class="skip-link" href="#main">Skip to content</a>
@@ -2690,7 +2842,7 @@ body.portfolio-modal-open{overflow:hidden}
 <p>I help businesses improve lead generation, simplify follow-ups, manage customer relationships, and save time through GoHighLevel, Zapier, CRM automation, and conversion-focused web design.</p>
 <div class="button-row">
 <a class="btn btn--accent" href="proof-of-work.html">View My Work <span class="btn__arrow">→</span></a>
-<a class="btn btn--ghost" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1s9ZiewEGBX1Z7alvve0D0L3Dcf9KeWCT-qWfswH8RLhlqgSk2J8IrSImAoCV7tNnxlUmfkzgS?gv=true" rel="noopener noreferrer" target="_blank">Book a Discovery Call ↗</a>
+<a class="btn btn--ghost" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1s9ZiewEGBX1Z7alvve0D0L3Dcf9KeWCT-qWfswH8RLhlqgSk2J8IrSImAoCV7tNnxlUmfkzgS?gv=true" rel="noopener noreferrer" target="_blank" data-calendar-open aria-haspopup="dialog">Book a Discovery Call ↗</a>
 </div>
 <div class="hero-note"><span></span><span>Funnels • CRM • automation • responsive web development</span></div>
 </div>
@@ -2850,7 +3002,7 @@ body.portfolio-modal-open{overflow:hidden}
 <div class="process-line"><article class="process-step reveal"><span class="process-step__num">01</span><h3>Discovery</h3><p>Understand the business, audience, goals, tools, and current challenges.</p></article><article class="process-step reveal" data-delay="1"><span class="process-step__num">02</span><h3>Strategy</h3><p>Plan the funnel, workflow, integrations, content, and customer journey.</p></article><article class="process-step reveal" data-delay="2"><span class="process-step__num">03</span><h3>Build &amp; Test</h3><p>Develop the system, map data, test automations, and resolve errors.</p></article><article class="process-step reveal" data-delay="3"><span class="process-step__num">04</span><h3>Launch &amp; Improve</h3><p>Deploy the project, document the process, and optimize performance.</p></article></div>
 </div>
 </section>
-<section class="section section--white cta-section"><div class="container"><div class="cta-panel reveal"><div class="cta-panel__copy"><div class="eyebrow">Start a project</div><h2>Need this built for your business?</h2><p>Tell me what you need, what you use now, and what you want working better.</p></div><div class="button-row"><a class="btn btn--accent" href="contact.html">Start a Project</a><a class="btn btn--ghost" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1s9ZiewEGBX1Z7alvve0D0L3Dcf9KeWCT-qWfswH8RLhlqgSk2J8IrSImAoCV7tNnxlUmfkzgS?gv=true" rel="noopener noreferrer" target="_blank">Book an Appointment ↗</a></div></div></div></section>
+<section class="section section--white cta-section"><div class="container"><div class="cta-panel reveal"><div class="cta-panel__copy"><div class="eyebrow">Start a project</div><h2>Need this built for your business?</h2><p>Tell me what you need, what you use now, and what you want working better.</p></div><div class="button-row"><a class="btn btn--accent" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1s9ZiewEGBX1Z7alvve0D0L3Dcf9KeWCT-qWfswH8RLhlqgSk2J8IrSImAoCV7tNnxlUmfkzgS?gv=true" rel="noopener noreferrer" target="_blank" data-calendar-open aria-haspopup="dialog">Book an Appointment ↗</a></div></div></div></section>
 </main>
 <footer class="site-footer">
 <div class="container">
@@ -3173,6 +3325,106 @@ body.portfolio-modal-open{overflow:hidden}
       const first = focusables[0], last = focusables[focusables.length - 1];
       if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
       else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+    }
+  });
+})();
+</script>
+
+
+<!-- Booking Calendar Modal -->
+<div class="booking-modal" id="booking-calendar" aria-hidden="true">
+  <button class="booking-modal__backdrop" type="button" aria-label="Close booking calendar" data-calendar-close></button>
+  <div class="booking-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="booking-calendar-title">
+    <div class="booking-modal__header">
+      <div class="booking-modal__title-wrap">
+        <span class="booking-modal__eyebrow">Schedule a call</span>
+        <h2 class="booking-modal__title" id="booking-calendar-title">Book an Appointment</h2>
+      </div>
+      <button class="booking-modal__close" type="button" aria-label="Close booking calendar" data-calendar-close>×</button>
+    </div>
+    <div class="booking-modal__frame-wrap">
+      <iframe
+        class="booking-modal__frame"
+        title="Book an appointment"
+        data-calendar-frame
+        data-src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1s9ZiewEGBX1Z7alvve0D0L3Dcf9KeWCT-qWfswH8RLhlqgSk2J8IrSImAoCV7tNnxlUmfkzgS?gv=true"
+        loading="lazy"
+        referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    </div>
+    <div class="booking-modal__footer">
+      <span>Select a date and time that works for you.</span>
+      <a class="booking-modal__fallback" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1s9ZiewEGBX1Z7alvve0D0L3Dcf9KeWCT-qWfswH8RLhlqgSk2J8IrSImAoCV7tNnxlUmfkzgS?gv=true" target="_blank" rel="noopener noreferrer">Open calendar in a new tab ↗</a>
+    </div>
+  </div>
+</div>
+
+<script data-booking-modal-script="true">
+(() => {
+  'use strict';
+
+  const bookingModal = document.getElementById('booking-calendar');
+  if (!bookingModal) return;
+
+  const bookingDialog = bookingModal.querySelector('.booking-modal__dialog');
+  const bookingClose = bookingModal.querySelector('.booking-modal__close');
+  const bookingFrame = bookingModal.querySelector('[data-calendar-frame]');
+  const openers = document.querySelectorAll('[data-calendar-open]');
+  const closers = bookingModal.querySelectorAll('[data-calendar-close]');
+  const focusableSelector = 'a[href], button:not([disabled]), iframe, [tabindex]:not([tabindex="-1"])';
+  let bookingLastFocused = null;
+
+  const openBookingModal = (trigger) => {
+    bookingLastFocused = trigger || document.activeElement;
+    if (bookingFrame && !bookingFrame.src) {
+      bookingFrame.src = bookingFrame.dataset.src;
+    }
+    bookingModal.classList.add('is-open');
+    bookingModal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('calendar-modal-open');
+    window.setTimeout(() => bookingClose?.focus(), 20);
+  };
+
+  const closeBookingModal = () => {
+    bookingModal.classList.remove('is-open');
+    bookingModal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('calendar-modal-open');
+    if (bookingLastFocused && typeof bookingLastFocused.focus === 'function') {
+      bookingLastFocused.focus();
+    }
+  };
+
+  openers.forEach((opener) => {
+    opener.addEventListener('click', (event) => {
+      event.preventDefault();
+      openBookingModal(opener);
+    });
+  });
+
+  closers.forEach((closer) => closer.addEventListener('click', closeBookingModal));
+
+  document.addEventListener('keydown', (event) => {
+    if (!bookingModal.classList.contains('is-open')) return;
+
+    if (event.key === 'Escape') {
+      event.preventDefault();
+      closeBookingModal();
+      return;
+    }
+
+    if (event.key === 'Tab' && bookingDialog) {
+      const focusable = [...bookingDialog.querySelectorAll(focusableSelector)]
+        .filter((el) => !el.hasAttribute('disabled') && el.getAttribute('aria-hidden') !== 'true');
+      if (!focusable.length) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
     }
   });
 })();
