@@ -1812,6 +1812,178 @@ main > section,
 .results-heading > div { max-width: 900px; }
 .results-intro, .results-source { display: none !important; }
 
+
+
+/* ===== WORK PROCESS — EDITORIAL PROCESS RAIL ===== */
+section[aria-labelledby="process-title"] {
+  position: relative;
+  overflow: hidden;
+}
+section[aria-labelledby="process-title"]::after {
+  content: "";
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  right: -150px;
+  top: 20px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(157,255,62,.055), transparent 68%);
+  pointer-events: none;
+}
+section[aria-labelledby="process-title"] .section-heading {
+  grid-template-columns: minmax(270px,.7fr) minmax(320px,1fr) !important;
+  gap: clamp(48px,8vw,130px) !important;
+  align-items: end !important;
+  margin-bottom: 0 !important;
+}
+section[aria-labelledby="process-title"] .section-heading h2 {
+  max-width: 420px;
+}
+section[aria-labelledby="process-title"] .section-heading p {
+  max-width: 470px;
+  margin: 0 0 8px;
+  padding: 0 !important;
+  color: #8fa0aa;
+  font-size: .86rem;
+}
+.process-line {
+  position: relative !important;
+  display: grid !important;
+  grid-template-columns: repeat(4,minmax(0,1fr)) !important;
+  gap: 0 !important;
+  margin: 72px 0 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  overflow: visible !important;
+}
+.process-line::before {
+  content: "" !important;
+  display: block !important;
+  position: absolute !important;
+  left: 0 !important;
+  right: 0 !important;
+  top: 29px !important;
+  height: 1px !important;
+  background: linear-gradient(90deg, #9dff3e 0 25%, rgba(157,255,62,.28) 25% 100%) !important;
+}
+.process-step {
+  position: relative !important;
+  min-height: 230px !important;
+  display: block !important;
+  padding: 82px 34px 24px 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+}
+.process-step:not(:last-child) {
+  border-right: 1px solid rgba(255,255,255,.07) !important;
+  margin-right: 34px;
+}
+.process-step__num {
+  position: absolute !important;
+  z-index: 3 !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 58px !important;
+  height: 58px !important;
+  display: grid !important;
+  place-items: center !important;
+  border-radius: 50% !important;
+  border: 1px solid rgba(157,255,62,.48) !important;
+  background: #0d1b24 !important;
+  color: #9dff3e !important;
+  box-shadow: 0 0 0 8px #07131b !important;
+  font: 800 .66rem/1 "Manrope",sans-serif !important;
+  letter-spacing: .08em;
+}
+.process-step h3 {
+  margin: 0 0 14px !important;
+  color: #f4f7f8 !important;
+  font-size: clamp(1rem,1.5vw,1.22rem) !important;
+  line-height: 1.2 !important;
+}
+.process-step h3::after {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 2px;
+  margin-top: 14px;
+  background: #9dff3e;
+  opacity: .75;
+}
+.process-step p {
+  max-width: 245px;
+  margin: 0 !important;
+  color: #81939e !important;
+  font-size: .76rem !important;
+  line-height: 1.7 !important;
+}
+.process-step:hover .process-step__num {
+  background: #9dff3e !important;
+  color: #07131b !important;
+  border-color: #9dff3e !important;
+}
+.process-step:hover h3 { color: #9dff3e !important; }
+
+@media (max-width: 900px) {
+  section[aria-labelledby="process-title"] .section-heading {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+  .process-line {
+    grid-template-columns: repeat(2,minmax(0,1fr)) !important;
+    gap: 46px 32px !important;
+    margin-top: 52px !important;
+  }
+  .process-line::before { display: none !important; }
+  .process-step {
+    min-height: 190px !important;
+    padding: 70px 22px 20px 0 !important;
+    border-top: 1px solid rgba(255,255,255,.10) !important;
+  }
+  .process-step:not(:last-child) {
+    border-right: 0 !important;
+    margin-right: 0 !important;
+  }
+  .process-step__num {
+    top: -29px !important;
+    box-shadow: 0 0 0 7px #07131b !important;
+  }
+}
+@media (max-width: 620px) {
+  .process-line {
+    grid-template-columns: 1fr !important;
+    gap: 0 !important;
+    margin-top: 42px !important;
+    padding-left: 66px !important;
+  }
+  .process-line::after {
+    content: "";
+    position: absolute;
+    left: 28px;
+    top: 0;
+    bottom: 22px;
+    width: 1px;
+    background: linear-gradient(#9dff3e, rgba(157,255,62,.12));
+  }
+  .process-step {
+    min-height: 0 !important;
+    padding: 25px 0 30px !important;
+    border-top: 0 !important;
+    border-bottom: 1px solid rgba(255,255,255,.08) !important;
+  }
+  .process-step:last-child { border-bottom: 0 !important; }
+  .process-step__num {
+    top: 19px !important;
+    left: -66px !important;
+    width: 56px !important;
+    height: 56px !important;
+    box-shadow: 0 0 0 7px #07131b !important;
+  }
+  .process-step p { max-width: 100%; }
+}
+
 </style>
 <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
 <title>Jhim Rick Marco | GoHighLevel &amp; Automation Specialist</title>
@@ -2153,6 +2325,69 @@ main > section,
   .specialization-list span::after{top:16px;bottom:16px;}
 }
 </style>
+
+<style data-animated-hero="true">
+/* ==========================================================
+   HERO ARTWORK — pixel-faithful source image
+   No color filters, no rotation, no perspective, no crop.
+   Only a subtle vertical float is applied to the whole image.
+   ========================================================== */
+.hero-artwork {
+  position: relative;
+  z-index: 3;
+  width: min(100%, 760px);
+  min-width: 0;
+  margin: 0 auto;
+}
+
+.hero-artwork__inner {
+  position: relative;
+  width: 100%;
+  animation: heroArtworkFloatExact 7.5s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+.hero-artwork__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  margin: 0 auto;
+  user-select: none;
+  pointer-events: none;
+  -webkit-user-drag: none;
+  filter: none !important;
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* Keep the old overlay element inert so it cannot alter the artwork. */
+.hero-artwork__pulse {
+  display: none !important;
+}
+
+@keyframes heroArtworkFloatExact {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(0, -6px, 0); }
+}
+
+@media (max-width: 1180px) {
+  .hero-artwork { width: min(100%, 700px); }
+}
+
+@media (max-width: 900px) {
+  .hero-artwork { width: min(100%, 760px); margin-inline: auto; }
+}
+
+@media (max-width: 640px) {
+  .hero-artwork { width: 100%; }
+  .hero-artwork__inner { animation-duration: 8.5s; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-artwork__inner { animation: none !important; transform: none !important; }
+}
+</style>
 </head>
 <body data-page="home">
 <a class="skip-link" href="#main">Skip to content</a>
@@ -2182,22 +2417,10 @@ main > section,
 </div>
 <div class="hero-note"><span></span><span>Funnels • CRM • automation • responsive web development</span></div>
 </div>
-<div aria-label="Connected lead management system illustration" class="system-visual reveal is-visible">
-<div class="system-panel">
-<div class="panel-top"><span>Lead System / Active Workflow</span><div class="panel-dots"><i></i><i></i><i></i></div></div>
-<div class="panel-body">
-<div class="status-strip"><div class="metric-chip"><small>Lead</small><strong class="good">Captured</strong></div><div class="metric-chip"><small>CRM</small><strong>Organized</strong></div><div class="metric-chip"><small>Follow-up</small><strong>Automated</strong></div></div>
-<div class="flow-stack">
-<div class="flow-node"><span class="flow-icon">01</span><div><strong>Landing Page</strong><small>Lead generation + conversion path</small></div></div>
-<div class="flow-node"><span class="flow-icon">02</span><div><strong>GoHighLevel CRM</strong><small>Pipeline, contact, calendar, opportunity</small></div></div>
-<div class="flow-node"><span class="flow-icon">03</span><div><strong>Workflow Automation</strong><small>Email, SMS, routing, reminders</small></div></div>
-<div class="flow-node"><span class="flow-icon">04</span><div><strong>Appointment &amp; Follow-Up</strong><small>Consistent next-step execution</small></div></div>
-</div>
-</div>
-</div>
-<div class="float-badge float-badge--1"><span></span>GoHighLevel</div>
-<div class="float-badge float-badge--2">Zapier • APIs • Webhooks</div>
-<div class="float-badge float-badge--3">Workflow tested ✓</div>
+<div class="hero-artwork reveal is-visible" id="automation-ecosystem" role="img" aria-label="GoHighLevel automation ecosystem showing lead capture, CRM, automation, follow-up, booking, AI, integrations, and business growth">
+  <div class="hero-artwork__inner">
+    <img class="hero-artwork__image" src="assets/images/ghl-automation-ecosystem.png" alt="GoHighLevel automation ecosystem with lead capture, CRM, automation, follow-up, booking, AI assistant, integrations, and growth" width="1448" height="1086" loading="eager" decoding="async" fetchpriority="high"/>
+  </div>
 </div>
 </div>
 </section>
@@ -2596,5 +2819,7 @@ main > section,
   }
 })();
 
-</script></body>
+</script>
+
+</body>
 </html>
