@@ -2463,6 +2463,38 @@ section[aria-labelledby="process-title"] .section-heading p {
   .hero-artwork__image { transform: scale(var(--hero-scale)) !important; }
 }
 </style>
+
+<style id="hero-headline-alignment-fix">
+/* Headline proportion fix: slightly smaller and more balanced against the hero artwork. */
+@media (min-width: 901px) {
+  .hero-copy h1.hero-title {
+    width: min(100%, 660px) !important;
+    max-width: 660px !important;
+    font-size: clamp(3.1rem, 3.78vw, 4rem) !important;
+    line-height: .96 !important;
+    letter-spacing: -.052em !important;
+  }
+
+  /* Keep the multi-line headline visually consistent. */
+  .hero-title > span:nth-child(3),
+  .hero-title > span:nth-child(4) {
+    font-size: 1em !important;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1120px) {
+  .hero-copy h1.hero-title {
+    font-size: clamp(2.95rem, 4.45vw, 3.5rem) !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-copy h1.hero-title {
+    font-size: clamp(2.5rem, 12vw, 3.55rem) !important;
+    line-height: .96 !important;
+  }
+}
+</style>
 </head>
 <body data-page="home">
 <a class="skip-link" href="#main">Skip to content</a>
