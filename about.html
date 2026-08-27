@@ -1,13 +1,14 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#0c151d">
-<link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#0c151d" name="theme-color"/>
+<link href="assets/icons/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
 <style>
 :root {
   --ink: #0a1220;
@@ -1165,87 +1166,386 @@ section[aria-labelledby="process-title"] .section-heading p{padding-top:4px;}
   .delivery-flow{grid-template-columns:1fr;}
 }
 
+
+
+/* === FULL-WIDTH SECTION OVERRIDE ===
+   Removes the dark outer canvas/gutters from the reference layout.
+   Section backgrounds now run edge-to-edge while .container keeps content centered. */
+html, body {
+  width: 100%;
+  max-width: none;
+}
+.site-header,
+main,
+.site-footer {
+  width: 100% !important;
+  max-width: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+.site-header {
+  top: 0 !important;
+  border-left: 0 !important;
+  border-right: 0 !important;
+}
+main > section,
+.hero,
+.page-hero,
+.specialization-bar,
+.section,
+.section--tight,
+.section--dark,
+.section--white,
+.section--accent,
+.proof-band {
+  width: 100% !important;
+  max-width: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+.site-footer {
+  border-left: 0 !important;
+  border-right: 0 !important;
+}
+@media (max-width: 1100px) {
+  .site-header, main, .site-footer { width: 100% !important; }
+}
+
 </style>
 <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
-<title>About Jhim Rick Marco | GoHighLevel & Digital Systems Specialist</title>
-<meta name="description" content="Learn how Jhim Rick Marco approaches GoHighLevel, CRM automation, web development, integrations, and marketing technology with a business-first systems mindset.">
-<meta property="og:title" content="About Jhim Rick Marco | Digital Systems Specialist"><meta property="og:description" content="Technical thinking, business-focused execution across CRM, automation, web, funnels, and integrations."><meta property="og:image" content="https://www.jrmrc.space/assets/images/og-placeholder.svg"><meta property="og:type" content="profile">
-<link rel="canonical" href="https://www.jrmrc.space/about.html">
-</head>
+<title>About Jhim Rick Marco | GoHighLevel &amp; Automation Specialist</title>
+<meta content="About Jhim Rick Marco, an Information Technology graduate and GoHighLevel specialist focused on automation, web development, CRM systems, and creative production." name="description"/>
+<meta content="About Jhim Rick Marco | GoHighLevel &amp; Automation Specialist" property="og:title"/><meta content="About Jhim Rick Marco, an Information Technology graduate and GoHighLevel specialist focused on automation, web development, CRM systems, and creative production." property="og:description"/><meta content="https://www.jrmrc.space/assets/images/og-placeholder.svg" property="og:image"/><meta content="profile" property="og:type"/>
+<link href="https://www.jrmrc.space/about.html" rel="canonical"/>
+<style data-source-content="true">
+/* Source-content integration */
+.source-list { margin: 18px 0 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+.source-list li { position: relative; padding-left: 20px; color: var(--muted); }
+.source-list li::before { content: ""; position: absolute; left: 0; top: .72em; width: 7px; height: 7px; border-radius: 2px; background: var(--accent); box-shadow: 0 0 0 4px rgba(214,255,75,.08); }
+.section--dark .source-list li, .service-card.is-dark .source-list li { color: #b9c6d7; }
+.source-contact { display: grid; gap: 10px; margin-top: 26px; }
+.source-contact a { display: flex; justify-content: space-between; align-items: center; gap: 14px; padding: 14px 16px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface-2); color: var(--text); font-weight: 800; transition: .2s ease; }
+.source-contact a:hover { border-color: rgba(214,255,75,.65); transform: translateX(3px); }
+.source-contact a span { color: var(--accent); }
+.service-card .source-list { margin-top: 16px; }
+.service-card .source-list li { font-size: .92rem; }
+.results-six { grid-template-columns: repeat(3, 1fr); }
+.tool-logo-grid { display: grid; grid-template-columns: repeat(5, minmax(0,1fr)); gap: 12px; }
+.tool-logo-item { min-height: 128px; padding: 18px 12px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface-2); display: grid; place-items: center; align-content: center; gap: 10px; text-align: center; }
+.tool-logo-item img { width: 44px; height: 44px; object-fit: contain; border-radius: 10px; background: #fff; padding: 4px; }
+.tool-logo-item span { font-size: .82rem; font-weight: 800; color: var(--text); }
+.project-source-link { margin-top: 8px; }
+.project-source-link small { color: var(--muted); }
+.exp-item .source-list { margin-top: 20px; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px 18px; }
+.contact-side-note { margin-top: 18px; padding: 16px; border-left: 3px solid var(--accent); background: rgba(214,255,75,.06); color: var(--muted); }
+.footer-contact { display: grid; gap: 8px; }
+.footer-contact a { color: #b8c6d6; }
+.footer-contact a:hover { color: var(--accent); }
+.proof-card .project-actions { flex-wrap: wrap; }
+.proof-card .project-actions .btn { flex: 1 1 150px; }
+@media (max-width: 980px) {
+  .results-six { grid-template-columns: repeat(2, 1fr); }
+  .tool-logo-grid { grid-template-columns: repeat(3, minmax(0,1fr)); }
+  .exp-item .source-list { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .results-six, .tool-logo-grid { grid-template-columns: 1fr; }
+  .source-contact a { align-items: flex-start; flex-direction: column; }
+}
+
+/* PREVIEW RELIABILITY FIX: content stays visible even if JS is blocked. */
+.reveal, .reveal[data-delay] {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+</style></head>
 <body data-page="about">
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
-  <div class="container nav-wrap">
-    <a class="brand" href="index.html" aria-label="Jhim Rick Marco home">
-      <span class="brand-mark" aria-hidden="true">JM</span>
-      <span class="brand-text"><strong>Jhim Rick Marco</strong><span>Digital Systems Specialist</span></span>
-    </a>
-    <nav class="nav-links" id="primary-navigation" aria-label="Primary navigation">
-      <a class="nav-link" data-nav="home" href="index.html">Home</a>
-      <a class="nav-link" data-nav="about" href="about.html">About</a>
-      <a class="nav-link" data-nav="services" href="services.html">Services</a>
-      <a class="nav-link" data-nav="proof" href="proof-of-work.html">Proof of Work</a>
-      <a class="btn btn--accent nav-cta" href="index.html#contact">Let's Work Together</a>
-    </nav>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation menu">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
+<div class="container nav-wrap">
+<a aria-label="Jhim Rick Marco home" class="brand" href="index.html">
+<span aria-hidden="true" class="brand-mark">JM</span>
+<span class="brand-text"><strong>Jhim Rick Marco</strong><span>GoHighLevel &amp; Automation Specialist</span></span>
+</a>
+<nav aria-label="Primary navigation" class="nav-links" id="primary-navigation">
+<a class="nav-link" data-nav="home" href="index.html">Home</a>
+<a class="nav-link" data-nav="about" href="about.html">About</a>
+<a class="nav-link" data-nav="services" href="services.html">Services</a>
+<a class="nav-link" data-nav="proof" href="proof-of-work.html">Proof of Work</a>
+<a class="btn btn--accent nav-cta" href="index.html#contact">Let's Work Together</a>
+</nav>
+<button aria-controls="primary-navigation" aria-expanded="false" aria-label="Open navigation menu" class="menu-toggle" type="button"><span></span><span></span><span></span></button>
+</div>
 </header>
 <main id="main">
-  <section class="page-hero"><div class="container page-hero-grid"><div class="reveal is-visible"><div class="eyebrow">About</div><h1>Technical thinking. Business-focused execution.</h1><p>I’m Jhim Rick Marco, an Information Technology graduate and digital systems specialist focused on GoHighLevel, CRM automation, web development, integrations, and marketing technology.</p></div><div class="page-hero-side reveal is-visible"><strong>Build for the real process.</strong><span>Understand the bottleneck → map the system → build the simplest reliable solution.</span></div></div></section>
-
-  <section class="section" aria-labelledby="about-intro-title"><div class="container about-intro"><figure class="portrait-card reveal"><img src="assets/images/profile-placeholder.svg" alt="Placeholder for an approved professional portrait of Jhim Rick Marco" width="900" height="1100"><figcaption class="portrait-note">Portrait placeholder — replace with the approved image from the existing site when available.</figcaption></figure><div class="bio-copy reveal"><div class="eyebrow">My approach</div><h2 id="about-intro-title">The goal isn’t simply to build something. It’s to solve the process.</h2><p class="lead">I work from the business problem outward: what happens now, where the handoff breaks, which tools are involved, and what the desired outcome should be.</p><p>That approach keeps the implementation grounded. A workflow should not exist because automation is trendy. A landing page should not exist just because a business “needs a page.” Every part should have a job inside a larger customer or operational journey.</p><ul class="approach-list"><li>The business problem</li><li>The current process</li><li>The customer journey</li><li>The technology involved</li><li>The bottlenecks</li><li>The required outcome</li></ul></div></div></section>
-
-  <section class="section section--white" aria-labelledby="skills-title"><div class="container"><div class="section-heading reveal"><div><div class="eyebrow">Skills + experience</div><h2 id="skills-title">A practical toolkit for connected digital systems.</h2></div><p>These skills are grouped around the work they support rather than separated into résumé-style pages.</p></div><div class="skill-columns"><section class="skill-group reveal"><h3>CRM & Automation</h3><ul><li>GoHighLevel</li><li>CRM Systems</li><li>Workflow Automation</li><li>Zapier</li><li>Make</li><li>n8n</li><li>APIs</li><li>Webhooks</li><li>Data Mapping</li><li>Conditional Logic</li><li>Lead Routing</li><li>Appointment Automation</li><li>Workflow Testing</li><li>Troubleshooting</li></ul></section><section class="skill-group reveal" data-delay="1"><h3>Web Development</h3><ul><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Responsive Design</li><li>Landing Pages</li><li>Sales Funnels</li><li>Business Websites</li><li>WordPress</li><li>Domain Configuration</li></ul></section><section class="skill-group reveal" data-delay="2"><h3>Marketing & Creative</h3><ul><li>Canva</li><li>CapCut</li><li>Graphic Design</li><li>Video Editing</li><li>Email Campaigns</li><li>Content Creation</li><li>Paid Advertising</li><li>Analytics</li></ul></section></div></div></section>
-
-  <section class="section" aria-labelledby="tools-title"><div class="container"><div class="section-heading reveal"><div><div class="eyebrow">Tools & platforms</div><h2 id="tools-title">Comfortable across the stack.</h2></div><p>Consistent visual badges keep the focus on capability without turning the page into a wall of oversized logos.</p></div><div class="tool-grid reveal">
-    <div class="tool-item"><span class="tool-mark">GHL</span><span>GoHighLevel</span></div><div class="tool-item"><span class="tool-mark">WP</span><span>WordPress</span></div><div class="tool-item"><span class="tool-mark">Z</span><span>Zapier</span></div><div class="tool-item"><span class="tool-mark">M</span><span>Make</span></div><div class="tool-item"><span class="tool-mark">N8</span><span>n8n</span></div><div class="tool-item"><span class="tool-mark">HS</span><span>HubSpot</span></div><div class="tool-item"><span class="tool-mark">CV</span><span>Canva</span></div><div class="tool-item"><span class="tool-mark">CC</span><span>CapCut</span></div><div class="tool-item"><span class="tool-mark">AI</span><span>ChatGPT</span></div><div class="tool-item"><span class="tool-mark">GA</span><span>Analytics</span></div><div class="tool-item"><span class="tool-mark">Ads</span><span>Google Ads</span></div><div class="tool-item"><span class="tool-mark">M</span><span>Meta Ads</span></div><div class="tool-item"><span class="tool-mark">IN</span><span>Instantly</span></div><div class="tool-item"><span class="tool-mark">AP</span><span>Apify</span></div>
-  </div></div></section>
-
-  <section class="section section--white" aria-labelledby="experience-title"><div class="container"><div class="section-heading reveal"><div><div class="eyebrow">Professional experience</div><h2 id="experience-title">Experience across the parts that make the system work.</h2></div><p>Rather than turning this into a copied résumé, the focus stays on the responsibilities and systems I work with directly.</p></div><div class="experience-timeline">
-    <article class="exp-item reveal"><div class="exp-meta"><strong>Primary Focus</strong>GoHighLevel & Automation</div><div class="exp-copy"><h3>CRM systems, workflows, and lead operations</h3><p>Hands-on work centers on structuring GoHighLevel accounts and building the workflows that support lead management and follow-up.</p><ul><li>Pipelines, calendars, forms, tags, fields, workflows, email/SMS flows, routing, reminders, and troubleshooting.</li><li>System testing and documentation to reduce fragile handoffs.</li></ul></div></article>
-    <article class="exp-item reveal"><div class="exp-meta"><strong>Supporting Focus</strong>Web & Funnel Development</div><div class="exp-copy"><h3>Responsive pages connected to the CRM journey</h3><p>Build landing pages, funnels, and websites with the conversion path and downstream system in mind.</p><ul><li>HTML, CSS, JavaScript, WordPress, GoHighLevel pages, forms, mobile optimization, and CTA structure.</li><li>Usability, credibility, layout QA, and responsive troubleshooting.</li></ul></div></article>
-    <article class="exp-item reveal"><div class="exp-meta"><strong>Extended Support</strong>Integrations & Creative</div><div class="exp-copy"><h3>Connecting tools and supporting marketing execution</h3><p>Use Make, Zapier, n8n, APIs, and webhooks to move data between systems, with creative support where it helps the larger workflow.</p><ul><li>Field mapping, filters, routes, transformations, triggers, error-aware testing, graphics, and video editing.</li></ul></div></article>
-  </div></div></section>
-
-  <section class="section" aria-labelledby="education-title"><div class="container"><div class="section-heading reveal"><div><div class="eyebrow">Education & training</div><h2 id="education-title">Technical foundation, hands-on learning.</h2></div><p>Formal education supports the systems mindset; practical work keeps the toolset current.</p></div><div class="service-grid"><article class="service-card reveal"><span class="service-card__num">EDU</span><h3>Bachelor of Science in Information Technology</h3><p>Technical foundation in information systems, web technologies, software concepts, and structured problem-solving.</p></article><article class="service-card reveal" data-delay="1"><span class="service-card__num">NOW</span><h3>Continuous Platform Practice</h3><p>Ongoing hands-on work across CRM platforms, automation tools, web development, integrations, analytics, and marketing technology.</p></article></div></div></section>
-
-  <section class="section section--white" aria-labelledby="philosophy-title"><div class="container"><div class="section-heading reveal"><div><div class="eyebrow">Work philosophy</div><h2 id="philosophy-title">Reliable beats complicated.</h2></div><p>The best system is the one people can actually use, understand, test, and maintain.</p></div><div class="philosophy-grid reveal"><article class="philosophy-item"><span>01</span><h3>Build for usability</h3><p>Systems should remain understandable and manageable after launch.</p></article><article class="philosophy-item"><span>02</span><h3>Automate intelligently</h3><p>Eliminate unnecessary work without making the customer journey feel robotic.</p></article><article class="philosophy-item"><span>03</span><h3>Test everything</h3><p>Forms, workflows, integrations, notifications, layouts, and user journeys all need validation.</p></article><article class="philosophy-item"><span>04</span><h3>Document the system</h3><p>Important configurations and workflows should be documented whenever possible.</p></article></div></div></section>
-
-  <section class="section"><div class="container"><div class="cta-panel reveal"><div><div class="eyebrow">Need implementation support?</div><h2>Need someone who understands both the technology and the business process?</h2><p>Bring the problem, the current tools, and the outcome you want. I’ll help turn that into a practical build plan.</p></div><div class="button-row"><a class="btn btn--accent" href="index.html#contact">Let's Talk</a></div></div></div></section>
+<section class="page-hero"><div class="container page-hero-grid"><div class="reveal is-visible"><div class="eyebrow">About Me</div><h1>Technical thinking with a conversion-focused approach.</h1><p>I'm Jhim Rick Marco, an Information Technology graduate and GoHighLevel specialist who combines automation, web development, and creative production to help businesses operate more efficiently.</p></div><div class="page-hero-side reveal is-visible"><strong>Build practical systems.</strong><span>Funnels, CRM systems, workflow automations, websites, and marketing assets aligned with real business goals.</span></div></div></section>
+<section aria-labelledby="about-intro-title" class="section"><div class="container about-intro"><figure class="portrait-card reveal"><img alt="Portrait placeholder for Jhim Rick Marco" height="1100" src="assets/images/profile-placeholder.svg" width="900"/><figcaption class="portrait-note">Replace this placeholder with the approved photo used in your original website assets.</figcaption></figure><div class="bio-copy reveal"><div class="eyebrow">Professional focus</div><h2 id="about-intro-title">I combine automation, web development, and creative production.</h2><p class="lead">I build funnels, CRM systems, workflow automations, websites, and marketing assets that are practical, user-friendly, and aligned with real business goals.</p><div class="tool-list" style="margin-top:24px"><span>GoHighLevel Expert</span><span>Automation Specialist</span><span>Graphic Designer</span><span>Video Editor</span></div><div class="button-row" style="margin-top:28px"><a class="btn btn--accent" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1s9ZiewEGBX1Z7alvve0D0L3Dcf9KeWCT-qWfswH8RLhlqgSk2J8IrSImAoCV7tNnxlUmfkzgS?gv=true" rel="noopener noreferrer" target="_blank">Book a Discovery Call ↗</a></div></div></div></section>
+<section aria-labelledby="skills-title" class="section section--white"><div class="container"><div class="section-heading reveal"><div><div class="eyebrow">Skills &amp; Tools</div><h2 id="skills-title">A practical mix of automation, web, and creative skills.</h2></div><p>These are the skills listed in the portfolio content you provided.</p></div><div class="skill-columns">
+<section class="skill-group reveal"><h3>Automation &amp; CRM</h3><ul><li>GoHighLevel</li><li>Zapier</li><li>CRM Integrations</li><li>APIs</li><li>Webhooks</li><li>Data Mapping</li><li>Filters</li><li>Multi-Step Automation</li><li>Error Handling</li><li>Workflow Testing</li></ul></section>
+<section class="skill-group reveal" data-delay="1"><h3>Web &amp; E-Commerce</h3><ul><li>Funnels</li><li>Landing Pages</li><li>Websites</li><li>Shopify</li><li>Printify</li><li>Domain Setup</li><li>Dedicated Email Domains</li><li>Responsive Design</li></ul></section>
+<section class="skill-group reveal" data-delay="2"><h3>Creative &amp; Marketing</h3><ul><li>Canva</li><li>CapCut</li><li>Graphic Design</li><li>Video Editing</li><li>Copywriting</li><li>Email Campaigns</li><li>Content Strategy</li><li>Paid Ads</li><li>Social Analytics</li><li>Community Management</li></ul></section>
+</div></div></section>
+<section aria-labelledby="tools-title" class="section"><div class="container"><div class="section-heading reveal"><div><div class="eyebrow">Tools &amp; Platforms</div><h2 id="tools-title">Platforms I use to build, automate, design, and manage digital systems.</h2></div><p>GoHighLevel, WordPress, automation tools, creative platforms, analytics, and advertising systems.</p></div><div class="tool-logo-grid reveal">
+<div class="tool-logo-item"><img alt="GoHighLevel logo" loading="lazy" src="https://www.google.com/s2/favicons?domain=gohighlevel.com&amp;sz=128"/><span>GoHighLevel</span></div><div class="tool-logo-item"><img alt="WordPress logo" loading="lazy" src="https://www.google.com/s2/favicons?domain=wordpress.org&amp;sz=128"/><span>WordPress</span></div><div class="tool-logo-item"><img alt="Make logo" loading="lazy" src="https://www.google.com/s2/favicons?domain=make.com&amp;sz=128"/><span>Make</span></div><div class="tool-logo-item"><img alt="n8n logo" loading="lazy" src="https://www.google.com/s2/favicons?domain=n8n.io&amp;sz=128"/><span>n8n</span></div><div class="tool-logo-item"><img alt="CapCut logo" loading="lazy" src="https://www.google.com/s2/favicons?domain=capcut.com&amp;sz=128"/><span>CapCut</span></div><div class="tool-logo-item"><img alt="Instantly logo" loading="lazy" src="https://www.google.com/s2/favicons?domain=instantly.ai&amp;sz=128"/><span>Instantly</span></div><div class="tool-logo-item"><img alt="Canva logo" loading="lazy" src="https://www.google.com/s2/favicons?domain=canva.com&amp;sz=128"/><span>Canva</span></div><div class="tool-logo-item"><img alt="HubSpot logo" loading="lazy" src="https://www.google.com/s2/favicons?domain=hubspot.com&amp;sz=128"/><span>HubSpot</span></div><div class="tool-logo-item"><img alt="Apify logo" loading="lazy" src="https://www.google.com/s2/favicons?domain=apify.com&amp;sz=128"/><span>Apify</span></div><div class="tool-logo-item"><img alt="Zapier logo" loading="lazy" src="https://www.google.com/s2/favicons?domain=zapier.com&amp;sz=128"/><span>Zapier</span></div><div class="tool-logo-item"><img alt="ChatGPT logo" loading="lazy" src="https://www.google.com/s2/favicons?domain=chatgpt.com&amp;sz=128"/><span>ChatGPT</span></div><div class="tool-logo-item"><img alt="HeyGen logo" loading="lazy" src="https://www.google.com/s2/favicons?domain=heygen.com&amp;sz=128"/><span>HeyGen</span></div><div class="tool-logo-item"><img alt="Ads Manager logo" loading="lazy" src="https://www.google.com/s2/favicons?domain=facebook.com&amp;sz=128"/><span>Ads Manager</span></div><div class="tool-logo-item"><img alt="Google Analytics logo" loading="lazy" src="https://www.google.com/s2/favicons?domain=analytics.google.com&amp;sz=128"/><span>Google Analytics</span></div><div class="tool-logo-item"><img alt="Google Ads logo" loading="lazy" src="https://www.google.com/s2/favicons?domain=ads.google.com&amp;sz=128"/><span>Google Ads</span></div>
+</div></div></section>
+<section aria-labelledby="experience-title" class="section section--white"><div class="container"><div class="section-heading reveal"><div><div class="eyebrow">Experience</div><h2 id="experience-title">Hands-on work across funnels, CRM, and automation.</h2></div><p>Six-plus years building funnels, CRM systems, automations, and digital experiences.</p></div><div class="experience-timeline">
+<article class="exp-item reveal"><div class="exp-meta"><strong>2020 – 2026</strong>6+ Years</div><div class="exp-copy"><h3>GoHighLevel Expert &amp; Automation Specialist</h3><p><strong>JJM DIGITAL SOLUTIONS</strong></p><p>Helping businesses turn manual processes into organized, conversion-focused systems through GoHighLevel, Zapier, CRM integrations, and responsive web experiences.</p><ul class="source-list"><li>Built and optimized more than 80 sales funnels.</li><li>Created lead-nurturing and appointment-booking workflows.</li><li>Integrated Zapier, CRM platforms, and third-party applications.</li><li>Managed social media content and email campaigns.</li><li>Set up GoHighLevel accounts from scratch.</li><li>Troubleshot automations and documented every process.</li><li>Designed responsive landing pages and business websites.</li><li>Communicated with clients through video calls and chat.</li></ul></div></article>
+</div></div></section>
+<section aria-labelledby="education-title" class="section"><div class="container"><div class="section-heading reveal"><div><div class="eyebrow">Education &amp; Certifications</div><h2 id="education-title">Technical education supported by continuous learning.</h2></div><p>Formal IT education plus professional training.</p></div><div class="service-grid"><article class="service-card reveal"><span class="service-card__num">EDU</span><h3>Bachelor of Science in Information Technology</h3><p>AMA Computer Learning Center — ACLC College of Butuan<br/>2024–2025</p></article><article class="service-card reveal" data-delay="1"><span class="service-card__num">TRN</span><h3>Professional Training</h3><ul class="source-list"><li>5-Day Crash Course for VA &amp; BPO Aspirants</li><li>Cyber Security Sentinel Training</li><li>Military Science 42 Program of Instruction</li></ul></article></div></div></section>
+<section class="section section--white"><div class="container"><div class="cta-panel reveal"><div><div class="eyebrow">Let's work together</div><h2>Need someone who understands both the technology and the business process?</h2><p>Tell me what you want to build, automate, connect, or improve.</p></div><div class="button-row"><a class="btn btn--accent" href="index.html#contact">Let's Talk</a><a class="btn btn--ghost" href="proof-of-work.html">View Proof of Work</a></div></div></div></section>
 </main>
 <footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a class="brand" href="index.html" aria-label="Jhim Rick Marco home">
-          <span class="brand-mark" aria-hidden="true">JM</span>
-          <span class="brand-text"><strong>Jhim Rick Marco</strong><span>Digital Systems Specialist</span></span>
-        </a>
-        <p>GoHighLevel, CRM automation, funnels, web development, and integrations built around practical business outcomes.</p>
-      </div>
-      <div>
-        <div class="footer-title">Navigate</div>
-        <div class="footer-links">
-          <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="proof-of-work.html">Proof of Work</a>
-        </div>
-      </div>
-      <div>
-        <div class="footer-title">Connect</div>
-        <div class="footer-links">
-          <a href="index.html#contact">Project inquiry</a>
-          <a href="https://portfolio.jrmrc.space/" target="_blank" rel="noopener noreferrer">External portfolio ↗</a>
-          <a href="proof-of-work.html">View selected work</a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© <span data-year></span> Jhim Rick Marco. All rights reserved.</span>
-      <span>GoHighLevel • Automation • Web Development</span>
-    </div>
-  </div>
+<div class="container">
+<div class="footer-grid">
+<div class="footer-brand">
+<a aria-label="Jhim Rick Marco home" class="brand" href="index.html"><span aria-hidden="true" class="brand-mark">JM</span><span class="brand-text"><strong>Jhim Rick Marco</strong><span>GoHighLevel &amp; Automation Specialist</span></span></a>
+<p>Funnels, websites, CRM systems, and automations designed to help businesses save time, improve follow-up, and grow.</p>
+</div>
+<div><div class="footer-title">Navigate</div><div class="footer-links"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="proof-of-work.html">Proof of Work</a></div></div>
+<div><div class="footer-title">Connect</div><div class="footer-contact"><a href="mailto:Jhimrickofficial@gmail.com">Jhimrickofficial@gmail.com</a><a href="tel:+639362651815">+63 936 265 1815</a><a href="https://facebook.com/jhimrickofficial" rel="noopener noreferrer" target="_blank">Facebook Profile ↗</a><a href="https://drive.google.com/drive/folders/1u092gy-B4LW8uMC9OKTmoucCMsCnrTej?usp=sharing" rel="noopener noreferrer" target="_blank">Google Drive Portfolio ↗</a></div></div>
+</div>
+<div class="footer-bottom"><span>© <span data-year=""></span> Jhim Rick Marco. All rights reserved.</span><span>GoHighLevel • Automation • Web Development</span></div>
+</div>
 </footer>
-<button class="scroll-top" type="button" aria-label="Scroll to top">↑</button>
-<script src="js/script.js" defer></script>
-</body></html>
+<button aria-label="Scroll to top" class="scroll-top" type="button">↑</button>
+<script>
+(() => {
+  'use strict';
+
+  const body = document.body;
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Current navigation state
+  const page = body.dataset.page;
+  document.querySelectorAll('[data-nav]').forEach((link) => {
+    if (link.dataset.nav === page) {
+      link.classList.add('is-active');
+      link.setAttribute('aria-current', 'page');
+    }
+  });
+
+  // Mobile menu
+  const menuButton = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  const closeMenu = () => {
+    if (!menuButton || !navLinks) return;
+    menuButton.setAttribute('aria-expanded', 'false');
+    navLinks.classList.remove('is-open');
+  };
+
+  if (menuButton && navLinks) {
+    menuButton.addEventListener('click', () => {
+      const open = menuButton.getAttribute('aria-expanded') === 'true';
+      menuButton.setAttribute('aria-expanded', String(!open));
+      navLinks.classList.toggle('is-open', !open);
+    });
+
+    navLinks.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') closeMenu();
+    });
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 900) closeMenu();
+    });
+  }
+
+  // Reveal-on-scroll
+  const revealItems = document.querySelectorAll('.reveal');
+  if (reduceMotion || !('IntersectionObserver' in window)) {
+    revealItems.forEach((item) => item.classList.add('is-visible'));
+  } else {
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.13, rootMargin: '0px 0px -40px' });
+    revealItems.forEach((item) => revealObserver.observe(item));
+  }
+
+  // Portfolio filters
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const proofCards = document.querySelectorAll('.proof-card[data-category]');
+  filterButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const filter = button.dataset.filter;
+      filterButtons.forEach((btn) => btn.setAttribute('aria-pressed', String(btn === button)));
+      proofCards.forEach((card) => {
+        const categories = (card.dataset.category || '').split(' ');
+        const visible = filter === 'all' || categories.includes(filter);
+        card.classList.toggle('is-hidden', !visible);
+      });
+    });
+  });
+
+  // Case-study modal
+  const modal = document.getElementById('project-modal');
+  let lastFocused = null;
+
+  if (modal) {
+    const modalDialog = modal.querySelector('.modal-dialog');
+    const modalClose = modal.querySelector('.modal-close');
+    const modalTitle = modal.querySelector('[data-modal-title]');
+    const modalType = modal.querySelector('[data-modal-type]');
+    const modalChallenge = modal.querySelector('[data-modal-challenge]');
+    const modalSolution = modal.querySelector('[data-modal-solution]');
+    const modalTools = modal.querySelector('[data-modal-tools]');
+    const modalNote = modal.querySelector('[data-modal-note]');
+
+    const focusableSelector = 'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])';
+
+    const closeModal = () => {
+      modal.classList.remove('is-open');
+      modal.setAttribute('aria-hidden', 'true');
+      body.classList.remove('modal-open');
+      if (lastFocused) lastFocused.focus();
+    };
+
+    const openModal = (trigger) => {
+      lastFocused = trigger;
+      const card = trigger.closest('.proof-card');
+      if (!card) return;
+      modalType.textContent = card.dataset.type || 'Project';
+      modalTitle.textContent = card.dataset.title || 'Project detail';
+      modalChallenge.textContent = card.dataset.challenge || 'Verified project challenge details can be added here.';
+      modalSolution.textContent = card.dataset.solution || 'Verified implementation details can be added here.';
+      modalTools.textContent = card.dataset.tools || 'Tools to be confirmed.';
+      modalNote.textContent = card.dataset.note || 'This case study intentionally avoids unverified results.';
+      modal.classList.add('is-open');
+      modal.setAttribute('aria-hidden', 'false');
+      body.classList.add('modal-open');
+      window.setTimeout(() => modalClose.focus(), 20);
+    };
+
+    document.querySelectorAll('[data-modal-open]').forEach((trigger) => {
+      trigger.addEventListener('click', () => openModal(trigger));
+    });
+    modalClose?.addEventListener('click', closeModal);
+    modal.querySelector('.modal-backdrop')?.addEventListener('click', closeModal);
+
+    document.addEventListener('keydown', (event) => {
+      if (!modal.classList.contains('is-open')) return;
+      if (event.key === 'Escape') {
+        closeModal();
+        return;
+      }
+      if (event.key === 'Tab' && modalDialog) {
+        const focusable = [...modalDialog.querySelectorAll(focusableSelector)].filter((el) => !el.hasAttribute('hidden'));
+        if (!focusable.length) return;
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault();
+          last.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault();
+          first.focus();
+        }
+      }
+    });
+  }
+
+  // Contact form validation + live submission endpoint from the provided portfolio source.
+  const form = document.getElementById('project-form');
+  if (form) {
+    const status = form.querySelector('.form-status');
+    const fields = [...form.querySelectorAll('[data-validate]')];
+
+    const showError = (field, message) => {
+      field.setAttribute('aria-invalid', 'true');
+      const error = form.querySelector(`#${field.id}-error`);
+      if (error) error.textContent = message;
+    };
+    const clearError = (field) => {
+      field.removeAttribute('aria-invalid');
+      const error = form.querySelector(`#${field.id}-error`);
+      if (error) error.textContent = '';
+    };
+    const validateField = (field) => {
+      const value = field.value.trim();
+      clearError(field);
+      if (field.required && !value) { showError(field, 'This field is required.'); return false; }
+      if (field.type === 'email' && value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) { showError(field, 'Enter a valid email address.'); return false; }
+      return true;
+    };
+    fields.forEach((field) => {
+      field.addEventListener('blur', () => validateField(field));
+      field.addEventListener('input', () => { if (field.hasAttribute('aria-invalid')) validateField(field); });
+    });
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      let valid = true;
+      fields.forEach((field) => { if (!validateField(field)) valid = false; });
+      status.className = 'form-status is-visible';
+      if (!valid) {
+        status.classList.add('is-error');
+        status.textContent = 'Please review the highlighted fields and try again.';
+        form.querySelector('[aria-invalid="true"]')?.focus();
+        return;
+      }
+
+      const endpoint = form.dataset.endpoint || '';
+      const data = new FormData(form);
+      const full = String(data.get('name') || '').trim();
+      const parts = full.split(/\s+/).filter(Boolean);
+      const firstName = parts.shift() || '';
+      const lastName = parts.join(' ');
+      const payload = {
+        first_name: firstName,
+        last_name: lastName,
+        email: String(data.get('email') || '').trim(),
+        phone: String(data.get('phone') || '').trim(),
+        business: String(data.get('business') || '').trim(),
+        service: String(data.get('service') || '').trim(),
+        work_type: String(data.get('work_type') || '').trim(),
+        message: String(data.get('message') || '').trim()
+      };
+
+      const button = form.querySelector('button[type="submit"]');
+      const original = button?.textContent || 'Send Project Inquiry';
+      if (button) { button.disabled = true; button.textContent = 'Sending...'; }
+      status.textContent = 'Sending your project inquiry...';
+      status.classList.remove('is-error', 'is-success');
+
+      try {
+        if (!endpoint) throw new Error('Contact endpoint is not configured.');
+        const response = await fetch(endpoint, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
+        const text = await response.text();
+        let result = {};
+        try { result = JSON.parse(text); } catch (_) {}
+        if (!response.ok) throw new Error(result.error || 'Your inquiry could not be sent.');
+        form.reset();
+        status.classList.add('is-success');
+        status.textContent = result.message || 'Thank you! Your project inquiry has been sent successfully.';
+      } catch (error) {
+        console.error(error);
+        status.classList.add('is-error');
+        status.textContent = error.message || 'Something went wrong. Please try again.';
+      } finally {
+        if (button) { button.disabled = false; button.textContent = original; }
+      }
+    });
+  }
+
+  // Footer year
+  document.querySelectorAll('[data-year]').forEach((node) => {
+    node.textContent = new Date().getFullYear();
+  });
+
+  // Scroll-to-top button
+  const scrollTopButton = document.querySelector('.scroll-top');
+  if (scrollTopButton) {
+    const updateScrollTop = () => scrollTopButton.classList.toggle('is-visible', window.scrollY > 550);
+    window.addEventListener('scroll', updateScrollTop, { passive: true });
+    updateScrollTop();
+    scrollTopButton.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+    });
+  }
+})();
+
+</script></body></html>

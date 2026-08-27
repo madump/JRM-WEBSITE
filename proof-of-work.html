@@ -1,13 +1,14 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#0c151d">
-<link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#0c151d" name="theme-color"/>
+<link href="assets/icons/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
 <style>
 :root {
   --ink: #0a1220;
@@ -1165,82 +1166,379 @@ section[aria-labelledby="process-title"] .section-heading p{padding-top:4px;}
   .delivery-flow{grid-template-columns:1fr;}
 }
 
+
+
+/* === FULL-WIDTH SECTION OVERRIDE ===
+   Removes the dark outer canvas/gutters from the reference layout.
+   Section backgrounds now run edge-to-edge while .container keeps content centered. */
+html, body {
+  width: 100%;
+  max-width: none;
+}
+.site-header,
+main,
+.site-footer {
+  width: 100% !important;
+  max-width: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+.site-header {
+  top: 0 !important;
+  border-left: 0 !important;
+  border-right: 0 !important;
+}
+main > section,
+.hero,
+.page-hero,
+.specialization-bar,
+.section,
+.section--tight,
+.section--dark,
+.section--white,
+.section--accent,
+.proof-band {
+  width: 100% !important;
+  max-width: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+.site-footer {
+  border-left: 0 !important;
+  border-right: 0 !important;
+}
+@media (max-width: 1100px) {
+  .site-header, main, .site-footer { width: 100% !important; }
+}
+
 </style>
 <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
 <title>Proof of Work | Jhim Rick Marco</title>
-<meta name="description" content="Explore Jhim Rick Marco's GoHighLevel, funnel, website, automation, Make, n8n, integration, and creative work through a filterable proof gallery and external portfolio archive.">
-<meta property="og:title" content="Proof of Work | Jhim Rick Marco"><meta property="og:description" content="See the systems, funnels, websites, automations, integrations, and supporting creative capabilities behind the portfolio."><meta property="og:image" content="https://www.jrmrc.space/assets/images/og-placeholder.svg"><meta property="og:type" content="website">
-<link rel="canonical" href="https://www.jrmrc.space/proof-of-work.html">
-</head>
+<meta content="Explore Jhim Rick Marco portfolio work across GoHighLevel funnels, business websites, GHL automation, n8n, Make, and creative content." name="description"/>
+<meta content="Proof of Work | Jhim Rick Marco" property="og:title"/><meta content="Explore Jhim Rick Marco portfolio work across GoHighLevel funnels, business websites, GHL automation, n8n, Make, and creative content." property="og:description"/><meta content="https://www.jrmrc.space/assets/images/og-placeholder.svg" property="og:image"/><meta content="website" property="og:type"/>
+<link href="https://www.jrmrc.space/proof-of-work.html" rel="canonical"/>
+<style data-source-content="true">
+/* Source-content integration */
+.source-list { margin: 18px 0 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+.source-list li { position: relative; padding-left: 20px; color: var(--muted); }
+.source-list li::before { content: ""; position: absolute; left: 0; top: .72em; width: 7px; height: 7px; border-radius: 2px; background: var(--accent); box-shadow: 0 0 0 4px rgba(214,255,75,.08); }
+.section--dark .source-list li, .service-card.is-dark .source-list li { color: #b9c6d7; }
+.source-contact { display: grid; gap: 10px; margin-top: 26px; }
+.source-contact a { display: flex; justify-content: space-between; align-items: center; gap: 14px; padding: 14px 16px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface-2); color: var(--text); font-weight: 800; transition: .2s ease; }
+.source-contact a:hover { border-color: rgba(214,255,75,.65); transform: translateX(3px); }
+.source-contact a span { color: var(--accent); }
+.service-card .source-list { margin-top: 16px; }
+.service-card .source-list li { font-size: .92rem; }
+.results-six { grid-template-columns: repeat(3, 1fr); }
+.tool-logo-grid { display: grid; grid-template-columns: repeat(5, minmax(0,1fr)); gap: 12px; }
+.tool-logo-item { min-height: 128px; padding: 18px 12px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface-2); display: grid; place-items: center; align-content: center; gap: 10px; text-align: center; }
+.tool-logo-item img { width: 44px; height: 44px; object-fit: contain; border-radius: 10px; background: #fff; padding: 4px; }
+.tool-logo-item span { font-size: .82rem; font-weight: 800; color: var(--text); }
+.project-source-link { margin-top: 8px; }
+.project-source-link small { color: var(--muted); }
+.exp-item .source-list { margin-top: 20px; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px 18px; }
+.contact-side-note { margin-top: 18px; padding: 16px; border-left: 3px solid var(--accent); background: rgba(214,255,75,.06); color: var(--muted); }
+.footer-contact { display: grid; gap: 8px; }
+.footer-contact a { color: #b8c6d6; }
+.footer-contact a:hover { color: var(--accent); }
+.proof-card .project-actions { flex-wrap: wrap; }
+.proof-card .project-actions .btn { flex: 1 1 150px; }
+@media (max-width: 980px) {
+  .results-six { grid-template-columns: repeat(2, 1fr); }
+  .tool-logo-grid { grid-template-columns: repeat(3, minmax(0,1fr)); }
+  .exp-item .source-list { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .results-six, .tool-logo-grid { grid-template-columns: 1fr; }
+  .source-contact a { align-items: flex-start; flex-direction: column; }
+}
+
+/* PREVIEW RELIABILITY FIX: content stays visible even if JS is blocked. */
+.reveal, .reveal[data-delay] {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+</style></head>
 <body data-page="proof">
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
-  <div class="container nav-wrap">
-    <a class="brand" href="index.html" aria-label="Jhim Rick Marco home">
-      <span class="brand-mark" aria-hidden="true">JM</span>
-      <span class="brand-text"><strong>Jhim Rick Marco</strong><span>Digital Systems Specialist</span></span>
-    </a>
-    <nav class="nav-links" id="primary-navigation" aria-label="Primary navigation">
-      <a class="nav-link" data-nav="home" href="index.html">Home</a>
-      <a class="nav-link" data-nav="about" href="about.html">About</a>
-      <a class="nav-link" data-nav="services" href="services.html">Services</a>
-      <a class="nav-link" data-nav="proof" href="proof-of-work.html">Proof of Work</a>
-      <a class="btn btn--accent nav-cta" href="index.html#contact">Let's Work Together</a>
-    </nav>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation menu">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
+<div class="container nav-wrap">
+<a aria-label="Jhim Rick Marco home" class="brand" href="index.html">
+<span aria-hidden="true" class="brand-mark">JM</span>
+<span class="brand-text"><strong>Jhim Rick Marco</strong><span>GoHighLevel &amp; Automation Specialist</span></span>
+</a>
+<nav aria-label="Primary navigation" class="nav-links" id="primary-navigation">
+<a class="nav-link" data-nav="home" href="index.html">Home</a>
+<a class="nav-link" data-nav="about" href="about.html">About</a>
+<a class="nav-link" data-nav="services" href="services.html">Services</a>
+<a class="nav-link" data-nav="proof" href="proof-of-work.html">Proof of Work</a>
+<a class="btn btn--accent nav-cta" href="index.html#contact">Let's Work Together</a>
+</nav>
+<button aria-controls="primary-navigation" aria-expanded="false" aria-label="Open navigation menu" class="menu-toggle" type="button"><span></span><span></span><span></span></button>
+</div>
 </header>
 <main id="main">
-  <section class="page-hero"><div class="container page-hero-grid"><div class="reveal is-visible"><div class="eyebrow">Proof of Work</div><h1>Don’t just take my word for it. See what I build.</h1><p>Explore the work categories behind my funnels, websites, CRM systems, automations, integrations, and creative support. Concrete client examples stay linked to the existing verified portfolio archive.</p></div><div class="page-hero-side reveal is-visible"><strong>Published work over inflated claims.</strong><span>Concrete examples belong in the published portfolio; this page keeps the presentation focused on the work itself.</span></div></div></section>
-
-  <section class="section" aria-labelledby="gallery-title"><div class="container"><div class="section-heading reveal"><div><div class="eyebrow">Filterable gallery</div><h2 id="gallery-title">Browse by build type.</h2></div><p>Use the filters to move quickly between build types. Open a project view for scope and tools, or jump to the published portfolio archive for concrete examples.</p></div><div class="filters-wrap" role="group" aria-label="Filter projects"><button class="filter-btn" type="button" data-filter="all" aria-pressed="true">All</button><button class="filter-btn" type="button" data-filter="funnels" aria-pressed="false">Funnels</button><button class="filter-btn" type="button" data-filter="websites" aria-pressed="false">Websites</button><button class="filter-btn" type="button" data-filter="ghl" aria-pressed="false">GoHighLevel</button><button class="filter-btn" type="button" data-filter="automations" aria-pressed="false">Automations</button><button class="filter-btn" type="button" data-filter="n8n" aria-pressed="false">n8n</button><button class="filter-btn" type="button" data-filter="make" aria-pressed="false">Make</button><button class="filter-btn" type="button" data-filter="integrations" aria-pressed="false">Integrations</button><button class="filter-btn" type="button" data-filter="creative" aria-pressed="false">Creative</button></div><div class="proof-grid"><article class="proof-card reveal" data-category="ghl automations integrations" data-type="GoHighLevel / CRM" data-title="GoHighLevel CRM & Lead Operations" data-challenge="This category covers CRM structure, lead capture, pipeline movement, calendars, forms, custom fields, nurturing, reminders, and workflow automation." data-solution="The project view focuses on the implementation scope and the way the moving parts connect across the lead journey." data-tools="GoHighLevel • CRM • Email/SMS • Workflows • Webhooks" data-note="Open the published portfolio archive for concrete examples and project-specific screenshots."><div class="project-card__visual" aria-hidden="true"><div class="project-window"><div class="project-window__top"><i></i><i></i><i></i></div><div class="project-window__body"><div class="mock-sidebar"><div class="mock-line accent"></div><div class="mock-line"></div><div class="mock-line short"></div><div class="mock-line"></div></div><div class="mock-main"><div class="mock-line accent"></div><div class="mock-line"></div><div class="mock-grid"><div class="mock-box"></div><div class="mock-box"></div><div class="mock-box"></div><div class="mock-box"></div></div></div></div></div></div><div class="proof-card__body"><div class="project-meta"><span class="project-type">GoHighLevel / CRM</span><span class="project-status">Build category</span></div><h3>GoHighLevel CRM & Lead Operations</h3><p>Explore the system scope here, then open the published archive for concrete project examples.</p><div class="proof-sections"><div><strong>The challenge</strong><span>Published archive contains project context.</span></div><div><strong>What I built</strong><span>Scope and tools are summarized here.</span></div></div><div class="tool-list" style="margin-top:16px"><span>GoHighLevel</span><span>CRM</span><span>Email/SMS</span><span>Workflows</span><span>Webhooks</span></div><div class="project-actions"><button class="btn btn--dark" type="button" data-modal-open>View Project</button><a class="btn btn--outline" href="https://portfolio.jrmrc.space/" target="_blank" rel="noopener noreferrer">Verified Archive ↗</a></div></div></article><article class="proof-card reveal" data-category="funnels websites ghl" data-type="Funnels / Websites" data-title="Conversion-Focused Funnel & Landing Page Work" data-challenge="This category covers funnels, landing pages, opt-in and sales pages, thank-you pages, webinar flows, and mobile optimization." data-solution="The project view focuses on the page architecture, conversion path, responsive build, and downstream handoff to the CRM." data-tools="HTML • CSS • JavaScript • GoHighLevel • WordPress" data-note="Open the published portfolio archive for concrete examples and project-specific screenshots."><div class="project-card__visual" aria-hidden="true"><div class="project-window"><div class="project-window__top"><i></i><i></i><i></i></div><div class="project-window__body"><div class="mock-sidebar"><div class="mock-line accent"></div><div class="mock-line"></div><div class="mock-line short"></div><div class="mock-line"></div></div><div class="mock-main"><div class="mock-line accent"></div><div class="mock-line"></div><div class="mock-grid"><div class="mock-box"></div><div class="mock-box"></div><div class="mock-box"></div><div class="mock-box"></div></div></div></div></div></div><div class="proof-card__body"><div class="project-meta"><span class="project-type">Funnels / Websites</span><span class="project-status">Build category</span></div><h3>Conversion-Focused Funnel & Landing Page Work</h3><p>Explore the system scope here, then open the published archive for concrete project examples.</p><div class="proof-sections"><div><strong>The challenge</strong><span>Published archive contains project context.</span></div><div><strong>What I built</strong><span>Scope and tools are summarized here.</span></div></div><div class="tool-list" style="margin-top:16px"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>GoHighLevel</span><span>WordPress</span></div><div class="project-actions"><button class="btn btn--dark" type="button" data-modal-open>View Project</button><a class="btn btn--outline" href="https://portfolio.jrmrc.space/" target="_blank" rel="noopener noreferrer">Verified Archive ↗</a></div></div></article><article class="proof-card reveal" data-category="automations make integrations" data-type="Make / Integrations" data-title="Multi-Step Make Automation" data-challenge="This category covers Make scenarios, field mapping, filters, conditional routes, transformations, and multi-platform workflows." data-solution="The project view highlights the logic used to move, transform, and route information between tools." data-tools="Make • Webhooks • Data Mapping • Conditional Logic" data-note="Open the published portfolio archive for concrete examples and project-specific screenshots."><div class="project-card__visual" aria-hidden="true"><div class="project-window"><div class="project-window__top"><i></i><i></i><i></i></div><div class="project-window__body"><div class="mock-sidebar"><div class="mock-line accent"></div><div class="mock-line"></div><div class="mock-line short"></div><div class="mock-line"></div></div><div class="mock-main"><div class="mock-line accent"></div><div class="mock-line"></div><div class="mock-grid"><div class="mock-box"></div><div class="mock-box"></div><div class="mock-box"></div><div class="mock-box"></div></div></div></div></div></div><div class="proof-card__body"><div class="project-meta"><span class="project-type">Make / Integrations</span><span class="project-status">Build category</span></div><h3>Multi-Step Make Automation</h3><p>Explore the system scope here, then open the published archive for concrete project examples.</p><div class="proof-sections"><div><strong>The challenge</strong><span>Published archive contains project context.</span></div><div><strong>What I built</strong><span>Scope and tools are summarized here.</span></div></div><div class="tool-list" style="margin-top:16px"><span>Make</span><span>Webhooks</span><span>Data Mapping</span><span>Conditional Logic</span></div><div class="project-actions"><button class="btn btn--dark" type="button" data-modal-open>View Project</button><a class="btn btn--outline" href="https://portfolio.jrmrc.space/" target="_blank" rel="noopener noreferrer">Verified Archive ↗</a></div></div></article><article class="proof-card reveal" data-category="automations n8n integrations" data-type="n8n / Automation" data-title="n8n Workflow Automation" data-challenge="This category covers n8n workflows, API connections, webhooks, routing, and multi-step automation logic." data-solution="The project view highlights the workflow structure and the way triggers, logic, and actions connect." data-tools="n8n • APIs • Webhooks • Routing" data-note="Open the published portfolio archive for concrete examples and project-specific screenshots."><div class="project-card__visual" aria-hidden="true"><div class="project-window"><div class="project-window__top"><i></i><i></i><i></i></div><div class="project-window__body"><div class="mock-sidebar"><div class="mock-line accent"></div><div class="mock-line"></div><div class="mock-line short"></div><div class="mock-line"></div></div><div class="mock-main"><div class="mock-line accent"></div><div class="mock-line"></div><div class="mock-grid"><div class="mock-box"></div><div class="mock-box"></div><div class="mock-box"></div><div class="mock-box"></div></div></div></div></div></div><div class="proof-card__body"><div class="project-meta"><span class="project-type">n8n / Automation</span><span class="project-status">Build category</span></div><h3>n8n Workflow Automation</h3><p>Explore the system scope here, then open the published archive for concrete project examples.</p><div class="proof-sections"><div><strong>The challenge</strong><span>Published archive contains project context.</span></div><div><strong>What I built</strong><span>Scope and tools are summarized here.</span></div></div><div class="tool-list" style="margin-top:16px"><span>n8n</span><span>APIs</span><span>Webhooks</span><span>Routing</span></div><div class="project-actions"><button class="btn btn--dark" type="button" data-modal-open>View Project</button><a class="btn btn--outline" href="https://portfolio.jrmrc.space/" target="_blank" rel="noopener noreferrer">Verified Archive ↗</a></div></div></article><article class="proof-card reveal" data-category="automations integrations" data-type="Zapier / Automation" data-title="Zapier Workflow Integration" data-challenge="This category covers Zapier workflows that connect lead sources, CRM records, notifications, and downstream tools." data-solution="The project view highlights the trigger, action, field mapping, and handoff structure behind the automation." data-tools="Zapier • CRM • Forms • Notifications" data-note="Open the published portfolio archive for concrete examples and project-specific screenshots."><div class="project-card__visual" aria-hidden="true"><div class="project-window"><div class="project-window__top"><i></i><i></i><i></i></div><div class="project-window__body"><div class="mock-sidebar"><div class="mock-line accent"></div><div class="mock-line"></div><div class="mock-line short"></div><div class="mock-line"></div></div><div class="mock-main"><div class="mock-line accent"></div><div class="mock-line"></div><div class="mock-grid"><div class="mock-box"></div><div class="mock-box"></div><div class="mock-box"></div><div class="mock-box"></div></div></div></div></div></div><div class="proof-card__body"><div class="project-meta"><span class="project-type">Zapier / Automation</span><span class="project-status">Build category</span></div><h3>Zapier Workflow Integration</h3><p>Explore the system scope here, then open the published archive for concrete project examples.</p><div class="proof-sections"><div><strong>The challenge</strong><span>Published archive contains project context.</span></div><div><strong>What I built</strong><span>Scope and tools are summarized here.</span></div></div><div class="tool-list" style="margin-top:16px"><span>Zapier</span><span>CRM</span><span>Forms</span><span>Notifications</span></div><div class="project-actions"><button class="btn btn--dark" type="button" data-modal-open>View Project</button><a class="btn btn--outline" href="https://portfolio.jrmrc.space/" target="_blank" rel="noopener noreferrer">Verified Archive ↗</a></div></div></article><article class="proof-card reveal" data-category="creative websites" data-type="Creative / Marketing" data-title="Creative & Marketing Support" data-challenge="This category covers supporting graphics, email assets, short-form video, long-form editing, Canva, and CapCut." data-solution="The project view shows how creative assets can support the larger CRM, funnel, and marketing system." data-tools="Canva • CapCut • Graphics • Video" data-note="Open the published portfolio archive for concrete examples and project-specific screenshots."><div class="project-card__visual" aria-hidden="true"><div class="project-window"><div class="project-window__top"><i></i><i></i><i></i></div><div class="project-window__body"><div class="mock-sidebar"><div class="mock-line accent"></div><div class="mock-line"></div><div class="mock-line short"></div><div class="mock-line"></div></div><div class="mock-main"><div class="mock-line accent"></div><div class="mock-line"></div><div class="mock-grid"><div class="mock-box"></div><div class="mock-box"></div><div class="mock-box"></div><div class="mock-box"></div></div></div></div></div></div><div class="proof-card__body"><div class="project-meta"><span class="project-type">Creative / Marketing</span><span class="project-status">Build category</span></div><h3>Creative & Marketing Support</h3><p>Explore the system scope here, then open the published archive for concrete project examples.</p><div class="proof-sections"><div><strong>The challenge</strong><span>Published archive contains project context.</span></div><div><strong>What I built</strong><span>Scope and tools are summarized here.</span></div></div><div class="tool-list" style="margin-top:16px"><span>Canva</span><span>CapCut</span><span>Graphics</span><span>Video</span></div><div class="project-actions"><button class="btn btn--dark" type="button" data-modal-open>View Project</button><a class="btn btn--outline" href="https://portfolio.jrmrc.space/" target="_blank" rel="noopener noreferrer">Verified Archive ↗</a></div></div></article></div></div></section>
-
-  <section class="section section--dark"><div class="container"><div class="external-proof reveal"><div><div class="eyebrow">Existing portfolio archive</div><h2>Open the live Proof of Work destination.</h2><p>Use the external portfolio to review concrete published examples, screenshots, and project-specific context.</p></div><a class="btn btn--accent" href="https://portfolio.jrmrc.space/" target="_blank" rel="noopener noreferrer">Open Portfolio ↗</a></div></div></section>
-
-  <section class="section section--white"><div class="container"><div class="cta-panel reveal"><div><div class="eyebrow">Need something similar?</div><h2>Want something like this built for your business?</h2><p>Share the existing process, the systems involved, and the outcome you need.</p></div><div class="button-row"><a class="btn btn--accent" href="index.html#contact">Start a Project</a></div></div></div></section>
+<section class="page-hero"><div class="container page-hero-grid"><div class="reveal is-visible"><div class="eyebrow">Proof of Work</div><h1>A flexible portfolio for different project types.</h1><p>Explore real examples of funnels, websites, GoHighLevel automations, n8n workflows, Make scenarios, and creative campaign assets.</p></div><div class="page-hero-side reveal is-visible"><strong>Real categories. Direct portfolio links.</strong><span>The project descriptions and Drive folders below come from the website content you provided.</span></div></div></section>
+<section aria-labelledby="work-title" class="section section--white"><div class="container"><div class="section-heading reveal"><div><div class="eyebrow">Featured Portfolio</div><h2 id="work-title">Funnels, websites, automations, and creative work.</h2></div><p>Use the filters to narrow the gallery, open the case-study summary, or jump directly to the supporting portfolio folder.</p></div>
+<div aria-label="Portfolio filters" class="filters reveal"><button aria-pressed="true" class="filter-btn" data-filter="all">All</button><button aria-pressed="false" class="filter-btn" data-filter="funnels">Funnels</button><button aria-pressed="false" class="filter-btn" data-filter="websites">Websites</button><button aria-pressed="false" class="filter-btn" data-filter="ghl">GoHighLevel</button><button aria-pressed="false" class="filter-btn" data-filter="n8n">n8n</button><button aria-pressed="false" class="filter-btn" data-filter="make">Make</button><button aria-pressed="false" class="filter-btn" data-filter="creative">Creative</button></div>
+<div class="proof-grid"><article class="proof-card reveal" data-category="funnels ghl" data-challenge="Leads needed a clearer path to inquiry." data-note="This project summary and destination are taken from the portfolio content you provided." data-solution="A focused landing page with CRM and follow-up integration." data-title="Lead Generation Funnel" data-tools="GoHighLevel • CRM • Follow-Up" data-type="GoHighLevel Funnel"><div aria-hidden="true" class="project-card__visual"><div class="project-window"><div class="project-window__top"><i></i><i></i><i></i></div><div class="project-window__body"><div class="mock-sidebar"><div class="mock-line accent"></div><div class="mock-line"></div><div class="mock-line short"></div><div class="mock-line"></div></div><div class="mock-main"><div class="mock-line accent"></div><div class="mock-line"></div><div class="mock-grid"><div class="mock-box"></div><div class="mock-box"></div><div class="mock-box"></div><div class="mock-box"></div></div></div></div></div></div><div class="proof-card__body"><div class="project-meta"><span class="project-type">GoHighLevel Funnel</span><span class="project-status">Portfolio work</span></div><h3>Lead Generation Funnel</h3><p><strong>Problem:</strong> Leads needed a clearer path to inquiry. <strong>Solution:</strong> A focused landing page with CRM and follow-up integration.</p><div class="tool-list" style="margin-top:16px"><span>GoHighLevel</span><span>CRM</span><span>Follow-Up</span></div><div class="project-actions"><button class="btn btn--dark" data-modal-open="" type="button">View Project</button><a class="btn btn--outline" href="https://drive.google.com/drive/folders/1NuQ4m2-6IXoL3xchVEIE0yacfJlVFNEK?usp=drive_link" rel="noopener noreferrer" target="_blank">View Funnel Folder ↗</a></div></div></article><article class="proof-card reveal" data-category="websites" data-challenge="The existing site lacked clarity." data-note="This project summary and destination are taken from the portfolio content you provided." data-solution="A responsive, organized website built around services and conversion." data-title="Responsive Business Website" data-tools="Responsive Web Design • Conversion Layout" data-type="Business Website"><div aria-hidden="true" class="project-card__visual"><div class="project-window"><div class="project-window__top"><i></i><i></i><i></i></div><div class="project-window__body"><div class="mock-sidebar"><div class="mock-line accent"></div><div class="mock-line"></div><div class="mock-line short"></div><div class="mock-line"></div></div><div class="mock-main"><div class="mock-line accent"></div><div class="mock-line"></div><div class="mock-grid"><div class="mock-box"></div><div class="mock-box"></div><div class="mock-box"></div><div class="mock-box"></div></div></div></div></div></div><div class="proof-card__body"><div class="project-meta"><span class="project-type">Business Website</span><span class="project-status">Portfolio work</span></div><h3>Responsive Business Website</h3><p><strong>Problem:</strong> The existing site lacked clarity. <strong>Solution:</strong> A responsive, organized website built around services and conversion.</p><div class="tool-list" style="margin-top:16px"><span>Responsive Web Design</span><span>Conversion Layout</span></div><div class="project-actions"><button class="btn btn--dark" data-modal-open="" type="button">View Project</button><a class="btn btn--outline" href="https://drive.google.com/drive/folders/1NuQ4m2-6IXoL3xchVEIE0yacfJlVFNEK?usp=drive_link" rel="noopener noreferrer" target="_blank">View Website Folder ↗</a></div></div></article><article class="proof-card reveal" data-category="automations ghl" data-challenge="Leads needed faster and more consistent follow-up." data-note="This project summary and destination are taken from the portfolio content you provided." data-solution="GoHighLevel workflows for email, SMS, pipeline updates, reminders, and internal notifications." data-title="GHL Automation" data-tools="GoHighLevel • Email • SMS • Pipelines • Reminders" data-type="GHL Automation"><div aria-hidden="true" class="project-card__visual"><div class="project-window"><div class="project-window__top"><i></i><i></i><i></i></div><div class="project-window__body"><div class="mock-sidebar"><div class="mock-line accent"></div><div class="mock-line"></div><div class="mock-line short"></div><div class="mock-line"></div></div><div class="mock-main"><div class="mock-line accent"></div><div class="mock-line"></div><div class="mock-grid"><div class="mock-box"></div><div class="mock-box"></div><div class="mock-box"></div><div class="mock-box"></div></div></div></div></div></div><div class="proof-card__body"><div class="project-meta"><span class="project-type">GHL Automation</span><span class="project-status">Portfolio work</span></div><h3>GHL Automation</h3><p><strong>Problem:</strong> Leads needed faster and more consistent follow-up. <strong>Solution:</strong> GoHighLevel workflows for email, SMS, pipeline updates, reminders, and internal notifications.</p><div class="tool-list" style="margin-top:16px"><span>GoHighLevel</span><span>Email</span><span>SMS</span><span>Pipelines</span><span>Reminders</span></div><div class="project-actions"><button class="btn btn--dark" data-modal-open="" type="button">View Project</button><a class="btn btn--outline" href="https://drive.google.com/drive/folders/1eS3IPFscSX-aul1YUhHJJxygLBovSRgM?usp=drive_link" rel="noopener noreferrer" target="_blank">View GHL Automation ↗</a></div></div></article><article class="proof-card reveal" data-category="automations n8n integrations" data-challenge="Complex processes required flexible connections between multiple systems." data-note="This project summary and destination are taken from the portfolio content you provided." data-solution="Custom n8n workflows using APIs, webhooks, conditional logic, data transformation, and error handling." data-title="n8n Automation" data-tools="n8n • APIs • Webhooks • Conditional Logic • Data Transformation" data-type="n8n Automation"><div aria-hidden="true" class="project-card__visual"><div class="project-window"><div class="project-window__top"><i></i><i></i><i></i></div><div class="project-window__body"><div class="mock-sidebar"><div class="mock-line accent"></div><div class="mock-line"></div><div class="mock-line short"></div><div class="mock-line"></div></div><div class="mock-main"><div class="mock-line accent"></div><div class="mock-line"></div><div class="mock-grid"><div class="mock-box"></div><div class="mock-box"></div><div class="mock-box"></div><div class="mock-box"></div></div></div></div></div></div><div class="proof-card__body"><div class="project-meta"><span class="project-type">n8n Automation</span><span class="project-status">Portfolio work</span></div><h3>n8n Automation</h3><p><strong>Problem:</strong> Complex processes required flexible connections between multiple systems. <strong>Solution:</strong> Custom n8n workflows using APIs, webhooks, conditional logic, data transformation, and error handling.</p><div class="tool-list" style="margin-top:16px"><span>n8n</span><span>APIs</span><span>Webhooks</span><span>Conditional Logic</span><span>Data Transformation</span></div><div class="project-actions"><button class="btn btn--dark" data-modal-open="" type="button">View Project</button><a class="btn btn--outline" href="https://drive.google.com/drive/folders/1TXh0CRfO589icmNbXbfW9EC1-gSs3vcC?usp=drive_link" rel="noopener noreferrer" target="_blank">View n8n Automation ↗</a></div></div></article><article class="proof-card reveal" data-category="automations make integrations" data-challenge="Repetitive data entry slowed down daily operations." data-note="This project summary and destination are taken from the portfolio content you provided." data-solution="Make scenarios that connect apps, map fields, route data, apply filters, and automate multi-step processes." data-title="Make Automation" data-tools="Make • Field Mapping • Filters • Data Routing" data-type="Make Automation"><div aria-hidden="true" class="project-card__visual"><div class="project-window"><div class="project-window__top"><i></i><i></i><i></i></div><div class="project-window__body"><div class="mock-sidebar"><div class="mock-line accent"></div><div class="mock-line"></div><div class="mock-line short"></div><div class="mock-line"></div></div><div class="mock-main"><div class="mock-line accent"></div><div class="mock-line"></div><div class="mock-grid"><div class="mock-box"></div><div class="mock-box"></div><div class="mock-box"></div><div class="mock-box"></div></div></div></div></div></div><div class="proof-card__body"><div class="project-meta"><span class="project-type">Make Automation</span><span class="project-status">Portfolio work</span></div><h3>Make Automation</h3><p><strong>Problem:</strong> Repetitive data entry slowed down daily operations. <strong>Solution:</strong> Make scenarios that connect apps, map fields, route data, apply filters, and automate multi-step processes.</p><div class="tool-list" style="margin-top:16px"><span>Make</span><span>Field Mapping</span><span>Filters</span><span>Data Routing</span></div><div class="project-actions"><button class="btn btn--dark" data-modal-open="" type="button">View Project</button><a class="btn btn--outline" href="https://drive.google.com/drive/folders/1jJMgzNtEVaUsp4U0UzhUJwEpIkdTazAY?usp=drive_link" rel="noopener noreferrer" target="_blank">View Make Automation ↗</a></div></div></article><article class="proof-card reveal" data-category="creative video" data-challenge="The brand needed consistent content." data-note="This project summary and destination are taken from the portfolio content you provided." data-solution="Canva graphics and edited short-form and long-form videos using CapCut." data-title="Social &amp; Video Campaign Assets" data-tools="Canva • CapCut • Short-Form Video • Long-Form Video" data-type="Creative Content"><div aria-hidden="true" class="project-card__visual"><div class="project-window"><div class="project-window__top"><i></i><i></i><i></i></div><div class="project-window__body"><div class="mock-sidebar"><div class="mock-line accent"></div><div class="mock-line"></div><div class="mock-line short"></div><div class="mock-line"></div></div><div class="mock-main"><div class="mock-line accent"></div><div class="mock-line"></div><div class="mock-grid"><div class="mock-box"></div><div class="mock-box"></div><div class="mock-box"></div><div class="mock-box"></div></div></div></div></div></div><div class="proof-card__body"><div class="project-meta"><span class="project-type">Creative Content</span><span class="project-status">Portfolio work</span></div><h3>Social &amp; Video Campaign Assets</h3><p><strong>Problem:</strong> The brand needed consistent content. <strong>Solution:</strong> Canva graphics and edited short-form and long-form videos using CapCut.</p><div class="tool-list" style="margin-top:16px"><span>Canva</span><span>CapCut</span><span>Short-Form Video</span><span>Long-Form Video</span></div><div class="project-actions"><button class="btn btn--dark" data-modal-open="" type="button">View Project</button><a class="btn btn--outline" href="https://drive.google.com/drive/folders/1xJEE06GNjncYQHHyvlPRIwPYufpm6Hll?usp=drive_link" rel="noopener noreferrer" target="_blank">View More Videos ↗</a></div></div></article></div>
+</div></section>
+<section class="section section--dark"><div class="container"><div class="external-proof reveal"><div><div class="eyebrow">Full Portfolio</div><h2>Open the complete Google Drive portfolio.</h2><p>Review additional screenshots, workflows, videos, and project files in the portfolio destination from your original website.</p></div><div class="button-row"><a class="btn btn--accent" href="https://drive.google.com/drive/folders/1u092gy-B4LW8uMC9OKTmoucCMsCnrTej?usp=sharing" rel="noopener noreferrer" target="_blank">Open Full Portfolio ↗</a><a class="btn btn--ghost" href="https://portfolio.jrmrc.space/" rel="noopener noreferrer" target="_blank">Open Portfolio Site ↗</a></div></div></div></section>
+<section class="section section--white"><div class="container"><div class="cta-panel reveal"><div><div class="eyebrow">Need something similar?</div><h2>Want something like this built for your business?</h2><p>Share the current process, the tools involved, and the outcome you want.</p></div><div class="button-row"><a class="btn btn--accent" href="index.html#contact">Start a Project</a><a class="btn btn--ghost" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1s9ZiewEGBX1Z7alvve0D0L3Dcf9KeWCT-qWfswH8RLhlqgSk2J8IrSImAoCV7tNnxlUmfkzgS?gv=true" rel="noopener noreferrer" target="_blank">Book an Appointment ↗</a></div></div></div></section>
 </main>
-
-<div class="modal" id="project-modal" aria-hidden="true">
-  <div class="modal-backdrop"></div>
-  <section class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-    <button class="modal-close" type="button" aria-label="Close case study">×</button>
-    <div class="modal-visual" aria-hidden="true"><div class="modal-diagram"><span>Input</span><span>System</span><span>Automation</span><span>Outcome</span></div></div>
-    <div class="modal-content"><span class="modal-label" data-modal-type>Project</span><h2 id="modal-title" data-modal-title>Project detail</h2><div class="modal-grid"><div><h3>The Challenge</h3><p data-modal-challenge></p></div><div><h3>What I Built</h3><p data-modal-solution></p></div><div><h3>Tools</h3><p data-modal-tools></p></div><div><h3>Publication Note</h3><p data-modal-note></p></div></div><div class="button-row" style="margin-top:28px"><a class="btn btn--dark" href="https://portfolio.jrmrc.space/" target="_blank" rel="noopener noreferrer">View Verified Portfolio ↗</a></div></div>
-  </section>
-</div>
+<div aria-hidden="true" class="modal" id="project-modal"><div class="modal-backdrop"></div><section aria-labelledby="modal-title" aria-modal="true" class="modal-dialog" role="dialog"><button aria-label="Close case study" class="modal-close" type="button">×</button><div aria-hidden="true" class="modal-visual"><div class="modal-diagram"><span>Problem</span><span>System</span><span>Automation</span><span>Outcome</span></div></div><div class="modal-content"><span class="modal-label" data-modal-type="">Project</span><h2 data-modal-title="" id="modal-title">Project detail</h2><div class="modal-grid"><div><h3>The Challenge</h3><p data-modal-challenge=""></p></div><div><h3>What I Built</h3><p data-modal-solution=""></p></div><div><h3>Tools</h3><p data-modal-tools=""></p></div><div><h3>Source Note</h3><p data-modal-note=""></p></div></div></div></section></div>
 <footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a class="brand" href="index.html" aria-label="Jhim Rick Marco home">
-          <span class="brand-mark" aria-hidden="true">JM</span>
-          <span class="brand-text"><strong>Jhim Rick Marco</strong><span>Digital Systems Specialist</span></span>
-        </a>
-        <p>GoHighLevel, CRM automation, funnels, web development, and integrations built around practical business outcomes.</p>
-      </div>
-      <div>
-        <div class="footer-title">Navigate</div>
-        <div class="footer-links">
-          <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="proof-of-work.html">Proof of Work</a>
-        </div>
-      </div>
-      <div>
-        <div class="footer-title">Connect</div>
-        <div class="footer-links">
-          <a href="index.html#contact">Project inquiry</a>
-          <a href="https://portfolio.jrmrc.space/" target="_blank" rel="noopener noreferrer">External portfolio ↗</a>
-          <a href="proof-of-work.html">View selected work</a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© <span data-year></span> Jhim Rick Marco. All rights reserved.</span>
-      <span>GoHighLevel • Automation • Web Development</span>
-    </div>
-  </div>
+<div class="container">
+<div class="footer-grid">
+<div class="footer-brand">
+<a aria-label="Jhim Rick Marco home" class="brand" href="index.html"><span aria-hidden="true" class="brand-mark">JM</span><span class="brand-text"><strong>Jhim Rick Marco</strong><span>GoHighLevel &amp; Automation Specialist</span></span></a>
+<p>Funnels, websites, CRM systems, and automations designed to help businesses save time, improve follow-up, and grow.</p>
+</div>
+<div><div class="footer-title">Navigate</div><div class="footer-links"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="proof-of-work.html">Proof of Work</a></div></div>
+<div><div class="footer-title">Connect</div><div class="footer-contact"><a href="mailto:Jhimrickofficial@gmail.com">Jhimrickofficial@gmail.com</a><a href="tel:+639362651815">+63 936 265 1815</a><a href="https://facebook.com/jhimrickofficial" rel="noopener noreferrer" target="_blank">Facebook Profile ↗</a><a href="https://drive.google.com/drive/folders/1u092gy-B4LW8uMC9OKTmoucCMsCnrTej?usp=sharing" rel="noopener noreferrer" target="_blank">Google Drive Portfolio ↗</a></div></div>
+</div>
+<div class="footer-bottom"><span>© <span data-year=""></span> Jhim Rick Marco. All rights reserved.</span><span>GoHighLevel • Automation • Web Development</span></div>
+</div>
 </footer>
-<button class="scroll-top" type="button" aria-label="Scroll to top">↑</button>
-<script src="js/script.js" defer></script>
-</body></html>
+<button aria-label="Scroll to top" class="scroll-top" type="button">↑</button>
+<script>
+(() => {
+  'use strict';
+
+  const body = document.body;
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Current navigation state
+  const page = body.dataset.page;
+  document.querySelectorAll('[data-nav]').forEach((link) => {
+    if (link.dataset.nav === page) {
+      link.classList.add('is-active');
+      link.setAttribute('aria-current', 'page');
+    }
+  });
+
+  // Mobile menu
+  const menuButton = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  const closeMenu = () => {
+    if (!menuButton || !navLinks) return;
+    menuButton.setAttribute('aria-expanded', 'false');
+    navLinks.classList.remove('is-open');
+  };
+
+  if (menuButton && navLinks) {
+    menuButton.addEventListener('click', () => {
+      const open = menuButton.getAttribute('aria-expanded') === 'true';
+      menuButton.setAttribute('aria-expanded', String(!open));
+      navLinks.classList.toggle('is-open', !open);
+    });
+
+    navLinks.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') closeMenu();
+    });
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 900) closeMenu();
+    });
+  }
+
+  // Reveal-on-scroll
+  const revealItems = document.querySelectorAll('.reveal');
+  if (reduceMotion || !('IntersectionObserver' in window)) {
+    revealItems.forEach((item) => item.classList.add('is-visible'));
+  } else {
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.13, rootMargin: '0px 0px -40px' });
+    revealItems.forEach((item) => revealObserver.observe(item));
+  }
+
+  // Portfolio filters
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const proofCards = document.querySelectorAll('.proof-card[data-category]');
+  filterButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const filter = button.dataset.filter;
+      filterButtons.forEach((btn) => btn.setAttribute('aria-pressed', String(btn === button)));
+      proofCards.forEach((card) => {
+        const categories = (card.dataset.category || '').split(' ');
+        const visible = filter === 'all' || categories.includes(filter);
+        card.classList.toggle('is-hidden', !visible);
+      });
+    });
+  });
+
+  // Case-study modal
+  const modal = document.getElementById('project-modal');
+  let lastFocused = null;
+
+  if (modal) {
+    const modalDialog = modal.querySelector('.modal-dialog');
+    const modalClose = modal.querySelector('.modal-close');
+    const modalTitle = modal.querySelector('[data-modal-title]');
+    const modalType = modal.querySelector('[data-modal-type]');
+    const modalChallenge = modal.querySelector('[data-modal-challenge]');
+    const modalSolution = modal.querySelector('[data-modal-solution]');
+    const modalTools = modal.querySelector('[data-modal-tools]');
+    const modalNote = modal.querySelector('[data-modal-note]');
+
+    const focusableSelector = 'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])';
+
+    const closeModal = () => {
+      modal.classList.remove('is-open');
+      modal.setAttribute('aria-hidden', 'true');
+      body.classList.remove('modal-open');
+      if (lastFocused) lastFocused.focus();
+    };
+
+    const openModal = (trigger) => {
+      lastFocused = trigger;
+      const card = trigger.closest('.proof-card');
+      if (!card) return;
+      modalType.textContent = card.dataset.type || 'Project';
+      modalTitle.textContent = card.dataset.title || 'Project detail';
+      modalChallenge.textContent = card.dataset.challenge || 'Verified project challenge details can be added here.';
+      modalSolution.textContent = card.dataset.solution || 'Verified implementation details can be added here.';
+      modalTools.textContent = card.dataset.tools || 'Tools to be confirmed.';
+      modalNote.textContent = card.dataset.note || 'This case study intentionally avoids unverified results.';
+      modal.classList.add('is-open');
+      modal.setAttribute('aria-hidden', 'false');
+      body.classList.add('modal-open');
+      window.setTimeout(() => modalClose.focus(), 20);
+    };
+
+    document.querySelectorAll('[data-modal-open]').forEach((trigger) => {
+      trigger.addEventListener('click', () => openModal(trigger));
+    });
+    modalClose?.addEventListener('click', closeModal);
+    modal.querySelector('.modal-backdrop')?.addEventListener('click', closeModal);
+
+    document.addEventListener('keydown', (event) => {
+      if (!modal.classList.contains('is-open')) return;
+      if (event.key === 'Escape') {
+        closeModal();
+        return;
+      }
+      if (event.key === 'Tab' && modalDialog) {
+        const focusable = [...modalDialog.querySelectorAll(focusableSelector)].filter((el) => !el.hasAttribute('hidden'));
+        if (!focusable.length) return;
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault();
+          last.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault();
+          first.focus();
+        }
+      }
+    });
+  }
+
+  // Contact form validation + live submission endpoint from the provided portfolio source.
+  const form = document.getElementById('project-form');
+  if (form) {
+    const status = form.querySelector('.form-status');
+    const fields = [...form.querySelectorAll('[data-validate]')];
+
+    const showError = (field, message) => {
+      field.setAttribute('aria-invalid', 'true');
+      const error = form.querySelector(`#${field.id}-error`);
+      if (error) error.textContent = message;
+    };
+    const clearError = (field) => {
+      field.removeAttribute('aria-invalid');
+      const error = form.querySelector(`#${field.id}-error`);
+      if (error) error.textContent = '';
+    };
+    const validateField = (field) => {
+      const value = field.value.trim();
+      clearError(field);
+      if (field.required && !value) { showError(field, 'This field is required.'); return false; }
+      if (field.type === 'email' && value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) { showError(field, 'Enter a valid email address.'); return false; }
+      return true;
+    };
+    fields.forEach((field) => {
+      field.addEventListener('blur', () => validateField(field));
+      field.addEventListener('input', () => { if (field.hasAttribute('aria-invalid')) validateField(field); });
+    });
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      let valid = true;
+      fields.forEach((field) => { if (!validateField(field)) valid = false; });
+      status.className = 'form-status is-visible';
+      if (!valid) {
+        status.classList.add('is-error');
+        status.textContent = 'Please review the highlighted fields and try again.';
+        form.querySelector('[aria-invalid="true"]')?.focus();
+        return;
+      }
+
+      const endpoint = form.dataset.endpoint || '';
+      const data = new FormData(form);
+      const full = String(data.get('name') || '').trim();
+      const parts = full.split(/\s+/).filter(Boolean);
+      const firstName = parts.shift() || '';
+      const lastName = parts.join(' ');
+      const payload = {
+        first_name: firstName,
+        last_name: lastName,
+        email: String(data.get('email') || '').trim(),
+        phone: String(data.get('phone') || '').trim(),
+        business: String(data.get('business') || '').trim(),
+        service: String(data.get('service') || '').trim(),
+        work_type: String(data.get('work_type') || '').trim(),
+        message: String(data.get('message') || '').trim()
+      };
+
+      const button = form.querySelector('button[type="submit"]');
+      const original = button?.textContent || 'Send Project Inquiry';
+      if (button) { button.disabled = true; button.textContent = 'Sending...'; }
+      status.textContent = 'Sending your project inquiry...';
+      status.classList.remove('is-error', 'is-success');
+
+      try {
+        if (!endpoint) throw new Error('Contact endpoint is not configured.');
+        const response = await fetch(endpoint, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
+        const text = await response.text();
+        let result = {};
+        try { result = JSON.parse(text); } catch (_) {}
+        if (!response.ok) throw new Error(result.error || 'Your inquiry could not be sent.');
+        form.reset();
+        status.classList.add('is-success');
+        status.textContent = result.message || 'Thank you! Your project inquiry has been sent successfully.';
+      } catch (error) {
+        console.error(error);
+        status.classList.add('is-error');
+        status.textContent = error.message || 'Something went wrong. Please try again.';
+      } finally {
+        if (button) { button.disabled = false; button.textContent = original; }
+      }
+    });
+  }
+
+  // Footer year
+  document.querySelectorAll('[data-year]').forEach((node) => {
+    node.textContent = new Date().getFullYear();
+  });
+
+  // Scroll-to-top button
+  const scrollTopButton = document.querySelector('.scroll-top');
+  if (scrollTopButton) {
+    const updateScrollTop = () => scrollTopButton.classList.toggle('is-visible', window.scrollY > 550);
+    window.addEventListener('scroll', updateScrollTop, { passive: true });
+    updateScrollTop();
+    scrollTopButton.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+    });
+  }
+})();
+
+</script></body></html>
