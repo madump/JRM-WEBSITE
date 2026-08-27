@@ -1262,6 +1262,138 @@ main > section,
   transform: none !important;
   transition: none !important;
 }
+
+
+/* ==========================================================
+   HERO REBALANCE — cleaner proportions like the supplied reference
+   ========================================================== */
+.hero {
+  min-height: 720px !important;
+  padding: 86px 0 74px !important;
+}
+
+.hero-grid {
+  grid-template-columns: minmax(0, 1.12fr) minmax(470px, .88fr) !important;
+  gap: clamp(28px, 4vw, 62px) !important;
+  align-items: center !important;
+}
+
+.hero-copy {
+  align-self: center;
+  padding-top: 2px;
+}
+
+.hero-copy .eyebrow {
+  margin-bottom: 18px;
+}
+
+.hero-copy h1.hero-title {
+  width: min(100%, 720px) !important;
+  max-width: 720px !important;
+  margin: 0 0 24px !important;
+  font-size: clamp(3.45rem, 4.15vw, 4.35rem) !important;
+  line-height: .93 !important;
+  letter-spacing: -.055em !important;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+
+.hero-title > span {
+  display: block;
+  width: max-content;
+  max-width: 100%;
+}
+
+.hero-title > span:nth-child(3),
+.hero-title > span:nth-child(4) {
+  font-size: .96em;
+}
+
+.hero-copy > p {
+  max-width: 610px !important;
+  margin-bottom: 24px !important;
+  font-size: .93rem !important;
+  line-height: 1.62 !important;
+}
+
+.hero-copy .button-row {
+  gap: 10px;
+}
+
+.hero-note {
+  margin-top: 17px !important;
+}
+
+.system-visual {
+  width: 100%;
+  min-height: 470px !important;
+  transform: translateY(-2px);
+}
+
+.system-panel {
+  inset: 68px 82px 58px 12px !important;
+  transform: rotate(-6deg) rotateY(5deg) !important;
+}
+
+.system-visual::before {
+  width: 220px !important;
+  height: 310px !important;
+  right: 54px !important;
+  top: 64px !important;
+}
+
+.system-visual::after {
+  right: 10px !important;
+  top: 55px !important;
+}
+
+.float-badge--1 { left: 18px !important; top: 28px !important; }
+.float-badge--2 { right: 0 !important; bottom: 78px !important; }
+.float-badge--3 { left: 68px !important; bottom: 25px !important; }
+
+@media (max-width: 1120px) {
+  .hero { min-height: auto !important; }
+  .hero-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(390px, .86fr) !important;
+    gap: 34px !important;
+  }
+  .hero-copy h1.hero-title {
+    font-size: clamp(3.1rem, 5vw, 3.85rem) !important;
+  }
+  .system-visual { min-height: 430px !important; }
+  .system-panel { inset: 64px 68px 54px 8px !important; }
+}
+
+@media (max-width: 900px) {
+  .hero { padding: 72px 0 64px !important; }
+  .hero-grid { grid-template-columns: 1fr !important; gap: 48px !important; }
+  .hero-copy { text-align: left !important; }
+  .hero-copy h1.hero-title { width: 100% !important; max-width: 760px !important; }
+  .hero-copy > p { margin-inline: 0 !important; }
+  .hero-copy .button-row { justify-content: flex-start !important; }
+  .hero-note { justify-content: flex-start !important; }
+  .system-visual { width: min(100%, 650px); min-height: 450px !important; margin-inline: auto; }
+}
+
+@media (max-width: 640px) {
+  .hero { padding: 58px 0 50px !important; }
+  .hero-copy h1.hero-title {
+    font-size: clamp(2.7rem, 13.4vw, 4rem) !important;
+    line-height: .94 !important;
+    letter-spacing: -.05em !important;
+  }
+  .hero-title > span { width: auto; }
+  .hero-copy > p { font-size: .95rem !important; }
+  .hero-copy .button-row { display: grid; grid-template-columns: 1fr; }
+  .hero-copy .button-row .btn { width: 100%; }
+  .system-visual { min-height: 370px !important; }
+  .system-panel { inset: 60px 42px 52px 10px !important; }
+  .system-visual::before { width: 170px !important; height: 250px !important; right: 26px !important; top: 66px !important; }
+  .system-visual::after { width: 58px !important; height: 58px !important; right: 2px !important; top: 50px !important; }
+  .float-badge--1 { left: 6px !important; top: 22px !important; }
+  .float-badge--2 { right: 0 !important; bottom: 58px !important; }
+  .float-badge--3 { left: 44px !important; bottom: 16px !important; }
+}
 </style></head>
 <body data-page="home">
 <a class="skip-link" href="#main">Skip to content</a>
@@ -1286,7 +1418,7 @@ main > section,
 <div class="container hero-grid">
 <div class="hero-copy reveal is-visible">
 <div class="eyebrow">GoHighLevel Expert &amp; Automation Specialist</div>
-<h1>I build funnels, websites and automated systems that help businesses <span class="accent">grow.</span></h1>
+<h1 class="hero-title"><span>I build funnels,</span><span>websites and</span><span>automated systems</span><span>that help businesses</span><span class="accent">grow.</span></h1>
 <p>I help businesses improve lead generation, simplify follow-ups, manage customer relationships, and save time through GoHighLevel, Zapier, CRM automation, and conversion-focused web design.</p>
 <div class="button-row">
 <a class="btn btn--accent" href="proof-of-work.html">View My Work <span class="btn__arrow">→</span></a>
@@ -1314,12 +1446,6 @@ main > section,
 </div>
 </section>
 <div aria-label="Core specialization" class="specialization-bar"><div class="container specialization-list"><span>GoHighLevel</span><span>CRM Automation</span><span>Sales Funnels</span><span>Websites</span><span>Zapier</span><span>Make</span><span>n8n</span><span>APIs &amp; Webhooks</span></div></div>
-<section aria-labelledby="about-preview-title" class="section">
-<div class="container journey-wrap">
-<div class="journey-copy reveal"><div class="eyebrow">About Me</div><h2 id="about-preview-title">Technical thinking with a conversion-focused approach.</h2><p>I'm Jhim Rick Marco, an Information Technology graduate and GoHighLevel specialist who combines automation, web development, and creative production to help businesses operate more efficiently.</p><div class="button-row" style="margin-top:24px"><a class="btn btn--dark" href="about.html">More About Me →</a></div></div>
-<div class="journey reveal" data-delay="1"><div class="journey-step"><span>01 / Capture</span><strong>Funnels</strong></div><div class="journey-step"><span>02 / Organize</span><strong>CRM</strong></div><div class="journey-step is-accent"><span>03 / Automate</span><strong>Workflows</strong></div><div class="journey-step"><span>04 / Connect</span><strong>Integrations</strong></div><div class="journey-step"><span>05 / Convert</span><strong>Appointments</strong></div><div class="journey-step is-accent"><span>06 / Support</span><strong>Creative</strong></div></div>
-</div>
-</section>
 <section aria-labelledby="services-title" class="section section--white">
 <div class="container">
 <div class="section-heading reveal"><div><div class="eyebrow">Services</div><h2 id="services-title">Digital systems built to support growth.</h2></div><p>From the first landing page visit to the final follow-up, every service is designed to make your customer journey clearer and your operations easier to manage.</p></div>
