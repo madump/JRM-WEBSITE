@@ -2690,6 +2690,85 @@ section[aria-labelledby="process-title"] .section-heading p {
 }
 </style>
 
+
+<style data-core-stack-alignment-fix="true">
+/* Final Core Stack alignment: match the hero container and remove the detached-strip feel. */
+.hero > .specialization-bar--hero {
+  margin-top: 14px !important;
+  background: var(--ref-shell, #0c151d) !important;
+  border-top: 0 !important;
+}
+
+.hero > .specialization-bar--hero::before {
+  top: 0 !important;
+  width: min(calc(100% - 64px), 1080px) !important;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(255,255,255,.055) 10%,
+    rgba(157,255,62,.18) 50%,
+    rgba(255,255,255,.055) 90%,
+    transparent 100%) !important;
+}
+
+.hero > .specialization-bar--hero::after {
+  display: none !important;
+}
+
+.hero > .specialization-bar--hero .specialization-shell {
+  width: min(calc(100% - 64px), 1080px) !important;
+  min-height: 64px !important;
+  gap: 16px !important;
+}
+
+.hero > .specialization-bar--hero .specialization-label {
+  min-height: 36px !important;
+  padding-right: 18px !important;
+}
+
+.hero > .specialization-bar--hero .specialization-list {
+  min-height: 64px !important;
+  gap: 0 !important;
+}
+
+.hero > .specialization-bar--hero .specialization-list span {
+  min-height: 34px !important;
+  padding: 0 9px !important;
+}
+
+@media (max-width: 1080px) {
+  .hero > .specialization-bar--hero::before,
+  .hero > .specialization-bar--hero .specialization-shell {
+    width: min(calc(100% - 42px), 960px) !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero > .specialization-bar--hero { margin-top: 22px !important; }
+  .hero > .specialization-bar--hero::before,
+  .hero > .specialization-bar--hero .specialization-shell {
+    width: min(calc(100% - 40px), 760px) !important;
+  }
+}
+
+@media (max-width: 680px) {
+  .hero > .specialization-bar--hero { margin-top: 18px !important; }
+  .hero > .specialization-bar--hero::before {
+    width: min(calc(100% - 28px), 620px) !important;
+  }
+  .hero > .specialization-bar--hero .specialization-shell {
+    width: min(calc(100% - 28px), 620px) !important;
+    padding: 12px 0 10px !important;
+  }
+}
+
+@media (max-width: 430px) {
+  .hero > .specialization-bar--hero::before,
+  .hero > .specialization-bar--hero .specialization-shell {
+    width: calc(100% - 24px) !important;
+  }
+}
+</style>
+
 </head>
 <body data-page="home">
 <a class="skip-link" href="#main">Skip to content</a>
