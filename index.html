@@ -1573,6 +1573,235 @@ main > section,
   .home-package__image { max-width: 200px; max-height: 124px; }
 }
 
+
+/* ===== EDITORIAL RESULTS / PROOF SECTION ===== */
+.proof-band {
+  position: relative;
+  overflow: hidden;
+  background: #071119 !important;
+  color: #f4f7f8;
+  border-top: 1px solid rgba(213,229,239,.08);
+  border-bottom: 1px solid rgba(213,229,239,.08);
+}
+.proof-band::before {
+  content: "";
+  position: absolute;
+  width: 620px;
+  height: 620px;
+  right: -250px;
+  top: -280px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(157,255,62,.09), transparent 68%);
+  pointer-events: none;
+}
+.proof-band > .container { position: relative; z-index: 1; }
+
+.results-heading {
+  display: grid !important;
+  grid-template-columns: minmax(0,1.35fr) minmax(280px,.65fr) !important;
+  gap: clamp(44px,7vw,110px) !important;
+  align-items: end !important;
+  margin-bottom: 52px !important;
+}
+.results-heading h2 {
+  max-width: 850px !important;
+  margin-bottom: 0 !important;
+  font-size: clamp(3rem,5.2vw,5.25rem) !important;
+  line-height: .94 !important;
+  letter-spacing: -.055em !important;
+}
+.results-intro {
+  max-width: 410px;
+  padding-bottom: 8px;
+}
+.results-intro::before {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 2px;
+  margin-bottom: 20px;
+  background: #9dff3e;
+}
+.results-intro p {
+  margin: 0 !important;
+  color: #8d9ca7 !important;
+  font-size: .92rem !important;
+  line-height: 1.75 !important;
+}
+.results-source {
+  display: block;
+  margin-top: 16px;
+  color: #667984;
+  font-size: .64rem;
+  font-weight: 800;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+
+.proof-editorial {
+  display: grid;
+  grid-template-columns: minmax(320px,.92fr) minmax(0,1.48fr);
+  border-top: 1px solid rgba(213,229,239,.13);
+  border-bottom: 1px solid rgba(213,229,239,.13);
+}
+.proof-anchor {
+  position: relative;
+  min-height: 560px;
+  padding: 48px 52px 48px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 1px solid rgba(213,229,239,.13);
+  overflow: hidden;
+}
+
+.proof-kicker {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #748993;
+  font-size: .64rem;
+  font-weight: 900;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+.proof-kicker::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #9dff3e;
+}
+.proof-anchor__body { position: relative; z-index: 1; }
+.proof-anchor strong {
+  display: block;
+  margin: 28px 0 18px;
+  color: #9dff3e;
+  font-size: clamp(6.5rem,11vw,11rem);
+  line-height: .76;
+  letter-spacing: -.085em;
+}
+.proof-anchor h3 {
+  max-width: 420px;
+  margin: 0 0 9px;
+  color: #f4f7f8;
+  font-size: clamp(1.25rem,2.2vw,2rem);
+  line-height: 1.12;
+  letter-spacing: -.035em;
+}
+.proof-anchor p {
+  max-width: 350px;
+  margin: 0;
+  color: #71838e;
+  font-size: .78rem;
+  line-height: 1.55;
+}
+
+
+.proof-ledger { display: grid; grid-template-rows: repeat(5,1fr); }
+.proof-ledger__row {
+  display: grid;
+  grid-template-columns: 54px minmax(210px,.46fr) minmax(220px,1fr);
+  gap: 24px;
+  align-items: center;
+  min-height: 112px;
+  padding: 22px 0 22px 34px;
+  border-bottom: 1px solid rgba(213,229,239,.10);
+  transition: background-color .2s ease, padding-left .2s ease;
+}
+.proof-ledger__row:last-child { border-bottom: 0; }
+.proof-ledger__row:hover {
+  padding-left: 42px;
+  background: linear-gradient(90deg, rgba(157,255,62,.045), transparent 70%);
+}
+.proof-ledger__index {
+  color: #536874;
+  font-size: .62rem;
+  font-weight: 900;
+  letter-spacing: .1em;
+}
+.proof-ledger__value {
+  color: #9dff3e;
+  font-size: clamp(2rem,3.35vw,3.8rem);
+  font-weight: 800;
+  line-height: .92;
+  letter-spacing: -.065em;
+  white-space: nowrap;
+}
+.proof-ledger__row:nth-child(4) .proof-ledger__value {
+  font-size: clamp(1.55rem,2.15vw,2.55rem);
+  letter-spacing: -.05em;
+}
+.proof-ledger__copy {
+  min-width: 0;
+  padding-left: 2px;
+}
+.proof-ledger__copy strong {
+  display: block;
+  margin-bottom: 5px;
+  color: #dce5ea;
+  font-size: .88rem;
+  line-height: 1.35;
+}
+.proof-ledger__copy span {
+  color: #647986;
+  font-size: .69rem;
+  line-height: 1.45;
+}
+
+@media (max-width: 980px) {
+  .results-heading { grid-template-columns: 1fr !important; gap: 24px !important; }
+  .results-intro { max-width: 620px; }
+  .proof-editorial { grid-template-columns: 1fr; }
+  .proof-anchor {
+    min-height: 360px;
+    padding: 36px 0 38px;
+    border-right: 0;
+    border-bottom: 1px solid rgba(213,229,239,.13);
+  }
+  .proof-anchor strong { font-size: clamp(6rem,18vw,9rem); }
+  .proof-anchor::after { right: 0; left: auto; }
+  .proof-ledger__row { padding-left: 0; }
+  .proof-ledger__row:hover { padding-left: 8px; }
+}
+@media (max-width: 720px) {
+  .proof-band { padding-block: 76px !important; }
+  .results-heading { margin-bottom: 34px !important; }
+  .results-heading h2 { font-size: clamp(2.75rem,13vw,4.1rem) !important; }
+  .proof-anchor { min-height: 320px; padding: 30px 0 34px; }
+  .proof-anchor strong { margin-top: 24px; font-size: clamp(5.7rem,27vw,8rem); }
+  .proof-ledger__row {
+    grid-template-columns: 34px minmax(0,1fr);
+    gap: 4px 14px;
+    min-height: 0;
+    padding: 22px 0;
+    align-items: start;
+  }
+  .proof-ledger__row:hover { padding-left: 0; }
+  .proof-ledger__index {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    padding-top: 8px;
+  }
+  .proof-ledger__value {
+    grid-column: 2;
+    grid-row: 1;
+    font-size: clamp(2.15rem,10vw,3rem);
+    line-height: .95;
+    white-space: normal;
+  }
+  .proof-ledger__row:nth-child(4) .proof-ledger__value {
+    font-size: clamp(1.9rem,8.8vw,2.65rem);
+  }
+  .proof-ledger__copy {
+    grid-column: 2;
+    grid-row: 2;
+    padding: 4px 0 0;
+  }
+  .proof-ledger__copy strong { font-size: .78rem; }
+  .proof-ledger__copy span { font-size: .64rem; }
+}
+
 </style>
 <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
 <title>Jhim Rick Marco | GoHighLevel &amp; Automation Specialist</title>
@@ -2020,15 +2249,55 @@ main > section,
 </section>
 <section aria-labelledby="results-title" class="section proof-band">
 <div class="container">
-<div class="section-heading reveal"><div><div class="eyebrow">Supported Results</div><h2 id="results-title">Experience backed by practical outcomes.</h2></div><p>These figures and outcomes come from the portfolio content you provided.</p></div>
-<div class="stats-grid results-six reveal">
-<div class="stat"><strong>80+</strong><span>Sales funnels built and optimized</span><small>Using GoHighLevel</small></div>
-<div class="stat"><strong>80%</strong><span>Reduction in manual follow-up work</span><small>Through automation</small></div>
-<div class="stat"><strong>15+</strong><span>High-converting client funnels</span><small>Across multiple industries</small></div>
-<div class="stat"><strong>Faster</strong><span>Lead response times</span><small>Through automated workflows</small></div>
-<div class="stat"><strong>End-to-End</strong><span>Lead nurturing &amp; booking systems</span><small>Built for consistent follow-up</small></div>
-<div class="stat"><strong>Clear</strong><span>Workflow documentation</span><small>Step-by-step client handoff</small></div>
-</div>
+  <div class="section-heading results-heading reveal">
+    <div>
+      <div class="eyebrow">Supported Results</div>
+      <h2 id="results-title">Experience backed by practical outcomes.</h2>
+    </div>
+    <div class="results-intro">
+      <p>Selected outcomes from the portfolio and experience you provided—shown as proof points, not decorative statistics.</p>
+      <span class="results-source">Portfolio / Experience / Delivery</span>
+    </div>
+  </div>
+
+  <div class="proof-editorial reveal">
+    <article class="proof-anchor">
+      <div class="proof-kicker">Funnel delivery</div>
+      <div class="proof-anchor__body">
+        <strong>80+</strong>
+        <h3>Sales funnels built and optimized</h3>
+        <p>Hands-on funnel implementation and optimization using GoHighLevel.</p>
+      </div>
+    </article>
+
+    <div class="proof-ledger" aria-label="Additional supported outcomes">
+      <article class="proof-ledger__row">
+        <span class="proof-ledger__index">02</span>
+        <strong class="proof-ledger__value">80%</strong>
+        <div class="proof-ledger__copy"><strong>Less manual follow-up work</strong><span>Reduction through automation.</span></div>
+      </article>
+      <article class="proof-ledger__row">
+        <span class="proof-ledger__index">03</span>
+        <strong class="proof-ledger__value">15+</strong>
+        <div class="proof-ledger__copy"><strong>High-converting client funnels</strong><span>Across multiple industries.</span></div>
+      </article>
+      <article class="proof-ledger__row">
+        <span class="proof-ledger__index">04</span>
+        <strong class="proof-ledger__value">Faster</strong>
+        <div class="proof-ledger__copy"><strong>Lead response times</strong><span>Improved through automated workflows.</span></div>
+      </article>
+      <article class="proof-ledger__row">
+        <span class="proof-ledger__index">05</span>
+        <strong class="proof-ledger__value">End-to-End</strong>
+        <div class="proof-ledger__copy"><strong>Lead nurturing &amp; booking systems</strong><span>Built for consistent follow-up.</span></div>
+      </article>
+      <article class="proof-ledger__row">
+        <span class="proof-ledger__index">06</span>
+        <strong class="proof-ledger__value">Clear</strong>
+        <div class="proof-ledger__copy"><strong>Workflow documentation</strong><span>Step-by-step client handoff.</span></div>
+      </article>
+    </div>
+  </div>
 </div>
 </section>
 <section aria-labelledby="featured-title" class="section section--white">
