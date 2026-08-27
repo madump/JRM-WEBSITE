@@ -2495,6 +2495,201 @@ section[aria-labelledby="process-title"] .section-heading p {
   }
 }
 </style>
+
+<style data-core-stack-in-hero="true">
+/* ===== CORE STACK — SEAMLESS HERO INTEGRATION ===== */
+.hero {
+  padding-bottom: 0 !important;
+}
+
+/* Same exact background as the hero so the stack feels built-in, not attached. */
+.hero > .specialization-bar--hero {
+  position: relative;
+  z-index: 8;
+  width: 100%;
+  margin-top: clamp(30px, 3.4vw, 50px);
+  flex: 0 0 auto;
+  background: var(--ref-shell, #0c151d) !important;
+  border-top: 1px solid rgba(255,255,255,.075) !important;
+  border-bottom: 0 !important;
+  box-shadow: none !important;
+  isolation: isolate;
+}
+
+/* Thin neon rail rather than a separate colored bar. */
+.hero > .specialization-bar--hero::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -1px;
+  width: min(78%, 980px);
+  height: 1px;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(157,255,62,.08) 15%,
+    rgba(157,255,62,.34) 50%,
+    rgba(157,255,62,.08) 85%,
+    transparent 100%);
+  pointer-events: none;
+}
+
+.hero > .specialization-bar--hero::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -18px;
+  width: min(64%, 760px);
+  height: 38px;
+  transform: translateX(-50%);
+  background: radial-gradient(ellipse at center, rgba(157,255,62,.045), transparent 68%);
+  filter: blur(6px);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.hero > .specialization-bar--hero .specialization-shell {
+  width: min(calc(100% - 64px), 1180px);
+  min-height: 72px;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 22px;
+}
+
+/* Cleaner Core Stack identity. */
+.hero > .specialization-bar--hero .specialization-label {
+  min-height: 40px;
+  padding-right: 22px;
+  border-right: 1px solid rgba(255,255,255,.09);
+  color: #f4f7f8;
+  font-size: .68rem;
+  letter-spacing: .14em;
+  white-space: nowrap;
+}
+
+.hero > .specialization-bar--hero .specialization-label i {
+  width: 28px;
+  height: 28px;
+  border-color: rgba(157,255,62,.28);
+  background: rgba(157,255,62,.045);
+  box-shadow: 0 0 0 5px rgba(157,255,62,.018), 0 0 18px rgba(157,255,62,.07);
+}
+
+.hero > .specialization-bar--hero .specialization-label i::before {
+  width: 6px;
+  height: 6px;
+  box-shadow: 0 0 12px rgba(157,255,62,.7);
+}
+
+/* Let each technology breathe while keeping a compact editorial rhythm. */
+.hero > .specialization-bar--hero .specialization-list {
+  min-width: 0;
+  min-height: 72px;
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between !important;
+  gap: 4px !important;
+  padding: 0 !important;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.hero > .specialization-bar--hero .specialization-list::-webkit-scrollbar {
+  display: none;
+}
+
+.hero > .specialization-bar--hero .specialization-list span {
+  position: relative;
+  min-height: 38px;
+  display: inline-flex !important;
+  align-items: center;
+  gap: 9px !important;
+  padding: 0 12px !important;
+  border: 1px solid transparent !important;
+  border-radius: 999px !important;
+  background: transparent !important;
+  color: #aab7c0 !important;
+  font-size: .68rem !important;
+  font-weight: 800 !important;
+  white-space: nowrap;
+  transition: color .2s ease, background-color .2s ease, border-color .2s ease, transform .2s ease;
+}
+
+.hero > .specialization-bar--hero .specialization-list span::before {
+  content: "" !important;
+  width: 5px !important;
+  height: 5px !important;
+  flex: 0 0 5px;
+  border-radius: 50%;
+  background: var(--ref-lime, #9dff3e) !important;
+  box-shadow: 0 0 9px rgba(157,255,62,.42);
+}
+
+@media (hover:hover) and (pointer:fine) {
+  .hero > .specialization-bar--hero .specialization-list span:hover {
+    color: #f4f7f8 !important;
+    background: rgba(255,255,255,.035) !important;
+    border-color: rgba(157,255,62,.11) !important;
+    transform: translateY(-1px);
+  }
+}
+
+@media (max-width: 1180px) {
+  .hero > .specialization-bar--hero .specialization-shell {
+    width: min(calc(100% - 42px), 1040px);
+  }
+  .hero > .specialization-bar--hero .specialization-list {
+    justify-content: flex-start !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero > .specialization-bar--hero {
+    margin-top: 38px;
+  }
+  .hero > .specialization-bar--hero .specialization-shell {
+    width: min(calc(100% - 40px), 760px);
+  }
+}
+
+@media (max-width: 760px) {
+  .hero > .specialization-bar--hero {
+    margin-top: 30px;
+  }
+  .hero > .specialization-bar--hero .specialization-shell {
+    width: 100% !important;
+    min-height: auto;
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 14px 14px 12px;
+  }
+  .hero > .specialization-bar--hero .specialization-label {
+    width: fit-content;
+    min-height: 34px;
+    margin-bottom: 5px;
+    padding-right: 0;
+    border-right: 0;
+  }
+  .hero > .specialization-bar--hero .specialization-list {
+    min-height: 48px;
+    width: 100%;
+    justify-content: flex-start !important;
+    gap: 4px !important;
+  }
+  .hero > .specialization-bar--hero .specialization-list span {
+    padding: 0 10px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero > .specialization-bar--hero {
+    margin-top: 26px;
+  }
+}
+</style>
+
 </head>
 <body data-page="home">
 <a class="skip-link" href="#main">Skip to content</a>
@@ -2534,8 +2729,7 @@ section[aria-labelledby="process-title"] .section-heading p {
 </div>
 
 </div>
-</section>
-<div aria-label="Core specialization" class="specialization-bar">
+<div aria-label="Core specialization" class="specialization-bar specialization-bar--hero">
   <div class="container specialization-shell">
     <div class="specialization-label"><i aria-hidden="true"></i><span>Core Stack</span></div>
     <div class="specialization-list" role="list">
@@ -2550,6 +2744,7 @@ section[aria-labelledby="process-title"] .section-heading p {
     </div>
   </div>
 </div>
+</section>
 <section aria-labelledby="services-title" class="section section--white">
 <div class="container">
   <div class="section-heading reveal is-visible"><div><div class="eyebrow">GoHighLevel Service Packages</div><h2 id="services-title">GoHighLevel packages.</h2></div><p>Three fixed-price builds, from a clean GoHighLevel setup to a full AI-powered revenue system.</p></div>
