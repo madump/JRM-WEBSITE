@@ -5083,6 +5083,11 @@ body[data-page="about"] .education-section.education-clean::after {
   text-wrap: balance;
 }
 
+.about-cta-line {
+  display: block;
+  white-space: nowrap;
+}
+
 .about-cta-editorial__lower {
   display: flex;
   flex-wrap: wrap;
@@ -5514,10 +5519,10 @@ body[data-page="about"] .education-section.education-clean {
   .about-cta-editorial { padding: 52px 0 !important; }
   .about-cta-editorial__shell { padding: 28px 0; }
   .about-cta-editorial__copy h2 {
-    font-size: clamp(2.2rem, 11vw, 3rem);
+    font-size: clamp(2rem, 9.4vw, 2.75rem);
     line-height: 1;
+    letter-spacing: -.055em;
   }
-  .about-cta-editorial__copy h2 br { display: none; }
   .about-cta-editorial__action {
     display: grid;
     grid-template-columns: auto minmax(0,1fr);
@@ -5534,6 +5539,7 @@ body[data-page="about"] .education-section.education-clean {
 }
 
 @media (max-width: 420px) {
+  .about-cta-editorial__copy h2 { font-size: clamp(1.85rem, 8.9vw, 2.2rem); }
   .about-cta-editorial__action { grid-template-columns: 1fr; }
   .about-cta-editorial__signal { width: 96px; }
 }
@@ -5836,7 +5842,7 @@ body[data-page="about"] .education-section.education-clean {
       <div class="education-clean__intro">
         <p>My technical foundation in Information Technology is supported by practical professional training across digital work, cybersecurity, and disciplined operations.</p>
         <div class="education-clean__meta" aria-label="Education summary">
-          <span><b>BSIT</b> Information Technology</span>
+          <span><b>Degree</b> Information Technology</span>
           <span><b>2024—2025</b> Academic period</span>
           <span><b>03</b> Completed programs</span>
         </div>
@@ -5859,7 +5865,6 @@ body[data-page="about"] .education-section.education-clean {
           <div><span>Period</span><strong>2024 — 2025</strong></div>
         </div>
 
-        <div class="education-clean__watermark" aria-hidden="true">BSIT</div>
       </article>
 
       <article class="education-clean__training reveal" data-delay="1">
@@ -5895,7 +5900,7 @@ body[data-page="about"] .education-section.education-clean {
     <div class="about-cta-editorial__shell reveal">
       <div class="about-cta-editorial__copy">
         <div class="eyebrow">Let's work together</div>
-        <h2 id="about-cta-title">Need someone who can<br>build and troubleshoot<br>the system?</h2>
+        <h2 id="about-cta-title"><span class="about-cta-line">Need someone</span><span class="about-cta-line">who can build</span><span class="about-cta-line">and troubleshoot</span><span class="about-cta-line">the system?</span></h2>
         <div class="about-cta-editorial__lower">
           <p>Tell me what needs to work better. I can help map the problem, build the solution, and make sure the pieces connect.</p>
           <div class="about-cta-editorial__availability"><i></i><span>Available for selected projects</span></div>
