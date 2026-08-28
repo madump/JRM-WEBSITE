@@ -1181,6 +1181,228 @@ section[aria-labelledby="process-title"] .section-heading p{padding-top:4px;}
 .tool-item:hover{background:#203541;border-color:rgba(157,255,62,.18);}
 .tool-mark{background:#0b171f;color:var(--ref-lime);}
 .tool-item span:last-child{color:#a7b3bb;}
+
+/* ===== TOOLS & PLATFORMS — ECOSYSTEM GRID ===== */
+.tools-platform-section{
+  position:relative;
+  overflow:hidden;
+  padding:86px 0 !important;
+  background:#0b171f !important;
+}
+.tools-platform-section::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:
+    linear-gradient(rgba(255,255,255,.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.018) 1px, transparent 1px),
+    radial-gradient(circle at 82% 18%, rgba(157,255,62,.075), transparent 24%);
+  background-size:44px 44px,44px 44px,auto;
+  mask-image:linear-gradient(to bottom, rgba(0,0,0,.7), rgba(0,0,0,.2));
+}
+.tools-platform-section .container{position:relative;z-index:1;}
+.tools-platform-heading{
+  grid-template-columns:minmax(0,1.05fr) minmax(340px,.72fr) !important;
+  gap:72px !important;
+  margin-bottom:34px !important;
+}
+.tools-platform-heading h2{
+  max-width:650px;
+  font-size:clamp(2.8rem,5vw,5rem) !important;
+  line-height:.92 !important;
+}
+.tools-platform-copy{max-width:520px;}
+.tools-platform-copy>p{
+  margin:0 0 18px;
+  color:#91a3ae !important;
+  font-size:.9rem;
+  line-height:1.7;
+}
+.tools-platform-meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+.tools-platform-meta span{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  min-height:31px;
+  padding:0 11px;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:999px;
+  background:rgba(20,38,49,.76);
+  color:#aebbc3;
+  font-size:.67rem;
+  font-weight:800;
+}
+.tools-platform-meta span::before{
+  content:"";
+  width:5px;
+  height:5px;
+  border-radius:50%;
+  background:var(--ref-lime);
+  box-shadow:0 0 10px rgba(157,255,62,.42);
+}
+.tool-logo-grid.tools-ecosystem-grid{
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:12px;
+}
+.tools-ecosystem-grid .tool-logo-item{
+  position:relative;
+  min-height:142px;
+  padding:16px;
+  border:1px solid rgba(255,255,255,.075);
+  border-radius:16px;
+  background:linear-gradient(160deg, rgba(30,51,64,.94), rgba(13,27,36,.98));
+  display:flex;
+  flex-direction:column;
+  align-items:stretch;
+  justify-content:space-between;
+  gap:16px;
+  text-align:left;
+  overflow:hidden;
+  box-shadow:0 14px 32px rgba(0,0,0,.11);
+  transition:transform .22s ease,border-color .22s ease,background .22s ease,box-shadow .22s ease;
+}
+.tools-ecosystem-grid .tool-logo-item::before{
+  content:"";
+  position:absolute;
+  width:110px;
+  height:110px;
+  right:-42px;
+  top:-45px;
+  border-radius:50%;
+  background:radial-gradient(circle, rgba(157,255,62,.11), transparent 68%);
+  opacity:.65;
+  transition:.22s ease;
+}
+.tools-ecosystem-grid .tool-logo-item:hover{
+  transform:translateY(-5px);
+  border-color:rgba(157,255,62,.22);
+  background:linear-gradient(160deg, rgba(35,59,73,.98), rgba(14,29,38,.98));
+  box-shadow:0 24px 44px rgba(0,0,0,.2),0 0 28px rgba(157,255,62,.035);
+}
+.tools-ecosystem-grid .tool-logo-item:hover::before{opacity:1;transform:scale(1.08);}
+.tool-logo-item__top{
+  position:relative;
+  z-index:1;
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:10px;
+}
+.tools-ecosystem-grid .tool-logo-item img{
+  width:42px;
+  height:42px;
+  flex:0 0 42px;
+  padding:5px;
+  object-fit:contain;
+  border-radius:11px;
+  background:#fff;
+  box-shadow:0 8px 18px rgba(0,0,0,.18);
+}
+.tool-logo-item__type{
+  display:inline-flex;
+  align-items:center;
+  min-height:24px;
+  padding:0 8px;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:999px;
+  background:rgba(8,20,28,.58);
+  color:#82939e;
+  font-size:.56rem;
+  font-weight:900;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+.tool-logo-item__body{position:relative;z-index:1;}
+.tools-ecosystem-grid .tool-logo-item strong{
+  display:block;
+  margin:0 0 4px;
+  color:#f3f7f8;
+  font:800 .88rem/1.25 "Manrope","Inter",sans-serif;
+  letter-spacing:-.025em;
+}
+.tools-ecosystem-grid .tool-logo-item small{
+  display:block;
+  color:#718590;
+  font-size:.62rem;
+  font-weight:700;
+  line-height:1.35;
+}
+.tool-logo-item.is-core{
+  border-color:rgba(157,255,62,.16);
+  background:linear-gradient(160deg, rgba(32,56,67,.98), rgba(14,29,38,.98));
+}
+.tool-logo-item.is-core .tool-logo-item__type{
+  color:var(--ref-lime);
+  border-color:rgba(157,255,62,.18);
+  background:rgba(157,255,62,.07);
+}
+.tools-stack-note{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+  margin-top:16px;
+  padding:15px 18px;
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:14px;
+  background:rgba(13,27,36,.68);
+}
+.tools-stack-note p{
+  margin:0;
+  color:#778b96 !important;
+  font-size:.72rem;
+}
+.tools-stack-note strong{
+  color:#dce5e9;
+  font-weight:800;
+}
+.tools-stack-note__signal{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  flex:0 0 auto;
+  color:var(--ref-lime);
+  font-size:.66rem;
+  font-weight:900;
+  letter-spacing:.09em;
+  text-transform:uppercase;
+}
+.tools-stack-note__signal::before{
+  content:"";
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:var(--ref-lime);
+  box-shadow:0 0 0 5px rgba(157,255,62,.07),0 0 16px rgba(157,255,62,.24);
+}
+@media (max-width:1080px){
+  .tool-logo-grid.tools-ecosystem-grid{grid-template-columns:repeat(4,minmax(0,1fr));}
+}
+@media (max-width:900px){
+  .tools-platform-heading{grid-template-columns:1fr !important;gap:18px !important;}
+  .tools-platform-copy{max-width:620px;}
+  .tool-logo-grid.tools-ecosystem-grid{grid-template-columns:repeat(3,minmax(0,1fr));}
+}
+@media (max-width:680px){
+  .tools-platform-section{padding:68px 0 !important;}
+  .tools-platform-heading h2{font-size:clamp(2.45rem,11vw,3.55rem) !important;}
+  .tool-logo-grid.tools-ecosystem-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;}
+  .tools-ecosystem-grid .tool-logo-item{min-height:132px;padding:14px;}
+  .tools-stack-note{align-items:flex-start;flex-direction:column;gap:10px;}
+}
+@media (max-width:430px){
+  .tool-logo-grid.tools-ecosystem-grid{grid-template-columns:1fr;}
+  .tools-ecosystem-grid .tool-logo-item{min-height:112px;}
+  .tool-logo-item__body{padding-right:8px;}
+}
+
 .experience-timeline,.exp-item{border-color:rgba(255,255,255,.09);}
 .exp-meta{color:#6f818d;}
 .exp-meta strong{color:#dfe6ea;}
@@ -2725,9 +2947,23 @@ body[data-page="about"] .about-focus-v2__actions .btn__arrow {
   </div>
 </section>
 <section aria-labelledby="skills-title" class="section section--white skills-section"><div class="container"><div class="section-heading reveal skills-heading"><div><div class="eyebrow">Skills &amp; Tools</div><h2 id="skills-title">The tools I work with.</h2></div><p>I combine automation, web production, and creative execution so the whole customer journey works better—from lead capture to follow-up.</p></div><div class="skills-summary reveal"><article class="skills-summary__card"><span>Core stack</span><strong>Automation, websites, and creative support handled in one workflow.</strong></article><article class="skills-summary__card"><span>Best outcome</span><strong>Connected systems that save time, improve follow-up, and support better conversions.</strong></article><article class="skills-summary__card"><span>Working style</span><strong>Practical, user-friendly execution aligned with real business goals.</strong></article></div><div class="skill-columns skills-shell"><section class="skill-group reveal"><div class="skill-group__top"><div class="skill-group__badge"><div class="skill-group__icon">01</div><div><span class="skill-group__eyebrow">Systems &amp; Workflows</span><h3>Automation &amp; CRM</h3></div></div><span class="skill-group__count">10 capabilities</span></div><p>Build connected lead capture, CRM, and follow-up workflows that reduce manual work and keep operations organized.</p><ul><li>GoHighLevel</li><li>Zapier</li><li>CRM Integrations</li><li>APIs</li><li>Webhooks</li><li>Data Mapping</li><li>Filters</li><li>Multi-Step Automation</li><li>Error Handling</li><li>Workflow Testing</li></ul><div class="skill-group__foot"><span>Best for</span><strong>Funnels, CRM setup, workflow automations, and integrations.</strong></div></section><section class="skill-group reveal" data-delay="1"><div class="skill-group__top"><div class="skill-group__badge"><div class="skill-group__icon">02</div><div><span class="skill-group__eyebrow">Front-End Delivery</span><h3>Web &amp; E-Commerce</h3></div></div><span class="skill-group__count">8 capabilities</span></div><p>Create responsive pages, websites, and e-commerce assets that look clean, load well, and support the business offer.</p><ul><li>Funnels</li><li>Landing Pages</li><li>Websites</li><li>Shopify</li><li>Printify</li><li>Domain Setup</li><li>Dedicated Email Domains</li><li>Responsive Design</li></ul><div class="skill-group__foot"><span>Best for</span><strong>Sales pages, branded websites, and online-store support.</strong></div></section><section class="skill-group reveal" data-delay="2"><div class="skill-group__top"><div class="skill-group__badge"><div class="skill-group__icon">03</div><div><span class="skill-group__eyebrow">Content &amp; Promotion</span><h3>Creative &amp; Marketing</h3></div></div><span class="skill-group__count">10 capabilities</span></div><p>Support the creative side with design, editing, and campaign assets so the systems you launch are also presentation-ready.</p><ul><li>Canva</li><li>CapCut</li><li>Graphic Design</li><li>Video Editing</li><li>Copywriting</li><li>Email Campaigns</li><li>Content Strategy</li><li>Paid Ads</li><li>Social Analytics</li><li>Community Management</li></ul><div class="skill-group__foot"><span>Best for</span><strong>Creative production, campaign support, and content execution.</strong></div></section></div></div></section>
-<section aria-labelledby="tools-title" class="section"><div class="container"><div class="section-heading reveal"><div><div class="eyebrow">Tools &amp; Platforms</div><h2 id="tools-title">Platforms I use.</h2></div><p>GoHighLevel, automation, web, creative, analytics, and advertising tools.</p></div><div class="tool-logo-grid reveal">
-<div class="tool-logo-item"><img alt="GoHighLevel logo" loading="lazy" src="https://www.google.com/s2/favicons?domain=gohighlevel.com&amp;sz=128"/><span>GoHighLevel</span></div><div class="tool-logo-item"><img alt="WordPress logo" loading="lazy" src="https://www.google.com/s2/favicons?domain=wordpress.org&amp;sz=128"/><span>WordPress</span></div><div class="tool-logo-item"><img alt="Make logo" loading="lazy" src="https://www.google.com/s2/favicons?domain=make.com&amp;sz=128"/><span>Make</span></div><div class="tool-logo-item"><img alt="n8n logo" loading="lazy" src="https://www.google.com/s2/favicons?domain=n8n.io&amp;sz=128"/><span>n8n</span></div><div class="tool-logo-item"><img alt="CapCut logo" loading="lazy" src="https://www.google.com/s2/favicons?domain=capcut.com&amp;sz=128"/><span>CapCut</span></div><div class="tool-logo-item"><img alt="Instantly logo" loading="lazy" src="https://www.google.com/s2/favicons?domain=instantly.ai&amp;sz=128"/><span>Instantly</span></div><div class="tool-logo-item"><img alt="Canva logo" loading="lazy" src="https://www.google.com/s2/favicons?domain=canva.com&amp;sz=128"/><span>Canva</span></div><div class="tool-logo-item"><img alt="HubSpot logo" loading="lazy" src="https://www.google.com/s2/favicons?domain=hubspot.com&amp;sz=128"/><span>HubSpot</span></div><div class="tool-logo-item"><img alt="Apify logo" loading="lazy" src="https://www.google.com/s2/favicons?domain=apify.com&amp;sz=128"/><span>Apify</span></div><div class="tool-logo-item"><img alt="Zapier logo" loading="lazy" src="https://www.google.com/s2/favicons?domain=zapier.com&amp;sz=128"/><span>Zapier</span></div><div class="tool-logo-item"><img alt="ChatGPT logo" loading="lazy" src="https://www.google.com/s2/favicons?domain=chatgpt.com&amp;sz=128"/><span>ChatGPT</span></div><div class="tool-logo-item"><img alt="HeyGen logo" loading="lazy" src="https://www.google.com/s2/favicons?domain=heygen.com&amp;sz=128"/><span>HeyGen</span></div><div class="tool-logo-item"><img alt="Ads Manager logo" loading="lazy" src="https://www.google.com/s2/favicons?domain=facebook.com&amp;sz=128"/><span>Ads Manager</span></div><div class="tool-logo-item"><img alt="Google Analytics logo" loading="lazy" src="https://www.google.com/s2/favicons?domain=analytics.google.com&amp;sz=128"/><span>Google Analytics</span></div><div class="tool-logo-item"><img alt="Google Ads logo" loading="lazy" src="https://www.google.com/s2/favicons?domain=ads.google.com&amp;sz=128"/><span>Google Ads</span></div>
-</div></div></section>
+<section aria-labelledby="tools-title" class="section tools-platform-section"><div class="container"><div class="section-heading reveal tools-platform-heading"><div><div class="eyebrow">Tools &amp; Platforms</div><h2 id="tools-title">Platforms I use.</h2></div><div class="tools-platform-copy"><p>A practical stack for building, automating, designing, measuring, and improving digital systems from one end of the customer journey to the other.</p><div class="tools-platform-meta"><span>15 platforms</span><span>Automation-first</span><span>Cross-functional stack</span></div></div></div><div class="tool-logo-grid tools-ecosystem-grid reveal">
+<div class="tool-logo-item is-core"><div class="tool-logo-item__top"><img alt="GoHighLevel logo" loading="lazy" src="https://www.google.com/s2/favicons?domain=gohighlevel.com&amp;sz=128"/><span class="tool-logo-item__type">Core</span></div><div class="tool-logo-item__body"><strong>GoHighLevel</strong><small>CRM &amp; Automation</small></div></div>
+<div class="tool-logo-item"><div class="tool-logo-item__top"><img alt="WordPress logo" loading="lazy" src="https://www.google.com/s2/favicons?domain=wordpress.org&amp;sz=128"/><span class="tool-logo-item__type">Web</span></div><div class="tool-logo-item__body"><strong>WordPress</strong><small>Websites &amp; CMS</small></div></div>
+<div class="tool-logo-item is-core"><div class="tool-logo-item__top"><img alt="Make logo" loading="lazy" src="https://www.google.com/s2/favicons?domain=make.com&amp;sz=128"/><span class="tool-logo-item__type">Core</span></div><div class="tool-logo-item__body"><strong>Make</strong><small>Workflow Automation</small></div></div>
+<div class="tool-logo-item"><div class="tool-logo-item__top"><img alt="n8n logo" loading="lazy" src="https://www.google.com/s2/favicons?domain=n8n.io&amp;sz=128"/><span class="tool-logo-item__type">Automation</span></div><div class="tool-logo-item__body"><strong>n8n</strong><small>Advanced Workflows</small></div></div>
+<div class="tool-logo-item"><div class="tool-logo-item__top"><img alt="CapCut logo" loading="lazy" src="https://www.google.com/s2/favicons?domain=capcut.com&amp;sz=128"/><span class="tool-logo-item__type">Creative</span></div><div class="tool-logo-item__body"><strong>CapCut</strong><small>Video Production</small></div></div>
+<div class="tool-logo-item"><div class="tool-logo-item__top"><img alt="Instantly logo" loading="lazy" src="https://www.google.com/s2/favicons?domain=instantly.ai&amp;sz=128"/><span class="tool-logo-item__type">Outreach</span></div><div class="tool-logo-item__body"><strong>Instantly</strong><small>Email Outreach</small></div></div>
+<div class="tool-logo-item"><div class="tool-logo-item__top"><img alt="Canva logo" loading="lazy" src="https://www.google.com/s2/favicons?domain=canva.com&amp;sz=128"/><span class="tool-logo-item__type">Creative</span></div><div class="tool-logo-item__body"><strong>Canva</strong><small>Design &amp; Assets</small></div></div>
+<div class="tool-logo-item"><div class="tool-logo-item__top"><img alt="HubSpot logo" loading="lazy" src="https://www.google.com/s2/favicons?domain=hubspot.com&amp;sz=128"/><span class="tool-logo-item__type">CRM</span></div><div class="tool-logo-item__body"><strong>HubSpot</strong><small>CRM &amp; Marketing</small></div></div>
+<div class="tool-logo-item"><div class="tool-logo-item__top"><img alt="Apify logo" loading="lazy" src="https://www.google.com/s2/favicons?domain=apify.com&amp;sz=128"/><span class="tool-logo-item__type">Data</span></div><div class="tool-logo-item__body"><strong>Apify</strong><small>Data &amp; Web Automation</small></div></div>
+<div class="tool-logo-item is-core"><div class="tool-logo-item__top"><img alt="Zapier logo" loading="lazy" src="https://www.google.com/s2/favicons?domain=zapier.com&amp;sz=128"/><span class="tool-logo-item__type">Core</span></div><div class="tool-logo-item__body"><strong>Zapier</strong><small>App Integrations</small></div></div>
+<div class="tool-logo-item"><div class="tool-logo-item__top"><img alt="ChatGPT logo" loading="lazy" src="https://www.google.com/s2/favicons?domain=chatgpt.com&amp;sz=128"/><span class="tool-logo-item__type">AI</span></div><div class="tool-logo-item__body"><strong>ChatGPT</strong><small>AI &amp; Productivity</small></div></div>
+<div class="tool-logo-item"><div class="tool-logo-item__top"><img alt="HeyGen logo" loading="lazy" src="https://www.google.com/s2/favicons?domain=heygen.com&amp;sz=128"/><span class="tool-logo-item__type">AI</span></div><div class="tool-logo-item__body"><strong>HeyGen</strong><small>AI Video</small></div></div>
+<div class="tool-logo-item"><div class="tool-logo-item__top"><img alt="Ads Manager logo" loading="lazy" src="https://www.google.com/s2/favicons?domain=facebook.com&amp;sz=128"/><span class="tool-logo-item__type">Ads</span></div><div class="tool-logo-item__body"><strong>Ads Manager</strong><small>Paid Social</small></div></div>
+<div class="tool-logo-item"><div class="tool-logo-item__top"><img alt="Google Analytics logo" loading="lazy" src="https://www.google.com/s2/favicons?domain=analytics.google.com&amp;sz=128"/><span class="tool-logo-item__type">Analytics</span></div><div class="tool-logo-item__body"><strong>Google Analytics</strong><small>Measurement &amp; Insights</small></div></div>
+<div class="tool-logo-item"><div class="tool-logo-item__top"><img alt="Google Ads logo" loading="lazy" src="https://www.google.com/s2/favicons?domain=ads.google.com&amp;sz=128"/><span class="tool-logo-item__type">Ads</span></div><div class="tool-logo-item__body"><strong>Google Ads</strong><small>Paid Search</small></div></div>
+</div><div class="tools-stack-note reveal"><p><strong>The goal is not to use more tools.</strong> It is to connect the right ones into a simpler, reliable system.</p><span class="tools-stack-note__signal">Connected stack</span></div></div></section>
 <section aria-labelledby="experience-title" class="section section--white"><div class="container"><div class="section-heading reveal"><div><div class="eyebrow">Experience</div><h2 id="experience-title">6+ years of hands-on digital work.</h2></div><p>Funnels, CRM systems, automations, websites, and client delivery.</p></div><div class="experience-timeline">
 <article class="exp-item reveal"><div class="exp-meta"><strong>2020 – 2026</strong>6+ Years</div><div class="exp-copy"><h3>GoHighLevel Expert &amp; Automation Specialist</h3><p><strong>JJM DIGITAL SOLUTIONS</strong></p><p>Helping businesses turn manual processes into organized, conversion-focused systems through GoHighLevel, Zapier, CRM integrations, and responsive web experiences.</p><ul class="source-list"><li>Built and optimized more than 80 sales funnels.</li><li>Created lead-nurturing and appointment-booking workflows.</li><li>Integrated Zapier, CRM platforms, and third-party applications.</li><li>Managed social media content and email campaigns.</li><li>Set up GoHighLevel accounts from scratch.</li><li>Troubleshot automations and documented every process.</li><li>Designed responsive landing pages and business websites.</li><li>Communicated with clients through video calls and chat.</li></ul></div></article>
 </div></div></section>
