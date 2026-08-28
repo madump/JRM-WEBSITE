@@ -4248,6 +4248,119 @@ body[data-page="about"] .education-note strong {
   .capability-visual-card__foot{grid-template-columns:58px 1fr;}
 }
 </style>
+
+<style id="home-footer-match">
+/* ===== FOOTER — MATCH HOMEPAGE REFERENCE ===== */
+.site-footer{
+  width:100% !important;
+  max-width:none !important;
+  margin:0 !important;
+  padding:34px 0 24px !important;
+  background:#05090D !important;
+  color:#fff !important;
+  border:0 !important;
+}
+
+.site-footer .container{
+  width:min(calc(100% - 64px),1080px) !important;
+  margin-inline:auto !important;
+}
+
+.site-footer .footer-grid{
+  display:grid !important;
+  grid-template-columns:minmax(260px,1.2fr) repeat(2,minmax(140px,.55fr)) !important;
+  gap:38px !important;
+  align-items:start !important;
+  padding-bottom:26px !important;
+  border-bottom:1px solid rgba(255,255,255,.16) !important;
+}
+
+.site-footer .footer-brand .brand{
+  margin-bottom:18px !important;
+}
+
+.site-footer .brand-logo{
+  display:block !important;
+  width:200px !important;
+  max-width:200px !important;
+  height:auto !important;
+  max-height:none !important;
+  object-fit:contain !important;
+  object-position:left center !important;
+}
+
+.site-footer .footer-brand p{
+  max-width:430px !important;
+  margin:0 !important;
+  color:rgba(255,255,255,.72) !important;
+  font-size:.85rem !important;
+}
+
+.site-footer .footer-title{
+  margin-bottom:16px !important;
+  color:rgba(255,255,255,.72) !important;
+  font-size:.69rem !important;
+  font-weight:900 !important;
+  letter-spacing:.1em !important;
+  text-transform:uppercase !important;
+}
+
+.site-footer .footer-links,
+.site-footer .footer-contact{
+  display:grid !important;
+}
+
+.site-footer .footer-links{gap:9px !important;}
+.site-footer .footer-contact{gap:8px !important;}
+
+.site-footer .footer-links a,
+.site-footer .footer-contact a{
+  width:fit-content !important;
+  color:#b8c6d6 !important;
+  font-size:.83rem !important;
+  line-height:1.45 !important;
+  transition:color .2s ease,transform .2s ease !important;
+}
+
+.site-footer .footer-links a:hover,
+.site-footer .footer-contact a:hover{
+  color:var(--ref-lime,#9dff3e) !important;
+  transform:translateX(2px) !important;
+}
+
+.site-footer .footer-bottom{
+  display:flex !important;
+  justify-content:space-between !important;
+  align-items:center !important;
+  gap:20px !important;
+  padding-top:18px !important;
+  color:rgba(255,255,255,.72) !important;
+  font-size:.72rem !important;
+}
+
+@media (max-width:680px){
+  .site-footer{padding:30px 0 22px !important;}
+  .site-footer .container{width:min(calc(100% - 28px),620px) !important;}
+  .site-footer .footer-grid{
+    grid-template-columns:1fr !important;
+    gap:24px !important;
+    padding-bottom:24px !important;
+  }
+  .site-footer .brand-logo{
+    width:200px !important;
+    max-width:200px !important;
+  }
+  .site-footer .footer-bottom{
+    flex-direction:column !important;
+    align-items:flex-start !important;
+    gap:8px !important;
+  }
+}
+
+@media (max-width:430px){
+  .site-footer .container{width:calc(100% - 24px) !important;}
+}
+</style>
 </head>
 <body data-page="about">
 <a class="skip-link" href="#main">Skip to content</a>
