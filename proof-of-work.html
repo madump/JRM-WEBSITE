@@ -1322,6 +1322,152 @@ body[data-page="proof"] .eyebrow{color:#9dff3e!important;letter-spacing:.15em;ma
 @media(max-width:680px){.portfolio-hero{padding:70px 0 58px}.portfolio-hero__copy h1{font-size:clamp(3rem,14vw,4.9rem)}.portfolio-hero__copy>p{font-size:.9rem}.portfolio-stats{grid-template-columns:1fr;margin-top:32px}.portfolio-stats div,.portfolio-stats div+div{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:13px 0;border-right:0;border-bottom:1px solid rgba(255,255,255,.07)}.portfolio-stats div:last-child{border-bottom:0}.portfolio-stats span{margin-top:0;text-align:right}.portfolio-hero__visual{min-height:390px}.hero-shot--main{width:55%;height:320px;left:16%;top:28px}.hero-shot--automation{width:46%;height:190px;right:0;top:132px}.hero-shot--graphic{width:34%;height:170px;left:0;bottom:0}.hero-orbit{width:50px;height:50px;border-radius:14px;font-size:.58rem}.portfolio-jump__inner{gap:18px}.portfolio-section{padding:72px 0}.portfolio-section__head{margin-bottom:38px}.portfolio-section__head h2{font-size:clamp(2.5rem,11vw,3.7rem)}.subsection-head{align-items:center}.reel-grid,.graphic-grid{grid-template-columns:repeat(2,1fr);gap:9px}.media-card__meta{display:block}.media-card__meta strong{display:block;margin-top:4px}.automation-grid,.live-grid{grid-template-columns:1fr}.portfolio-cta{padding:34px 24px}.portfolio-cta h2{font-size:clamp(2.35rem,11vw,3.5rem)}.work-preview-modal{padding:10px}.work-preview-modal__dialog{max-height:calc(100svh - 20px);border-radius:16px}.work-preview-modal__frame{height:68vh}.site-footer{padding:30px 0 22px!important}.site-footer .container{width:min(calc(100% - 28px),620px)!important}.site-footer .footer-grid{grid-template-columns:1fr!important;justify-items:center!important;text-align:center!important;gap:24px!important}.site-footer .footer-brand .brand{justify-content:center!important}.site-footer .brand-logo{margin-inline:auto!important;object-position:center!important}.site-footer .footer-brand p{margin-inline:auto!important;text-align:center!important}.site-footer .footer-links,.site-footer .footer-contact{justify-items:center!important}.site-footer .footer-socials{justify-content:center!important}.site-footer .footer-bottom{flex-direction:column!important;align-items:center!important;text-align:center!important;gap:8px!important}}
 @media(max-width:420px){.portfolio-hero__visual{min-height:330px}.hero-shot--main{height:270px}.hero-shot--automation{height:155px}.hero-shot--graphic{height:145px}.portfolio-hero__actions .btn{width:100%}.reel-grid,.graphic-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.media-card__play{width:32px;height:32px}.subsection-head p{display:none}.portfolio-cta__actions .btn{width:100%}}
 </style>
+
+<style id="playnet-inspired-layout">
+/* ===== PLAYNET-INSPIRED PORTFOLIO LAYOUT ===== */
+body[data-page="proof"]{background:#050814!important;}
+body[data-page="proof"] main{background:linear-gradient(180deg,#060916 0%,#07111a 48%,#050914 100%);}
+.playnet-hero{padding:94px 0 82px!important;background:
+ radial-gradient(circle at 11% 55%,rgba(47,94,255,.18),transparent 31%),
+ radial-gradient(circle at 88% 42%,rgba(157,255,62,.09),transparent 26%),
+ #050814!important;}
+.playnet-hero::before{background:
+ linear-gradient(rgba(118,141,255,.025) 1px,transparent 1px),
+ linear-gradient(90deg,rgba(118,141,255,.025) 1px,transparent 1px)!important;
+ background-size:56px 56px!important;mask-image:linear-gradient(to bottom,#000 10%,transparent 92%)!important;}
+.playnet-hero .portfolio-hero__grid{grid-template-columns:minmax(0,1.05fr) minmax(380px,.95fr);gap:64px;align-items:center;}
+.playnet-hero .portfolio-hero__copy h1{max-width:760px;font-size:clamp(3.25rem,6vw,6.25rem);line-height:.92;letter-spacing:-.065em;text-transform:none;}
+.playnet-hero .portfolio-hero__copy h1 span{color:#9dff3e;}
+.playnet-hero .portfolio-hero__copy>p{max-width:600px;color:#a0adbb;font-size:.95rem;line-height:1.65;}
+.hero-skill-note{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:28px;}
+.hero-skill-note span{display:inline-flex;align-items:center;min-height:30px;padding:0 11px;border:1px solid rgba(255,255,255,.08);border-radius:999px;background:rgba(23,34,56,.65);color:#aab8c7;font-size:.62rem;font-weight:800;}
+.playnet-hero .portfolio-hero__visual{min-height:535px;display:grid;place-items:center;}
+.play-feature-card{position:relative;width:min(410px,82%);aspect-ratio:4/5;border:1px solid rgba(132,115,255,.45);border-radius:20px;padding:0;overflow:hidden;background:#10142a;cursor:pointer;box-shadow:0 38px 90px rgba(0,0,0,.48),0 0 70px rgba(74,86,255,.18);transition:.28s ease;}
+.play-feature-card:hover{transform:translateY(-7px);border-color:rgba(157,255,62,.5);box-shadow:0 46px 100px rgba(0,0,0,.52),0 0 80px rgba(62,106,255,.22);}
+.play-feature-card>img{width:100%;height:100%;object-fit:cover;}
+.play-feature-card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,8,20,.02) 45%,rgba(5,8,20,.94) 100%);pointer-events:none;}
+.play-feature-card__badge{position:absolute;z-index:3;left:16px;top:16px;padding:7px 10px;border-radius:999px;background:rgba(8,10,24,.78);border:1px solid rgba(255,255,255,.12);color:#dce4ef;font-size:.58rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase;backdrop-filter:blur(10px);}
+.play-feature-card__glow{position:absolute;z-index:2;width:180px;height:180px;border-radius:50%;right:-68px;top:-60px;background:rgba(83,76,255,.33);filter:blur(42px);pointer-events:none;}
+.play-feature-card__footer{position:absolute;z-index:4;left:0;right:0;bottom:0;display:flex;align-items:flex-end;justify-content:space-between;gap:20px;padding:20px;color:#fff;text-align:left;}
+.play-feature-card__footer small{display:block;margin-bottom:6px;color:#9dff3e;font-size:.56rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase;}
+.play-feature-card__footer strong{display:block;font:800 1rem/1.2 "Manrope",sans-serif;}
+.play-feature-card__footer>b{display:inline-flex;align-items:center;justify-content:center;min-height:34px;padding:0 12px;border-radius:999px;background:linear-gradient(90deg,#8d45ff,#2a9cff);font-size:.65rem;white-space:nowrap;}
+.play-floating-work{position:absolute;z-index:6;left:2%;bottom:38px;width:190px;display:grid;grid-template-columns:62px 1fr;align-items:center;gap:10px;padding:10px;border:1px solid rgba(255,255,255,.12);border-radius:16px;background:rgba(12,17,35,.92);box-shadow:0 20px 46px rgba(0,0,0,.38);backdrop-filter:blur(14px);cursor:pointer;transition:.25s ease;text-align:left;}
+.play-floating-work:hover{transform:translateY(-5px);border-color:rgba(157,255,62,.28);}
+.play-floating-work img{width:62px;height:62px;border-radius:11px;object-fit:cover;}
+.play-floating-work small{display:block;color:#7e91a4;font-size:.5rem;text-transform:uppercase;letter-spacing:.1em;font-weight:900;}
+.play-floating-work strong{display:block;margin-top:4px;color:#fff;font-size:.69rem;line-height:1.25;}
+.portfolio-platform-strip{position:relative;z-index:4;overflow:hidden;background:linear-gradient(90deg,#3e1bbd 0%,#263fbd 50%,#1776b4 100%);border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08);}
+.portfolio-platform-strip__track{width:max-content;min-width:100%;display:flex;align-items:center;justify-content:center;gap:26px;padding:16px 28px;}
+.portfolio-platform-strip span{color:#eef2ff;font-size:.75rem;font-weight:800;white-space:nowrap;letter-spacing:-.01em;}
+.portfolio-platform-strip i{width:5px;height:5px;border-radius:50%;background:#9dff3e;box-shadow:0 0 14px rgba(157,255,62,.8);}
+.portfolio-jump{top:72px;background:rgba(5,8,20,.9);border-bottom-color:rgba(255,255,255,.06);}
+.portfolio-jump__inner{justify-content:center;}
+.portfolio-jump span{color:#53657a;}
+.portfolio-jump a{color:#a5b3c5;}
+
+.portfolio-section{padding:92px 0;background:#060a18!important;}
+.portfolio-section:nth-of-type(even){background:#07111d!important;}
+.portfolio-section__head{display:block;max-width:760px;margin:0 auto 48px;text-align:center;}
+.portfolio-section__head h2{margin-inline:auto;font-size:clamp(2.65rem,4.8vw,4.6rem);text-transform:none;line-height:.96;}
+.portfolio-section__head p{margin:14px auto 0;max-width:590px;}
+.subsection-head{max-width:1080px;margin:0 auto 24px;}
+.subsection-head span{background:linear-gradient(135deg,rgba(124,64,255,.18),rgba(31,138,255,.12));border-color:rgba(125,111,255,.3);color:#c5baff;}
+
+/* Popular-this-week style reel rail */
+.reel-grid{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:.88fr 1fr 1.18fr 1fr .88fr;gap:18px;align-items:end;}
+.reel-card .media-card__preview{border-radius:18px;border-color:rgba(117,94,255,.24);box-shadow:0 22px 44px rgba(0,0,0,.2);}
+.reel-card:nth-child(3) .media-card__preview{transform:translateY(-22px);box-shadow:0 34px 64px rgba(0,0,0,.35),0 0 45px rgba(70,96,255,.13);border-color:rgba(157,255,62,.24);}
+.reel-card:nth-child(3) .media-card__meta{transform:translateY(-22px);}
+.reel-card .media-card__preview:hover{transform:translateY(-8px) scale(1.015);}
+.reel-card:nth-child(3) .media-card__preview:hover{transform:translateY(-30px) scale(1.015);}
+.media-card__play{background:linear-gradient(135deg,#8a49ff,#2d9fff);color:#fff;}
+.media-card__meta{padding-top:12px;}
+.media-card__meta span{color:#667a92;}.media-card__meta strong{font-size:.75rem;}
+
+/* Explore-artworks style graphic mosaic */
+.graphic-grid{max-width:1050px;margin:0 auto;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;}
+.graphic-card .media-card__preview{aspect-ratio:1.55/1;border-radius:16px;border-color:rgba(83,110,255,.2);background:#0a1121;}
+.graphic-card:nth-child(1){grid-column:span 2;}.graphic-card:nth-child(1) .media-card__preview{aspect-ratio:2.05/1;}
+.graphic-card:nth-child(4){grid-column:span 2;}.graphic-card:nth-child(4) .media-card__preview{aspect-ratio:2.05/1;}
+.graphic-card .media-card__preview:hover{box-shadow:0 24px 48px rgba(0,0,0,.3),0 0 34px rgba(67,102,255,.09);}
+.show-more-btn{background:linear-gradient(90deg,rgba(131,68,255,.14),rgba(34,145,255,.12));border-color:rgba(104,112,255,.25);color:#d7ddff;}
+
+/* Top-sellers style automation cards */
+.automation-switcher,.build-tabs{justify-content:center;margin-bottom:30px;}
+.automation-tab,.build-tab{background:#111a31;border-color:rgba(99,99,255,.18);color:#94a5ba;}
+.automation-tab.is-active,.build-tab.is-active{background:linear-gradient(90deg,#8d45ff,#269dff);border-color:transparent;color:#fff;box-shadow:0 10px 28px rgba(60,82,255,.2);}
+.automation-tab.is-active span,.build-tab.is-active span{color:#e6e9ff;}
+.automation-grid{max-width:1100px;margin:0 auto;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;}
+.automation-card{display:grid;grid-template-columns:82px minmax(0,1fr);align-items:center;min-height:96px;padding:9px;border-radius:13px;background:linear-gradient(145deg,#10182d,#0a1422);border-color:rgba(98,118,255,.18);box-shadow:none;}
+.automation-card:hover{transform:translateY(-3px);background:linear-gradient(145deg,#15203a,#0c1727);border-color:rgba(157,255,62,.24);box-shadow:0 16px 36px rgba(0,0,0,.2);}
+.automation-card__visual{width:82px;height:76px;aspect-ratio:auto;border-radius:10px;}
+.automation-card__overlay{display:none;}
+.automation-card__body{padding:4px 10px 4px 12px;min-width:0;}
+.automation-card__top{margin-bottom:5px;}.automation-card__top span{color:#9dff3e;}.automation-card__top small{font-size:.58rem;}
+.automation-card h3{margin:0 0 7px;font-size:.82rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.automation-card__body a{font-size:.59rem;color:#71859b;}
+
+/* Explore-artworks style live build gallery */
+.live-section{background:radial-gradient(circle at 50% 30%,rgba(38,80,180,.12),transparent 38%),#050914!important;}
+.live-grid{max-width:1080px;margin:0 auto;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;}
+.live-card__link{border-radius:16px;background:linear-gradient(160deg,#111a31,#081522);border-color:rgba(89,104,255,.2);}
+.live-card__browser{background:linear-gradient(135deg,#0d1830,#102943);}
+.live-card__screen{min-height:150px;background:
+ radial-gradient(circle at 75% 22%,rgba(157,255,62,.12),transparent 28%),
+ linear-gradient(135deg,#121f3b,#0d263b);}
+.live-card__screen img{width:54px;height:54px;border-radius:14px;padding:8px;background:#fff;box-shadow:0 12px 30px rgba(0,0,0,.24);}
+.live-card__body>strong{background:linear-gradient(135deg,#8b49ff,#2d9cff);border:0;color:#fff;}
+.live-card__link:hover{transform:translateY(-5px);border-color:rgba(157,255,62,.28);box-shadow:0 24px 50px rgba(0,0,0,.26);}
+
+.portfolio-cta-section{padding:86px 0 96px;background:#050814;}
+.portfolio-cta{max-width:900px;margin:0 auto;padding:54px 70px;border-radius:70px 16px 70px 16px;background:linear-gradient(105deg,#4d20c9 0%,#1f57bf 58%,#0f7799 100%);border:1px solid rgba(255,255,255,.14);box-shadow:0 30px 80px rgba(0,0,0,.3);}
+.portfolio-cta::after{background:#9dff3e;opacity:.08;}
+.portfolio-cta h2{font-size:clamp(2.2rem,4vw,3.8rem);text-transform:none;}
+.portfolio-cta p{color:rgba(239,245,255,.72);}
+.portfolio-cta .eyebrow{color:#cfeaff!important;}
+.portfolio-cta__text{color:#d4e1ff;}
+
+@media(max-width:1050px){
+ .playnet-hero .portfolio-hero__grid{grid-template-columns:minmax(0,1fr) minmax(340px,.85fr);gap:38px;}
+ .playnet-hero .portfolio-hero__visual{min-height:470px;}
+ .reel-grid{grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;}
+ .automation-grid,.live-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+}
+@media(max-width:900px){
+ .playnet-hero .portfolio-hero__grid{grid-template-columns:1fr;gap:48px;}
+ .playnet-hero .portfolio-hero__copy{text-align:center;}.hero-skill-note,.playnet-hero .portfolio-hero__actions{justify-content:center;}
+ .playnet-hero .portfolio-hero__visual{width:min(620px,100%);margin-inline:auto;}
+ .portfolio-platform-strip__track{justify-content:flex-start;overflow-x:auto;}
+ .portfolio-jump__inner{justify-content:flex-start;}
+ .reel-grid{grid-template-columns:repeat(5,210px);overflow-x:auto;padding:30px 8px 18px;scroll-snap-type:x proximity;scrollbar-width:none;}
+ .reel-grid::-webkit-scrollbar{display:none}.reel-card{scroll-snap-align:center;}
+ .reel-card:nth-child(3) .media-card__preview,.reel-card:nth-child(3) .media-card__meta{transform:none;}
+ .graphic-grid{grid-template-columns:repeat(2,minmax(0,1fr));}.graphic-card:nth-child(1),.graphic-card:nth-child(4){grid-column:auto}.graphic-card:nth-child(1) .media-card__preview,.graphic-card:nth-child(4) .media-card__preview{aspect-ratio:1.55/1;}
+ .portfolio-cta{padding:46px 36px;border-radius:50px 14px 50px 14px;}
+}
+@media(max-width:680px){
+ .playnet-hero{padding:66px 0 60px!important;}
+ .playnet-hero .portfolio-hero__copy h1{font-size:clamp(2.75rem,13vw,4.2rem);}
+ .hero-skill-note{max-width:390px;margin-inline:auto;}
+ .playnet-hero .portfolio-hero__visual{min-height:410px;}
+ .play-feature-card{width:min(320px,78%);}
+ .play-floating-work{left:0;bottom:18px;width:168px;grid-template-columns:52px 1fr;}.play-floating-work img{width:52px;height:52px;}
+ .portfolio-section{padding:72px 0;}.portfolio-section__head{margin-bottom:38px;}.portfolio-section__head h2{font-size:clamp(2.35rem,11vw,3.45rem);}
+ .subsection-head{justify-content:center;text-align:center;}.subsection-head>div{justify-content:center;}.subsection-head p{display:none;}
+ .reel-grid{grid-template-columns:repeat(5,176px);margin-inline:-14px;padding-inline:14px;}
+ .graphic-grid{grid-template-columns:1fr;}.graphic-card:nth-child(n){grid-column:auto;}.graphic-card .media-card__preview,.graphic-card:nth-child(1) .media-card__preview,.graphic-card:nth-child(4) .media-card__preview{aspect-ratio:1.65/1;}
+ .automation-grid,.live-grid{grid-template-columns:1fr;}.automation-card{grid-template-columns:76px minmax(0,1fr);}.automation-card__visual{width:76px;height:70px;}
+ .automation-switcher,.build-tabs{justify-content:flex-start;}
+ .portfolio-cta{grid-template-columns:1fr;padding:38px 24px;border-radius:36px 12px 36px 12px;text-align:center;}.portfolio-cta__actions{align-items:center;}.portfolio-cta__actions .btn{width:100%;}
+}
+@media(max-width:420px){
+ .playnet-hero .portfolio-hero__visual{min-height:350px;}.play-feature-card{width:min(275px,82%);}.play-floating-work{width:150px;bottom:8px;}
+ .portfolio-platform-strip__track{gap:18px;padding-inline:18px;}.portfolio-platform-strip span{font-size:.68rem;}
+ .reel-grid{grid-template-columns:repeat(5,160px);}
+}
+</style>
+
 </head>
 <body data-page="proof">
 <a class="skip-link" href="#main">Skip to content</a>
@@ -1340,37 +1486,48 @@ body[data-page="proof"] .eyebrow{color:#9dff3e!important;letter-spacing:.15em;ma
 </div>
 </header>
 <main id="main">
-<section class="portfolio-hero" aria-labelledby="portfolio-hero-title">
+<section class="portfolio-hero playnet-hero" aria-labelledby="portfolio-hero-title">
   <div class="container portfolio-hero__grid">
     <div class="portfolio-hero__copy reveal is-visible">
       <div class="eyebrow">Proof of Work</div>
-      <h1 id="portfolio-hero-title">Work that<br><span>actually shipped.</span></h1>
-      <p>A browsable library of creative production, automation systems, funnels, websites, and coded landing pages. Open the work directly and inspect the real output.</p>
+      <h1 id="portfolio-hero-title">Builds, systems<br>and creative work<br><span>that ship.</span></h1>
+      <p>Explore real creative production, automation workflows, funnels, websites, and coded landing pages. Every section below is built around work you can open and inspect.</p>
       <div class="portfolio-hero__actions">
-        <a class="btn btn--accent" href="#creative-work">Explore the work <span class="btn__arrow">↓</span></a>
-        <a class="btn btn--ghost" href="https://drive.google.com/drive/folders/1u092gy-B4LW8uMC9OKTmoucCMsCnrTej?usp=sharing" target="_blank" rel="noopener noreferrer">Full Drive Portfolio ↗</a>
+        <a class="btn btn--accent" href="#creative-work">Explore Work</a>
+        <a class="btn btn--ghost" href="https://drive.google.com/drive/folders/1u092gy-B4LW8uMC9OKTmoucCMsCnrTej?usp=sharing" target="_blank" rel="noopener noreferrer">Full Portfolio ↗</a>
       </div>
-      <div class="portfolio-stats" aria-label="Portfolio sample counts">
-        <div><strong>32</strong><span>Creative samples</span></div>
-        <div><strong>25</strong><span>Automation workflows</span></div>
-        <div><strong>49</strong><span>Web + funnel links</span></div>
+      <div class="hero-skill-note" aria-label="Core portfolio capabilities">
+        <span>GoHighLevel</span><span>n8n</span><span>Make</span><span>Web</span><span>Creative</span>
       </div>
     </div>
-    <div class="portfolio-hero__visual reveal is-visible" aria-label="Featured work previews">
-      <button class="hero-shot hero-shot--main" type="button" data-drive-preview="https://drive.google.com/file/d/1GfHMMqdnY_a8-YUkwrfrZ-O-ZKzdn82N/preview" data-drive-link="https://drive.google.com/file/d/1GfHMMqdnY_a8-YUkwrfrZ-O-ZKzdn82N/view?usp=drive_link" data-preview-title="Featured Video Reel"><img src="https://drive.google.com/thumbnail?id=1GfHMMqdnY_a8-YUkwrfrZ-O-ZKzdn82N&sz=w1600" alt="Featured short form video preview" loading="eager" decoding="async"/><span>VIDEO REEL</span></button>
-      <button class="hero-shot hero-shot--automation" type="button" data-drive-preview="https://drive.google.com/file/d/1lepCr16W35SHA4ICfaSZWkQOIgOqOMGm/preview" data-drive-link="https://drive.google.com/file/d/1lepCr16W35SHA4ICfaSZWkQOIgOqOMGm/view?usp=drive_link" data-preview-title="YouTube Strategist Automation"><img src="https://drive.google.com/thumbnail?id=1lepCr16W35SHA4ICfaSZWkQOIgOqOMGm&sz=w1600" alt="Featured n8n automation preview" loading="eager" decoding="async"/><span>N8N AUTOMATION</span></button>
-      <button class="hero-shot hero-shot--graphic" type="button" data-drive-preview="https://drive.google.com/file/d/1B14YbKiLkonjWez9rDBE6tIk2Mpb5e8S/preview" data-drive-link="https://drive.google.com/file/d/1B14YbKiLkonjWez9rDBE6tIk2Mpb5e8S/view?usp=drive_link" data-preview-title="Featured Graphic"><img src="https://drive.google.com/thumbnail?id=1B14YbKiLkonjWez9rDBE6tIk2Mpb5e8S&sz=w1600" alt="Featured graphic design preview" loading="eager" decoding="async"/><span>GRAPHIC DESIGN</span></button>
-      <div class="hero-orbit hero-orbit--one">GHL</div><div class="hero-orbit hero-orbit--two">MAKE</div>
+    <div class="portfolio-hero__visual reveal is-visible">
+      <button class="play-feature-card" type="button" data-drive-preview="https://drive.google.com/file/d/1GfHMMqdnY_a8-YUkwrfrZ-O-ZKzdn82N/preview" data-drive-link="https://drive.google.com/file/d/1GfHMMqdnY_a8-YUkwrfrZ-O-ZKzdn82N/view?usp=drive_link" data-preview-title="Featured Video Reel" aria-label="Preview featured video reel">
+        <img src="https://drive.google.com/thumbnail?id=1GfHMMqdnY_a8-YUkwrfrZ-O-ZKzdn82N&sz=w1600" alt="Featured short form video reel" loading="eager" decoding="async"/>
+        <span class="play-feature-card__badge">Featured work</span>
+        <span class="play-feature-card__glow"></span>
+        <span class="play-feature-card__footer">
+          <span><small>Creative Production</small><strong>Short Form Video Reel</strong></span>
+          <b>View ↗</b>
+        </span>
+      </button>
+      <button class="play-floating-work" type="button" data-drive-preview="https://drive.google.com/file/d/1lepCr16W35SHA4ICfaSZWkQOIgOqOMGm/preview" data-drive-link="https://drive.google.com/file/d/1lepCr16W35SHA4ICfaSZWkQOIgOqOMGm/view?usp=drive_link" data-preview-title="YouTube Strategist Automation" aria-label="Preview featured n8n automation">
+        <img src="https://drive.google.com/thumbnail?id=1lepCr16W35SHA4ICfaSZWkQOIgOqOMGm&sz=w800" alt="n8n automation preview" loading="eager" decoding="async"/>
+        <span><small>Automation</small><strong>YouTube Strategist</strong></span>
+      </button>
     </div>
   </div>
 </section>
-
-<nav class="portfolio-jump" aria-label="Portfolio sections"><div class="container portfolio-jump__inner"><span>Browse</span><a href="#creative-work">Creative</a><a href="#automation-work">Automation</a><a href="#live-builds">Live Builds</a></div></nav>
+<div class="portfolio-platform-strip" aria-label="Portfolio categories">
+  <div class="portfolio-platform-strip__track">
+    <span>GoHighLevel Funnels</span><i></i><span>Business Websites</span><i></i><span>n8n Automation</span><i></i><span>Make Automation</span><i></i><span>WordPress</span><i></i><span>Shopify</span><i></i><span>Creative Production</span><i></i><span>HTML CSS JavaScript</span>
+  </div>
+</div>
+<nav class="portfolio-jump" aria-label="Portfolio sections"><div class="container portfolio-jump__inner"><span>Explore</span><a href="#creative-work">Featured Creative</a><a href="#automation-work">Automation Systems</a><a href="#live-builds">Live Builds</a></div></nav>
 
 <section class="portfolio-section creative-section" id="creative-work" aria-labelledby="creative-title">
  <div class="container">
-  <header class="portfolio-section__head reveal"><div><div class="eyebrow">Creative Production</div><h2 id="creative-title">Motion + visual work.</h2></div><p>Short form reels and graphic assets built for social content, campaigns, and day to day brand publishing.</p></header>
-  <div class="subsection-head"><div><span>01</span><h3>Video Reels</h3></div><p>16 short form samples</p></div>
+  <header class="portfolio-section__head reveal"><div><div class="eyebrow">Featured Creative</div><h2 id="creative-title">Popular work.</h2></div><p>A curated front row of reels and visual assets, followed by the wider creative library.</p></header>
+  <div class="subsection-head"><div><span>01</span><h3>Featured Reels</h3></div><p>Short form video</p></div>
   <div class="reel-grid"><article class="media-card reel-card" data-expand-group="reel">
 <button class="media-card__preview" type="button" data-drive-preview="https://drive.google.com/file/d/1GfHMMqdnY_a8-YUkwrfrZ-O-ZKzdn82N/preview" data-drive-link="https://drive.google.com/file/d/1GfHMMqdnY_a8-YUkwrfrZ-O-ZKzdn82N/view?usp=drive_link" data-preview-title="Video Reel 01" aria-label="Preview Video Reel 01">
 <img src="https://drive.google.com/thumbnail?id=1GfHMMqdnY_a8-YUkwrfrZ-O-ZKzdn82N&sz=w1200" alt="Video Reel 01 portfolio preview" loading="lazy" decoding="async"/>
@@ -1406,21 +1563,21 @@ body[data-page="proof"] .eyebrow{color:#9dff3e!important;letter-spacing:.15em;ma
 </button>
 <div class="media-card__meta"><span>SHORT FORM VIDEO</span><strong>Video Reel 05</strong></div>
 </article>
-<article class="media-card reel-card" data-expand-group="reel">
+<article class="media-card reel-card is-collapsed" data-expand-group="reel">
 <button class="media-card__preview" type="button" data-drive-preview="https://drive.google.com/file/d/1k3gF8cxZyVaGCE6qrFbbLK9TH5_UCazv/preview" data-drive-link="https://drive.google.com/file/d/1k3gF8cxZyVaGCE6qrFbbLK9TH5_UCazv/view?usp=drive_link" data-preview-title="Video Reel 06" aria-label="Preview Video Reel 06">
 <img src="https://drive.google.com/thumbnail?id=1k3gF8cxZyVaGCE6qrFbbLK9TH5_UCazv&sz=w1200" alt="Video Reel 06 portfolio preview" loading="lazy" decoding="async"/>
 <span class="media-card__shade"></span><span class="media-card__play">▶</span>
 </button>
 <div class="media-card__meta"><span>SHORT FORM VIDEO</span><strong>Video Reel 06</strong></div>
 </article>
-<article class="media-card reel-card" data-expand-group="reel">
+<article class="media-card reel-card is-collapsed" data-expand-group="reel">
 <button class="media-card__preview" type="button" data-drive-preview="https://drive.google.com/file/d/1hiYcrHFtrJ0kJ4UG2TM1UU-r3oiv56Mn/preview" data-drive-link="https://drive.google.com/file/d/1hiYcrHFtrJ0kJ4UG2TM1UU-r3oiv56Mn/view?usp=drive_link" data-preview-title="Video Reel 07" aria-label="Preview Video Reel 07">
 <img src="https://drive.google.com/thumbnail?id=1hiYcrHFtrJ0kJ4UG2TM1UU-r3oiv56Mn&sz=w1200" alt="Video Reel 07 portfolio preview" loading="lazy" decoding="async"/>
 <span class="media-card__shade"></span><span class="media-card__play">▶</span>
 </button>
 <div class="media-card__meta"><span>SHORT FORM VIDEO</span><strong>Video Reel 07</strong></div>
 </article>
-<article class="media-card reel-card" data-expand-group="reel">
+<article class="media-card reel-card is-collapsed" data-expand-group="reel">
 <button class="media-card__preview" type="button" data-drive-preview="https://drive.google.com/file/d/1r6T9aOzFrUKcOJtuNkCO34LkYQ-F4eF2/preview" data-drive-link="https://drive.google.com/file/d/1r6T9aOzFrUKcOJtuNkCO34LkYQ-F4eF2/view?usp=drive_link" data-preview-title="Video Reel 08" aria-label="Preview Video Reel 08">
 <img src="https://drive.google.com/thumbnail?id=1r6T9aOzFrUKcOJtuNkCO34LkYQ-F4eF2&sz=w1200" alt="Video Reel 08 portfolio preview" loading="lazy" decoding="async"/>
 <span class="media-card__shade"></span><span class="media-card__play">▶</span>
@@ -1485,7 +1642,7 @@ body[data-page="proof"] .eyebrow{color:#9dff3e!important;letter-spacing:.15em;ma
 </article></div>
   <div class="show-more-wrap"><button class="show-more-btn" type="button" data-expand="reel" aria-expanded="false">Show all 16 reels <span>↓</span></button></div>
   <div class="subsection-divider"></div>
-  <div class="subsection-head"><div><span>02</span><h3>Graphics</h3></div><p>16 design samples</p></div>
+  <div class="subsection-head"><div><span>02</span><h3>Explore Graphics</h3></div><p>Visual design library</p></div>
   <div class="graphic-grid"><article class="media-card graphic-card" data-expand-group="graphic">
 <button class="media-card__preview" type="button" data-drive-preview="https://drive.google.com/file/d/1B14YbKiLkonjWez9rDBE6tIk2Mpb5e8S/preview" data-drive-link="https://drive.google.com/file/d/1B14YbKiLkonjWez9rDBE6tIk2Mpb5e8S/view?usp=drive_link" data-preview-title="Graphic 01" aria-label="Preview Graphic 01">
 <img src="https://drive.google.com/thumbnail?id=1B14YbKiLkonjWez9rDBE6tIk2Mpb5e8S&sz=w1200" alt="Graphic 01 portfolio preview" loading="lazy" decoding="async"/>
@@ -1528,14 +1685,14 @@ body[data-page="proof"] .eyebrow{color:#9dff3e!important;letter-spacing:.15em;ma
 </button>
 <div class="media-card__meta"><span>DESIGN ASSET</span><strong>Graphic 06</strong></div>
 </article>
-<article class="media-card graphic-card" data-expand-group="graphic">
+<article class="media-card graphic-card is-collapsed" data-expand-group="graphic">
 <button class="media-card__preview" type="button" data-drive-preview="https://drive.google.com/file/d/1w-1u-zZ3cwVaD3k-GY5rF4tf02kA43_m/preview" data-drive-link="https://drive.google.com/file/d/1w-1u-zZ3cwVaD3k-GY5rF4tf02kA43_m/view?usp=drive_link" data-preview-title="Graphic 07" aria-label="Preview Graphic 07">
 <img src="https://drive.google.com/thumbnail?id=1w-1u-zZ3cwVaD3k-GY5rF4tf02kA43_m&sz=w1200" alt="Graphic 07 portfolio preview" loading="lazy" decoding="async"/>
 <span class="media-card__shade"></span><span class="media-card__play">↗</span>
 </button>
 <div class="media-card__meta"><span>DESIGN ASSET</span><strong>Graphic 07</strong></div>
 </article>
-<article class="media-card graphic-card" data-expand-group="graphic">
+<article class="media-card graphic-card is-collapsed" data-expand-group="graphic">
 <button class="media-card__preview" type="button" data-drive-preview="https://drive.google.com/file/d/1oyYSmjXygfWgTjdpeGpdYQFBV2kANSrf/preview" data-drive-link="https://drive.google.com/file/d/1oyYSmjXygfWgTjdpeGpdYQFBV2kANSrf/view?usp=drive_link" data-preview-title="Graphic 08" aria-label="Preview Graphic 08">
 <img src="https://drive.google.com/thumbnail?id=1oyYSmjXygfWgTjdpeGpdYQFBV2kANSrf&sz=w1200" alt="Graphic 08 portfolio preview" loading="lazy" decoding="async"/>
 <span class="media-card__shade"></span><span class="media-card__play">↗</span>
@@ -1604,7 +1761,7 @@ body[data-page="proof"] .eyebrow{color:#9dff3e!important;letter-spacing:.15em;ma
 
 <section class="portfolio-section automation-section" id="automation-work" aria-labelledby="automation-title">
  <div class="container">
-  <header class="portfolio-section__head reveal"><div><div class="eyebrow">Automation Systems</div><h2 id="automation-title">Workflows with real logic.</h2></div><p>Examples across n8n, Make, and GoHighLevel covering content operations, lead handling, reporting, intake, sales, and nurture.</p></header>
+  <header class="portfolio-section__head reveal"><div><div class="eyebrow">Automation Library</div><h2 id="automation-title">Systems behind the scenes.</h2></div><p>Browse compact workflow examples across n8n, Make, and GoHighLevel. Switch platforms to inspect the logic behind each system.</p></header>
   <div class="automation-switcher" role="tablist" aria-label="Automation platform"><button class="automation-tab is-active" type="button" data-automation-tab="n8n" aria-selected="true">n8n <span>8</span></button><button class="automation-tab" type="button" data-automation-tab="make" aria-selected="false">Make <span>7</span></button><button class="automation-tab" type="button" data-automation-tab="ghl" aria-selected="false">GoHighLevel <span>10</span></button></div>
   <div class="automation-grid">
    <article class="automation-card reveal" data-automation="n8n">
@@ -1788,7 +1945,7 @@ body[data-page="proof"] .eyebrow{color:#9dff3e!important;letter-spacing:.15em;ma
 
 <section class="portfolio-section live-section" id="live-builds" aria-labelledby="live-title">
  <div class="container">
-  <header class="portfolio-section__head reveal"><div><div class="eyebrow">Live Web Builds</div><h2 id="live-title">Open the real sites.</h2></div><p>Funnels, business websites, WordPress builds, Shopify stores, and coded landing page mockups. Every card opens the live URL.</p></header>
+  <header class="portfolio-section__head reveal"><div><div class="eyebrow">Explore Live Builds</div><h2 id="live-title">Sites you can open.</h2></div><p>Move between platform categories and open the live builds directly. No mock project labels, just working URLs and deployed pages.</p></header>
   <div class="build-tabs" role="tablist" aria-label="Website categories">
    <button class="build-tab is-active" type="button" data-build-tab="ghl-funnels" aria-selected="true">GHL Funnels <span>9</span></button>
    <button class="build-tab" type="button" data-build-tab="ghl-websites" aria-selected="false">GHL Websites <span>12</span></button>
@@ -2044,7 +2201,7 @@ body[data-page="proof"] .eyebrow{color:#9dff3e!important;letter-spacing:.15em;ma
  </div>
 </section>
 
-<section class="portfolio-cta-section"><div class="container"><div class="portfolio-cta reveal"><div><div class="eyebrow">Need something built?</div><h2>Bring me the outcome.<br>I’ll build the system.</h2><p>Share the current setup, the tools involved, and what needs to happen next.</p></div><div class="portfolio-cta__actions"><a class="btn btn--accent" href="contact.html">Start a Project →</a><a class="portfolio-cta__text" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1s9ZiewEGBX1Z7alvve0D0L3Dcf9KeWCT-qWfswH8RLhlqgSk2J8IrSImAoCV7tNnxlUmfkzgS?gv=true" target="_blank" rel="noopener noreferrer">Book an appointment ↗</a></div></div></div></section>
+<section class="portfolio-cta-section"><div class="container"><div class="portfolio-cta reveal"><div><div class="eyebrow">Build Something Better</div><h2>Have an outcome in mind?<br>Let’s turn it into a system.</h2><p>Share the current setup, the tools involved, and what needs to happen next.</p></div><div class="portfolio-cta__actions"><a class="btn btn--accent" href="contact.html">Start a Project →</a><a class="portfolio-cta__text" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1s9ZiewEGBX1Z7alvve0D0L3Dcf9KeWCT-qWfswH8RLhlqgSk2J8IrSImAoCV7tNnxlUmfkzgS?gv=true" target="_blank" rel="noopener noreferrer">Book an appointment ↗</a></div></div></div></section>
 </main>
 <div class="work-preview-modal" id="work-preview-modal" aria-hidden="true"><div class="work-preview-modal__backdrop" data-preview-close></div><div class="work-preview-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="work-preview-title"><header><div><span>PROJECT PREVIEW</span><h2 id="work-preview-title">Work preview</h2></div><button type="button" aria-label="Close preview" data-preview-close>×</button></header><div class="work-preview-modal__frame"><iframe title="Portfolio work preview" loading="lazy" allow="autoplay; fullscreen" allowfullscreen></iframe></div><footer><span>Google Drive preview</span><a href="#" target="_blank" rel="noopener noreferrer" data-preview-source>Open source file ↗</a></footer></div></div>
 <footer class="site-footer">
@@ -2306,7 +2463,7 @@ body[data-page="proof"] .eyebrow{color:#9dff3e!important;letter-spacing:.15em;ma
   }
   document.querySelectorAll('[data-expand]').forEach(btn => btn.addEventListener('click', () => {
     const group=btn.dataset.expand; const expanded=btn.getAttribute('aria-expanded')==='true';
-    document.querySelectorAll(`[data-expand-group="${group}"]`).forEach((card,i) => { if(i>=8) card.classList.toggle('is-collapsed', expanded); });
+    const limit = group === 'reel' ? 5 : 6; document.querySelectorAll(`[data-expand-group="${group}"]`).forEach((card,i) => { if(i>=limit) card.classList.toggle('is-collapsed', expanded); });
     btn.setAttribute('aria-expanded', String(!expanded));
     const total=group==='reel'?16:16; btn.innerHTML=expanded?`Show all ${total} ${group==='reel'?'reels':'graphics'} <span>↓</span>`:`Show fewer <span>↑</span>`;
   }));
