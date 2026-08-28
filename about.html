@@ -5306,6 +5306,239 @@ body[data-page="about"] .education-section.education-clean::after {
 }
 </style>
 
+
+<style id="final-layout-fixes">
+/* ===== FINAL BALANCE FIXES: EXPERIENCE / EDUCATION / CTA ===== */
+
+/* Experience period: prevent generic meta span rule from stretching the pill */
+body[data-page="about"] .experience-card__meta .experience-period {
+  display: inline-flex !important;
+  width: fit-content !important;
+  max-width: 100%;
+  min-height: 32px;
+  padding: 0 12px;
+  margin: 0 0 16px;
+  color: var(--ref-lime) !important;
+  letter-spacing: .04em !important;
+  text-transform: none !important;
+  white-space: nowrap;
+}
+
+/* Education: tighter editorial proportions and cleaner wrapping */
+body[data-page="about"] .education-section.education-clean {
+  padding: 78px 0 !important;
+}
+.education-clean__header {
+  gap: clamp(40px, 6vw, 84px);
+  padding-bottom: 42px;
+}
+.education-clean__title h2 {
+  font-size: clamp(2.75rem, 4.7vw, 4.55rem);
+  line-height: .96;
+}
+.education-clean__body {
+  grid-template-columns: minmax(0, 1.08fr) minmax(360px, .92fr);
+}
+.education-clean__degree,
+.education-clean__training {
+  padding-top: 38px;
+}
+.education-clean__degree {
+  min-height: 410px;
+  padding-right: clamp(30px, 4vw, 54px);
+}
+.education-clean__training {
+  padding-left: clamp(30px, 4vw, 54px);
+}
+.education-clean__section-label {
+  margin-bottom: 34px;
+}
+.education-clean__degree h3 {
+  max-width: 590px;
+  font-size: clamp(1.9rem, 2.65vw, 2.75rem);
+  line-height: 1.06;
+  letter-spacing: -.045em;
+  text-wrap: balance;
+}
+.education-clean__school {
+  margin-top: 24px;
+}
+.education-clean__degree-bottom {
+  right: clamp(30px, 4vw, 54px);
+  bottom: 18px;
+  gap: 18px;
+}
+.education-clean__watermark {
+  right: clamp(30px, 4vw, 54px);
+  bottom: 65px;
+  font-size: clamp(5rem, 8vw, 8rem);
+}
+.education-clean__training-head {
+  margin-bottom: 18px;
+}
+.education-clean__training h3 {
+  font-size: clamp(1.75rem, 2.45vw, 2.45rem);
+}
+.education-clean__list li {
+  min-height: 82px;
+  padding: 16px 0;
+}
+
+/* CTA: reduce scale, remove dead space, and keep the message readable */
+.about-cta-editorial {
+  padding: clamp(58px, 6vw, 78px) 0 !important;
+}
+.about-cta-editorial::before {
+  background: radial-gradient(circle at 92% 55%, rgba(157,255,62,.06), transparent 22%);
+}
+.about-cta-editorial__shell {
+  grid-template-columns: minmax(0, 1.28fr) minmax(270px, .72fr);
+  gap: clamp(36px, 5vw, 70px);
+  padding: clamp(30px, 3.8vw, 46px) 0;
+}
+.about-cta-editorial__copy .eyebrow {
+  margin-bottom: 20px;
+}
+.about-cta-editorial__copy h2 {
+  max-width: 760px;
+  font-size: clamp(2.5rem, 4.15vw, 4.05rem);
+  line-height: .98;
+  letter-spacing: -.055em;
+  text-wrap: initial;
+}
+.about-cta-editorial__lower {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  justify-items: start;
+  gap: 18px;
+  margin-top: clamp(28px, 3.5vw, 40px);
+}
+.about-cta-editorial__lower p {
+  max-width: 610px;
+  font-size: .82rem;
+  line-height: 1.65;
+}
+.about-cta-editorial__action {
+  min-height: 0;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px;
+  padding-left: clamp(30px, 4vw, 48px);
+}
+.about-cta-editorial__signal {
+  width: clamp(118px, 11vw, 148px);
+  flex: 0 0 auto;
+}
+.about-cta-editorial__orbit {
+  inset: 9px;
+}
+.about-cta-editorial__signal-label {
+  max-width: 70px;
+  font-size: .58rem;
+}
+.about-cta-editorial__signal-arrow {
+  right: 16px;
+  bottom: 14px;
+  font-size: 1rem;
+}
+.about-cta-editorial__buttons {
+  width: auto;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 13px;
+}
+.about-cta-editorial__buttons .btn {
+  min-height: 44px;
+  padding-inline: 18px;
+}
+.about-cta-editorial__proof {
+  margin-left: 8px;
+}
+
+@media (max-width: 980px) {
+  .education-clean__body { grid-template-columns: 1fr; }
+  .education-clean__degree {
+    min-height: 390px;
+    padding-right: 0;
+  }
+  .education-clean__training { padding-left: 0; }
+  .education-clean__degree-bottom { right: 0; }
+  .education-clean__watermark { right: 0; }
+}
+
+@media (max-width: 900px) {
+  .about-cta-editorial__shell {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .about-cta-editorial__action {
+    padding: 26px 0 0;
+    border-left: 0;
+    border-top: 1px solid rgba(255,255,255,.09);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 26px;
+  }
+  .about-cta-editorial__buttons {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+@media (max-width: 640px) {
+  body[data-page="about"] .education-section.education-clean {
+    padding: 60px 0 !important;
+  }
+  .education-clean__header { padding-bottom: 30px; }
+  .education-clean__title h2 { font-size: clamp(2.35rem, 11.8vw, 3.35rem); }
+  .education-clean__degree { min-height: 400px; }
+  .education-clean__section-label { margin-bottom: 28px; }
+  .education-clean__degree h3 {
+    max-width: 100%;
+    font-size: clamp(1.75rem, 8.8vw, 2.35rem);
+    line-height: 1.08;
+  }
+  .education-clean__degree-bottom {
+    position: static;
+    margin-top: 46px;
+    padding-top: 18px;
+  }
+  .education-clean__watermark {
+    right: -8px;
+    bottom: 78px;
+    font-size: 5.2rem;
+  }
+  .about-cta-editorial { padding: 52px 0 !important; }
+  .about-cta-editorial__shell { padding: 28px 0; }
+  .about-cta-editorial__copy h2 {
+    font-size: clamp(2.2rem, 11vw, 3rem);
+    line-height: 1;
+  }
+  .about-cta-editorial__copy h2 br { display: none; }
+  .about-cta-editorial__action {
+    display: grid;
+    grid-template-columns: auto minmax(0,1fr);
+    align-items: center;
+    gap: 20px;
+  }
+  .about-cta-editorial__signal { width: 106px; }
+  .about-cta-editorial__buttons {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .about-cta-editorial__buttons .btn { width: auto; }
+}
+
+@media (max-width: 420px) {
+  .about-cta-editorial__action { grid-template-columns: 1fr; }
+  .about-cta-editorial__signal { width: 96px; }
+}
+</style>
+
 </head>
 <body data-page="about">
 <a class="skip-link" href="#main">Skip to content</a>
@@ -5616,7 +5849,7 @@ body[data-page="about"] .education-section.education-clean::after {
 
         <div class="education-clean__degree-main">
           <span class="education-clean__kicker">Bachelor's Degree</span>
-          <h3>Bachelor of Science in<br>Information Technology</h3>
+          <h3>Bachelor of Science in Information Technology</h3>
           <p class="education-clean__school">AMA Computer Learning Center</p>
           <p class="education-clean__campus">ACLC College of Butuan</p>
         </div>
@@ -5662,7 +5895,7 @@ body[data-page="about"] .education-section.education-clean::after {
     <div class="about-cta-editorial__shell reveal">
       <div class="about-cta-editorial__copy">
         <div class="eyebrow">Let's work together</div>
-        <h2 id="about-cta-title">Need someone who can build and troubleshoot the system?</h2>
+        <h2 id="about-cta-title">Need someone who can<br>build and troubleshoot<br>the system?</h2>
         <div class="about-cta-editorial__lower">
           <p>Tell me what needs to work better. I can help map the problem, build the solution, and make sure the pieces connect.</p>
           <div class="about-cta-editorial__availability"><i></i><span>Available for selected projects</span></div>
