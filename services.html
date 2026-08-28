@@ -1557,6 +1557,19 @@ main > section,
   background: #0e1a23 !important;
 }
 .standalone-service:nth-of-type(even) { background: #0b151d !important; }
+.standalone-service--first {
+  padding: 72px 0 104px !important;
+  border-top: 0;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(157,255,62,.08), transparent 34%),
+    #0c151d !important;
+}
+.standalone-service--first .pricing-heading {
+  margin-bottom: 18px;
+}
+.standalone-service--first .pricing-promise {
+  margin: 18px auto 72px;
+}
 .standalone-service--featured {
   background:
     radial-gradient(circle at 78% 16%, rgba(157,255,62,.09), transparent 28%),
@@ -1744,6 +1757,8 @@ main > section,
 @media (max-width: 680px) {
   .package-intro { padding-bottom: 50px !important; }
   .standalone-service { padding: 66px 0 !important; }
+  .standalone-service--first { padding: 54px 0 66px !important; }
+  .standalone-service--first .pricing-promise { margin-bottom: 46px; }
   .standalone-service::before { top: 18px; right: 12px; font-size: 6rem; }
   .service-feature-grid { gap: 28px; }
   .service-feature-media { aspect-ratio: 4 / 3; border-radius: 20px; }
@@ -2036,20 +2051,16 @@ main > section,
 </div>
 </header>
 <main id="main">
-<section aria-labelledby="packages-title" class="section pricing-section package-intro" id="packages">
-<div class="container">
-  <div class="pricing-heading reveal is-visible">
-    <div class="eyebrow">GoHighLevel Service Packages</div>
-    <h2 id="packages-title">Choose your package.</h2>
-    <p>Three fixed-price GoHighLevel builds, each designed around a different level of automation.</p>
-  </div>
-  <div class="pricing-promise reveal is-visible">Fixed one-time pricing. No hourly guesswork. Clear scope, clear outcome.</div>
-</div>
-</section>
-
-<section aria-labelledby="foundation-title" class="section standalone-service" id="foundation" data-service="01">
+<section aria-labelledby="packages-title" class="section standalone-service standalone-service--first" id="packages" data-service="01">
   <div class="container">
-    <div class="service-feature-grid">
+    <div class="pricing-heading reveal is-visible">
+      <div class="eyebrow">GoHighLevel Service Packages</div>
+      <h2 id="packages-title">Choose your package.</h2>
+      <p>Three fixed-price GoHighLevel builds, each designed around a different level of automation.</p>
+    </div>
+    <div class="pricing-promise reveal is-visible">Fixed one-time pricing. No hourly guesswork. Clear scope, clear outcome.</div>
+
+    <div class="service-feature-grid" id="foundation">
       <div class="service-feature-media reveal is-visible">
         <img src="https://drive.google.com/thumbnail?id=1iRbtq8QNhheCXG6uozkB3qr-CafJhmUh&amp;sz=w1600" alt="GoHighLevel Setup service" loading="lazy" decoding="async"/>
         <span class="service-image-label">Service 01 · Foundation</span>
