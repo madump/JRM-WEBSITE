@@ -2263,6 +2263,152 @@ main > section,
   }
 }
 </style>
+
+<style>
+/* ===== PROJECT CALL CALENDAR POPUP ===== */
+.calendar-trigger { border: 0; }
+.calendar-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1700;
+  display: none;
+  place-items: center;
+  padding: 24px;
+}
+.calendar-modal.is-open { display: grid; }
+.calendar-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(2, 7, 11, .88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  opacity: 0;
+  transition: opacity .22s ease;
+}
+.calendar-modal.is-open .calendar-modal__backdrop { opacity: 1; }
+.calendar-modal__dialog {
+  position: relative;
+  z-index: 2;
+  width: min(1040px, 100%);
+  max-height: calc(100svh - 48px);
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 24px;
+  background: #0d1a23;
+  box-shadow: 0 44px 120px rgba(0,0,0,.56), 0 0 0 1px rgba(157,255,62,.025);
+  opacity: 0;
+  transform: translateY(18px) scale(.985);
+  transition: opacity .22s ease, transform .22s ease;
+}
+.calendar-modal.is-open .calendar-modal__dialog {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+.calendar-modal__header {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 26px 76px 22px 28px;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+  background:
+    radial-gradient(circle at 84% 0%, rgba(157,255,62,.1), transparent 32%),
+    #10202b;
+}
+.calendar-modal__eyebrow {
+  display: block;
+  margin-bottom: 8px;
+  color: #9dff3e;
+  font-size: .65rem;
+  font-weight: 900;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.calendar-modal__header h2 {
+  margin: 0 0 7px;
+  color: #f4f7f8;
+  font-size: clamp(1.65rem, 3vw, 2.6rem);
+  line-height: 1;
+  text-transform: none;
+}
+.calendar-modal__header p {
+  max-width: 650px;
+  margin: 0;
+  color: #91a1ad;
+  font-size: .82rem;
+  line-height: 1.55;
+}
+.calendar-modal__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 50%;
+  background: #1b303d;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.25rem;
+  line-height: 1;
+  transition: .2s ease;
+}
+.calendar-modal__close:hover {
+  background: #29404e;
+  border-color: rgba(157,255,62,.3);
+  color: #9dff3e;
+}
+.calendar-modal__frame-wrap {
+  position: relative;
+  height: min(670px, calc(100svh - 190px));
+  min-height: 520px;
+  background: #fff;
+}
+.calendar-modal__frame {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: #fff;
+}
+.calendar-modal__fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 9px 18px;
+  border-top: 1px solid rgba(255,255,255,.08);
+  background: #0d1a23;
+  color: #7f909b;
+  font-size: .68rem;
+  text-align: center;
+}
+.calendar-modal__fallback a {
+  color: #9dff3e;
+  font-weight: 800;
+}
+.calendar-modal__fallback a:hover { text-decoration: underline; }
+
+@media (max-width: 680px) {
+  .calendar-modal { padding: 8px; }
+  .calendar-modal__dialog {
+    max-height: calc(100svh - 16px);
+    border-radius: 16px;
+  }
+  .calendar-modal__header { padding: 22px 60px 18px 20px; }
+  .calendar-modal__header p { font-size: .76rem; }
+  .calendar-modal__close { top: 14px; right: 14px; width: 38px; height: 38px; }
+  .calendar-modal__frame-wrap {
+    height: calc(100svh - 190px);
+    min-height: 470px;
+  }
+  .calendar-modal__fallback { padding-inline: 12px; font-size: .62rem; }
+}
+</style>
 </head>
 <body data-page="services">
 <a class="skip-link" href="#main">Skip to content</a>
@@ -2475,7 +2621,7 @@ main > section,
     </div>
   </div>
 </section>
-<section class="section section--white"><div class="container"><div class="cta-panel reveal"><div><div class="eyebrow">Not sure which package fits?</div><h2>Tell me what is happening now.</h2><p>I’ll tell you which package fits, or if you need something different.</p></div><div class="button-row"><a class="btn btn--accent" href="contact.html">Tell Me About Your Project</a></div></div></div></section>
+<section class="section section--white"><div class="container"><div class="cta-panel reveal"><div><div class="eyebrow">Not sure which package fits?</div><h2>Tell me what is happening now.</h2><p>I’ll tell you which package fits, or if you need something different.</p></div><div class="button-row"><button class="btn btn--accent calendar-trigger" type="button" aria-haspopup="dialog" aria-controls="calendar-modal">Tell Me About Your Project</button></div></div></div></section>
 </main>
 <div aria-hidden="true" class="checkout-modal" id="checkout-modal">
 <div class="checkout-modal__backdrop" data-checkout-close=""></div>
@@ -2542,6 +2688,24 @@ main > section,
 </div>
 </div>
 </div>
+</div>
+
+<div aria-hidden="true" class="calendar-modal" id="calendar-modal">
+  <div class="calendar-modal__backdrop" data-calendar-close=""></div>
+  <div aria-labelledby="calendar-modal-title" aria-modal="true" class="calendar-modal__dialog" role="dialog">
+    <div class="calendar-modal__header">
+      <div>
+        <span class="calendar-modal__eyebrow">Book a Project Call</span>
+        <h2 id="calendar-modal-title">Choose a time that works for you.</h2>
+        <p>Pick an available time below and your appointment will be added to the calendar.</p>
+      </div>
+      <button aria-label="Close calendar" class="calendar-modal__close" data-calendar-close="" type="button">×</button>
+    </div>
+    <div class="calendar-modal__frame-wrap">
+      <iframe class="calendar-modal__frame" data-calendar-src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1s9ZiewEGBX1Z7alvve0D0L3Dcf9KeWCT-qWfswH8RLhlqgSk2J8IrSImAoCV7tNnxlUmfkzgS?gv=true" loading="lazy" src="about:blank" title="Book a project call"></iframe>
+    </div>
+    <div class="calendar-modal__fallback">Having trouble viewing the calendar? <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1s9ZiewEGBX1Z7alvve0D0L3Dcf9KeWCT-qWfswH8RLhlqgSk2J8IrSImAoCV7tNnxlUmfkzgS?gv=true" rel="noopener noreferrer" target="_blank">Open it in a new tab ↗</a></div>
+  </div>
 </div>
 <footer class="site-footer">
 <div class="container">
@@ -2931,6 +3095,62 @@ main > section,
       }
       if (event.key === 'Tab' && dialog) {
         const focusable = [...dialog.querySelectorAll(focusableSelector)].filter((el) => el.offsetParent !== null);
+        if (!focusable.length) return;
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault();
+          last.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault();
+          first.focus();
+        }
+      }
+    });
+  }
+
+
+
+  // Project call calendar popup
+  const calendarModal = document.getElementById('calendar-modal');
+  const calendarTriggers = document.querySelectorAll('.calendar-trigger');
+  let calendarLastFocused = null;
+
+  if (calendarModal && calendarTriggers.length) {
+    const calendarDialog = calendarModal.querySelector('.calendar-modal__dialog');
+    const calendarFrame = calendarModal.querySelector('.calendar-modal__frame');
+    const calendarCloseButtons = calendarModal.querySelectorAll('[data-calendar-close]');
+    const calendarFocusableSelector = 'button:not([disabled]), a[href], iframe, [tabindex]:not([tabindex="-1"])';
+
+    const closeCalendar = () => {
+      calendarModal.classList.remove('is-open');
+      calendarModal.setAttribute('aria-hidden', 'true');
+      body.classList.remove('modal-open');
+      if (calendarLastFocused) calendarLastFocused.focus();
+    };
+
+    const openCalendar = (trigger) => {
+      calendarLastFocused = trigger;
+      if (calendarFrame && calendarFrame.src === 'about:blank') {
+        calendarFrame.src = calendarFrame.dataset.calendarSrc || 'about:blank';
+      }
+      calendarModal.classList.add('is-open');
+      calendarModal.setAttribute('aria-hidden', 'false');
+      body.classList.add('modal-open');
+      window.setTimeout(() => calendarModal.querySelector('.calendar-modal__close')?.focus(), 20);
+    };
+
+    calendarTriggers.forEach((trigger) => trigger.addEventListener('click', () => openCalendar(trigger)));
+    calendarCloseButtons.forEach((button) => button.addEventListener('click', closeCalendar));
+
+    document.addEventListener('keydown', (event) => {
+      if (!calendarModal.classList.contains('is-open')) return;
+      if (event.key === 'Escape') {
+        closeCalendar();
+        return;
+      }
+      if (event.key === 'Tab' && calendarDialog) {
+        const focusable = [...calendarDialog.querySelectorAll(calendarFocusableSelector)].filter((el) => el.offsetParent !== null);
         if (!focusable.length) return;
         const first = focusable[0];
         const last = focusable[focusable.length - 1];
