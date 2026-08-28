@@ -3284,6 +3284,34 @@ body.calendar-modal-open { overflow: hidden; }
   margin: 0 !important;
 }
 </style>
+
+<style id="process-overlap-fix">
+/* Work Process: keep column dividers below the timeline rail/circles */
+@media (min-width: 901px) {
+  .process-step:not(:last-child) {
+    border-right: 0 !important;
+    margin-right: 34px !important;
+  }
+
+  .process-step:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 82px;
+    right: 0;
+    bottom: 22px;
+    width: 1px;
+    background: rgba(255,255,255,.07);
+    pointer-events: none;
+  }
+}
+
+/* Tablet/mobile already uses a different process layout */
+@media (max-width: 900px) {
+  .process-step:not(:last-child)::after {
+    display: none !important;
+  }
+}
+</style>
 </head>
 <body data-page="home">
 <a class="skip-link" href="#main">Skip to content</a>
@@ -3296,7 +3324,7 @@ body.calendar-modal-open { overflow: hidden; }
 <a class="nav-link" data-nav="services" href="services.html">Services</a>
 <a class="nav-link" data-nav="proof" href="proof-of-work.html">Proof of Work</a>
 <a class="nav-link" data-nav="contact" href="contact.html">Contact Us</a>
-<a class="btn btn--accent nav-cta" href="contact.html">Let's Work Together</a>
+<a class="btn btn--accent nav-cta" href="services.html">Let's Work Together</a>
 </nav>
 <button aria-controls="primary-navigation" aria-expanded="false" aria-label="Open navigation menu" class="menu-toggle" type="button"><span></span><span></span><span></span></button>
 </div>
