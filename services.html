@@ -2050,7 +2050,220 @@ main > section,
   .checkout-status { grid-column: auto; }
 }
 
-</style></head>
+</style>
+<style>
+/* ===== ENHANCED WORK PROCESS SECTION ===== */
+.work-process-section {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% -10%, rgba(157,255,62,.085), transparent 32%),
+    radial-gradient(circle at 92% 75%, rgba(111,135,153,.08), transparent 28%),
+    #09141c !important;
+  border-top: 1px solid rgba(255,255,255,.06);
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+.work-process-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255,255,255,.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.018) 1px, transparent 1px);
+  background-size: 52px 52px;
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,.65), transparent 92%);
+}
+.work-process-section .container {
+  position: relative;
+  z-index: 1;
+}
+.work-process-header {
+  max-width: 780px;
+  margin: 0 auto 54px;
+  text-align: center;
+}
+.work-process-header .eyebrow {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+.work-process-header .eyebrow::before { display: none !important; }
+.work-process-header h2 {
+  margin: 0 0 16px;
+  color: #f4f7f8;
+  font-size: clamp(2.75rem, 5.4vw, 5rem);
+  line-height: .96;
+  text-transform: uppercase;
+  letter-spacing: -.06em;
+}
+.work-process-header p {
+  max-width: 630px;
+  margin: 0 auto;
+  color: #91a1ab;
+  font-size: .94rem;
+  line-height: 1.7;
+}
+.process-flow {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+.process-flow::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  top: 45px;
+  left: 8%;
+  right: 8%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(157,255,62,.42) 14%, rgba(157,255,62,.16) 50%, rgba(157,255,62,.42) 86%, transparent);
+  box-shadow: 0 0 18px rgba(157,255,62,.08);
+}
+.process-flow__card {
+  position: relative;
+  z-index: 1;
+  min-height: 286px;
+  padding: 25px 24px 27px;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 20px;
+  background:
+    linear-gradient(180deg, rgba(35,56,69,.88), rgba(19,34,44,.96));
+  box-shadow: 0 18px 42px rgba(0,0,0,.15);
+  transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease, background .25s ease;
+  overflow: hidden;
+}
+.process-flow__card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(157,255,62,.9), transparent);
+  opacity: .45;
+}
+.process-flow__card::after {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  right: -55px;
+  bottom: -60px;
+  border-radius: 50%;
+  background: rgba(157,255,62,.055);
+  filter: blur(4px);
+  pointer-events: none;
+}
+.process-flow__card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(157,255,62,.28);
+  background: linear-gradient(180deg, rgba(40,64,78,.94), rgba(19,34,44,.98));
+  box-shadow: 0 24px 55px rgba(0,0,0,.25), 0 0 34px rgba(157,255,62,.045);
+}
+.process-flow__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 34px;
+}
+.process-flow__num {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #9dff3e;
+  color: #102006;
+  font: 900 .73rem/1 "Manrope", sans-serif;
+  box-shadow: 0 0 0 7px rgba(157,255,62,.055), 0 0 26px rgba(157,255,62,.12);
+}
+.process-flow__icon {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(157,255,62,.16);
+  border-radius: 13px;
+  background: rgba(157,255,62,.055);
+  color: #b6ff6a;
+}
+.process-flow__icon svg {
+  width: 21px;
+  height: 21px;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.process-flow__phase {
+  display: block;
+  margin-bottom: 10px;
+  color: #9dff3e;
+  font-size: .62rem;
+  font-weight: 900;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.process-flow__card h3 {
+  margin: 0 0 12px;
+  color: #f4f7f8;
+  font-size: 1.18rem;
+  line-height: 1.15;
+}
+.process-flow__card p {
+  margin: 0;
+  color: #8fa0aa;
+  font-size: .8rem;
+  line-height: 1.68;
+}
+.process-assurance {
+  width: fit-content;
+  max-width: 780px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 26px auto 0;
+  padding: 13px 17px;
+  border: 1px solid rgba(157,255,62,.14);
+  border-radius: 999px;
+  background: rgba(157,255,62,.045);
+  color: #84959f;
+  font-size: .73rem;
+  line-height: 1.45;
+}
+.process-assurance strong { color: #dce7ec; }
+.process-assurance__check {
+  flex: 0 0 24px;
+  width: 24px;
+  height: 24px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #9dff3e;
+  color: #102006;
+  font-size: .68rem;
+  font-weight: 900;
+}
+@media (max-width: 980px) {
+  .process-flow { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .process-flow::before { display: none; }
+  .process-flow__card { min-height: 250px; }
+}
+@media (max-width: 640px) {
+  .work-process-header { margin-bottom: 34px; }
+  .work-process-header h2 { font-size: clamp(2.45rem, 13vw, 3.8rem); }
+  .work-process-header p { font-size: .84rem; }
+  .process-flow { grid-template-columns: 1fr; gap: 12px; }
+  .process-flow__card { min-height: 0; padding: 22px 20px 23px; }
+  .process-flow__top { margin-bottom: 26px; }
+  .process-assurance {
+    width: 100%;
+    align-items: flex-start;
+    border-radius: 15px;
+  }
+}
+</style>
+</head>
 <body data-page="services">
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
@@ -2198,7 +2411,70 @@ main > section,
 </div>
 </div>
 </section>
-<section aria-labelledby="service-process-title" class="section"><div class="container"><div class="section-heading reveal"><div><div class="eyebrow">Work Process</div><h2 id="service-process-title">How I build it.</h2></div><p>I scope the setup first, then build, test, and hand it over.</p></div><div class="process-line"><article class="process-step reveal"><span class="process-step__num">01</span><h3>Discovery</h3><p>Understand the business, audience, goals, tools, and current challenges.</p></article><article class="process-step reveal" data-delay="1"><span class="process-step__num">02</span><h3>Strategy</h3><p>Plan the funnel, workflow, integrations, content, and customer journey.</p></article><article class="process-step reveal" data-delay="2"><span class="process-step__num">03</span><h3>Build &amp; Test</h3><p>Develop the system, map data, test automations, and resolve errors.</p></article><article class="process-step reveal" data-delay="3"><span class="process-step__num">04</span><h3>Launch &amp; Improve</h3><p>Deploy the project, document the process, and optimize performance.</p></article></div></div></section>
+<section aria-labelledby="service-process-title" class="section work-process-section" id="work-process">
+  <div class="container">
+    <div class="work-process-header reveal is-visible">
+      <div class="eyebrow">Work Process</div>
+      <h2 id="service-process-title">How I build it.</h2>
+      <p>I scope the setup first, then build, test, and hand it over with a clear process from start to launch.</p>
+    </div>
+
+    <div class="process-flow">
+      <article class="process-flow__card reveal is-visible">
+        <div class="process-flow__top">
+          <span class="process-flow__num">01</span>
+          <span class="process-flow__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="6.5"></circle><path d="M16 16l4 4"></path><path d="M8.5 11h5M11 8.5v5"></path></svg>
+          </span>
+        </div>
+        <span class="process-flow__phase">Understand</span>
+        <h3>Discovery</h3>
+        <p>Understand the business, audience, goals, tools, and current challenges.</p>
+      </article>
+
+      <article class="process-flow__card reveal is-visible" data-delay="1">
+        <div class="process-flow__top">
+          <span class="process-flow__num">02</span>
+          <span class="process-flow__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="6" height="6" rx="1.5"></rect><rect x="14" y="14" width="6" height="6" rx="1.5"></rect><path d="M10 7h4a3 3 0 0 1 3 3v4M14 17h-4a3 3 0 0 1-3-3v-4"></path></svg>
+          </span>
+        </div>
+        <span class="process-flow__phase">Plan</span>
+        <h3>Strategy</h3>
+        <p>Plan the funnel, workflow, integrations, content, and customer journey.</p>
+      </article>
+
+      <article class="process-flow__card reveal is-visible" data-delay="2">
+        <div class="process-flow__top">
+          <span class="process-flow__num">03</span>
+          <span class="process-flow__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M8.5 5.5L5 9l3.5 3.5M15.5 5.5L19 9l-3.5 3.5M14 4l-4 16"></path><path d="M15 18h5"></path></svg>
+          </span>
+        </div>
+        <span class="process-flow__phase">Execute</span>
+        <h3>Build &amp; Test</h3>
+        <p>Develop the system, map data, test automations, and resolve errors.</p>
+      </article>
+
+      <article class="process-flow__card reveal is-visible" data-delay="3">
+        <div class="process-flow__top">
+          <span class="process-flow__num">04</span>
+          <span class="process-flow__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M13.2 4.2c2.8.2 5.1 2.5 5.4 5.4l-5.9 5.9-4.2-4.2 4.7-7.1z"></path><path d="M8.5 11.3L5.7 12l-2 2 4.3.5M12.7 15.5l-.7 2.8-2 2-.5-4.3"></path><path d="M15.7 8.3h.01"></path></svg>
+          </span>
+        </div>
+        <span class="process-flow__phase">Launch</span>
+        <h3>Launch &amp; Improve</h3>
+        <p>Deploy the project, document the process, and optimize performance.</p>
+      </article>
+    </div>
+
+    <div class="process-assurance reveal is-visible">
+      <span class="process-assurance__check" aria-hidden="true">✓</span>
+      <span><strong>Built with clarity.</strong> Every system is tested before handover and documented so your team knows what happens next.</span>
+    </div>
+  </div>
+</section>
 <section class="section section--dark"><div class="container"><div class="external-proof reveal"><div><div class="eyebrow">See the work</div><h2>Funnels, websites, automations, and creative work.</h2><p>Open the project folders and review the work directly.</p></div><a class="btn btn--accent" href="proof-of-work.html">View Proof of Work →</a></div></div></section>
 <section class="section section--white"><div class="container"><div class="cta-panel reveal"><div><div class="eyebrow">Not sure which package fits?</div><h2>Tell me what is happening now.</h2><p>I’ll tell you which package fits, or if you need something different.</p></div><div class="button-row"><a class="btn btn--accent" href="contact.html">Tell Me About Your Project</a></div></div></div></section>
 </main>
