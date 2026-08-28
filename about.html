@@ -3605,7 +3605,650 @@ body[data-page="about"] .education-note strong {
   }
 }
 
-</style></head>
+</style><style>
+/* ===== SKILLS & TOOLS — ASYMMETRIC EDITORIAL REDESIGN ===== */
+.skills-editorial{
+  position:relative;
+  overflow:hidden;
+  background:#0c151d !important;
+}
+.skills-editorial::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:
+    linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);
+  background-size:54px 54px;
+  mask-image:linear-gradient(to bottom,rgba(0,0,0,.7),transparent 90%);
+}
+.skills-editorial::after{
+  content:"";
+  position:absolute;
+  width:420px;
+  height:420px;
+  right:-180px;
+  top:160px;
+  border-radius:50%;
+  background:rgba(157,255,62,.065);
+  filter:blur(65px);
+  pointer-events:none;
+}
+.skills-editorial .container{position:relative;z-index:1;}
+.skills-editorial__header{
+  display:grid;
+  grid-template-columns:minmax(0,1.1fr) minmax(320px,.7fr);
+  gap:80px;
+  align-items:end;
+  margin-bottom:54px;
+}
+.skills-editorial__header h2{
+  max-width:660px;
+  margin:0;
+  font-size:clamp(3rem,5.4vw,5.2rem);
+  line-height:.94;
+  text-transform:uppercase;
+}
+.skills-editorial__intro{padding-bottom:6px;}
+.skills-editorial__intro p{
+  max-width:520px;
+  margin:0;
+  color:#91a2ad;
+  font-size:.9rem;
+  line-height:1.7;
+}
+.skills-editorial__index{
+  display:flex;
+  flex-wrap:wrap;
+  gap:18px;
+  margin-top:22px;
+  padding-top:18px;
+  border-top:1px solid rgba(255,255,255,.08);
+}
+.skills-editorial__index span{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  color:#91a2ad;
+  font-size:.72rem;
+  font-weight:800;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+}
+.skills-editorial__index b{color:var(--ref-lime);font:800 .72rem/1 "Manrope",sans-serif;}
+.skills-editorial__layout{
+  display:grid;
+  grid-template-columns:minmax(0,1.08fr) minmax(360px,.92fr);
+  gap:18px;
+  align-items:stretch;
+}
+.skills-feature{
+  position:relative;
+  min-height:590px;
+  display:flex;
+  flex-direction:column;
+  padding:30px;
+  border:1px solid rgba(255,255,255,.09);
+  border-radius:26px 8px 26px 8px;
+  background:
+    radial-gradient(circle at 88% 10%,rgba(157,255,62,.12),transparent 26%),
+    linear-gradient(150deg,#1a303c 0%,#10222d 52%,#0a1821 100%);
+  overflow:hidden;
+  box-shadow:0 28px 70px rgba(0,0,0,.18);
+}
+.skills-feature::after{
+  content:"01";
+  position:absolute;
+  right:-18px;
+  bottom:-44px;
+  color:rgba(255,255,255,.025);
+  font:800 clamp(10rem,19vw,17rem)/1 "Manrope",sans-serif;
+  letter-spacing:-.08em;
+  pointer-events:none;
+}
+.skills-feature__topline{
+  position:relative;
+  z-index:2;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:18px;
+  padding-bottom:18px;
+  border-bottom:1px solid rgba(255,255,255,.09);
+}
+.skills-feature__topline span{
+  color:#8ea0aa;
+  font-size:.66rem;
+  font-weight:800;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+}
+.skills-feature__topline strong{
+  color:var(--ref-lime);
+  font:800 .76rem/1 "Manrope",sans-serif;
+}
+.skills-feature__body{
+  position:relative;
+  z-index:2;
+  display:grid;
+  grid-template-columns:minmax(230px,.85fr) minmax(230px,1.15fr);
+  gap:34px;
+  flex:1;
+  padding:48px 0 38px;
+}
+.skills-feature__kicker,.skills-slice__kicker{
+  display:block;
+  margin-bottom:12px;
+  color:var(--ref-lime);
+  font-size:.66rem;
+  font-weight:900;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+}
+.skills-feature h3{
+  margin:0 0 22px;
+  color:#fff;
+  font-size:clamp(2.8rem,4.6vw,4.7rem);
+  line-height:.88;
+  text-transform:uppercase;
+}
+.skills-feature__copy p{
+  max-width:420px;
+  margin:0;
+  color:#9aabb5;
+  font-size:.9rem;
+  line-height:1.72;
+}
+.skills-feature__stack{
+  align-self:center;
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  border-top:1px solid rgba(255,255,255,.09);
+}
+.skills-feature__stack span{
+  position:relative;
+  padding:13px 12px 13px 18px;
+  border-bottom:1px solid rgba(255,255,255,.08);
+  color:#d8e3e8;
+  font-size:.78rem;
+  font-weight:700;
+}
+.skills-feature__stack span::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:50%;
+  width:6px;
+  height:6px;
+  transform:translateY(-50%);
+  border-radius:50%;
+  background:var(--ref-lime);
+  box-shadow:0 0 12px rgba(157,255,62,.45);
+}
+.skills-feature__flow{
+  position:relative;
+  z-index:2;
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:8px 10px;
+  padding:15px 17px;
+  border-radius:12px;
+  background:rgba(4,13,19,.42);
+  border:1px solid rgba(255,255,255,.07);
+}
+.skills-feature__flow span{color:#b8c6ce;font-size:.69rem;font-weight:800;}
+.skills-feature__flow i{color:var(--ref-lime);font-style:normal;font-size:.68rem;}
+.skills-editorial__side{
+  display:grid;
+  grid-template-rows:1fr 1fr;
+  gap:18px;
+}
+.skills-slice{
+  position:relative;
+  display:grid;
+  grid-template-columns:58px minmax(0,1fr) 120px;
+  gap:22px;
+  align-items:start;
+  padding:27px 26px;
+  border-top:1px solid rgba(157,255,62,.5);
+  border-bottom:1px solid rgba(255,255,255,.08);
+  background:linear-gradient(90deg,rgba(28,47,58,.72),rgba(15,28,36,.82));
+  overflow:hidden;
+  transition:background .25s ease,border-color .25s ease,transform .25s ease;
+}
+.skills-slice:hover{
+  transform:translateX(4px);
+  background:linear-gradient(90deg,rgba(33,55,67,.86),rgba(16,31,40,.92));
+  border-top-color:var(--ref-lime);
+}
+.skills-slice__number{
+  width:48px;
+  height:48px;
+  display:grid;
+  place-items:center;
+  border:1px solid rgba(157,255,62,.26);
+  border-radius:50%;
+  color:var(--ref-lime);
+  background:rgba(157,255,62,.06);
+  font:800 .78rem/1 "Manrope",sans-serif;
+}
+.skills-slice__content h3{
+  margin:0 0 10px;
+  color:#fff;
+  font-size:clamp(1.55rem,2.5vw,2.35rem);
+  line-height:1;
+}
+.skills-slice__content p{
+  margin:0 0 17px;
+  color:#8fa2ad;
+  font-size:.8rem;
+  line-height:1.6;
+}
+.skills-slice__tools{
+  display:flex;
+  flex-wrap:wrap;
+  gap:0;
+}
+.skills-slice__tools span{
+  position:relative;
+  margin:0 12px 5px 0;
+  padding-right:12px;
+  color:#cbd7dd;
+  font-size:.7rem;
+  font-weight:700;
+}
+.skills-slice__tools span:not(:last-child)::after{
+  content:"/";
+  position:absolute;
+  right:-1px;
+  color:#526570;
+}
+.skills-slice__note{
+  align-self:end;
+  padding-left:16px;
+  border-left:1px solid rgba(255,255,255,.09);
+}
+.skills-slice__note small{
+  display:block;
+  margin-bottom:8px;
+  color:#6f838e;
+  font-size:.58rem;
+  font-weight:900;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.skills-slice__note strong{
+  display:block;
+  color:#dfe7eb;
+  font-size:.75rem;
+  line-height:1.45;
+}
+.skills-editorial__footer{
+  display:grid;
+  grid-template-columns:180px minmax(0,1fr);
+  gap:28px;
+  align-items:start;
+  margin-top:22px;
+  padding:24px 0 0;
+  border-top:1px solid rgba(255,255,255,.08);
+}
+.skills-editorial__footer span{
+  color:var(--ref-lime);
+  font-size:.65rem;
+  font-weight:900;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.skills-editorial__footer strong{
+  max-width:760px;
+  color:#d7e0e5;
+  font-size:clamp(1rem,1.4vw,1.22rem);
+  line-height:1.55;
+}
+@media (max-width:980px){
+  .skills-editorial__header{grid-template-columns:1fr;gap:22px;margin-bottom:38px;}
+  .skills-editorial__intro{max-width:650px;}
+  .skills-editorial__layout{grid-template-columns:1fr;}
+  .skills-feature{min-height:auto;}
+  .skills-editorial__side{grid-template-columns:1fr 1fr;grid-template-rows:auto;}
+  .skills-slice{grid-template-columns:52px minmax(0,1fr);}
+  .skills-slice__note{grid-column:2;padding:16px 0 0;border-left:0;border-top:1px solid rgba(255,255,255,.08);}
+}
+@media (max-width:760px){
+  .skills-feature__body{grid-template-columns:1fr;gap:28px;padding:34px 0 28px;}
+  .skills-feature__stack{align-self:stretch;}
+  .skills-editorial__side{grid-template-columns:1fr;}
+  .skills-slice{grid-template-columns:46px minmax(0,1fr);gap:16px;padding:23px 18px;}
+  .skills-slice__number{width:40px;height:40px;}
+  .skills-editorial__footer{grid-template-columns:1fr;gap:9px;}
+}
+@media (max-width:520px){
+  .skills-editorial__header h2{font-size:clamp(2.55rem,13vw,3.7rem);}
+  .skills-editorial__index{gap:12px 15px;}
+  .skills-feature{padding:22px 18px;border-radius:20px 7px 20px 7px;}
+  .skills-feature h3{font-size:clamp(2.5rem,13vw,3.75rem);}
+  .skills-feature__stack{grid-template-columns:1fr;}
+  .skills-feature__flow{gap:7px;}
+  .skills-slice__tools span{font-size:.67rem;}
+}
+</style>
+
+<style>
+/* ===== SKILLS & TOOLS — IMAGE-LED CAPABILITY CARDS ===== */
+.skills-visual{
+  position:relative;
+  overflow:hidden;
+  padding:92px 0 !important;
+  background:#0b171f !important;
+  color:#f4f7f8;
+}
+.skills-visual::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at 7% 18%,rgba(157,255,62,.08),transparent 22%),
+    radial-gradient(circle at 95% 72%,rgba(82,127,151,.12),transparent 28%),
+    linear-gradient(rgba(255,255,255,.016) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.016) 1px,transparent 1px);
+  background-size:auto,auto,52px 52px,52px 52px;
+}
+.skills-visual .container{position:relative;z-index:1;}
+.skills-visual__header{
+  display:grid;
+  grid-template-columns:minmax(0,1.12fr) minmax(320px,.72fr);
+  gap:72px;
+  align-items:end;
+  margin-bottom:36px;
+}
+.skills-visual__heading h2{
+  max-width:680px;
+  margin:0;
+  color:#fff;
+  font-size:clamp(3rem,5.3vw,5.1rem);
+  line-height:.93;
+  text-transform:uppercase;
+}
+.skills-visual__intro{padding-bottom:5px;}
+.skills-visual__intro p{
+  max-width:520px;
+  margin:0;
+  color:#91a3ae !important;
+  font-size:.9rem;
+  line-height:1.72;
+}
+.skills-visual__legend{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:18px;
+}
+.skills-visual__legend span{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  min-height:31px;
+  padding:0 11px;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:999px;
+  background:rgba(23,41,52,.82);
+  color:#9babb4;
+  font-size:.64rem;
+  font-weight:800;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+}
+.skills-visual__legend b{color:var(--ref-lime);font-weight:900;}
+
+.skills-visual__grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:16px;
+}
+.capability-visual-card{
+  position:relative;
+  min-width:0;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.085);
+  border-top:2px solid var(--ref-lime);
+  border-radius:22px;
+  background:linear-gradient(180deg,#182b36 0%,#10212b 100%);
+  box-shadow:0 24px 54px rgba(0,0,0,.18);
+  transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease;
+}
+.capability-visual-card:hover{
+  transform:translateY(-6px);
+  border-color:rgba(157,255,62,.24);
+  box-shadow:0 30px 66px rgba(0,0,0,.25),0 0 34px rgba(157,255,62,.035);
+}
+.capability-visual-card__media{
+  position:relative;
+  height:225px;
+  overflow:hidden;
+  background:#09131a;
+}
+.capability-visual-card__media img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  filter:saturate(.82) contrast(1.06) brightness(.82);
+  transform:scale(1.015);
+  transition:transform .55s cubic-bezier(.2,.65,.2,1),filter .35s ease;
+}
+.capability-visual-card:nth-child(1) .capability-visual-card__media img{object-position:center 48%;}
+.capability-visual-card:nth-child(2) .capability-visual-card__media img{object-position:center 58%;}
+.capability-visual-card:nth-child(3) .capability-visual-card__media img{object-position:center 52%;}
+.capability-visual-card:hover .capability-visual-card__media img{
+  transform:scale(1.055);
+  filter:saturate(.92) contrast(1.06) brightness(.88);
+}
+.capability-visual-card__shade{
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(180deg,rgba(4,12,18,.1) 15%,rgba(4,12,18,.18) 48%,rgba(8,21,28,.94) 100%),
+    linear-gradient(90deg,rgba(8,20,27,.26),transparent 54%);
+}
+.capability-visual-card__media::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.025);
+}
+.capability-visual-card__number,
+.capability-visual-card__count,
+.capability-visual-card__visual-label{position:absolute;z-index:2;}
+.capability-visual-card__number{
+  left:16px;
+  top:16px;
+  width:44px;
+  height:44px;
+  display:grid;
+  place-items:center;
+  border:1px solid rgba(157,255,62,.38);
+  border-radius:13px;
+  background:rgba(8,20,27,.82);
+  color:var(--ref-lime);
+  font:900 .76rem/1 "Manrope",sans-serif;
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+}
+.capability-visual-card__count{
+  right:14px;
+  top:16px;
+  display:inline-flex;
+  align-items:center;
+  min-height:29px;
+  padding:0 10px;
+  border:1px solid rgba(157,255,62,.3);
+  border-radius:999px;
+  background:rgba(14,34,28,.78);
+  color:var(--ref-lime);
+  font-size:.59rem;
+  font-weight:900;
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+}
+.capability-visual-card__visual-label{
+  left:17px;
+  right:17px;
+  bottom:15px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  color:#f2f6f7;
+  font-size:.64rem;
+  font-weight:900;
+  letter-spacing:.11em;
+  text-transform:uppercase;
+}
+.capability-visual-card__visual-label span{
+  width:20px;
+  height:2px;
+  border-radius:999px;
+  background:var(--ref-lime);
+  box-shadow:0 0 12px rgba(157,255,62,.4);
+}
+.capability-visual-card__body{
+  display:flex;
+  flex-direction:column;
+  min-height:360px;
+  padding:24px 22px 22px;
+}
+.capability-visual-card__body h3{
+  margin:0 0 12px;
+  color:#fff;
+  font-size:clamp(1.85rem,2.6vw,2.75rem);
+  line-height:.94;
+  letter-spacing:-.055em;
+}
+.capability-visual-card__body p{
+  margin:0 0 18px;
+  color:#8fa2ad !important;
+  font-size:.8rem;
+  line-height:1.62;
+}
+.capability-visual-card__tools{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+  margin-bottom:22px;
+}
+.capability-visual-card__tools span{
+  display:inline-flex;
+  align-items:center;
+  min-height:30px;
+  padding:0 10px;
+  border:1px solid rgba(255,255,255,.075);
+  border-radius:999px;
+  background:#0b1b24;
+  color:#d6e0e5;
+  font-size:.64rem;
+  font-weight:800;
+  white-space:nowrap;
+}
+.capability-visual-card__tools .is-more{
+  border-color:rgba(157,255,62,.16);
+  background:rgba(157,255,62,.07);
+  color:var(--ref-lime);
+}
+.capability-visual-card__foot{
+  display:grid;
+  grid-template-columns:66px minmax(0,1fr);
+  gap:12px;
+  align-items:start;
+  margin-top:auto;
+  padding-top:17px;
+  border-top:1px solid rgba(255,255,255,.08);
+}
+.capability-visual-card__foot small{
+  color:#71858f;
+  font-size:.57rem;
+  font-weight:900;
+  letter-spacing:.11em;
+  text-transform:uppercase;
+}
+.capability-visual-card__foot strong{
+  color:#edf2f4;
+  font-size:.72rem;
+  line-height:1.45;
+  text-align:right;
+}
+.skills-visual__footer{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:30px;
+  margin-top:20px;
+  padding:18px 20px;
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:14px;
+  background:rgba(13,28,36,.7);
+}
+.skills-visual__signal{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  flex:0 0 auto;
+  color:var(--ref-lime);
+  font-size:.62rem;
+  font-weight:900;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+}
+.skills-visual__signal i{
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:var(--ref-lime);
+  box-shadow:0 0 0 5px rgba(157,255,62,.07),0 0 18px rgba(157,255,62,.25);
+}
+.skills-visual__footer strong{
+  color:#cdd7dc;
+  font-size:.76rem;
+  font-weight:700;
+  line-height:1.5;
+  text-align:right;
+}
+
+@media (max-width:980px){
+  .skills-visual__header{grid-template-columns:1fr;gap:18px;margin-bottom:30px;}
+  .skills-visual__intro{max-width:650px;}
+  .skills-visual__grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .capability-visual-card:first-child{grid-column:1 / -1;display:grid;grid-template-columns:minmax(300px,.9fr) minmax(0,1.1fr);}
+  .capability-visual-card:first-child .capability-visual-card__media{height:100%;min-height:410px;}
+  .capability-visual-card:first-child .capability-visual-card__body{min-height:410px;}
+}
+@media (max-width:720px){
+  .skills-visual{padding:72px 0 !important;}
+  .skills-visual__heading h2{font-size:clamp(2.55rem,12vw,3.8rem);}
+  .skills-visual__grid{grid-template-columns:1fr;}
+  .capability-visual-card:first-child{grid-column:auto;display:block;}
+  .capability-visual-card:first-child .capability-visual-card__media{height:220px;min-height:0;}
+  .capability-visual-card:first-child .capability-visual-card__body{min-height:0;}
+  .capability-visual-card__media{height:220px;}
+  .capability-visual-card__body{min-height:0;}
+  .skills-visual__footer{align-items:flex-start;flex-direction:column;gap:10px;}
+  .skills-visual__footer strong{text-align:left;}
+}
+@media (max-width:430px){
+  .skills-visual__legend{gap:6px;}
+  .skills-visual__legend span{font-size:.58rem;padding-inline:9px;}
+  .capability-visual-card{border-radius:18px;}
+  .capability-visual-card__media{height:205px;}
+  .capability-visual-card:first-child .capability-visual-card__media{height:205px;}
+  .capability-visual-card__body{padding:21px 17px 18px;}
+  .capability-visual-card__body h3{font-size:clamp(1.9rem,10vw,2.35rem);}
+  .capability-visual-card__tools span{font-size:.61rem;}
+  .capability-visual-card__foot{grid-template-columns:58px 1fr;}
+}
+</style>
+</head>
 <body data-page="about">
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
@@ -3731,7 +4374,94 @@ body[data-page="about"] .education-note strong {
     </div>
   </div>
 </section>
-<section aria-labelledby="skills-title" class="section section--white skills-section"><div class="container"><div class="section-heading reveal skills-heading"><div><div class="eyebrow">Skills &amp; Tools</div><h2 id="skills-title">The tools I work with.</h2></div><p>I combine automation, web production, and creative execution so the whole customer journey works better—from lead capture to follow-up.</p></div><div class="skills-summary reveal"><article class="skills-summary__card"><span>Core stack</span><strong>Automation, websites, and creative support handled in one workflow.</strong></article><article class="skills-summary__card"><span>Best outcome</span><strong>Connected systems that save time, improve follow-up, and support better conversions.</strong></article><article class="skills-summary__card"><span>Working style</span><strong>Practical, user-friendly execution aligned with real business goals.</strong></article></div><div class="skill-columns skills-shell"><section class="skill-group reveal"><div class="skill-group__top"><div class="skill-group__badge"><div class="skill-group__icon">01</div><div><span class="skill-group__eyebrow">Systems &amp; Workflows</span><h3>Automation &amp; CRM</h3></div></div><span class="skill-group__count">10 capabilities</span></div><p>Build connected lead capture, CRM, and follow-up workflows that reduce manual work and keep operations organized.</p><ul><li>GoHighLevel</li><li>Zapier</li><li>CRM Integrations</li><li>APIs</li><li>Webhooks</li><li>Data Mapping</li><li>Filters</li><li>Multi-Step Automation</li><li>Error Handling</li><li>Workflow Testing</li></ul><div class="skill-group__foot"><span>Best for</span><strong>Funnels, CRM setup, workflow automations, and integrations.</strong></div></section><section class="skill-group reveal" data-delay="1"><div class="skill-group__top"><div class="skill-group__badge"><div class="skill-group__icon">02</div><div><span class="skill-group__eyebrow">Front-End Delivery</span><h3>Web &amp; E-Commerce</h3></div></div><span class="skill-group__count">8 capabilities</span></div><p>Create responsive pages, websites, and e-commerce assets that look clean, load well, and support the business offer.</p><ul><li>Funnels</li><li>Landing Pages</li><li>Websites</li><li>Shopify</li><li>Printify</li><li>Domain Setup</li><li>Dedicated Email Domains</li><li>Responsive Design</li></ul><div class="skill-group__foot"><span>Best for</span><strong>Sales pages, branded websites, and online-store support.</strong></div></section><section class="skill-group reveal" data-delay="2"><div class="skill-group__top"><div class="skill-group__badge"><div class="skill-group__icon">03</div><div><span class="skill-group__eyebrow">Content &amp; Promotion</span><h3>Creative &amp; Marketing</h3></div></div><span class="skill-group__count">10 capabilities</span></div><p>Support the creative side with design, editing, and campaign assets so the systems you launch are also presentation-ready.</p><ul><li>Canva</li><li>CapCut</li><li>Graphic Design</li><li>Video Editing</li><li>Copywriting</li><li>Email Campaigns</li><li>Content Strategy</li><li>Paid Ads</li><li>Social Analytics</li><li>Community Management</li></ul><div class="skill-group__foot"><span>Best for</span><strong>Creative production, campaign support, and content execution.</strong></div></section></div></div></section>
+<section aria-labelledby="skills-title" class="section skills-visual">
+  <div class="container">
+    <div class="skills-visual__header reveal">
+      <div class="skills-visual__heading">
+        <div class="eyebrow">Skills &amp; Tools</div>
+        <h2 id="skills-title">The tools I work with.</h2>
+      </div>
+      <div class="skills-visual__intro">
+        <p>I combine automation, web production, and creative execution so the customer journey works as one connected system—from first click to follow-up.</p>
+        <div class="skills-visual__legend" aria-label="Capability areas">
+          <span><b>01</b> Systems</span>
+          <span><b>02</b> Web</span>
+          <span><b>03</b> Creative</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="skills-visual__grid">
+      <article class="capability-visual-card reveal">
+        <div class="capability-visual-card__media">
+          <img src="https://images.unsplash.com/photo-1771923082503-0a3381c46cef?auto=format&amp;fit=crop&amp;w=1600&amp;q=85" alt="Laptop showing a modern business automation dashboard" loading="lazy" decoding="async"/>
+          <div class="capability-visual-card__shade" aria-hidden="true"></div>
+          <span class="capability-visual-card__number">01</span>
+          <span class="capability-visual-card__count">10 capabilities</span>
+          <div class="capability-visual-card__visual-label"><span></span> Systems &amp; Workflows</div>
+        </div>
+        <div class="capability-visual-card__body">
+          <h3>Automation<br>&amp; CRM</h3>
+          <p>Connect lead capture, CRM, nurture, booking, and follow-up into one reliable workflow.</p>
+          <div class="capability-visual-card__tools" aria-label="Automation and CRM tools">
+            <span>GoHighLevel</span><span>Zapier</span><span>CRM Integrations</span><span>APIs</span><span>Webhooks</span><span class="is-more">+5 more</span>
+          </div>
+          <div class="capability-visual-card__foot">
+            <small>Best for</small>
+            <strong>Funnels, CRM setup &amp; integrations</strong>
+          </div>
+        </div>
+      </article>
+
+      <article class="capability-visual-card reveal" data-delay="1">
+        <div class="capability-visual-card__media">
+          <img src="https://images.unsplash.com/photo-1780253256194-34e5867ccb8c?auto=format&amp;fit=crop&amp;w=1600&amp;q=85" alt="Developer workspace with laptop displaying source code" loading="lazy" decoding="async"/>
+          <div class="capability-visual-card__shade" aria-hidden="true"></div>
+          <span class="capability-visual-card__number">02</span>
+          <span class="capability-visual-card__count">8 capabilities</span>
+          <div class="capability-visual-card__visual-label"><span></span> Front-End Delivery</div>
+        </div>
+        <div class="capability-visual-card__body">
+          <h3>Web &amp;<br>E-Commerce</h3>
+          <p>Responsive landing pages, websites, and store experiences built around the offer and user journey.</p>
+          <div class="capability-visual-card__tools" aria-label="Web and e-commerce capabilities">
+            <span>Funnels</span><span>Landing Pages</span><span>Websites</span><span>Shopify</span><span>Responsive Design</span><span class="is-more">+3 more</span>
+          </div>
+          <div class="capability-visual-card__foot">
+            <small>Best for</small>
+            <strong>Sales pages, branded websites &amp; stores</strong>
+          </div>
+        </div>
+      </article>
+
+      <article class="capability-visual-card reveal" data-delay="2">
+        <div class="capability-visual-card__media">
+          <img src="https://images.unsplash.com/photo-1758553026412-bc1da0ebd366?auto=format&amp;fit=crop&amp;w=1600&amp;q=85" alt="Creative content production desk with cameras and editing screens" loading="lazy" decoding="async"/>
+          <div class="capability-visual-card__shade" aria-hidden="true"></div>
+          <span class="capability-visual-card__number">03</span>
+          <span class="capability-visual-card__count">10 capabilities</span>
+          <div class="capability-visual-card__visual-label"><span></span> Content &amp; Promotion</div>
+        </div>
+        <div class="capability-visual-card__body">
+          <h3>Creative &amp;<br>Marketing</h3>
+          <p>Design, video, and campaign assets that make the system clear, polished, and ready to promote.</p>
+          <div class="capability-visual-card__tools" aria-label="Creative and marketing capabilities">
+            <span>Canva</span><span>CapCut</span><span>Graphic Design</span><span>Video Editing</span><span>Copywriting</span><span class="is-more">+5 more</span>
+          </div>
+          <div class="capability-visual-card__foot">
+            <small>Best for</small>
+            <strong>Campaign assets, content &amp; promotion</strong>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="skills-visual__footer reveal">
+      <span class="skills-visual__signal"><i></i> One connected approach</span>
+      <strong>Plan the journey. Build the system. Create the assets. Improve what happens next.</strong>
+    </div>
+  </div>
+</section>
 <section aria-labelledby="tools-title" class="section tools-platform-section"><div class="container"><div class="section-heading reveal tools-platform-heading"><div><div class="eyebrow">Tools &amp; Platforms</div><h2 id="tools-title">Platforms I use.</h2></div><div class="tools-platform-copy"><p>A practical stack for building, automating, designing, measuring, and improving digital systems from one end of the customer journey to the other.</p><div class="tools-platform-meta"><span>15 platforms</span><span>Automation-first</span><span>Cross-functional stack</span></div></div></div><div class="tool-logo-grid tools-ecosystem-grid reveal">
 <div class="tool-logo-item is-core"><div class="tool-logo-item__top"><img alt="GoHighLevel logo" loading="lazy" src="https://www.google.com/s2/favicons?domain=gohighlevel.com&amp;sz=128"/><span class="tool-logo-item__type">Core</span></div><div class="tool-logo-item__body"><strong>GoHighLevel</strong><small>CRM &amp; Automation</small></div></div>
 <div class="tool-logo-item"><div class="tool-logo-item__top"><img alt="WordPress logo" loading="lazy" src="https://www.google.com/s2/favicons?domain=wordpress.org&amp;sz=128"/><span class="tool-logo-item__type">Web</span></div><div class="tool-logo-item__body"><strong>WordPress</strong><small>Websites &amp; CMS</small></div></div>
