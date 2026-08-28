@@ -2380,6 +2380,39 @@ body[data-page="about"] .about-focus-v2__actions .btn__arrow {
   }
 }
 
+
+
+/* ===== PROFESSIONAL FOCUS V3 — EQUAL COLUMN HEIGHTS ===== */
+/* Keeps the complete portrait block aligned with the full content column on desktop/tablet. */
+@media (min-width: 761px) {
+  body[data-page="about"] .about-focus-v2__grid {
+    align-items: stretch !important;
+  }
+
+  body[data-page="about"] .about-focus-v2__visual {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 100%;
+  }
+
+  body[data-page="about"] .about-profile-shell {
+    flex: 1 1 auto;
+    width: min(100%, 370px);
+    min-height: 0;
+  }
+
+  body[data-page="about"] .about-proof-strip {
+    flex: 0 0 auto;
+  }
+
+  body[data-page="about"] .about-focus-v2__content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
 </style></head>
 <body data-page="about">
 <a class="skip-link" href="#main">Skip to content</a>
