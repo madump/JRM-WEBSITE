@@ -1877,6 +1877,509 @@ body[data-page="about"] .about-system-metric span {
   }
 }
 
+
+/* ===== PROFESSIONAL FOCUS V2 — EDITORIAL SYSTEMS PROFILE ===== */
+body[data-page="about"] .about-focus-v2 {
+  position: relative;
+  padding: clamp(78px, 8vw, 112px) 0 !important;
+  background:
+    radial-gradient(circle at 13% 42%, rgba(157,255,62,.055), transparent 24%),
+    linear-gradient(180deg, #0a141c 0%, #0b151d 100%) !important;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+body[data-page="about"] .about-focus-v2::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255,255,255,.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.018) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: linear-gradient(to right, rgba(0,0,0,.72), rgba(0,0,0,.22) 48%, transparent 78%);
+}
+
+body[data-page="about"] .about-focus-v2__grid {
+  display: grid;
+  grid-template-columns: minmax(300px, 380px) minmax(0, 1fr);
+  gap: clamp(54px, 7vw, 88px);
+  align-items: center;
+}
+
+body[data-page="about"] .about-focus-v2__visual {
+  width: 100%;
+}
+
+body[data-page="about"] .about-profile-shell {
+  position: relative;
+  width: min(100%, 370px);
+  min-height: 454px;
+  border: 1px solid rgba(255,255,255,.09);
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at 50% 38%, rgba(157,255,62,.10), transparent 30%),
+    linear-gradient(155deg, #172a35 0%, #10212b 55%, #0d1b23 100%);
+  box-shadow: 0 36px 78px rgba(0,0,0,.30), inset 0 1px 0 rgba(255,255,255,.035);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+body[data-page="about"] .about-profile-shell::before {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  right: -90px;
+  top: -105px;
+  border-radius: 50%;
+  border: 1px solid rgba(157,255,62,.16);
+  box-shadow: 0 0 0 24px rgba(157,255,62,.025), 0 0 0 54px rgba(157,255,62,.018);
+  z-index: 0;
+}
+
+body[data-page="about"] .about-profile-shell::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 42%;
+  z-index: 2;
+  pointer-events: none;
+  background: linear-gradient(to top, rgba(6,15,21,.96) 0%, rgba(6,15,21,.54) 48%, transparent 100%);
+}
+
+body[data-page="about"] .about-profile-shell__grid {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  opacity: .38;
+  background-image:
+    linear-gradient(rgba(255,255,255,.026) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.026) 1px, transparent 1px);
+  background-size: 31px 31px;
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,.82), transparent 78%);
+}
+
+body[data-page="about"] .about-profile-kicker {
+  position: absolute;
+  left: 18px;
+  top: 18px;
+  z-index: 5;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border: 1px solid rgba(255,255,255,.075);
+  border-radius: 999px;
+  background: rgba(8,20,27,.72);
+  color: #b8c4ca;
+  font-size: .56rem;
+  font-weight: 900;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  backdrop-filter: blur(12px);
+}
+
+body[data-page="about"] .about-profile-kicker span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--ref-lime);
+  box-shadow: 0 0 12px rgba(157,255,62,.65);
+}
+
+body[data-page="about"] .about-profile-tech {
+  position: absolute;
+  right: 18px;
+  top: 20px;
+  z-index: 5;
+  color: rgba(157,255,62,.66);
+  font: 900 .53rem/1 "Manrope", sans-serif;
+  letter-spacing: .12em;
+}
+
+body[data-page="about"] .about-profile-photo {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 1;
+  width: 100% !important;
+  max-width: none !important;
+  height: 100% !important;
+  margin: 0 !important;
+  aspect-ratio: auto !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  overflow: hidden;
+  background: transparent !important;
+}
+
+body[data-page="about"] .about-profile-photo::before {
+  display: none !important;
+}
+
+body[data-page="about"] .about-profile-photo img {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: 50% 18% !important;
+  filter: saturate(.94) contrast(1.025) !important;
+  transform: scale(1.018);
+  transition: transform .55s cubic-bezier(.2,.8,.2,1), filter .35s ease;
+}
+
+body[data-page="about"] .about-profile-shell:hover .about-profile-photo img {
+  transform: scale(1.045);
+  filter: saturate(1) contrast(1.04) !important;
+}
+
+body[data-page="about"] .about-profile-caption {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 18px;
+  z-index: 5;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+body[data-page="about"] .about-profile-caption strong {
+  display: block;
+  color: #f7fafb;
+  font: 800 1rem/1.1 "Manrope", sans-serif;
+  letter-spacing: -.035em;
+}
+
+body[data-page="about"] .about-profile-caption span {
+  display: block;
+  margin-top: 5px;
+  color: #80919b;
+  font-size: .62rem;
+  font-weight: 700;
+}
+
+body[data-page="about"] .about-profile-caption i {
+  flex: 0 0 34px;
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--ref-lime);
+  color: #142108;
+  font-style: normal;
+  font-size: .73rem;
+  font-weight: 900;
+  box-shadow: 0 0 24px rgba(157,255,62,.14);
+}
+
+body[data-page="about"] .about-proof-strip {
+  width: min(100%, 370px);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 12px;
+  border: 1px solid rgba(255,255,255,.075);
+  border-radius: 16px;
+  background: rgba(21,37,47,.86);
+  overflow: hidden;
+}
+
+body[data-page="about"] .about-proof-item {
+  min-height: 76px;
+  padding: 14px 13px;
+  border-right: 1px solid rgba(255,255,255,.07);
+}
+
+body[data-page="about"] .about-proof-item:last-child {
+  border-right: 0;
+}
+
+body[data-page="about"] .about-proof-item strong {
+  display: block;
+  color: var(--ref-lime);
+  font: 800 1rem/1 "Manrope", sans-serif;
+  letter-spacing: -.035em;
+}
+
+body[data-page="about"] .about-proof-item span {
+  display: block;
+  margin-top: 7px;
+  color: #7f909a;
+  font-size: .55rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+body[data-page="about"] .about-focus-v2__content {
+  max-width: 720px !important;
+  padding: 0 !important;
+}
+
+body[data-page="about"] .about-focus-v2__content .eyebrow {
+  margin-bottom: 18px;
+}
+
+body[data-page="about"] .about-focus-v2__content h2 {
+  max-width: 720px !important;
+  margin: 0 0 22px !important;
+  color: #f6f8f9;
+  font-size: clamp(2.75rem, 4.45vw, 4.35rem) !important;
+  line-height: .98 !important;
+  letter-spacing: -.06em !important;
+  text-wrap: balance;
+}
+
+body[data-page="about"] .about-focus-v2__content h2 span {
+  color: var(--ref-lime);
+  text-shadow: 0 0 28px rgba(157,255,62,.08);
+}
+
+body[data-page="about"] .about-focus-v2__content .lead {
+  max-width: 680px !important;
+  margin: 0 !important;
+  color: #a9b6bd !important;
+  font-size: .94rem !important;
+  line-height: 1.72 !important;
+}
+
+body[data-page="about"] .about-focus-v2__content .about-supporting {
+  max-width: 650px !important;
+  margin: 14px 0 0 !important;
+  color: #778994 !important;
+  font-size: .83rem !important;
+  line-height: 1.68 !important;
+}
+
+body[data-page="about"] .about-focus-v2__workflow {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 24px;
+  padding: 12px 14px;
+  width: fit-content;
+  max-width: 100%;
+  border: 1px solid rgba(255,255,255,.07);
+  border-radius: 12px;
+  background: rgba(20,37,47,.64);
+}
+
+body[data-page="about"] .about-focus-v2__workflow span {
+  color: #b8c4ca;
+  font-size: .63rem;
+  font-weight: 800;
+  letter-spacing: .01em;
+}
+
+body[data-page="about"] .about-focus-v2__workflow span:last-child {
+  color: var(--ref-lime);
+}
+
+body[data-page="about"] .about-focus-v2__workflow i {
+  color: #536873;
+  font-style: normal;
+  font-size: .68rem;
+}
+
+body[data-page="about"] .about-focus-v2__pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+body[data-page="about"] .about-focus-v2__pill-row span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 31px;
+  padding: 0 11px;
+  border: 1px solid rgba(255,255,255,.075);
+  border-radius: 999px;
+  background: #1b303d;
+  color: #c0ccd2;
+  font-size: .61rem;
+  font-weight: 800;
+  transition: transform .2s ease, border-color .2s ease, background .2s ease;
+}
+
+body[data-page="about"] .about-focus-v2__pill-row span::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  margin-right: 7px;
+  border-radius: 50%;
+  background: var(--ref-lime);
+  box-shadow: 0 0 9px rgba(157,255,62,.28);
+}
+
+body[data-page="about"] .about-focus-v2__pill-row span:hover {
+  transform: translateY(-2px);
+  border-color: rgba(157,255,62,.18);
+  background: #203744;
+}
+
+body[data-page="about"] .about-focus-v2__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+body[data-page="about"] .about-focus-v2__actions .btn {
+  min-height: 48px;
+  padding-inline: 20px;
+}
+
+body[data-page="about"] .about-focus-v2__actions .btn--ghost {
+  background: transparent;
+  border-color: rgba(255,255,255,.12);
+}
+
+body[data-page="about"] .about-focus-v2__actions .btn--ghost:hover {
+  background: rgba(255,255,255,.055);
+  border-color: rgba(157,255,62,.24);
+}
+
+body[data-page="about"] .about-focus-v2__actions .btn__arrow {
+  width: 22px;
+  height: 22px;
+}
+
+@media (max-width: 980px) {
+  body[data-page="about"] .about-focus-v2__grid {
+    grid-template-columns: minmax(270px, 330px) minmax(0, 1fr);
+    gap: 44px;
+  }
+
+  body[data-page="about"] .about-profile-shell {
+    min-height: 408px;
+  }
+
+  body[data-page="about"] .about-focus-v2__content h2 {
+    font-size: clamp(2.45rem, 5vw, 3.6rem) !important;
+  }
+}
+
+@media (max-width: 760px) {
+  body[data-page="about"] .about-focus-v2 {
+    padding: 66px 0 !important;
+  }
+
+  body[data-page="about"] .about-focus-v2__grid {
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+
+  body[data-page="about"] .about-focus-v2__visual {
+    width: min(100%, 430px);
+    margin-inline: auto;
+  }
+
+  body[data-page="about"] .about-profile-shell,
+  body[data-page="about"] .about-proof-strip {
+    width: 100%;
+    max-width: none;
+  }
+
+  body[data-page="about"] .about-profile-shell {
+    min-height: 480px;
+  }
+
+  body[data-page="about"] .about-focus-v2__content {
+    max-width: 620px !important;
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  body[data-page="about"] .about-focus-v2__content .eyebrow,
+  body[data-page="about"] .about-focus-v2__workflow,
+  body[data-page="about"] .about-focus-v2__pill-row,
+  body[data-page="about"] .about-focus-v2__actions {
+    justify-content: center;
+  }
+
+  body[data-page="about"] .about-focus-v2__content h2,
+  body[data-page="about"] .about-focus-v2__content .lead,
+  body[data-page="about"] .about-focus-v2__content .about-supporting {
+    margin-inline: auto !important;
+  }
+}
+
+@media (max-width: 480px) {
+  body[data-page="about"] .about-focus-v2 {
+    padding: 56px 0 !important;
+  }
+
+  body[data-page="about"] .about-profile-shell {
+    min-height: 420px;
+    border-radius: 22px;
+  }
+
+  body[data-page="about"] .about-profile-kicker {
+    left: 14px;
+    top: 14px;
+  }
+
+  body[data-page="about"] .about-profile-tech {
+    right: 14px;
+    top: 17px;
+  }
+
+  body[data-page="about"] .about-profile-caption {
+    left: 16px;
+    right: 16px;
+    bottom: 15px;
+  }
+
+  body[data-page="about"] .about-proof-item {
+    min-height: 70px;
+    padding: 12px 10px;
+  }
+
+  body[data-page="about"] .about-proof-item strong {
+    font-size: .9rem;
+  }
+
+  body[data-page="about"] .about-proof-item span {
+    font-size: .5rem;
+  }
+
+  body[data-page="about"] .about-focus-v2__content h2 {
+    font-size: clamp(2.25rem, 10.7vw, 3.1rem) !important;
+  }
+
+  body[data-page="about"] .about-focus-v2__content .lead {
+    font-size: .88rem !important;
+  }
+
+  body[data-page="about"] .about-focus-v2__workflow {
+    gap: 6px;
+    padding: 10px 11px;
+  }
+
+  body[data-page="about"] .about-focus-v2__workflow span {
+    font-size: .57rem;
+  }
+
+  body[data-page="about"] .about-focus-v2__actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  body[data-page="about"] .about-focus-v2__actions .btn {
+    width: 100%;
+  }
+}
+
 </style></head>
 <body data-page="about">
 <a class="skip-link" href="#main">Skip to content</a>
@@ -1948,7 +2451,61 @@ body[data-page="about"] .about-system-metric span {
     </div>
   </div>
 </section>
-<section aria-labelledby="about-intro-title" class="section about-focus-section"><div class="container about-intro"><figure class="portrait-card reveal"><img alt="Jhim Rick Marco" height="1100" src="https://drive.google.com/thumbnail?id=1R8UttYp2NQ0q_pm_O3gMJe_jY6ZZ24tF&amp;sz=w1600" loading="eager" decoding="async" fetchpriority="high" width="900"/></figure><div class="bio-copy reveal"><div class="eyebrow">Professional focus</div><h2 id="about-intro-title">Automation, web development, and creative work—handled together.</h2><p class="lead">I'm Jhim Rick Marco, an Information Technology graduate and GoHighLevel specialist who combines automation, web development, and creative production to help businesses operate more efficiently.</p><p class="about-supporting">I build funnels, CRM systems, workflow automations, websites, and marketing assets that are practical, user-friendly, and aligned with real business goals.</p><div class="tool-list" style="margin-top:24px"><span>GoHighLevel Expert</span><span>Automation Specialist</span><span>Graphic Designer</span><span>Video Editor</span></div><div class="button-row" style="margin-top:28px"><a class="btn btn--accent" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1s9ZiewEGBX1Z7alvve0D0L3Dcf9KeWCT-qWfswH8RLhlqgSk2J8IrSImAoCV7tNnxlUmfkzgS?gv=true" rel="noopener noreferrer" target="_blank">Book a Discovery Call ↗</a></div></div></div></section>
+<section aria-labelledby="about-intro-title" class="section about-focus-section about-focus-v2">
+  <div class="container">
+    <div class="about-focus-v2__grid">
+      <div class="about-focus-v2__visual reveal">
+        <div class="about-profile-shell">
+          <div class="about-profile-shell__grid" aria-hidden="true"></div>
+          <div class="about-profile-kicker"><span></span> Systems builder</div>
+          <div class="about-profile-tech" aria-hidden="true">GHL / API</div>
+
+          <figure class="about-profile-photo">
+            <img alt="Jhim Rick Marco" height="1100" src="https://drive.google.com/thumbnail?id=1R8UttYp2NQ0q_pm_O3gMJe_jY6ZZ24tF&amp;sz=w1600" loading="eager" decoding="async" fetchpriority="high" width="900"/>
+          </figure>
+
+          <div class="about-profile-caption">
+            <div>
+              <strong>Jhim Rick Marco</strong>
+              <span>Automation • Web • Creative</span>
+            </div>
+            <i aria-hidden="true">↗</i>
+          </div>
+        </div>
+
+        <div class="about-proof-strip" aria-label="Professional highlights">
+          <div class="about-proof-item"><strong>6+</strong><span>Years hands-on</span></div>
+          <div class="about-proof-item"><strong>80+</strong><span>Funnels built</span></div>
+          <div class="about-proof-item"><strong>GHL</strong><span>Automation specialist</span></div>
+        </div>
+      </div>
+
+      <div class="bio-copy about-focus-v2__content reveal">
+        <div class="eyebrow">Professional focus</div>
+        <h2 id="about-intro-title">Automation, web development, and creative work—<span>handled together.</span></h2>
+
+        <p class="lead">I'm Jhim Rick Marco, an Information Technology graduate and GoHighLevel specialist who combines automation, web development, and creative production to help businesses operate more efficiently.</p>
+        <p class="about-supporting">I build funnels, CRM systems, workflow automations, websites, and marketing assets that are practical, user-friendly, and aligned with real business goals.</p>
+
+        <div class="about-focus-v2__workflow" aria-label="How the disciplines connect">
+          <span>Plan</span><i aria-hidden="true">→</i><span>Build</span><i aria-hidden="true">→</i><span>Automate</span><i aria-hidden="true">→</i><span>Optimize</span>
+        </div>
+
+        <div class="about-focus-v2__pill-row" aria-label="Specialties">
+          <span>GoHighLevel Expert</span>
+          <span>Automation Specialist</span>
+          <span>Graphic Designer</span>
+          <span>Video Editor</span>
+        </div>
+
+        <div class="about-focus-v2__actions">
+          <a class="btn btn--accent" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1s9ZiewEGBX1Z7alvve0D0L3Dcf9KeWCT-qWfswH8RLhlqgSk2J8IrSImAoCV7tNnxlUmfkzgS?gv=true" rel="noopener noreferrer" target="_blank">Book a Discovery Call <span class="btn__arrow">↗</span></a>
+          <a class="btn btn--ghost" href="proof-of-work.html">View Proof of Work <span class="btn__arrow">↗</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 <section aria-labelledby="skills-title" class="section section--white"><div class="container"><div class="section-heading reveal"><div><div class="eyebrow">Skills &amp; Tools</div><h2 id="skills-title">The tools I work with.</h2></div></div><div class="skill-columns">
 <section class="skill-group reveal"><h3>Automation &amp; CRM</h3><ul><li>GoHighLevel</li><li>Zapier</li><li>CRM Integrations</li><li>APIs</li><li>Webhooks</li><li>Data Mapping</li><li>Filters</li><li>Multi-Step Automation</li><li>Error Handling</li><li>Workflow Testing</li></ul></section>
 <section class="skill-group reveal" data-delay="1"><h3>Web &amp; E-Commerce</h3><ul><li>Funnels</li><li>Landing Pages</li><li>Websites</li><li>Shopify</li><li>Printify</li><li>Domain Setup</li><li>Dedicated Email Domains</li><li>Responsive Design</li></ul></section>
