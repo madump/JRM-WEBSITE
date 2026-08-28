@@ -2820,6 +2820,414 @@ body[data-page="about"] .about-focus-v2__actions .btn__arrow {
     justify-content: flex-start;
   }
 }
+
+
+/* ===== EXPERIENCE V2 — PREMIUM TIMELINE / DELIVERY CARD ===== */
+body[data-page="about"] .experience-section {
+  position: relative;
+  overflow: hidden;
+  background: #0a141c !important;
+}
+
+body[data-page="about"] .experience-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(rgba(255,255,255,.022) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.022) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,.55), transparent 82%);
+}
+
+body[data-page="about"] .experience-section::after {
+  content: "";
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  right: -150px;
+  top: 18%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(157,255,62,.1), transparent 68%);
+  pointer-events: none;
+}
+
+body[data-page="about"] .experience-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+body[data-page="about"] .experience-heading {
+  align-items: end;
+  margin-bottom: 34px;
+}
+
+body[data-page="about"] .experience-heading h2 {
+  max-width: 760px;
+}
+
+body[data-page="about"] .experience-heading h2 .experience-accent {
+  color: var(--ref-lime);
+}
+
+body[data-page="about"] .experience-heading p {
+  max-width: 420px;
+  color: #899aa5;
+}
+
+body[data-page="about"] .experience-snapshot {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0,1fr));
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+body[data-page="about"] .experience-stat {
+  min-height: 92px;
+  padding: 16px 18px;
+  border: 1px solid rgba(255,255,255,.075);
+  border-radius: 14px;
+  background: rgba(20,38,49,.78);
+  box-shadow: inset 0 1px rgba(255,255,255,.025);
+}
+
+body[data-page="about"] .experience-stat strong {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--ref-lime);
+  font: 800 1.22rem/1 "Manrope", sans-serif;
+  letter-spacing: -.035em;
+}
+
+body[data-page="about"] .experience-stat span {
+  display: block;
+  color: #8598a4;
+  font-size: .69rem;
+  font-weight: 700;
+  line-height: 1.45;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+
+body[data-page="about"] .experience-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(190px,.36fr) minmax(0,1fr);
+  gap: 34px;
+  padding: 32px;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 8% 8%, rgba(157,255,62,.07), transparent 24%),
+    linear-gradient(145deg, rgba(29,49,61,.96), rgba(12,25,34,.98));
+  box-shadow: 0 28px 70px rgba(0,0,0,.2);
+  overflow: hidden;
+}
+
+body[data-page="about"] .experience-card::after {
+  content: "";
+  position: absolute;
+  right: -70px;
+  bottom: -110px;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(157,255,62,.1), transparent 68%);
+  pointer-events: none;
+}
+
+body[data-page="about"] .experience-card__meta {
+  position: relative;
+  padding: 4px 28px 4px 4px;
+  border-right: 1px solid rgba(255,255,255,.08);
+}
+
+body[data-page="about"] .experience-card__meta::before {
+  content: "";
+  position: absolute;
+  right: -5px;
+  top: 8px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--ref-lime);
+  box-shadow: 0 0 0 5px rgba(157,255,62,.08), 0 0 22px rgba(157,255,62,.28);
+}
+
+body[data-page="about"] .experience-card__meta::after {
+  content: "";
+  position: absolute;
+  right: -1px;
+  top: 17px;
+  bottom: 10px;
+  width: 1px;
+  background: linear-gradient(to bottom, rgba(157,255,62,.36), rgba(255,255,255,.04));
+}
+
+body[data-page="about"] .experience-period {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 0 12px;
+  margin-bottom: 18px;
+  border: 1px solid rgba(157,255,62,.18);
+  border-radius: 999px;
+  background: rgba(157,255,62,.07);
+  color: var(--ref-lime);
+  font-size: .72rem;
+  font-weight: 900;
+  letter-spacing: .04em;
+}
+
+body[data-page="about"] .experience-card__meta strong {
+  display: block;
+  margin-bottom: 7px;
+  color: #fff;
+  font: 800 1.2rem/1.15 "Manrope", sans-serif;
+}
+
+body[data-page="about"] .experience-card__meta span {
+  display: block;
+  color: #7e919d;
+  font-size: .7rem;
+  font-weight: 800;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+body[data-page="about"] .experience-card__company {
+  margin-top: 26px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,.07);
+}
+
+body[data-page="about"] .experience-card__company small {
+  display: block;
+  margin-bottom: 6px;
+  color: #70848f;
+  font-size: .6rem;
+  font-weight: 800;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+body[data-page="about"] .experience-card__company b {
+  display: block;
+  color: #cdd7dc;
+  font-size: .82rem;
+  line-height: 1.45;
+}
+
+body[data-page="about"] .experience-card__content {
+  position: relative;
+  z-index: 1;
+}
+
+body[data-page="about"] .experience-role-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  color: var(--ref-lime);
+  font-size: .64rem;
+  font-weight: 900;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+}
+
+body[data-page="about"] .experience-role-kicker::before {
+  content: "";
+  width: 18px;
+  height: 1px;
+  background: currentColor;
+}
+
+body[data-page="about"] .experience-card__content h3 {
+  margin: 0 0 8px;
+  color: #fff;
+  font-size: clamp(1.55rem, 2.6vw, 2.3rem);
+  line-height: 1.08;
+}
+
+body[data-page="about"] .experience-company-line {
+  margin: 0 0 14px;
+  color: #a7b7c1;
+  font-size: .83rem;
+  font-weight: 800;
+  letter-spacing: .02em;
+}
+
+body[data-page="about"] .experience-summary {
+  max-width: 790px;
+  margin: 0;
+  color: #8fa1ad;
+  font-size: .9rem;
+  line-height: 1.75;
+}
+
+body[data-page="about"] .experience-delivery-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin: 26px 0 12px;
+}
+
+body[data-page="about"] .experience-delivery-label span:first-child {
+  color: #dfe7eb;
+  font-size: .72rem;
+  font-weight: 900;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+body[data-page="about"] .experience-delivery-label span:last-child {
+  color: #6f838f;
+  font-size: .67rem;
+  font-weight: 700;
+}
+
+body[data-page="about"] .experience-achievements {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body[data-page="about"] .experience-achievements li {
+  position: relative;
+  min-height: 76px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 15px 15px;
+  border: 1px solid rgba(255,255,255,.07);
+  border-radius: 13px;
+  background: rgba(9,23,31,.56);
+  color: #9aabb5;
+  font-size: .78rem;
+  line-height: 1.55;
+  transition: transform .2s ease, border-color .2s ease, background .2s ease;
+}
+
+body[data-page="about"] .experience-achievements li:hover {
+  transform: translateY(-2px);
+  border-color: rgba(157,255,62,.18);
+  background: rgba(18,34,44,.78);
+}
+
+body[data-page="about"] .experience-achievements li::before {
+  content: "✓";
+  flex: 0 0 24px;
+  width: 24px;
+  height: 24px;
+  display: grid;
+  place-items: center;
+  margin-top: 1px;
+  border-radius: 8px;
+  background: rgba(157,255,62,.1);
+  border: 1px solid rgba(157,255,62,.17);
+  color: var(--ref-lime);
+  font-size: .66rem;
+  font-weight: 900;
+}
+
+@media (max-width: 900px) {
+  body[data-page="about"] .experience-snapshot {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+
+  body[data-page="about"] .experience-card {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  body[data-page="about"] .experience-card__meta {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 14px 22px;
+    align-items: start;
+    padding: 0 0 22px;
+    border-right: 0;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+  }
+
+  body[data-page="about"] .experience-card__meta::before {
+    left: 0;
+    right: auto;
+    top: auto;
+    bottom: -5px;
+  }
+
+  body[data-page="about"] .experience-card__meta::after {
+    display: none;
+  }
+
+  body[data-page="about"] .experience-card__company {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    justify-self: end;
+    text-align: right;
+  }
+}
+
+@media (max-width: 680px) {
+  body[data-page="about"] .experience-heading {
+    margin-bottom: 28px;
+  }
+
+  body[data-page="about"] .experience-snapshot {
+    gap: 8px;
+  }
+
+  body[data-page="about"] .experience-stat {
+    min-height: 82px;
+    padding: 14px;
+  }
+
+  body[data-page="about"] .experience-card {
+    padding: 22px 18px;
+    border-radius: 18px;
+  }
+
+  body[data-page="about"] .experience-card__meta {
+    grid-template-columns: 1fr;
+  }
+
+  body[data-page="about"] .experience-card__company {
+    justify-self: start;
+    text-align: left;
+  }
+
+  body[data-page="about"] .experience-achievements {
+    grid-template-columns: 1fr;
+  }
+
+  body[data-page="about"] .experience-delivery-label {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+@media (max-width: 430px) {
+  body[data-page="about"] .experience-snapshot {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  body[data-page="about"] .experience-stat strong {
+    font-size: 1.05rem;
+  }
+
+  body[data-page="about"] .experience-stat span {
+    font-size: .6rem;
+  }
+}
+
 </style></head>
 <body data-page="about">
 <a class="skip-link" href="#main">Skip to content</a>
@@ -2964,9 +3372,61 @@ body[data-page="about"] .about-focus-v2__actions .btn__arrow {
 <div class="tool-logo-item"><div class="tool-logo-item__top"><img alt="Google Analytics logo" loading="lazy" src="https://www.google.com/s2/favicons?domain=analytics.google.com&amp;sz=128"/><span class="tool-logo-item__type">Analytics</span></div><div class="tool-logo-item__body"><strong>Google Analytics</strong><small>Measurement &amp; Insights</small></div></div>
 <div class="tool-logo-item"><div class="tool-logo-item__top"><img alt="Google Ads logo" loading="lazy" src="https://www.google.com/s2/favicons?domain=ads.google.com&amp;sz=128"/><span class="tool-logo-item__type">Ads</span></div><div class="tool-logo-item__body"><strong>Google Ads</strong><small>Paid Search</small></div></div>
 </div><div class="tools-stack-note reveal"><p><strong>The goal is not to use more tools.</strong> It is to connect the right ones into a simpler, reliable system.</p><span class="tools-stack-note__signal">Connected stack</span></div></div></section>
-<section aria-labelledby="experience-title" class="section section--white"><div class="container"><div class="section-heading reveal"><div><div class="eyebrow">Experience</div><h2 id="experience-title">6+ years of hands-on digital work.</h2></div><p>Funnels, CRM systems, automations, websites, and client delivery.</p></div><div class="experience-timeline">
-<article class="exp-item reveal"><div class="exp-meta"><strong>2020 – 2026</strong>6+ Years</div><div class="exp-copy"><h3>GoHighLevel Expert &amp; Automation Specialist</h3><p><strong>JJM DIGITAL SOLUTIONS</strong></p><p>Helping businesses turn manual processes into organized, conversion-focused systems through GoHighLevel, Zapier, CRM integrations, and responsive web experiences.</p><ul class="source-list"><li>Built and optimized more than 80 sales funnels.</li><li>Created lead-nurturing and appointment-booking workflows.</li><li>Integrated Zapier, CRM platforms, and third-party applications.</li><li>Managed social media content and email campaigns.</li><li>Set up GoHighLevel accounts from scratch.</li><li>Troubleshot automations and documented every process.</li><li>Designed responsive landing pages and business websites.</li><li>Communicated with clients through video calls and chat.</li></ul></div></article>
-</div></div></section>
+<section aria-labelledby="experience-title" class="section section--white experience-section">
+  <div class="container">
+    <div class="section-heading reveal experience-heading">
+      <div>
+        <div class="eyebrow">Experience</div>
+        <h2 id="experience-title"><span class="experience-accent">6+</span> years of hands-on digital work.</h2>
+      </div>
+      <p>Funnels, CRM systems, automations, websites, and client delivery—built around practical business outcomes.</p>
+    </div>
+
+    <div class="experience-snapshot reveal" aria-label="Experience highlights">
+      <div class="experience-stat"><strong>6+ Years</strong><span>Hands-on digital experience</span></div>
+      <div class="experience-stat"><strong>80+</strong><span>Sales funnels built &amp; optimized</span></div>
+      <div class="experience-stat"><strong>CRM + Web</strong><span>Connected systems &amp; experiences</span></div>
+      <div class="experience-stat"><strong>End-to-End</strong><span>Build, test, troubleshoot &amp; deliver</span></div>
+    </div>
+
+    <article class="experience-card reveal">
+      <aside class="experience-card__meta" aria-label="Experience period">
+        <div>
+          <span class="experience-period">2020 — 2026</span>
+          <strong>6+ Years</strong>
+          <span>Hands-on experience</span>
+        </div>
+        <div class="experience-card__company">
+          <small>Organization</small>
+          <b>JJM DIGITAL SOLUTIONS</b>
+        </div>
+      </aside>
+
+      <div class="experience-card__content">
+        <span class="experience-role-kicker">Primary Role</span>
+        <h3>GoHighLevel Expert &amp; Automation Specialist</h3>
+        <p class="experience-company-line">JJM DIGITAL SOLUTIONS</p>
+        <p class="experience-summary">Helping businesses turn manual processes into organized, conversion-focused systems through GoHighLevel, Zapier, CRM integrations, and responsive web experiences.</p>
+
+        <div class="experience-delivery-label">
+          <span>What I delivered</span>
+          <span>Systems • Automation • Web • Client Support</span>
+        </div>
+
+        <ul class="experience-achievements">
+          <li>Built and optimized more than 80 sales funnels.</li>
+          <li>Created lead-nurturing and appointment-booking workflows.</li>
+          <li>Integrated Zapier, CRM platforms, and third-party applications.</li>
+          <li>Managed social media content and email campaigns.</li>
+          <li>Set up GoHighLevel accounts from scratch.</li>
+          <li>Troubleshot automations and documented every process.</li>
+          <li>Designed responsive landing pages and business websites.</li>
+          <li>Communicated with clients through video calls and chat.</li>
+        </ul>
+      </div>
+    </article>
+  </div>
+</section>
 <section aria-labelledby="education-title" class="section"><div class="container"><div class="section-heading reveal"><div><div class="eyebrow">Education &amp; Certifications</div><h2 id="education-title">Education & training.</h2></div><p>Information Technology plus professional training.</p></div><div class="service-grid"><article class="service-card reveal"><span class="service-card__num">EDU</span><h3>Bachelor of Science in Information Technology</h3><p>AMA Computer Learning Center — ACLC College of Butuan<br/>2024–2025</p></article><article class="service-card reveal" data-delay="1"><span class="service-card__num">TRN</span><h3>Professional Training</h3><ul class="source-list"><li>5-Day Crash Course for VA &amp; BPO Aspirants</li><li>Cyber Security Sentinel Training</li><li>Military Science 42 Program of Instruction</li></ul></article></div></div></section>
 <section class="section section--white"><div class="container"><div class="cta-panel reveal"><div><div class="eyebrow">Let's work together</div><h2>Need someone who can build and troubleshoot the system?</h2><p>Tell me what needs to work better.</p></div><div class="button-row"><a class="btn btn--accent" href="contact.html">Let's Talk</a><a class="btn btn--ghost" href="proof-of-work.html">View Proof of Work</a></div></div></div></section>
 </main>
