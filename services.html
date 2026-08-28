@@ -1538,6 +1538,225 @@ main > section,
 .site-footer {
   background: #05090D !important;
 }
+
+
+/* ===== STANDALONE SERVICE SECTIONS ===== */
+.package-intro {
+  padding-bottom: 66px !important;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(157,255,62,.08), transparent 34%),
+    #0c151d !important;
+}
+.package-intro .pricing-promise { margin-bottom: 0; }
+
+.standalone-service {
+  position: relative;
+  overflow: hidden;
+  padding: 104px 0 !important;
+  border-top: 1px solid rgba(213,229,239,.08);
+  background: #0e1a23 !important;
+}
+.standalone-service:nth-of-type(even) { background: #0b151d !important; }
+.standalone-service--featured {
+  background:
+    radial-gradient(circle at 78% 16%, rgba(157,255,62,.09), transparent 28%),
+    #101c25 !important;
+}
+.standalone-service::before {
+  content: attr(data-service);
+  position: absolute;
+  right: clamp(18px, 4vw, 70px);
+  top: 28px;
+  color: rgba(255,255,255,.025);
+  font: 800 clamp(6rem, 14vw, 13rem)/1 "Manrope", sans-serif;
+  letter-spacing: -.08em;
+  pointer-events: none;
+}
+.service-feature-grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr);
+  gap: clamp(42px, 6vw, 78px);
+  align-items: center;
+}
+.standalone-service--reverse .service-feature-media { order: 2; }
+.standalone-service--reverse .service-feature-content { order: 1; }
+
+.service-feature-media {
+  position: relative;
+  aspect-ratio: 4 / 4.35;
+  min-height: 540px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.11);
+  border-radius: 28px;
+  background: #14252f;
+  box-shadow: 0 38px 90px rgba(0,0,0,.28);
+}
+.service-feature-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, transparent 52%, rgba(5,9,13,.74) 100%),
+    linear-gradient(120deg, rgba(157,255,62,.06), transparent 38%);
+  pointer-events: none;
+}
+.service-feature-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform .65s ease;
+}
+.standalone-service:hover .service-feature-media img { transform: scale(1.025); }
+.service-image-label {
+  position: absolute;
+  z-index: 3;
+  left: 22px;
+  bottom: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 34px;
+  padding: 0 13px;
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 999px;
+  background: rgba(5,9,13,.72);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #eef4f6;
+  font-size: .68rem;
+  font-weight: 900;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+.service-image-label::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #9dff3e;
+  box-shadow: 0 0 16px rgba(157,255,62,.55);
+}
+
+.service-feature-content { max-width: 690px; }
+.service-feature-topline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 21px;
+}
+.service-feature-topline .package-tier { margin: 0; }
+.service-feature-turnaround {
+  color: #8fa0aa;
+  font-size: .73rem;
+  font-weight: 800;
+}
+.service-feature-content h2 {
+  max-width: 720px;
+  margin: 0 0 18px;
+  color: #f4f7f8;
+  font-size: clamp(2.55rem, 4.8vw, 4.65rem);
+  line-height: .98;
+  text-transform: uppercase;
+}
+.service-price-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 15px;
+  margin-bottom: 22px;
+}
+.service-price-row .package-price {
+  margin: 0;
+  color: #9dff3e;
+  font-size: clamp(3rem, 5.4vw, 4.8rem);
+}
+.service-price-row .package-price-note {
+  margin: 0 0 8px;
+  color: #758792;
+}
+.service-feature-content .package-description {
+  max-width: 650px;
+  margin-bottom: 25px;
+  color: #abb8c0;
+  font-size: .98rem;
+  line-height: 1.72;
+}
+.service-feature-content .package-includes-title { margin-bottom: 14px; }
+.service-feature-content .package-list {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 24px;
+  margin-bottom: 24px;
+}
+.service-feature-content .package-list li {
+  padding-left: 20px;
+  color: #d2dce2;
+  font-size: .82rem;
+}
+.service-feature-content .package-scope {
+  margin: 0 0 18px;
+  border-left-color: #9dff3e;
+  background: rgba(157,255,62,.045);
+}
+.service-feature-content .package-result {
+  margin: 0;
+  padding: 17px 18px;
+  border-radius: 15px;
+  background: rgba(157,255,62,.055);
+}
+.service-feature-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-top: 20px;
+}
+.service-feature-actions .btn { min-width: 210px; }
+.service-feature-note {
+  color: #6f818c;
+  font-size: .7rem;
+  line-height: 1.5;
+}
+.package-terms {
+  padding: 48px 0 !important;
+  background: #091219 !important;
+  border-top: 1px solid rgba(255,255,255,.07);
+  border-bottom: 1px solid rgba(255,255,255,.07);
+}
+.package-terms .pricing-notes { margin-top: 0; padding-top: 0; border-top: 0; }
+
+@media (max-width: 980px) {
+  .standalone-service { padding: 84px 0 !important; }
+  .service-feature-grid { grid-template-columns: 1fr; gap: 36px; }
+  .standalone-service--reverse .service-feature-media,
+  .standalone-service--reverse .service-feature-content { order: initial; }
+  .service-feature-media {
+    width: min(720px, 100%);
+    min-height: 0;
+    aspect-ratio: 16 / 10;
+  }
+  .service-feature-content { max-width: 760px; }
+}
+
+@media (max-width: 680px) {
+  .package-intro { padding-bottom: 50px !important; }
+  .standalone-service { padding: 66px 0 !important; }
+  .standalone-service::before { top: 18px; right: 12px; font-size: 6rem; }
+  .service-feature-grid { gap: 28px; }
+  .service-feature-media { aspect-ratio: 4 / 3; border-radius: 20px; }
+  .service-image-label { left: 14px; bottom: 14px; }
+  .service-feature-content h2 { font-size: clamp(2.25rem, 11vw, 3.45rem); }
+  .service-price-row { gap: 10px; margin-bottom: 18px; }
+  .service-price-row .package-price { font-size: 3.2rem; }
+  .service-price-row .package-price-note { flex-basis: 100%; margin-bottom: 0; }
+  .service-feature-content .package-description { font-size: .9rem; }
+  .service-feature-content .package-list { grid-template-columns: 1fr; gap: 9px; }
+  .service-feature-actions .btn { width: 100%; min-width: 0; }
+}
+
 </style></head>
 <body data-page="services">
 <a class="skip-link" href="#main">Skip to content</a>
@@ -1557,90 +1776,143 @@ main > section,
 </header>
 <main id="main">
 <section class="page-hero"><div class="container page-hero-grid"><div class="reveal is-visible"><div class="eyebrow">GoHighLevel Service Packages</div><h1>Three fixed-price GoHighLevel builds.</h1><p>Pick the setup that matches what you need built now.</p><div class="button-row" style="margin-top:26px"><a class="btn btn--accent" href="#packages">View Packages</a><a class="btn btn--ghost" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1s9ZiewEGBX1Z7alvve0D0L3Dcf9KeWCT-qWfswH8RLhlqgSk2J8IrSImAoCV7tNnxlUmfkzgS?gv=true" rel="noopener noreferrer" target="_blank">Book a Call ↗</a></div></div><div class="page-hero-side reveal is-visible"><strong>Setup → AI Receptionist → Revenue System</strong><span>Start with a clean GHL foundation, add inbound AI, or deploy a complete inbound + outbound conversion system.</span></div></div></section>
-<section aria-labelledby="packages-title" class="section pricing-section" id="packages">
+<section aria-labelledby="packages-title" class="section pricing-section package-intro" id="packages">
 <div class="container">
   <div class="pricing-heading reveal is-visible">
     <div class="eyebrow">GoHighLevel Service Packages</div>
     <h2 id="packages-title">Choose your package.</h2>
-    <p>Three fixed-price GoHighLevel builds.</p>
+    <p>Three fixed-price GoHighLevel builds, each designed around a different level of automation.</p>
   </div>
   <div class="pricing-promise reveal is-visible">Fixed one-time pricing. No hourly guesswork. Clear scope, clear outcome.</div>
-
-  <div class="pricing-grid">
-    <article class="pricing-card reveal is-visible" id="foundation">
-      <span class="package-tier">Foundation</span>
-      <h3>GoHighLevel Setup</h3>
-      <div class="package-price">$799</div>
-      <div class="package-price-note">One-time implementation</div>
-      <div class="package-turnaround">Estimated turnaround: 7–10 business days</div>
-      <p class="package-description">Build the foundation your leads depend on—a clean, conversion-ready GHL system that captures, organizes, follows up, and books without the manual chaos.</p>
-      <div class="package-includes-title">What you get</div>
-      <ul class="package-list">
-        <li>GHL subaccount settings configuration</li>
-        <li>CRM pipeline + lead management</li>
-        <li>Calendar, forms + lead capture</li>
-        <li>Email &amp; SMS configuration</li>
-        <li>Up to 5 automation workflows</li>
-        <li>Lead nurture + team notifications</li>
-        <li>Modern, responsive landing/booking page</li>
-        <li>1 standard integration + testing</li>
-        <li>Handover + 14-day post-launch support</li>
-      </ul>
-      <div class="package-result"><strong>Result:</strong> A polished GHL system ready to turn new inquiries into organized follow-up and booked appointments.</div>
-      <a class="btn btn--ghost package-cta" href="contact.html">Choose GHL Setup <span class="btn__arrow">→</span></a>
-    </article>
-
-    <article class="pricing-card is-popular reveal is-visible" id="ai-receptionist">
-      <span class="package-tier">Most Popular</span>
-      <h3>GHL + AI Receptionist</h3>
-      <div class="package-price">$1,799</div>
-      <div class="package-price-note">One-time implementation</div>
-      <div class="package-turnaround">Estimated turnaround: 10–15 business days</div>
-      <p class="package-description">Never make a caller wait for someone to pick up. Your inbound Voice AI can answer business questions, qualify callers, book appointments, and live-transfer the right opportunities to your team.</p>
-      <div class="package-includes-title">What you get</div>
-      <ul class="package-list">
-        <li>Everything in GoHighLevel Setup</li>
-        <li>Inbound Voice AI receptionist</li>
-        <li>Business Q&amp;A + knowledge training</li>
-        <li>Lead qualification + information capture</li>
-        <li>Appointment booking + calendar checks</li>
-        <li>Live transfer + human escalation</li>
-        <li>Up to 10 automation workflows</li>
-        <li>Call testing, tuning + 30-day support</li>
-      </ul>
-      <div class="package-scope"><strong>Voice AI scope:</strong> Inbound phone calls only. It does not reply to SMS, email, chat, or contact responses inside the CRM.</div>
-      <div class="package-result"><strong>Result:</strong> Your business can keep answering, qualifying, and booking inbound callers even when your team cannot pick up.</div>
-      <a class="btn btn--accent package-cta" href="contact.html">Choose AI Receptionist <span class="btn__arrow">→</span></a>
-    </article>
-
-    <article class="pricing-card is-complete reveal is-visible" id="revenue-system">
-      <span class="package-tier">Complete System</span>
-      <h3>GHL AI Revenue System</h3>
-      <div class="package-price">$2,999</div>
-      <div class="package-price-note">One-time implementation</div>
-      <div class="package-turnaround">Estimated turnaround: 15–20 business days</div>
-      <p class="package-description">Turn GHL into an AI-powered conversion engine. Inbound Voice AI handles new calls, while Outbound Voice AI proactively follows up with leads, checks interest, qualifies them, and drives the next step.</p>
-      <div class="package-includes-title">What you get</div>
-      <ul class="package-list">
-        <li>Everything in GHL + AI Receptionist</li>
-        <li>Outbound Voice AI outreach + qualification</li>
-        <li>AI replies for CRM/SMS/chat conversations</li>
-        <li>Stale-lead, missed-lead + no-show reactivation</li>
-        <li>Booking, live transfer + advanced lead routing</li>
-        <li>Up to 15 workflows, 2 calendars + 2 pipelines</li>
-        <li>Up to 2 standard integrations</li>
-        <li>30-day optimization + team handover</li>
-      </ul>
-      <div class="package-result"><strong>Result:</strong> Your system does not wait for leads to come back—it answers, follows up, qualifies interest, and moves more opportunities toward a booking automatically.</div>
-      <a class="btn btn--ghost package-cta" href="contact.html">Choose Revenue System <span class="btn__arrow">→</span></a>
-    </article>
-  </div>
-
-  <div class="pricing-notes reveal is-visible">
-    <p>All prices are one-time implementation fees. GoHighLevel subscription, AI usage, phone/SMS charges, and third-party app fees are billed separately.</p>
-    <p>Turnaround starts after required access, intake details, content, and assets are received. Outbound AI outreach must follow applicable consent and calling rules.</p>
-  </div>
 </div>
+</section>
+
+<section aria-labelledby="foundation-title" class="section standalone-service" id="foundation" data-service="01">
+  <div class="container">
+    <div class="service-feature-grid">
+      <div class="service-feature-media reveal is-visible">
+        <img src="https://drive.google.com/thumbnail?id=1iRbtq8QNhheCXG6uozkB3qr-CafJhmUh&amp;sz=w1600" alt="GoHighLevel Setup service" loading="lazy" decoding="async"/>
+        <span class="service-image-label">Service 01 · Foundation</span>
+      </div>
+      <div class="service-feature-content reveal is-visible">
+        <div class="service-feature-topline">
+          <span class="package-tier">Foundation</span>
+          <span class="service-feature-turnaround">7–10 business days</span>
+        </div>
+        <h2 id="foundation-title">GoHighLevel Setup</h2>
+        <div class="service-price-row">
+          <div class="package-price">$799</div>
+          <div class="package-price-note">One-time implementation</div>
+        </div>
+        <p class="package-description">Build the foundation your leads depend on—a clean, conversion-ready GHL system that captures, organizes, follows up, and books without the manual chaos.</p>
+        <div class="package-includes-title">What you get</div>
+        <ul class="package-list">
+          <li>GHL subaccount settings configuration</li>
+          <li>CRM pipeline + lead management</li>
+          <li>Calendar, forms + lead capture</li>
+          <li>Email &amp; SMS configuration</li>
+          <li>Up to 5 automation workflows</li>
+          <li>Lead nurture + team notifications</li>
+          <li>Modern, responsive landing/booking page</li>
+          <li>1 standard integration + testing</li>
+          <li>Handover + 14-day post-launch support</li>
+        </ul>
+        <div class="package-result"><strong>Result:</strong> A polished GHL system ready to turn new inquiries into organized follow-up and booked appointments.</div>
+        <div class="service-feature-actions">
+          <a class="btn btn--accent" href="contact.html">Choose GHL Setup <span class="btn__arrow">→</span></a>
+          <span class="service-feature-note">Best for businesses that need the core CRM, follow-up, and booking system built correctly.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="ai-receptionist-title" class="section standalone-service standalone-service--featured standalone-service--reverse" id="ai-receptionist" data-service="02">
+  <div class="container">
+    <div class="service-feature-grid">
+      <div class="service-feature-media reveal is-visible">
+        <img src="https://drive.google.com/thumbnail?id=14HTZ3PRKSJTirQ500_m84i9Wthkn9usF&amp;sz=w1600" alt="GoHighLevel AI Receptionist service" loading="lazy" decoding="async"/>
+        <span class="service-image-label">Service 02 · Most Popular</span>
+      </div>
+      <div class="service-feature-content reveal is-visible">
+        <div class="service-feature-topline">
+          <span class="package-tier" style="background:#9dff3e;color:#05090d">Most Popular</span>
+          <span class="service-feature-turnaround">10–15 business days</span>
+        </div>
+        <h2 id="ai-receptionist-title">GHL + AI Receptionist</h2>
+        <div class="service-price-row">
+          <div class="package-price">$1,799</div>
+          <div class="package-price-note">One-time implementation</div>
+        </div>
+        <p class="package-description">Never make a caller wait for someone to pick up. Your inbound Voice AI can answer business questions, qualify callers, book appointments, and live-transfer the right opportunities to your team.</p>
+        <div class="package-includes-title">What you get</div>
+        <ul class="package-list">
+          <li>Everything in GoHighLevel Setup</li>
+          <li>Inbound Voice AI receptionist</li>
+          <li>Business Q&amp;A + knowledge training</li>
+          <li>Lead qualification + information capture</li>
+          <li>Appointment booking + calendar checks</li>
+          <li>Live transfer + human escalation</li>
+          <li>Up to 10 automation workflows</li>
+          <li>Call testing, tuning + 30-day support</li>
+        </ul>
+        <div class="package-scope"><strong>Voice AI scope:</strong> Inbound phone calls only. It does not reply to SMS, email, chat, or contact responses inside the CRM.</div>
+        <div class="package-result"><strong>Result:</strong> Your business can keep answering, qualifying, and booking inbound callers even when your team cannot pick up.</div>
+        <div class="service-feature-actions">
+          <a class="btn btn--accent" href="contact.html">Choose AI Receptionist <span class="btn__arrow">→</span></a>
+          <span class="service-feature-note">Best for businesses losing opportunities because calls are missed, delayed, or handled inconsistently.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="revenue-system-title" class="section standalone-service" id="revenue-system" data-service="03">
+  <div class="container">
+    <div class="service-feature-grid">
+      <div class="service-feature-media reveal is-visible">
+        <img src="https://drive.google.com/thumbnail?id=1H14SJ5wMf43JDVv_AcMN8l9nahE4aHOu&amp;sz=w1600" alt="GoHighLevel AI Revenue System service" loading="lazy" decoding="async"/>
+        <span class="service-image-label">Service 03 · Complete System</span>
+      </div>
+      <div class="service-feature-content reveal is-visible">
+        <div class="service-feature-topline">
+          <span class="package-tier">Complete System</span>
+          <span class="service-feature-turnaround">15–20 business days</span>
+        </div>
+        <h2 id="revenue-system-title">GHL AI Revenue System</h2>
+        <div class="service-price-row">
+          <div class="package-price">$2,999</div>
+          <div class="package-price-note">One-time implementation</div>
+        </div>
+        <p class="package-description">Turn GHL into an AI-powered conversion engine. Inbound Voice AI handles new calls, while Outbound Voice AI proactively follows up with leads, checks interest, qualifies them, and drives the next step.</p>
+        <div class="package-includes-title">What you get</div>
+        <ul class="package-list">
+          <li>Everything in GHL + AI Receptionist</li>
+          <li>Outbound Voice AI outreach + qualification</li>
+          <li>AI replies for CRM/SMS/chat conversations</li>
+          <li>Stale-lead, missed-lead + no-show reactivation</li>
+          <li>Booking, live transfer + advanced lead routing</li>
+          <li>Up to 15 workflows, 2 calendars + 2 pipelines</li>
+          <li>Up to 2 standard integrations</li>
+          <li>30-day optimization + team handover</li>
+        </ul>
+        <div class="package-result"><strong>Result:</strong> Your system does not wait for leads to come back—it answers, follows up, qualifies interest, and moves more opportunities toward a booking automatically.</div>
+        <div class="service-feature-actions">
+          <a class="btn btn--accent" href="contact.html">Choose Revenue System <span class="btn__arrow">→</span></a>
+          <span class="service-feature-note">Best for businesses ready to automate both inbound response and proactive outbound follow-up.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section package-terms" aria-label="Package terms">
+  <div class="container">
+    <div class="pricing-notes reveal is-visible">
+      <p>All prices are one-time implementation fees. GoHighLevel subscription, AI usage, phone/SMS charges, and third-party app fees are billed separately.</p>
+      <p>Turnaround starts after required access, intake details, content, and assets are received. Outbound AI outreach must follow applicable consent and calling rules.</p>
+    </div>
+  </div>
 </section>
 <section aria-labelledby="service-process-title" class="section"><div class="container"><div class="section-heading reveal"><div><div class="eyebrow">Work Process</div><h2 id="service-process-title">How I build it.</h2></div><p>I scope the setup first, then build, test, and hand it over.</p></div><div class="process-line"><article class="process-step reveal"><span class="process-step__num">01</span><h3>Discovery</h3><p>Understand the business, audience, goals, tools, and current challenges.</p></article><article class="process-step reveal" data-delay="1"><span class="process-step__num">02</span><h3>Strategy</h3><p>Plan the funnel, workflow, integrations, content, and customer journey.</p></article><article class="process-step reveal" data-delay="2"><span class="process-step__num">03</span><h3>Build &amp; Test</h3><p>Develop the system, map data, test automations, and resolve errors.</p></article><article class="process-step reveal" data-delay="3"><span class="process-step__num">04</span><h3>Launch &amp; Improve</h3><p>Deploy the project, document the process, and optimize performance.</p></article></div></div></section>
 <section class="section section--dark"><div class="container"><div class="external-proof reveal"><div><div class="eyebrow">See the work</div><h2>Funnels, websites, automations, and creative work.</h2><p>Open the project folders and review the work directly.</p></div><a class="btn btn--accent" href="proof-of-work.html">View Proof of Work →</a></div></div></section>
