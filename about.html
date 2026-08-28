@@ -5543,6 +5543,15 @@ body[data-page="about"] .education-section.education-clean {
   .about-cta-editorial__action { grid-template-columns: 1fr; }
   .about-cta-editorial__signal { width: 96px; }
 }
+
+/* CTA divider cleanup */
+.about-cta-editorial__shell {
+  border-top: 0 !important;
+  border-bottom: 0 !important;
+}
+.about-cta-editorial__shell::before {
+  display: none !important;
+}
 </style>
 
 </head>
