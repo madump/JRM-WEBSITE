@@ -1603,16 +1603,6 @@ main > section,
     radial-gradient(circle at 78% 16%, rgba(157,255,62,.09), transparent 28%),
     #101c25 !important;
 }
-.standalone-service::before {
-  content: attr(data-service);
-  position: absolute;
-  right: clamp(18px, 4vw, 70px);
-  top: 28px;
-  color: rgba(255,255,255,.025);
-  font: 800 clamp(6rem, 14vw, 13rem)/1 "Manrope", sans-serif;
-  letter-spacing: -.08em;
-  pointer-events: none;
-}
 .service-feature-grid {
   position: relative;
   z-index: 2;
@@ -1787,7 +1777,6 @@ main > section,
   .standalone-service { padding: 66px 0 !important; }
   .standalone-service--first { padding: 54px 0 66px !important; }
   .standalone-service--first .pricing-promise { margin-bottom: 46px; }
-  .standalone-service::before { top: 18px; right: 12px; font-size: 6rem; }
   .service-feature-grid { gap: 28px; }
   .service-feature-media { aspect-ratio: 4 / 3; border-radius: 20px; }
   .service-image-label { left: 14px; bottom: 14px; }
