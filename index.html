@@ -2894,6 +2894,396 @@ body.calendar-modal-open { overflow: hidden; }
 }
 </style>
 
+
+<style data-mobile-center-fix="true">
+/* ==========================================================
+   MOBILE ALIGNMENT / RESPONSIVE POLISH
+   Keeps desktop unchanged and centers the mobile experience.
+   ========================================================== */
+@media (max-width: 680px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  .container,
+  .nav-wrap,
+  .site-footer .container {
+    width: min(calc(100% - 28px), 620px) !important;
+    margin-inline: auto !important;
+  }
+
+  /* Global mobile alignment */
+  .hero-copy,
+  .section-heading,
+  .section-heading > div,
+  .journey-copy,
+  .portfolio-heading,
+  .portfolio-heading > div,
+  .portfolio-heading__side,
+  .pricing-heading,
+  .page-hero-grid,
+  .page-hero-grid > div,
+  .contact-copy,
+  .cta-panel__copy,
+  .external-proof,
+  .footer-brand,
+  .footer-grid > div,
+  .footer-bottom {
+    text-align: center !important;
+  }
+
+  .section-heading,
+  .portfolio-heading,
+  .page-hero-grid {
+    justify-items: center !important;
+  }
+
+  .section-heading p,
+  .portfolio-heading__side > p,
+  .journey-copy p,
+  .contact-copy > p,
+  #contact .contact-copy > p,
+  #contact .source-contact,
+  .cta-panel p,
+  .page-hero p,
+  .bio-copy p,
+  .footer-brand p {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .eyebrow,
+  .pricing-section .pricing-heading .eyebrow {
+    justify-content: center !important;
+  }
+
+  .button-row,
+  .hero-note,
+  .portfolio-counts,
+  .portfolio-footer-actions,
+  .contact-socials,
+  .footer-socials {
+    justify-content: center !important;
+  }
+
+  .hero-note {
+    text-align: center !important;
+  }
+
+  /* Mobile navigation */
+  .nav-links {
+    text-align: center !important;
+  }
+
+  .nav-link,
+  .nav-cta {
+    text-align: center !important;
+    justify-content: center !important;
+  }
+
+  /* Cards / content blocks */
+  .service-card,
+  .home-package,
+  .pricing-card,
+  .project-card__content,
+  .proof-card__body,
+  .skill-group,
+  .philosophy-item,
+  .outcome-box,
+  .fit-item {
+    text-align: center !important;
+  }
+
+  .service-card__num,
+  .home-package__image,
+  .portrait-card,
+  .process-step__num,
+  .tool-mark {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .service-card__link,
+  .project-actions,
+  .tool-list,
+  .approach-list,
+  .filters-wrap {
+    justify-content: center !important;
+  }
+
+  /* Keep long lists readable while centering the containing card. */
+  .package-list,
+  .service-bullets,
+  .exp-copy ul,
+  .outcome-box ul {
+    text-align: left !important;
+    width: min(100%, 430px);
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* Journey and work process */
+  .journey {
+    text-align: center !important;
+  }
+
+  .journey-step,
+  .journey-step.is-accent {
+    grid-template-columns: 1fr !important;
+    justify-items: center !important;
+    gap: 5px !important;
+    padding: 14px 8px !important;
+    text-align: center !important;
+  }
+
+  .journey-step::after,
+  .journey-step:nth-child(4)::after,
+  .journey-step:nth-child(8)::after {
+    margin-top: 5px !important;
+    justify-self: center !important;
+  }
+
+  .process-line {
+    text-align: center !important;
+  }
+
+  .process-step {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 9px !important;
+    padding: 20px 10px !important;
+    text-align: center !important;
+  }
+
+  .process-step h3,
+  .process-step p {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* Portfolio category cards */
+  .portfolio-category-content {
+    text-align: center !important;
+  }
+
+  .portfolio-category-meta {
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    column-gap: 12px !important;
+    row-gap: 5px !important;
+    text-align: center !important;
+  }
+
+  .portfolio-category-content p {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 430px !important;
+  }
+
+  .portfolio-browse-btn {
+    justify-content: center !important;
+    gap: 10px !important;
+  }
+
+  .portfolio-footer-actions .btn {
+    justify-content: center !important;
+  }
+
+  /* Full-screen portfolio viewer */
+  .portfolio-viewer__item {
+    text-align: center !important;
+  }
+
+  .portfolio-viewer__item-copy strong,
+  .portfolio-viewer__item-copy span {
+    text-align: center !important;
+  }
+
+  .portfolio-viewer__topbar {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 104px !important;
+    padding: 10px 12px !important;
+    text-align: center !important;
+  }
+
+  .portfolio-viewer__heading {
+    width: 100% !important;
+    margin-right: 0 !important;
+    text-align: center !important;
+  }
+
+  .portfolio-viewer__heading strong {
+    max-width: none !important;
+    white-space: normal !important;
+    text-align: center !important;
+    line-height: 1.25 !important;
+  }
+
+  .portfolio-viewer__actions {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  .portfolio-viewer__browserbar {
+    justify-content: center !important;
+  }
+
+  .portfolio-viewer__browserbar span {
+    margin-left: 6px !important;
+    max-width: calc(100% - 42px) !important;
+  }
+
+  /* CTA */
+  .cta-section .cta-panel {
+    text-align: center !important;
+  }
+
+  .cta-section .cta-panel .button-row {
+    justify-content: center !important;
+  }
+
+  .cta-section .cta-panel::before {
+    left: 50% !important;
+    right: auto !important;
+    top: 0 !important;
+    bottom: auto !important;
+    width: 44% !important;
+    height: 2px !important;
+    transform: translateX(-50%) !important;
+    background: linear-gradient(90deg, transparent, rgba(157,255,62,.78), transparent) !important;
+  }
+
+  /* Contact */
+  #contact .contact-grid {
+    justify-content: center !important;
+  }
+
+  #contact .contact-copy {
+    margin-inline: auto !important;
+    text-align: center !important;
+  }
+
+  .contact-points {
+    width: min(100%, 460px);
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .contact-point {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  .contact-social {
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  /* Footer */
+  .footer-grid {
+    justify-items: center !important;
+  }
+
+  .footer-brand .brand,
+  .site-footer .brand {
+    justify-content: center !important;
+  }
+
+  .site-footer .brand-logo {
+    object-position: center center !important;
+    margin-inline: auto !important;
+  }
+
+  .footer-links,
+  .footer-contact {
+    justify-items: center !important;
+    align-items: center !important;
+  }
+
+  .footer-links a,
+  .footer-contact a {
+    width: auto !important;
+    text-align: center !important;
+  }
+
+  .footer-bottom {
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 7px !important;
+  }
+
+  /* Booking modal mobile header/footer alignment */
+  .booking-modal__title-wrap,
+  .booking-modal__footer {
+    text-align: center !important;
+  }
+
+  .booking-modal__footer {
+    align-items: center !important;
+    justify-content: center !important;
+  }
+}
+
+@media (max-width: 430px) {
+  .container,
+  .nav-wrap,
+  .site-footer .container {
+    width: calc(100% - 24px) !important;
+  }
+
+  .portfolio-viewer {
+    padding: 6px !important;
+  }
+
+  .portfolio-viewer__dialog {
+    height: calc(100svh - 12px) !important;
+    border-radius: 14px !important;
+  }
+
+  .portfolio-viewer__item {
+    flex-basis: 164px !important;
+  }
+
+  .portfolio-viewer__open {
+    min-width: 118px !important;
+    justify-content: center !important;
+  }
+}
+</style>
+
+
+<style id="remove-section-hyphens">
+/* Remove the decorative horizontal hyphen/line before section eyebrow labels */
+.eyebrow::before {
+  content: none !important;
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  margin: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Remove the empty spacing that belonged to the decorative line */
+.eyebrow {
+  gap: 0 !important;
+}
+
+/* Remove the same decorative horizontal treatment where used as section intro styling */
+.results-intro::before {
+  content: none !important;
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  margin: 0 !important;
+}
+</style>
 </head>
 <body data-page="home">
 <a class="skip-link" href="#main">Skip to content</a>
@@ -3036,14 +3426,14 @@ body.calendar-modal-open { overflow: hidden; }
     <div><div class="eyebrow">Featured Portfolio</div><h2 id="featured-title">Selected work.</h2></div>
     <div class="portfolio-heading__side">
       <p>Open a category to browse real projects without leaving the page. Each item loads into a full preview modal.</p>
-      <div class="portfolio-counts" aria-label="Portfolio totals"><span><strong>9</strong> Websites</span><span><strong>10</strong> GHL Automations</span><span><strong>8</strong> n8n Automations</span></div>
+      <div class="portfolio-counts" aria-label="Portfolio totals"><span><strong>12</strong> Websites</span><span><strong>10</strong> GHL Automations</span><span><strong>8</strong> n8n Automations</span></div>
     </div>
   </div>
 
   <div class="portfolio-category-grid">
     <article class="portfolio-category-card reveal">
       <div class="portfolio-category-preview" aria-hidden="true"><iframe src="https://sites.leadconnectorhq.com/preview/ajSxcQgsAqsmKeB7rBDK" loading="lazy" tabindex="-1" title="Website work preview"></iframe><span class="portfolio-category-preview__badge">Live preview</span></div>
-      <div class="portfolio-category-content"><div class="portfolio-category-meta"><span>Websites</span><strong>09 projects</strong></div><h3>Web Design &amp; Development</h3><p>GoHighLevel, WordPress, and Shopify builds with live project previews.</p><button class="btn btn--outline portfolio-browse-btn" type="button" data-open-portfolio="websites">Browse Websites <span>↗</span></button></div>
+      <div class="portfolio-category-content"><div class="portfolio-category-meta"><span>GHL Websites</span><strong>12 projects</strong></div><h3>GHL Website Design &amp; Development</h3><p>GoHighLevel website and funnel builds with live project previews.</p><button class="btn btn--outline portfolio-browse-btn" type="button" data-open-portfolio="websites">Browse Websites <span>↗</span></button></div>
     </article>
     <article class="portfolio-category-card reveal" data-delay="1">
       <div class="portfolio-category-preview" aria-hidden="true"><iframe src="https://drive.google.com/file/d/1gOA3TVy3BiPrQHYVzWqqjxYwGqdyjoZ6/preview" loading="lazy" tabindex="-1" title="GHL automation preview"></iframe><span class="portfolio-category-preview__badge">Workflow preview</span></div>
@@ -3302,8 +3692,8 @@ body.calendar-modal-open { overflow: hidden; }
 
 <script data-portfolio-modal="true">
 (() => {
-  const projects = {"websites": [{"title": "GHL Website Build", "type": "GoHighLevel", "desc": "GoHighLevel website / funnel build.", "url": "https://sites.leadconnectorhq.com/preview/ajSxcQgsAqsmKeB7rBDK"}, {"title": "Construction by Compass", "type": "GoHighLevel", "desc": "Live construction website build.", "url": "https://constructionbycompass.com/"}, {"title": "Theme Eleven Home Care", "type": "GoHighLevel", "desc": "Home-care marketing website build.", "url": "https://themeeleven.homecaremarketing.com/"}, {"title": "Dodge City Pest Control", "type": "WordPress", "desc": "WordPress service-business website.", "url": "https://dodgecitypestcontrol.com/"}, {"title": "Diamond Contractors", "type": "WordPress", "desc": "WordPress contractor website.", "url": "https://diamondcontractors.com/"}, {"title": "IVYD", "type": "WordPress", "desc": "WordPress website build.", "url": "https://ivyd.com/"}, {"title": "The KUDA", "type": "Shopify", "desc": "Shopify e-commerce website.", "url": "https://TheKUDA.com/"}, {"title": "One Swag Shop", "type": "Shopify", "desc": "Shopify storefront build.", "url": "https://oneswagshop.com/"}, {"title": "Solezy Health", "type": "Shopify", "desc": "Shopify health and wellness storefront.", "url": "https://solezyhealth.com/"}], "ghl": [{"title": "Lead Magnet", "type": "GHL Automation", "desc": "Lead generation asset and delivery workflow.", "url": "https://drive.google.com/file/d/1gOA3TVy3BiPrQHYVzWqqjxYwGqdyjoZ6/view?usp=drive_link"}, {"title": "Lead Capturing Form", "type": "GHL Automation", "desc": "Form capture and CRM entry automation.", "url": "https://drive.google.com/file/d/1-1Er_3IfRsB7wrsDvD_8CD28okq_NxCi/view?usp=drive_link"}, {"title": "Email Sequence", "type": "GHL Automation", "desc": "Automated nurture and follow-up sequence.", "url": "https://drive.google.com/file/d/1oPSAKWHFB-HYxNA8yI1r7huhTI4lQw7D/view?usp=drive_link"}, {"title": "Client Intake Form to Zapier", "type": "GHL Automation", "desc": "Intake workflow connecting GHL data to Zapier.", "url": "https://drive.google.com/file/d/1slf1sErUCrJkYSCJL2rpo0giwDSG0eKG/view?usp=drive_link"}, {"title": "Website + Additional Service Logic", "type": "GHL Automation", "desc": "Conditional workflow based on selected client services.", "url": "https://drive.google.com/file/d/1w-A5YWvQ7sOSXerKPmdCc8BkSX4gGeZM/view?usp=drive_link"}, {"title": "Invoice Paid — Elite Website+ (OTF)", "type": "GHL Automation", "desc": "Paid-invoice trigger and post-purchase automation.", "url": "https://drive.google.com/file/d/1pfChQoxF8KhJobSgHpj8ibKK9WJkPWae/view?usp=drive_link"}, {"title": "Growth Lead Magnet", "type": "GHL Automation", "desc": "Lead magnet workflow for growth-focused campaigns.", "url": "https://drive.google.com/file/d/19GCJCfRYmGvwbqfId1g10JjgEW2s0c_t/view?usp=drive_link"}, {"title": "Invoice & Contract", "type": "GHL Automation", "desc": "Automated invoice and contract workflow.", "url": "https://drive.google.com/file/d/133AlfX6tg1ugtJvu-EOIwuQmBiZSytLq/view?usp=drive_link"}, {"title": "SEO Value Nurture Newsletter", "type": "GHL Automation", "desc": "Existing-client nurture focused on ongoing SEO value.", "url": "https://drive.google.com/file/d/1oD_HKYVLHOaG8vgEAZn69qQTeri4DtWD/view?usp=drive_link"}, {"title": "Social Media Onboarding", "type": "GHL Automation", "desc": "Client onboarding workflow for social media services.", "url": "https://drive.google.com/file/d/1t7hnOwj1NpLNa8tKo0F0M03Gw9AVR91N/view?usp=drive_link"}], "n8n": [{"title": "YouTube Strategist", "type": "n8n Automation", "desc": "Content strategy workflow for YouTube planning.", "url": "https://drive.google.com/file/d/1lepCr16W35SHA4ICfaSZWkQOIgOqOMGm/view?usp=drive_link"}, {"title": "Social Media Posting", "type": "n8n Automation", "desc": "Automated content distribution workflow.", "url": "https://drive.google.com/file/d/16qPH_E2s459ajroQXGVDwScZyHOIL2WG/view?usp=drive_link"}, {"title": "SMM Schedule Posting", "type": "n8n Automation", "desc": "Scheduled social publishing automation.", "url": "https://drive.google.com/file/d/1SKV2nv3rgly4LncSj7JRxexHNIKQA3G9/view?usp=drive_link"}, {"title": "Image Generator", "type": "n8n Automation", "desc": "Automated image-generation workflow.", "url": "https://drive.google.com/file/d/1X-p9qmAVb6Rlm5uvszWnYVTftofbJA20/view?usp=drive_link"}, {"title": "Glass Fruit ASMR", "type": "n8n Automation", "desc": "Creative AI media-generation workflow.", "url": "https://drive.google.com/file/d/1-brwBFOE2X5VqzFmD8N2wZgJF4ahpfWu/view?usp=drive_link"}, {"title": "Generate Image to Social Post", "type": "n8n Automation", "desc": "Creates an image and routes it into social publishing.", "url": "https://drive.google.com/file/d/10SQJ7iIIDoWjIVQiD2caS9gGHVc17VB7/view?usp=drive_link"}, {"title": "Data Scraping", "type": "n8n Automation", "desc": "Automated data collection and transformation workflow.", "url": "https://drive.google.com/file/d/1kik-oFl0YbQYnf6E9yvKMt8VUmvGZkb7/view?usp=drive_link"}, {"title": "Daily Video Posting", "type": "n8n Automation", "desc": "Recurring automated video publishing workflow.", "url": "https://drive.google.com/file/d/1Pd6hPB0CRAuzhpMBfFa58Gu9LLPO87qM/view?usp=drive_link"}]};
-  const categoryNames = { websites: 'Websites', ghl: 'GHL Automation', n8n: 'n8n Automation' };
+  const projects = {"websites": [{"title": "GHL Website Build", "type": "GoHighLevel", "desc": "GoHighLevel website / funnel build.", "url": "https://sites.leadconnectorhq.com/preview/ajSxcQgsAqsmKeB7rBDK"}, {"title": "Construction by Compass", "type": "GoHighLevel", "desc": "Construction website built in GoHighLevel.", "url": "https://constructionbycompass.com/"}, {"title": "Theme Eleven Home Care", "type": "GoHighLevel", "desc": "Home-care marketing website built in GoHighLevel.", "url": "https://themeeleven.homecaremarketing.com/"}, {"title": "Totality Treatment", "type": "GoHighLevel", "desc": "Treatment and recovery landing page built in GoHighLevel.", "url": "https://get.totalitytreatment.com/home-page149799"}, {"title": "GHL Website Build 02", "type": "GoHighLevel", "desc": "GoHighLevel website / funnel build.", "url": "https://sites.leadconnectorhq.com/preview/SWXIrX07wQbPxOlc4sZ5"}, {"title": "SEPira(k)", "type": "GoHighLevel", "desc": "Financial technology website build.", "url": "https://www.sepirak.com/"}, {"title": "World of Love Home Care", "type": "GoHighLevel", "desc": "Home care website build.", "url": "https://www.worldoflovehomecare.com/"}, {"title": "DigiLign Website Preview", "type": "GoHighLevel", "desc": "GoHighLevel website preview build.", "url": "https://app.digilign.com/v2/preview/Rza7buWiSDPEoiihNM3M?notrack=true"}, {"title": "Well Adjusted Chiropractic", "type": "GoHighLevel", "desc": "Chiropractic website build.", "url": "https://staywelladjusted.com/"}, {"title": "DigiLign AI", "type": "GoHighLevel", "desc": "Med spa marketing website build.", "url": "https://ai.digilign.com/"}, {"title": "Forward Hustle", "type": "GoHighLevel", "desc": "Business and marketing website build.", "url": "https://forwardhustle.co/"}, {"title": "DaLuz Communications", "type": "GoHighLevel", "desc": "Public relations and advertising website build.", "url": "https://daluzcommunications.com/"}], "ghl": [{"title": "Lead Magnet", "type": "GHL Automation", "desc": "Lead generation asset and delivery workflow.", "url": "https://drive.google.com/file/d/1gOA3TVy3BiPrQHYVzWqqjxYwGqdyjoZ6/view?usp=drive_link"}, {"title": "Lead Capturing Form", "type": "GHL Automation", "desc": "Form capture and CRM entry automation.", "url": "https://drive.google.com/file/d/1-1Er_3IfRsB7wrsDvD_8CD28okq_NxCi/view?usp=drive_link"}, {"title": "Email Sequence", "type": "GHL Automation", "desc": "Automated nurture and follow-up sequence.", "url": "https://drive.google.com/file/d/1oPSAKWHFB-HYxNA8yI1r7huhTI4lQw7D/view?usp=drive_link"}, {"title": "Client Intake Form to Zapier", "type": "GHL Automation", "desc": "Intake workflow connecting GHL data to Zapier.", "url": "https://drive.google.com/file/d/1slf1sErUCrJkYSCJL2rpo0giwDSG0eKG/view?usp=drive_link"}, {"title": "Website + Additional Service Logic", "type": "GHL Automation", "desc": "Conditional workflow based on selected client services.", "url": "https://drive.google.com/file/d/1w-A5YWvQ7sOSXerKPmdCc8BkSX4gGeZM/view?usp=drive_link"}, {"title": "Invoice Paid — Elite Website+ (OTF)", "type": "GHL Automation", "desc": "Paid-invoice trigger and post-purchase automation.", "url": "https://drive.google.com/file/d/1pfChQoxF8KhJobSgHpj8ibKK9WJkPWae/view?usp=drive_link"}, {"title": "Growth Lead Magnet", "type": "GHL Automation", "desc": "Lead magnet workflow for growth-focused campaigns.", "url": "https://drive.google.com/file/d/19GCJCfRYmGvwbqfId1g10JjgEW2s0c_t/view?usp=drive_link"}, {"title": "Invoice & Contract", "type": "GHL Automation", "desc": "Automated invoice and contract workflow.", "url": "https://drive.google.com/file/d/133AlfX6tg1ugtJvu-EOIwuQmBiZSytLq/view?usp=drive_link"}, {"title": "SEO Value Nurture Newsletter", "type": "GHL Automation", "desc": "Existing-client nurture focused on ongoing SEO value.", "url": "https://drive.google.com/file/d/1oD_HKYVLHOaG8vgEAZn69qQTeri4DtWD/view?usp=drive_link"}, {"title": "Social Media Onboarding", "type": "GHL Automation", "desc": "Client onboarding workflow for social media services.", "url": "https://drive.google.com/file/d/1t7hnOwj1NpLNa8tKo0F0M03Gw9AVR91N/view?usp=drive_link"}], "n8n": [{"title": "YouTube Strategist", "type": "n8n Automation", "desc": "Content strategy workflow for YouTube planning.", "url": "https://drive.google.com/file/d/1lepCr16W35SHA4ICfaSZWkQOIgOqOMGm/view?usp=drive_link"}, {"title": "Social Media Posting", "type": "n8n Automation", "desc": "Automated content distribution workflow.", "url": "https://drive.google.com/file/d/16qPH_E2s459ajroQXGVDwScZyHOIL2WG/view?usp=drive_link"}, {"title": "SMM Schedule Posting", "type": "n8n Automation", "desc": "Scheduled social publishing automation.", "url": "https://drive.google.com/file/d/1SKV2nv3rgly4LncSj7JRxexHNIKQA3G9/view?usp=drive_link"}, {"title": "Image Generator", "type": "n8n Automation", "desc": "Automated image-generation workflow.", "url": "https://drive.google.com/file/d/1X-p9qmAVb6Rlm5uvszWnYVTftofbJA20/view?usp=drive_link"}, {"title": "Glass Fruit ASMR", "type": "n8n Automation", "desc": "Creative AI media-generation workflow.", "url": "https://drive.google.com/file/d/1-brwBFOE2X5VqzFmD8N2wZgJF4ahpfWu/view?usp=drive_link"}, {"title": "Generate Image to Social Post", "type": "n8n Automation", "desc": "Creates an image and routes it into social publishing.", "url": "https://drive.google.com/file/d/10SQJ7iIIDoWjIVQiD2caS9gGHVc17VB7/view?usp=drive_link"}, {"title": "Data Scraping", "type": "n8n Automation", "desc": "Automated data collection and transformation workflow.", "url": "https://drive.google.com/file/d/1kik-oFl0YbQYnf6E9yvKMt8VUmvGZkb7/view?usp=drive_link"}, {"title": "Daily Video Posting", "type": "n8n Automation", "desc": "Recurring automated video publishing workflow.", "url": "https://drive.google.com/file/d/1Pd6hPB0CRAuzhpMBfFa58Gu9LLPO87qM/view?usp=drive_link"}]};
+  const categoryNames = { websites: 'GHL Websites', ghl: 'GHL Automation', n8n: 'n8n Automation' };
   const modal = document.getElementById('portfolio-viewer');
   const list = document.getElementById('portfolio-viewer-list');
   const frame = document.getElementById('portfolio-viewer-frame');
