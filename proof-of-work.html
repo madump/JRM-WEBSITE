@@ -1355,10 +1355,12 @@ body[data-page="proof"] main{background:linear-gradient(180deg,#060916 0%,#07111
 .play-floating-work img{width:62px;height:62px;border-radius:11px;object-fit:cover;}
 .play-floating-work small{display:block;color:#7e91a4;font-size:.5rem;text-transform:uppercase;letter-spacing:.1em;font-weight:900;}
 .play-floating-work strong{display:block;margin-top:4px;color:#fff;font-size:.69rem;line-height:1.25;}
-.portfolio-platform-strip{position:relative;z-index:4;overflow:hidden;background:linear-gradient(90deg,#3e1bbd 0%,#263fbd 50%,#1776b4 100%);border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08);}
-.portfolio-platform-strip__track{width:max-content;min-width:100%;display:flex;align-items:center;justify-content:center;gap:26px;padding:16px 28px;}
-.portfolio-platform-strip span{color:#eef2ff;font-size:.75rem;font-weight:800;white-space:nowrap;letter-spacing:-.01em;}
-.portfolio-platform-strip i{width:5px;height:5px;border-radius:50%;background:#9dff3e;box-shadow:0 0 14px rgba(157,255,62,.8);}
+.portfolio-platform-strip{position:relative;z-index:4;overflow:hidden;background:linear-gradient(90deg,rgba(74,39,196,.96) 0%,rgba(41,74,200,.94) 44%,rgba(20,120,182,.95) 100%);border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08);box-shadow:0 18px 44px rgba(0,0,0,.24),inset 0 1px 0 rgba(255,255,255,.08),inset 0 -1px 0 rgba(255,255,255,.08);}
+.portfolio-platform-strip::before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 12% 50%,rgba(255,255,255,.12),transparent 26%),radial-gradient(circle at 88% 50%,rgba(157,255,62,.12),transparent 22%),linear-gradient(180deg,rgba(255,255,255,.06),transparent 45%,rgba(0,0,0,.12));}
+.portfolio-platform-strip::after{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.4),transparent);pointer-events:none;}
+.portfolio-platform-strip__track{position:relative;z-index:1;width:max-content;min-width:100%;display:flex;align-items:center;justify-content:center;gap:24px;padding:18px 34px;}
+.portfolio-platform-strip span{color:#fff;font-size:.74rem;font-weight:800;white-space:nowrap;letter-spacing:.04em;text-transform:uppercase;text-shadow:0 1px 0 rgba(0,0,0,.12);}
+.portfolio-platform-strip i{flex:0 0 auto;width:6px;height:6px;border-radius:50%;background:#9dff3e;box-shadow:0 0 0 5px rgba(157,255,62,.12),0 0 14px rgba(157,255,62,.65);}
 .portfolio-jump{top:72px;background:rgba(5,8,20,.9);border-bottom-color:rgba(255,255,255,.06);}
 .portfolio-jump__inner{justify-content:center;}
 .portfolio-jump span{color:#53657a;}
@@ -1436,7 +1438,7 @@ body[data-page="proof"] main{background:linear-gradient(180deg,#060916 0%,#07111
  .playnet-hero .portfolio-hero__grid{grid-template-columns:1fr;gap:48px;}
  .playnet-hero .portfolio-hero__copy{text-align:center;}.hero-skill-note,.playnet-hero .portfolio-hero__actions{justify-content:center;}
  .playnet-hero .portfolio-hero__visual{width:min(620px,100%);margin-inline:auto;}
- .portfolio-platform-strip__track{justify-content:flex-start;overflow-x:auto;}
+ .portfolio-platform-strip__track{justify-content:flex-start;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;mask-image:linear-gradient(90deg,transparent 0,black 18px,black calc(100% - 18px),transparent 100%);}.portfolio-platform-strip__track::-webkit-scrollbar{display:none;}
  .portfolio-jump__inner{justify-content:flex-start;}
  .reel-grid{grid-template-columns:repeat(5,210px);overflow-x:auto;padding:30px 8px 18px;scroll-snap-type:x proximity;scrollbar-width:none;}
  .reel-grid::-webkit-scrollbar{display:none}.reel-card{scroll-snap-align:center;}
@@ -1461,7 +1463,7 @@ body[data-page="proof"] main{background:linear-gradient(180deg,#060916 0%,#07111
 }
 @media(max-width:420px){
  .playnet-hero .portfolio-hero__visual{min-height:350px;}.play-feature-card{width:min(275px,82%);}.play-floating-work{width:150px;bottom:8px;}
- .portfolio-platform-strip__track{gap:18px;padding-inline:18px;}.portfolio-platform-strip span{font-size:.68rem;}
+ .portfolio-platform-strip__track{gap:18px;padding:15px 18px;}.portfolio-platform-strip span{font-size:.66rem;letter-spacing:.035em;}.portfolio-platform-strip i{width:5px;height:5px;box-shadow:0 0 0 4px rgba(157,255,62,.12),0 0 10px rgba(157,255,62,.55);}
  .reel-grid{grid-template-columns:repeat(5,160px);}
 }
 </style>
