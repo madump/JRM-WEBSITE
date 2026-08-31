@@ -570,7 +570,155 @@
       html { scroll-behavior: auto; }
       *, *::before, *::after { transition-duration: .001ms !important; }
     }
-  </style>
+  
+    /* Calendar booking popup */
+    body.calendar-modal-open { overflow: hidden; }
+
+    .calendar-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 2000;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity .22s ease, visibility .22s ease;
+    }
+
+    .calendar-modal.is-open {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    .calendar-modal__backdrop {
+      position: absolute;
+      inset: 0;
+      border: 0;
+      background: rgba(2,7,10,.82);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      cursor: pointer;
+    }
+
+    .calendar-modal__dialog {
+      position: relative;
+      z-index: 1;
+      width: min(980px, 100%);
+      height: min(820px, calc(100svh - 48px));
+      display: grid;
+      grid-template-rows: auto minmax(0,1fr) auto;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 22px;
+      background: #fff;
+      box-shadow: 0 38px 100px rgba(0,0,0,.5);
+      transform: translateY(18px) scale(.985);
+      transition: transform .22s ease;
+    }
+
+    .calendar-modal.is-open .calendar-modal__dialog {
+      transform: translateY(0) scale(1);
+    }
+
+    .calendar-modal__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 16px 18px;
+      background: #0c151d;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    .calendar-modal__heading small {
+      display: block;
+      margin-bottom: 3px;
+      color: #9dff3e;
+      font-size: .58rem;
+      font-weight: 900;
+      letter-spacing: .11em;
+      text-transform: uppercase;
+    }
+
+    .calendar-modal__heading strong {
+      display: block;
+      color: #f4f7f8;
+      font: 800 .95rem/1.25 "Manrope", sans-serif;
+    }
+
+    .calendar-modal__close {
+      flex: 0 0 40px;
+      width: 40px;
+      height: 40px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 50%;
+      background: #172934;
+      color: #fff;
+      font-size: 1.2rem;
+      line-height: 1;
+      cursor: pointer;
+      transition: .2s ease;
+    }
+
+    .calendar-modal__close:hover {
+      background: #9dff3e;
+      border-color: #9dff3e;
+      color: #132006;
+      transform: rotate(4deg);
+    }
+
+    .calendar-modal__frame {
+      min-height: 0;
+      background: #fff;
+    }
+
+    .calendar-modal__frame iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      background: #fff;
+    }
+
+    .calendar-modal__footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 11px 18px;
+      background: #0c151d;
+      border-top: 1px solid rgba(255,255,255,.08);
+      color: #71828e;
+      font-size: .65rem;
+    }
+
+    .calendar-modal__footer a {
+      color: #9dff3e;
+      font-weight: 800;
+    }
+
+    .calendar-modal__footer a:hover { color: #b6ff6a; }
+
+    @media (max-width: 640px) {
+      .calendar-modal { padding: 10px; }
+
+      .calendar-modal__dialog {
+        width: 100%;
+        height: calc(100svh - 20px);
+        border-radius: 18px;
+      }
+
+      .calendar-modal__header { padding: 13px 14px; }
+      .calendar-modal__footer { padding: 10px 14px; }
+      .calendar-modal__footer span { display: none; }
+      .calendar-modal__footer a { margin-inline: auto; }
+    }
+
+</style>
 
   <script type="application/ld+json">
   {
@@ -612,7 +760,7 @@
         <a class="nav-link" data-nav="services" href="services.html">Services</a>
         <a class="nav-link" data-nav="proof" href="proof-of-work.html">Proof of Work</a>
         <a class="nav-link is-active" data-nav="contact" href="contact.html" aria-current="page">Contact Us</a>
-        <a class="btn btn--accent nav-cta" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1s9ZiewEGBX1Z7alvve0D0L3Dcf9KeWCT-qWfswH8RLhlqgSk2J8IrSImAoCV7tNnxlUmfkzgS?gv=true" target="_blank" rel="noopener noreferrer">Let's Work Together</a>
+        <a class="btn btn--accent nav-cta" href="#" data-calendar-modal-open aria-haspopup="dialog" aria-controls="calendar-booking-modal">Let's Work Together</a>
       </nav>
 
       <button class="menu-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false" aria-label="Open navigation menu">
@@ -634,7 +782,7 @@
           <div class="availability-card__top"><span class="availability-card__dot"></span>Project inquiries open</div>
           <strong>Have a project in mind?</strong>
           <p>Book a discovery call to discuss your goals, current setup, timeline, and what needs to be built.</p>
-          <a class="btn btn--accent" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1s9ZiewEGBX1Z7alvve0D0L3Dcf9KeWCT-qWfswH8RLhlqgSk2J8IrSImAoCV7tNnxlUmfkzgS?gv=true" target="_blank" rel="noopener noreferrer">Book a Discovery Call &nearr;</a>
+          <a class="btn btn--accent" href="#" data-calendar-modal-open aria-haspopup="dialog" aria-controls="calendar-booking-modal">Book a Discovery Call &nearr;</a>
         </aside>
       </div>
     </section>
@@ -719,12 +867,42 @@
           </div>
           <div class="button-row">
             <a class="btn btn--accent" href="mailto:Jhimrickofficial@gmail.com">Email Me</a>
-            <a class="btn btn--ghost" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1s9ZiewEGBX1Z7alvve0D0L3Dcf9KeWCT-qWfswH8RLhlqgSk2J8IrSImAoCV7tNnxlUmfkzgS?gv=true" target="_blank" rel="noopener noreferrer">Book an Appointment &nearr;</a>
+            <a class="btn btn--ghost" href="#" data-calendar-modal-open aria-haspopup="dialog" aria-controls="calendar-booking-modal">Book an Appointment &nearr;</a>
           </div>
         </div>
       </div>
     </section>
   </main>
+
+  <div class="calendar-modal" id="calendar-booking-modal" role="dialog" aria-modal="true" aria-labelledby="calendar-modal-title" aria-hidden="true">
+    <button class="calendar-modal__backdrop" type="button" data-calendar-modal-close aria-label="Close booking calendar"></button>
+    <div class="calendar-modal__dialog">
+      <div class="calendar-modal__header">
+        <div class="calendar-modal__heading">
+          <small>Schedule a meeting</small>
+          <strong id="calendar-modal-title">Book a Discovery Call</strong>
+        </div>
+        <button class="calendar-modal__close" type="button" data-calendar-modal-close aria-label="Close booking calendar">&times;</button>
+      </div>
+
+      <div class="calendar-modal__frame">
+        <iframe
+          data-calendar-frame
+          src=""
+          title="Book a discovery call with Jhim Rick Marco"
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allow="fullscreen">
+        </iframe>
+      </div>
+
+      <div class="calendar-modal__footer">
+        <span>Select an available date and time directly in the calendar.</span>
+        <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1s9ZiewEGBX1Z7alvve0D0L3Dcf9KeWCT-qWfswH8RLhlqgSk2J8IrSImAoCV7tNnxlUmfkzgS?gv=true" target="_blank" rel="noopener noreferrer">Open booking page instead &nearr;</a>
+      </div>
+    </div>
+  </div>
+
 
   <footer class="site-footer">
     <div class="container">
@@ -814,8 +992,55 @@
         });
       }
 
+
+      const calendarModal = document.getElementById('calendar-booking-modal');
+      const calendarFrame = calendarModal?.querySelector('[data-calendar-frame]');
+      const calendarOpeners = document.querySelectorAll('[data-calendar-modal-open]');
+      const calendarClosers = calendarModal?.querySelectorAll('[data-calendar-modal-close]') || [];
+      const calendarUrl = 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ1s9ZiewEGBX1Z7alvve0D0L3Dcf9KeWCT-qWfswH8RLhlqgSk2J8IrSImAoCV7tNnxlUmfkzgS?gv=true';
+      let lastCalendarTrigger = null;
+
+      const openCalendarModal = (trigger) => {
+        if (!calendarModal) return;
+        lastCalendarTrigger = trigger || document.activeElement;
+
+        if (calendarFrame && !calendarFrame.getAttribute('src')) {
+          calendarFrame.setAttribute('src', calendarUrl);
+        }
+
+        calendarModal.classList.add('is-open');
+        calendarModal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('calendar-modal-open');
+        calendarModal.querySelector('.calendar-modal__close')?.focus();
+      };
+
+      const closeCalendarModal = () => {
+        if (!calendarModal || !calendarModal.classList.contains('is-open')) return;
+        calendarModal.classList.remove('is-open');
+        calendarModal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('calendar-modal-open');
+        if (lastCalendarTrigger && typeof lastCalendarTrigger.focus === 'function') {
+          lastCalendarTrigger.focus();
+        }
+      };
+
+      calendarOpeners.forEach((trigger) => {
+        trigger.addEventListener('click', (event) => {
+          event.preventDefault();
+          closeMenu();
+          openCalendarModal(trigger);
+        });
+      });
+
+      calendarClosers.forEach((button) => {
+        button.addEventListener('click', closeCalendarModal);
+      });
+
       document.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape') closeMenu();
+        if (event.key === 'Escape') {
+          closeMenu();
+          closeCalendarModal();
+        }
       });
     })();
   </script>
