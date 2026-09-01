@@ -46,6 +46,35 @@
 @media(prefers-reduced-motion:reduce){.checkout-step{animation:none}}
 </style>
 
+
+<style id="paypal-sdk-modal-v6">
+.paypal-inline-checkout{display:grid;gap:18px;margin-top:22px}
+.paypal-inline-checkout__product{display:flex;align-items:flex-start;justify-content:space-between;gap:22px;padding:20px 21px;border:1px solid rgba(255,255,255,.09);border-radius:15px;background:#12232d}
+.paypal-inline-checkout__label{display:block;margin-bottom:5px;color:#718691;font-size:.62rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
+.paypal-inline-checkout__product h3{margin:0;color:#f4f7f8;font-size:1.05rem;line-height:1.3;letter-spacing:-.025em}
+.paypal-inline-checkout__amount{flex:0 0 auto;color:#9dff3e;font:800 1.05rem/1.35 "Manrope",sans-serif;white-space:nowrap}
+.paypal-inline-checkout__summary{padding:22px;border:1px solid rgba(255,255,255,.1);border-radius:17px;background:#f7f8fb;color:#111827;box-shadow:0 18px 45px rgba(0,0,0,.18)}
+.paypal-inline-checkout__heading{margin-bottom:17px;color:#111827;font:800 .9rem/1.2 "Manrope",sans-serif}
+.paypal-inline-checkout__total{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 0 17px;border-bottom:1px solid rgba(17,24,39,.12);font-size:.78rem}
+.paypal-inline-checkout__total span{font-weight:800}.paypal-inline-checkout__total strong{font-size:.84rem}
+.paypal-inline-checkout__client{display:grid;gap:8px;padding:15px 0 2px}
+.paypal-inline-checkout__client>div{display:flex;justify-content:space-between;gap:20px;font-size:.7rem}
+.paypal-inline-checkout__client span{color:#667085}.paypal-inline-checkout__client strong{max-width:65%;overflow-wrap:anywhere;text-align:right;color:#28323d}
+.paypal-inline-checkout__divider{display:flex;align-items:center;gap:10px;margin:17px 0 15px;color:#7b8490;font-size:.63rem;text-transform:uppercase;letter-spacing:.08em}
+.paypal-inline-checkout__divider:before,.paypal-inline-checkout__divider:after{content:"";height:1px;flex:1;background:rgba(17,24,39,.13)}
+.paypal-sdk-state{display:flex;align-items:center;justify-content:center;gap:9px;min-height:49px;padding:12px 14px;border:1px solid rgba(17,24,39,.1);border-radius:9px;background:#fff;color:#5e6874;font-size:.72rem;font-weight:700}
+.paypal-sdk-state.is-error{border-color:rgba(217,72,95,.22);background:#fff6f7;color:#b4233a}
+.paypal-sdk-state.is-success{border-color:rgba(11,125,97,.2);background:#f3fffb;color:#087059}
+.paypal-sdk-spinner{width:16px;height:16px;border:2px solid rgba(17,24,39,.16);border-top-color:#1473e6;border-radius:50%;animation:paypalSpin .7s linear infinite}
+.paypal-sdk-state.is-error .paypal-sdk-spinner,.paypal-sdk-state.is-success .paypal-sdk-spinner{display:none}
+@keyframes paypalSpin{to{transform:rotate(360deg)}}
+.paypal-sdk-buttons{min-height:45px;margin-top:12px}.paypal-sdk-buttons paypal-button{display:block;width:100%;min-height:45px}
+.paypal-sdk-fallback{margin-top:12px}.paypal-sdk-fallback p{margin:0 0 10px;color:#667085;font-size:.7rem}.paypal-sdk-fallback .btn{width:100%;background:#ffc439;color:#111827;box-shadow:none}.paypal-sdk-fallback .btn:hover{background:#ffcf5a}
+.paypal-inline-checkout__note{margin:13px 0 0!important;color:#7b8490!important;font-size:.64rem!important;line-height:1.55!important;text-align:center}
+.checkout-payment-actions--sdk{grid-template-columns:1fr;margin-top:14px}.checkout-payment-actions--sdk .checkout-back{width:100%}
+@media(max-width:560px){.paypal-inline-checkout__product{padding:17px 16px;gap:14px}.paypal-inline-checkout__product h3{font-size:.92rem}.paypal-inline-checkout__amount{font-size:.92rem}.paypal-inline-checkout__summary{padding:17px 15px}.paypal-inline-checkout__client>div{display:grid;gap:2px}.paypal-inline-checkout__client strong{max-width:100%;text-align:left}}
+@media(prefers-reduced-motion:reduce){.paypal-sdk-spinner{animation:none}}
+</style>
 </head>
 <body data-page="services">
 <a class="skip-link" href="#main">Skip to content</a>
@@ -108,7 +137,7 @@
 <div class="package-scope"><strong>Standard pages:</strong> Home, About, Services, Contact, FAQ, Pricing, Portfolio, Team, or similar content pages.</div>
 <div class="package-result"><strong>Result:</strong> Your website. Your code. Your deployment. No page-builder lock-in. Built to launch, convert, and hand over cleanly.</div>
 <div class="service-feature-actions">
-<button class="btn btn--accent checkout-trigger" data-checkout-package="Custom Coded Website" data-checkout-price="$699" data-checkout-tier="Custom Coded Build" data-paypal-link="https://www.paypal.com/ncp/payment/HW55K7WVDQMSL" type="button">Choose Custom Website <span class="btn__arrow">→</span></button>
+<button class="btn btn--accent checkout-trigger" data-package-id="custom-coded-website" data-checkout-package="Custom Coded Website" data-checkout-price="$699" data-checkout-tier="Custom Coded Build" data-paypal-link="https://www.paypal.com/ncp/payment/HW55K7WVDQMSL" type="button">Choose Custom Website <span class="btn__arrow">→</span></button>
 <span class="service-feature-note">Best for businesses that want a fast, professional website they fully own.</span>
 </div>
 </div>
@@ -148,7 +177,7 @@
 </ul>
 <div class="package-result"><strong>Result:</strong> A polished GHL system ready to turn new inquiries into organized follow up and booked appointments.</div>
 <div class="service-feature-actions">
-<button class="btn btn--accent checkout-trigger" data-checkout-package="GoHighLevel Setup" data-checkout-price="$799" data-checkout-tier="Foundation" data-paypal-link="https://www.paypal.com/ncp/payment/5HQF6RYYKH6BU" type="button">Choose GHL Setup <span class="btn__arrow">→</span></button>
+<button class="btn btn--accent checkout-trigger" data-package-id="ghl-setup" data-checkout-package="GoHighLevel Setup" data-checkout-price="$799" data-checkout-tier="Foundation" data-paypal-link="https://www.paypal.com/ncp/payment/5HQF6RYYKH6BU" type="button">Choose GHL Setup <span class="btn__arrow">→</span></button>
 <span class="service-feature-note">Best for businesses that need the core CRM, follow up, and booking system built correctly.</span>
 </div>
 </div>
@@ -186,7 +215,7 @@
 <div class="package-scope"><strong>Voice AI scope:</strong> Inbound phone calls only. It does not reply to SMS, email, chat, or contact responses inside the CRM.</div>
 <div class="package-result"><strong>Result:</strong> Your business can keep answering, qualifying, and booking inbound callers even when your team cannot pick up.</div>
 <div class="service-feature-actions">
-<button class="btn btn--accent checkout-trigger" data-checkout-package="GHL + AI Receptionist" data-checkout-price="$1,799" data-checkout-tier="Most Popular" data-paypal-link="https://www.paypal.com/ncp/payment/TDYJ68TYKXNXY" type="button">Choose AI Receptionist <span class="btn__arrow">→</span></button>
+<button class="btn btn--accent checkout-trigger" data-package-id="ai-receptionist" data-checkout-package="GHL + AI Receptionist" data-checkout-price="$1,799" data-checkout-tier="Most Popular" data-paypal-link="https://www.paypal.com/ncp/payment/TDYJ68TYKXNXY" type="button">Choose AI Receptionist <span class="btn__arrow">→</span></button>
 <span class="service-feature-note">Best for businesses losing opportunities because calls are missed, delayed, or handled inconsistently.</span>
 </div>
 </div>
@@ -223,7 +252,7 @@
 </ul>
 <div class="package-result"><strong>Result:</strong> Your system does not wait for leads to come back, it answers, follows up, qualifies interest, and moves more opportunities toward a booking automatically.</div>
 <div class="service-feature-actions">
-<button class="btn btn--accent checkout-trigger" data-checkout-package="GHL AI Revenue System" data-checkout-price="$2,999" data-checkout-tier="Complete System" data-paypal-link="https://www.paypal.com/ncp/payment/PMVSPZPDTR28U" type="button">Choose Revenue System <span class="btn__arrow">→</span></button>
+<button class="btn btn--accent checkout-trigger" data-package-id="revenue-system" data-checkout-package="GHL AI Revenue System" data-checkout-price="$2,999" data-checkout-tier="Complete System" data-paypal-link="https://www.paypal.com/ncp/payment/PMVSPZPDTR28U" type="button">Choose Revenue System <span class="btn__arrow">→</span></button>
 <span class="service-feature-note">Best for businesses ready to automate both inbound response and proactive outbound follow up.</span>
 </div>
 </div>
@@ -382,27 +411,53 @@
 <section class="checkout-step" data-checkout-step="payment" aria-labelledby="checkout-payment-title" hidden>
 <div class="eyebrow">Step 2 of 2</div>
 <h2 id="checkout-payment-title">Complete your payment.</h2>
-<p>Your details are ready. Review the package below, then continue to PayPal to complete the secure payment.</p>
-<div class="checkout-payment-card">
-<div class="checkout-payment-card__top">
-<div>
-<span class="checkout-payment-card__label">Selected package</span>
-<h3 data-payment-package>GoHighLevel Setup</h3>
+<p>Your details are ready. Review the order summary and choose an eligible PayPal payment option below.</p>
+
+<div class="paypal-inline-checkout">
+  <div class="paypal-inline-checkout__product">
+    <div>
+      <span class="paypal-inline-checkout__label">Selected service</span>
+      <h3 data-payment-package>GoHighLevel Setup</h3>
+    </div>
+    <strong class="paypal-inline-checkout__amount" data-payment-price>$799.00 USD</strong>
+  </div>
+
+  <div class="paypal-inline-checkout__summary">
+    <div class="paypal-inline-checkout__heading">Order summary</div>
+    <div class="paypal-inline-checkout__total">
+      <span>Total</span>
+      <strong data-payment-total>$799.00 USD</strong>
+    </div>
+
+    <div class="paypal-inline-checkout__client">
+      <div><span>Client</span><strong data-payment-client>—</strong></div>
+      <div><span>Email</span><strong data-payment-email>—</strong></div>
+    </div>
+
+    <div class="paypal-inline-checkout__divider"><span>secure checkout</span></div>
+
+    <div class="paypal-sdk-state" data-paypal-state aria-live="polite">
+      <span class="paypal-sdk-spinner" aria-hidden="true"></span>
+      <span data-paypal-state-text>Preparing secure PayPal checkout…</span>
+    </div>
+
+    <div class="paypal-sdk-buttons" data-paypal-buttons hidden>
+      <paypal-button id="jrmrc-paypal-button" type="pay" hidden></paypal-button>
+    </div>
+
+    <div class="paypal-sdk-fallback" data-paypal-fallback hidden>
+      <p>PayPal checkout could not be loaded inside the modal.</p>
+      <a class="btn btn--accent checkout-paypal-btn" data-checkout-paypal-fallback href="#" rel="noopener noreferrer">Open secure PayPal checkout <span class="btn__arrow">→</span></a>
+    </div>
+
+    <p class="paypal-inline-checkout__note">PayPal controls the secure payment window. Eligible payment methods can vary by customer, device, country, and PayPal account.</p>
+  </div>
 </div>
-<div class="checkout-payment-card__price" data-payment-price>$799</div>
+
+<div class="checkout-payment-actions checkout-payment-actions--sdk">
+  <button class="btn checkout-back" data-checkout-back type="button">← Back to details</button>
 </div>
-<div class="checkout-payment-card__details">
-<div><span>Client</span><strong data-payment-client>—</strong></div>
-<div><span>Email</span><strong data-payment-email>—</strong></div>
-<div><span>Billing</span><strong>One-time implementation</strong></div>
-</div>
-</div>
-<div class="checkout-payment-success"><span aria-hidden="true">✓</span><div><strong>Your information has been received.</strong><p>PayPal will handle the payment securely. After successful payment, use PayPal Auto-return to send the buyer to <code>thankyou.html</code>.</p></div></div>
-<div class="checkout-payment-actions">
-<button class="btn checkout-back" data-checkout-back type="button">← Back to details</button>
-<a class="btn btn--accent checkout-paypal-btn" data-checkout-paypal href="#" rel="noopener">Pay $799 with PayPal <span class="btn__arrow">→</span></a>
-</div>
-<p class="checkout-secure-note checkout-secure-note--payment">Secure payment powered by PayPal. You will leave this page to complete payment.</p>
+<p class="checkout-secure-note checkout-secure-note--payment">Your card or PayPal credentials are never collected by this website.</p>
 </section>
 </div>
 </div>
@@ -655,242 +710,437 @@ const checkoutModal = document.getElementById('checkout-modal');
 const checkoutForm = document.getElementById('service-checkout-form');
 const checkoutTriggers = document.querySelectorAll('.checkout-trigger');
 let checkoutLastFocused = null;
+
+/*
+  PAYPAL SDK CONFIGURATION
+  ------------------------
+  Deploy the companion Cloudflare Worker file and replace this URL with it.
+  Example: https://jrmrc-paypal.your-account.workers.dev
+*/
+const PAYPAL_API_BASE = 'https://YOUR-WORKER.workers.dev';
+let paypalSdkPromise = null;
+let paypalSdkInstance = null;
+let paypalPaymentSession = null;
+let paypalClickBound = false;
+
+const normalizeApiBase = () => PAYPAL_API_BASE.replace(/\/+$/, '');
+const paypalApiConfigured = () => !PAYPAL_API_BASE.includes('YOUR-WORKER');
+
+const loadExternalScript = (src) => new Promise((resolve, reject) => {
+  const existing = [...document.scripts].find((s) => s.src === src);
+  if (existing && window.paypal?.createInstance) return resolve();
+  const script = existing || document.createElement('script');
+  if (!existing) {
+    script.src = src;
+    script.async = true;
+    script.dataset.jrmrcPaypalSdk = 'true';
+    document.head.appendChild(script);
+  }
+  script.addEventListener('load', resolve, { once: true });
+  script.addEventListener('error', () => reject(new Error('Unable to load PayPal SDK.')), { once: true });
+});
+
+async function getPayPalConfig() {
+  const response = await fetch(`${normalizeApiBase()}/config`, { headers: { Accept: 'application/json' } });
+  if (!response.ok) throw new Error('PayPal configuration endpoint is unavailable.');
+  const config = await response.json();
+  if (!config.clientId) throw new Error('PayPal Client ID is not configured on the server.');
+  return config;
+}
+
+async function createPayPalOrder() {
+  const packageId = checkoutForm?.dataset.packageId;
+  if (!packageId) throw new Error('No service package is selected.');
+  const response = await fetch(`${normalizeApiBase()}/orders`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+    body: JSON.stringify({ packageId })
+  });
+  const data = await response.json().catch(() => ({}));
+  if (!response.ok || !data.id) throw new Error(data.error || 'Could not create the PayPal order.');
+  return { orderId: data.id };
+}
+
+async function capturePayPalOrder(orderId) {
+  const response = await fetch(`${normalizeApiBase()}/orders/${encodeURIComponent(orderId)}/capture`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', Accept: 'application/json' }
+  });
+  const data = await response.json().catch(() => ({}));
+  if (!response.ok) throw new Error(data.error || 'Could not capture the PayPal payment.');
+  return data;
+}
+
+function thankYouUrl(orderId) {
+  const params = new URLSearchParams({
+    package: checkoutForm?.querySelector('[data-checkout-package-input]')?.value || '',
+    amount: (checkoutForm?.querySelector('[data-checkout-price-input]')?.value || '').replace(/[^0-9.]/g, ''),
+    order: orderId || ''
+  });
+  return `thankyou.html?${params.toString()}`;
+}
+
+async function initPayPalSdk() {
+  if (paypalSdkInstance) return paypalSdkInstance;
+  if (paypalSdkPromise) return paypalSdkPromise;
+  paypalSdkPromise = (async () => {
+    const config = await getPayPalConfig();
+    const sdkUrl = config.environment === 'sandbox'
+      ? 'https://www.sandbox.paypal.com/web-sdk/v6/core'
+      : 'https://www.paypal.com/web-sdk/v6/core';
+    await loadExternalScript(sdkUrl);
+    if (!window.paypal?.createInstance) throw new Error('PayPal SDK did not initialize.');
+    paypalSdkInstance = await window.paypal.createInstance({
+      clientId: config.clientId,
+      components: ['paypal-payments'],
+      pageType: 'checkout',
+      locale: 'en-US'
+    });
+    return paypalSdkInstance;
+  })().catch((error) => {
+    paypalSdkPromise = null;
+    throw error;
+  });
+  return paypalSdkPromise;
+}
+
 if (checkoutModal && checkoutForm && checkoutTriggers.length) {
-const dialog = checkoutModal.querySelector('.checkout-modal__dialog');
-const closeButtons = checkoutModal.querySelectorAll('[data-checkout-close]');
-const summaryName = checkoutModal.querySelector('[data-checkout-name]');
-const summaryPrice = checkoutModal.querySelector('[data-checkout-price]');
-const summaryTier = checkoutModal.querySelector('[data-checkout-tier]');
-const packageInput = checkoutForm.querySelector('[data-checkout-package-input]');
-const priceInput = checkoutForm.querySelector('[data-checkout-price-input]');
-const tierInput = checkoutForm.querySelector('[data-checkout-tier-input]');
-const status = checkoutForm.querySelector('.checkout-status');
-const submitButton = checkoutForm.querySelector('[data-checkout-submit]');
-const consent = checkoutForm.querySelector('[data-checkout-consent]');
-const fields = [...checkoutForm.querySelectorAll('[data-checkout-validate]')];
-const detailsStep = checkoutModal.querySelector('[data-checkout-step="details"]');
-const paymentStep = checkoutModal.querySelector('[data-checkout-step="payment"]');
-const stepper = checkoutModal.querySelector('.checkout-stepper');
-const detailsIndicator = checkoutModal.querySelector('[data-step-indicator="details"]');
-const paymentIndicator = checkoutModal.querySelector('[data-step-indicator="payment"]');
-const paymentPackage = checkoutModal.querySelector('[data-payment-package]');
-const paymentPrice = checkoutModal.querySelector('[data-payment-price]');
-const paymentClient = checkoutModal.querySelector('[data-payment-client]');
-const paymentEmail = checkoutModal.querySelector('[data-payment-email]');
-const paypalButton = checkoutModal.querySelector('[data-checkout-paypal]');
-const backButton = checkoutModal.querySelector('[data-checkout-back]');
-const focusableSelector = 'button:not([disabled]), input:not([disabled]), textarea:not([disabled]), select:not([disabled]), a[href], [tabindex]:not([tabindex="-1"])';
+  const dialog = checkoutModal.querySelector('.checkout-modal__dialog');
+  const closeButtons = checkoutModal.querySelectorAll('[data-checkout-close]');
+  const summaryName = checkoutModal.querySelector('[data-checkout-name]');
+  const summaryPrice = checkoutModal.querySelector('[data-checkout-price]');
+  const summaryTier = checkoutModal.querySelector('[data-checkout-tier]');
+  const packageInput = checkoutForm.querySelector('[data-checkout-package-input]');
+  const priceInput = checkoutForm.querySelector('[data-checkout-price-input]');
+  const tierInput = checkoutForm.querySelector('[data-checkout-tier-input]');
+  const status = checkoutForm.querySelector('.checkout-status');
+  const submitButton = checkoutForm.querySelector('[data-checkout-submit]');
+  const consent = checkoutForm.querySelector('[data-checkout-consent]');
+  const fields = [...checkoutForm.querySelectorAll('[data-checkout-validate]')];
+  const detailsStep = checkoutModal.querySelector('[data-checkout-step="details"]');
+  const paymentStep = checkoutModal.querySelector('[data-checkout-step="payment"]');
+  const stepper = checkoutModal.querySelector('.checkout-stepper');
+  const detailsIndicator = checkoutModal.querySelector('[data-step-indicator="details"]');
+  const paymentIndicator = checkoutModal.querySelector('[data-step-indicator="payment"]');
+  const paymentPackage = checkoutModal.querySelector('[data-payment-package]');
+  const paymentPrice = checkoutModal.querySelector('[data-payment-price]');
+  const paymentTotal = checkoutModal.querySelector('[data-payment-total]');
+  const paymentClient = checkoutModal.querySelector('[data-payment-client]');
+  const paymentEmail = checkoutModal.querySelector('[data-payment-email]');
+  const backButton = checkoutModal.querySelector('[data-checkout-back]');
+  const paypalState = checkoutModal.querySelector('[data-paypal-state]');
+  const paypalStateText = checkoutModal.querySelector('[data-paypal-state-text]');
+  const paypalButtonsWrap = checkoutModal.querySelector('[data-paypal-buttons]');
+  const paypalElement = checkoutModal.querySelector('#jrmrc-paypal-button');
+  const paypalFallback = checkoutModal.querySelector('[data-paypal-fallback]');
+  const paypalFallbackLink = checkoutModal.querySelector('[data-checkout-paypal-fallback]');
+  const focusableSelector = 'button:not([disabled]), input:not([disabled]), textarea:not([disabled]), select:not([disabled]), a[href], paypal-button:not([hidden]), [tabindex]:not([tabindex="-1"])';
 
-const clearCheckoutStatus = () => {
-status.className = 'checkout-status';
-status.textContent = '';
-};
-const clearCheckoutError = (field) => {
-field.removeAttribute('aria-invalid');
-const error = checkoutForm.querySelector(`#${field.id}-error`);
-if (error) error.textContent = '';
-};
-const showCheckoutError = (field, message) => {
-field.setAttribute('aria-invalid', 'true');
-const error = checkoutForm.querySelector(`#${field.id}-error`);
-if (error) error.textContent = message;
-};
-const validateCheckoutField = (field) => {
-const value = field.value.trim();
-clearCheckoutError(field);
-if (field.required && !value) {
-showCheckoutError(field, 'This field is required.');
-return false;
-}
-if (field.type === 'email' && value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
-showCheckoutError(field, 'Enter a valid email address.');
-return false;
-}
-return true;
-};
-const showCheckoutStep = (step) => {
-const showPayment = step === 'payment';
-detailsStep.hidden = showPayment;
-paymentStep.hidden = !showPayment;
-detailsStep.classList.toggle('is-active', !showPayment);
-paymentStep.classList.toggle('is-active', showPayment);
-stepper?.classList.toggle('is-payment', showPayment);
-detailsIndicator?.classList.toggle('is-active', !showPayment);
-detailsIndicator?.classList.toggle('is-complete', showPayment);
-paymentIndicator?.classList.toggle('is-active', showPayment);
-paymentIndicator?.classList.remove('is-complete');
-if (dialog) dialog.scrollTop = 0;
-window.setTimeout(() => {
-if (showPayment) paypalButton?.focus();
-else checkoutForm.querySelector('#checkout-name')?.focus();
-}, 30);
-};
-const closeCheckout = () => {
-checkoutModal.classList.remove('is-open');
-checkoutModal.setAttribute('aria-hidden', 'true');
-body.classList.remove('modal-open');
-if (checkoutLastFocused) checkoutLastFocused.focus();
-};
-const openCheckout = (trigger) => {
-checkoutLastFocused = trigger;
-const packageName = trigger.dataset.checkoutPackage || 'Selected Service';
-const price = trigger.dataset.checkoutPrice || '';
-const tier = trigger.dataset.checkoutTier || 'Selected Package';
-const paypalLink = trigger.dataset.paypalLink || '';
-summaryName.textContent = packageName;
-summaryPrice.textContent = price;
-summaryTier.textContent = tier;
-packageInput.value = packageName;
-priceInput.value = price;
-tierInput.value = tier;
-checkoutForm.dataset.paypalLink = paypalLink;
-checkoutForm.dataset.notificationSent = 'false';
-if (paymentPackage) paymentPackage.textContent = packageName;
-if (paymentPrice) paymentPrice.textContent = price;
-if (paypalButton) {
-paypalButton.href = paypalLink || '#';
-paypalButton.innerHTML = `Pay ${price} with PayPal <span class="btn__arrow">→</span>`;
-}
-submitButton.disabled = false;
-submitButton.innerHTML = 'Continue to Payment <span class="btn__arrow">→</span>';
-clearCheckoutStatus();
-showCheckoutStep('details');
-checkoutModal.classList.add('is-open');
-checkoutModal.setAttribute('aria-hidden', 'false');
-body.classList.add('modal-open');
-window.setTimeout(() => checkoutModal.querySelector('.checkout-modal__close')?.focus(), 20);
-};
+  const setPaypalState = (message, type = 'loading') => {
+    if (!paypalState || !paypalStateText) return;
+    paypalState.hidden = false;
+    paypalState.classList.toggle('is-error', type === 'error');
+    paypalState.classList.toggle('is-success', type === 'success');
+    paypalStateText.textContent = message;
+  };
 
-checkoutTriggers.forEach((trigger) => trigger.addEventListener('click', () => openCheckout(trigger)));
-closeButtons.forEach((button) => button.addEventListener('click', closeCheckout));
-fields.forEach((field) => {
-field.addEventListener('blur', () => validateCheckoutField(field));
-field.addEventListener('input', () => {
-if (field.hasAttribute('aria-invalid')) validateCheckoutField(field);
-});
-});
+  const showPayPalFallback = (message) => {
+    setPaypalState(message, 'error');
+    if (paypalButtonsWrap) paypalButtonsWrap.hidden = true;
+    if (paypalFallback) paypalFallback.hidden = false;
+    if (paypalFallbackLink) paypalFallbackLink.href = checkoutForm.dataset.paypalLink || '#';
+  };
 
-checkoutForm.addEventListener('submit', async (event) => {
-event.preventDefault();
-clearCheckoutStatus();
-let valid = true;
-fields.forEach((field) => { if (!validateCheckoutField(field)) valid = false; });
-if (!consent.checked) {
-valid = false;
-status.className = 'checkout-status is-visible is-error';
-status.textContent = 'Please confirm the package and contact consent before continuing.';
-}
-if (!valid) {
-checkoutForm.querySelector('[aria-invalid="true"]')?.focus();
-return;
-}
+  const clearCheckoutStatus = () => {
+    status.className = 'checkout-status';
+    status.textContent = '';
+  };
+  const clearCheckoutError = (field) => {
+    field.removeAttribute('aria-invalid');
+    const error = checkoutForm.querySelector(`#${field.id}-error`);
+    if (error) error.textContent = '';
+  };
+  const showCheckoutError = (field, message) => {
+    field.setAttribute('aria-invalid', 'true');
+    const error = checkoutForm.querySelector(`#${field.id}-error`);
+    if (error) error.textContent = message;
+  };
+  const validateCheckoutField = (field) => {
+    const value = field.value.trim();
+    clearCheckoutError(field);
+    if (field.required && !value) {
+      showCheckoutError(field, 'This field is required.');
+      return false;
+    }
+    if (field.type === 'email' && value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+      showCheckoutError(field, 'Enter a valid email address.');
+      return false;
+    }
+    return true;
+  };
 
-const paypalLink = checkoutForm.dataset.paypalLink?.trim();
-if (!paypalLink) {
-status.className = 'checkout-status is-visible is-error';
-status.textContent = 'The PayPal payment link for this package is unavailable. Please choose the package again.';
-return;
-}
+  const configureEmbeddedPayPal = async () => {
+    if (paypalFallback) paypalFallback.hidden = true;
+    if (paypalButtonsWrap) paypalButtonsWrap.hidden = true;
+    if (paypalElement) paypalElement.hidden = true;
 
-const data = Object.fromEntries(new FormData(checkoutForm).entries());
-const endpoint = checkoutForm.dataset.endpoint?.trim();
-const originalHtml = submitButton.innerHTML;
-submitButton.disabled = true;
-submitButton.textContent = 'Saving details...';
+    if (!paypalApiConfigured()) {
+      showPayPalFallback('PayPal SDK setup is not connected yet. Add your Worker URL to PAYPAL_API_BASE.');
+      return;
+    }
 
-try {
-if (endpoint && checkoutForm.dataset.notificationSent !== 'true') {
-try {
-const notificationData = {
-_subject: `New Portfolio Checkout - ${packageInput.value} ${priceInput.value}`,
-_template: 'table',
-source: 'Jhim Rick Marco Portfolio',
-name: data.name || '',
-email: data.email || '',
-phone: data.phone || '',
-business: data.business || 'Not provided',
-package: packageInput.value,
-price: priceInput.value,
-tier: tierInput.value,
-project_notes: data.notes || 'None provided',
-consent: consent.checked ? 'Confirmed' : 'Not confirmed',
-page: window.location.href,
-submitted_at: new Date().toLocaleString()
-};
-const notificationResponse = await fetch(endpoint, {
-method: 'POST',
-headers: {'Content-Type': 'application/json','Accept': 'application/json'},
-body: JSON.stringify(notificationData),
-keepalive: true
-});
-if (!notificationResponse.ok) throw new Error(`Notification service returned ${notificationResponse.status}`);
-checkoutForm.dataset.notificationSent = 'true';
-} catch (captureError) {
-console.warn('Email notification could not be sent.', captureError);
-}
-}
+    setPaypalState('Preparing secure PayPal checkout…');
+    try {
+      const sdk = await initPayPalSdk();
+      const methods = await sdk.findEligibleMethods({ currencyCode: 'USD' });
+      if (!methods.isEligible('paypal')) {
+        showPayPalFallback('PayPal is not currently eligible for this browser.');
+        return;
+      }
 
-if (paymentPackage) paymentPackage.textContent = packageInput.value;
-if (paymentPrice) paymentPrice.textContent = priceInput.value;
-if (paymentClient) paymentClient.textContent = data.name || 'Client';
-if (paymentEmail) paymentEmail.textContent = data.email || '';
-if (paypalButton) {
-paypalButton.href = paypalLink;
-paypalButton.innerHTML = `Pay ${priceInput.value} with PayPal <span class="btn__arrow">→</span>`;
-}
+      if (!paypalPaymentSession) {
+        paypalPaymentSession = sdk.createPayPalOneTimePaymentSession({
+          async onApprove(data) {
+            setPaypalState('Payment approved. Confirming your payment…');
+            try {
+              const captured = await capturePayPalOrder(data.orderId);
+              if (captured.status !== 'COMPLETED') {
+                throw new Error(`Payment status is ${captured.status || 'unknown'}.`);
+              }
+              setPaypalState('Payment complete. Redirecting…', 'success');
+              sessionStorage.setItem('jrmrcPaidOrder', JSON.stringify({
+                orderId: data.orderId,
+                package: packageInput.value,
+                price: priceInput.value,
+                capturedAt: Date.now()
+              }));
+              window.location.assign(thankYouUrl(data.orderId));
+            } catch (error) {
+              console.error('PayPal capture error:', error);
+              showPayPalFallback('PayPal approved the checkout, but confirmation failed. Please contact me before trying another payment.');
+            }
+          },
+          onCancel() {
+            setPaypalState('Payment was cancelled. You can try again whenever you are ready.', 'error');
+          },
+          onError(error) {
+            console.error('PayPal payment error:', error);
+            showPayPalFallback('PayPal could not complete the checkout. Please try again or use the secure fallback link.');
+          }
+        });
+      }
 
-sessionStorage.setItem('jrmrcCheckout', JSON.stringify({
-package: packageInput.value,
-price: priceInput.value,
-tier: tierInput.value,
-name: data.name || '',
-email: data.email || '',
-timestamp: Date.now()
-}));
-showCheckoutStep('payment');
-} catch (error) {
-console.error(error);
-status.className = 'checkout-status is-visible is-error';
-status.textContent = 'Your details could not be prepared. Please try again.';
-} finally {
-submitButton.disabled = false;
-submitButton.innerHTML = originalHtml;
-}
-});
+      if (!paypalClickBound && paypalElement) {
+        paypalElement.addEventListener('click', async () => {
+          if (!checkoutForm.dataset.packageId) return;
+          setPaypalState('Opening secure PayPal checkout…');
+          try {
+            await paypalPaymentSession.start(
+              { presentationMode: 'auto' },
+              createPayPalOrder()
+            );
+          } catch (error) {
+            console.error('PayPal start error:', error);
+            if (error?.isRecoverable) {
+              showPayPalFallback('PayPal popup could not open. Use the secure fallback link below.');
+            } else {
+              showPayPalFallback('PayPal checkout could not start. Please try again.');
+            }
+          }
+        });
+        paypalClickBound = true;
+      }
 
-backButton?.addEventListener('click', () => showCheckoutStep('details'));
-paypalButton?.addEventListener('click', (event) => {
-const paypalLink = checkoutForm.dataset.paypalLink?.trim();
-if (!paypalLink) {
-event.preventDefault();
-showCheckoutStep('details');
-status.className = 'checkout-status is-visible is-error';
-status.textContent = 'The PayPal payment link for this package is unavailable. Please choose the package again.';
-return;
-}
-paypalButton.href = paypalLink;
-});
+      paypalState.hidden = true;
+      if (paypalButtonsWrap) paypalButtonsWrap.hidden = false;
+      if (paypalElement) paypalElement.hidden = false;
+    } catch (error) {
+      console.error('PayPal SDK setup error:', error);
+      showPayPalFallback('Embedded PayPal checkout is unavailable right now.');
+    }
+  };
 
-document.addEventListener('keydown', (event) => {
-if (!checkoutModal.classList.contains('is-open')) return;
-if (event.key === 'Escape') {
-closeCheckout();
-return;
-}
-if (event.key === 'Tab' && dialog) {
-const focusable = [...dialog.querySelectorAll(focusableSelector)].filter((el) => el.offsetParent !== null);
-if (!focusable.length) return;
-const first = focusable[0];
-const last = focusable[focusable.length - 1];
-if (event.shiftKey && document.activeElement === first) {
-event.preventDefault();
-last.focus();
-} else if (!event.shiftKey && document.activeElement === last) {
-event.preventDefault();
-first.focus();
-}
-}
-});
+  const showCheckoutStep = (step) => {
+    const showPayment = step === 'payment';
+    detailsStep.hidden = showPayment;
+    paymentStep.hidden = !showPayment;
+    detailsStep.classList.toggle('is-active', !showPayment);
+    paymentStep.classList.toggle('is-active', showPayment);
+    stepper?.classList.toggle('is-payment', showPayment);
+    detailsIndicator?.classList.toggle('is-active', !showPayment);
+    detailsIndicator?.classList.toggle('is-complete', showPayment);
+    paymentIndicator?.classList.toggle('is-active', showPayment);
+    paymentIndicator?.classList.remove('is-complete');
+    if (dialog) dialog.scrollTop = 0;
+    if (showPayment) {
+      window.setTimeout(() => configureEmbeddedPayPal(), 20);
+    } else {
+      window.setTimeout(() => checkoutForm.querySelector('#checkout-name')?.focus(), 30);
+    }
+  };
+
+  const closeCheckout = () => {
+    checkoutModal.classList.remove('is-open');
+    checkoutModal.setAttribute('aria-hidden', 'true');
+    body.classList.remove('modal-open');
+    if (checkoutLastFocused) checkoutLastFocused.focus();
+  };
+
+  const openCheckout = (trigger) => {
+    checkoutLastFocused = trigger;
+    const packageName = trigger.dataset.checkoutPackage || 'Selected Service';
+    const price = trigger.dataset.checkoutPrice || '';
+    const tier = trigger.dataset.checkoutTier || 'Selected Package';
+    const packageId = trigger.dataset.packageId || '';
+    const paypalLink = trigger.dataset.paypalLink || '';
+
+    summaryName.textContent = packageName;
+    summaryPrice.textContent = price;
+    summaryTier.textContent = tier;
+    packageInput.value = packageName;
+    priceInput.value = price;
+    tierInput.value = tier;
+    checkoutForm.dataset.packageId = packageId;
+    checkoutForm.dataset.paypalLink = paypalLink;
+    checkoutForm.dataset.notificationSent = 'false';
+
+    const usd = `${price}.00 USD`.replace('$.', '$0.');
+    if (paymentPackage) paymentPackage.textContent = packageName;
+    if (paymentPrice) paymentPrice.textContent = usd;
+    if (paymentTotal) paymentTotal.textContent = usd;
+    if (paypalFallbackLink) paypalFallbackLink.href = paypalLink || '#';
+    if (paypalFallback) paypalFallback.hidden = true;
+    if (paypalButtonsWrap) paypalButtonsWrap.hidden = true;
+    setPaypalState('Preparing secure PayPal checkout…');
+
+    submitButton.disabled = false;
+    submitButton.innerHTML = 'Continue to Payment <span class="btn__arrow">→</span>';
+    clearCheckoutStatus();
+    showCheckoutStep('details');
+    checkoutModal.classList.add('is-open');
+    checkoutModal.setAttribute('aria-hidden', 'false');
+    body.classList.add('modal-open');
+    window.setTimeout(() => checkoutModal.querySelector('.checkout-modal__close')?.focus(), 20);
+  };
+
+  checkoutTriggers.forEach((trigger) => trigger.addEventListener('click', () => openCheckout(trigger)));
+  closeButtons.forEach((button) => button.addEventListener('click', closeCheckout));
+  fields.forEach((field) => {
+    field.addEventListener('blur', () => validateCheckoutField(field));
+    field.addEventListener('input', () => {
+      if (field.hasAttribute('aria-invalid')) validateCheckoutField(field);
+    });
+  });
+
+  checkoutForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    clearCheckoutStatus();
+    let valid = true;
+    fields.forEach((field) => { if (!validateCheckoutField(field)) valid = false; });
+    if (!consent.checked) {
+      valid = false;
+      status.className = 'checkout-status is-visible is-error';
+      status.textContent = 'Please confirm the package and contact consent before continuing.';
+    }
+    if (!valid) {
+      checkoutForm.querySelector('[aria-invalid="true"]')?.focus();
+      return;
+    }
+
+    if (!checkoutForm.dataset.packageId) {
+      status.className = 'checkout-status is-visible is-error';
+      status.textContent = 'The selected package could not be identified. Please close the checkout and choose the package again.';
+      return;
+    }
+
+    const data = Object.fromEntries(new FormData(checkoutForm).entries());
+    const endpoint = checkoutForm.dataset.endpoint?.trim();
+    const originalHtml = submitButton.innerHTML;
+    submitButton.disabled = true;
+    submitButton.textContent = 'Saving details...';
+
+    try {
+      if (endpoint && checkoutForm.dataset.notificationSent !== 'true') {
+        try {
+          const notificationData = {
+            _subject: `New Portfolio Checkout - ${packageInput.value} ${priceInput.value}`,
+            _template: 'table',
+            source: 'Jhim Rick Marco Portfolio',
+            name: data.name || '',
+            email: data.email || '',
+            phone: data.phone || '',
+            business: data.business || 'Not provided',
+            package: packageInput.value,
+            price: priceInput.value,
+            tier: tierInput.value,
+            project_notes: data.notes || 'None provided',
+            consent: consent.checked ? 'Confirmed' : 'Not confirmed',
+            page: window.location.href,
+            submitted_at: new Date().toLocaleString()
+          };
+          const notificationResponse = await fetch(endpoint, {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json','Accept': 'application/json'},
+            body: JSON.stringify(notificationData),
+            keepalive: true
+          });
+          if (!notificationResponse.ok) throw new Error(`Notification service returned ${notificationResponse.status}`);
+          checkoutForm.dataset.notificationSent = 'true';
+        } catch (captureError) {
+          console.warn('Email notification could not be sent.', captureError);
+        }
+      }
+
+      const amountNumber = Number(String(priceInput.value).replace(/[^0-9.]/g, ''));
+      const usdAmount = `$${amountNumber.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})} USD`;
+      if (paymentPackage) paymentPackage.textContent = packageInput.value;
+      if (paymentPrice) paymentPrice.textContent = usdAmount;
+      if (paymentTotal) paymentTotal.textContent = usdAmount;
+      if (paymentClient) paymentClient.textContent = data.name || 'Client';
+      if (paymentEmail) paymentEmail.textContent = data.email || '';
+
+      sessionStorage.setItem('jrmrcCheckout', JSON.stringify({
+        packageId: checkoutForm.dataset.packageId,
+        package: packageInput.value,
+        price: priceInput.value,
+        tier: tierInput.value,
+        name: data.name || '',
+        email: data.email || '',
+        timestamp: Date.now()
+      }));
+      showCheckoutStep('payment');
+    } catch (error) {
+      console.error(error);
+      status.className = 'checkout-status is-visible is-error';
+      status.textContent = 'Your details could not be prepared. Please try again.';
+    } finally {
+      submitButton.disabled = false;
+      submitButton.innerHTML = originalHtml;
+    }
+  });
+
+  backButton?.addEventListener('click', () => showCheckoutStep('details'));
+
+  document.addEventListener('keydown', (event) => {
+    if (!checkoutModal.classList.contains('is-open')) return;
+    if (event.key === 'Escape') {
+      closeCheckout();
+      return;
+    }
+    if (event.key === 'Tab' && dialog) {
+      const focusable = [...dialog.querySelectorAll(focusableSelector)].filter((el) => el.offsetParent !== null);
+      if (!focusable.length) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    }
+  });
 }
 const calendarModal = document.getElementById('calendar-modal');
 const calendarTriggers = document.querySelectorAll('.calendar-trigger');
