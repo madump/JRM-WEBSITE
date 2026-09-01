@@ -189,9 +189,11 @@
   justify-content:center;
   gap:9px;
   border-radius:999px;
+  border:0;
   background:#ffc439;
   color:#003087;
   font-size:.75rem;
+  cursor:pointer;
   font-weight:900;
   box-shadow:0 12px 26px rgba(0,0,0,.16);
   transition:transform .2s ease,box-shadow .2s ease,background .2s ease;
@@ -205,6 +207,18 @@
   outline:3px solid rgba(157,255,62,.55);
   outline-offset:3px;
 }
+.checkout-test-notice{
+  margin:0 0 22px;
+  padding:13px 14px;
+  border:1px solid rgba(157,255,62,.22);
+  border-radius:11px;
+  background:rgba(157,255,62,.06);
+  color:#9fb0ba;
+  font-size:.72rem;
+  line-height:1.6;
+}
+.checkout-test-notice strong{color:#b6ff6a}
+.checkout-test-notice[hidden]{display:none!important}
 @media(max-width:720px){
   .paypal-test-panel{
     margin:-24px auto 48px;
@@ -259,9 +273,20 @@
       <p>Temporary checkout for testing PayPal, Apple Pay, and debit or credit card payment options.</p>
     </div>
   </div>
-  <a class="paypal-test-panel__button" href="https://www.paypal.com/ncp/payment/57G7ZH3HZYGA8" target="_blank" rel="noopener noreferrer" aria-label="Open PayPal test checkout in a new tab">
-    Open Test Checkout <span aria-hidden="true">→</span>
-  </a>
+  <button
+    class="paypal-test-panel__button checkout-trigger"
+    type="button"
+    data-checkout-mode="test-link"
+    data-checkout-package="Custom Coded Website"
+    data-checkout-price="$699"
+    data-checkout-tier="Custom Coded Build"
+    data-checkout-display-package="Worker + PayPal Test"
+    data-checkout-display-price="₱0.25 PHP"
+    data-checkout-display-tier="TEST ONLY"
+    data-paypal-link="https://www.paypal.com/ncp/payment/57G7ZH3HZYGA8"
+    aria-label="Open Worker and PayPal test checkout modal">
+    Test Worker + PayPal <span aria-hidden="true">→</span>
+  </button>
 </div>
 <div class="service-feature-grid">
 <div class="service-feature-media service-feature-media--custom reveal is-visible">
@@ -527,6 +552,7 @@
 <div class="eyebrow">Step 1 of 2</div>
 <h2 id="checkout-title">Start your project.</h2>
 <p>Enter your details and confirm the selected package. Your information will be submitted before you continue to payment.</p>
+<div class="checkout-test-notice" data-checkout-test-note hidden><strong>TEST MODE:</strong> This sends the form to your Cloudflare Worker as the <strong>Custom Coded Website</strong> offer so your current Worker validation succeeds. After the Worker responds successfully, Step 2 will open the ₱0.25 PHP PayPal test checkout.</div>
 <form class="checkout-form-grid" data-endpoint="https://jhimrick.jhimrickofficial.workers.dev/" id="service-checkout-form" novalidate="">
 <input data-checkout-package-input="" name="package" type="hidden" value="GoHighLevel Setup"/>
 <input data-checkout-price-input="" name="price" type="hidden" value="$799"/>
@@ -863,6 +889,9 @@ const paypalSummaryName = checkoutModal.querySelector('[data-paypal-summary-name
 const paypalSummaryPrice = checkoutModal.querySelector('[data-paypal-summary-price]');
 const paypalError = checkoutModal.querySelector('[data-paypal-error]');
 const paypalFallback = checkoutModal.querySelector('[data-paypal-fallback]');
+const paypalHeadTitle = checkoutModal.querySelector('.paypal-hosted-checkout__head strong');
+const paypalHeadMeta = checkoutModal.querySelector('.paypal-hosted-checkout__head span');
+const testNotice = checkoutModal.querySelector('[data-checkout-test-note]');
 let renderedPaypalHostedId = '';
 const focusableSelector = 'button:not([disabled]), input:not([disabled]), textarea:not([disabled]), select:not([disabled]), a[href], [tabindex]:not([tabindex="-1"])';
 
@@ -917,29 +946,45 @@ if (checkoutLastFocused) checkoutLastFocused.focus();
 };
 const openCheckout = (trigger) => {
 checkoutLastFocused = trigger;
+const checkoutMode = trigger.dataset.checkoutMode || 'hosted';
 const packageName = trigger.dataset.checkoutPackage || 'Selected Service';
 const price = trigger.dataset.checkoutPrice || '';
 const tier = trigger.dataset.checkoutTier || 'Selected Package';
+const displayPackage = trigger.dataset.checkoutDisplayPackage || packageName;
+const displayPrice = trigger.dataset.checkoutDisplayPrice || price;
+const displayTier = trigger.dataset.checkoutDisplayTier || tier;
 const paypalHostedId = trigger.dataset.paypalHostedId || '';
 const paypalLink = trigger.dataset.paypalLink || '';
-summaryName.textContent = packageName;
-summaryPrice.textContent = price;
-summaryTier.textContent = tier;
+summaryName.textContent = displayPackage;
+summaryPrice.textContent = displayPrice;
+summaryTier.textContent = displayTier;
 packageInput.value = packageName;
 priceInput.value = price;
 tierInput.value = tier;
+checkoutForm.dataset.checkoutMode = checkoutMode;
 checkoutForm.dataset.paypalHostedId = paypalHostedId;
 checkoutForm.dataset.paypalLink = paypalLink;
 checkoutForm.dataset.notificationSent = 'false';
-if (paypalSummaryName) paypalSummaryName.textContent = packageName;
-if (paypalSummaryPrice) paypalSummaryPrice.textContent = `${price} USD`;
+if (testNotice) testNotice.hidden = checkoutMode !== 'test-link';
+if (paypalHeadTitle) paypalHeadTitle.textContent = checkoutMode === 'test-link' ? 'PayPal test checkout' : 'Secure PayPal checkout';
+if (paypalHeadMeta) paypalHeadMeta.textContent = checkoutMode === 'test-link' ? 'Test payment · PHP' : 'One-time payment · USD';
+if (paypalSummaryName) paypalSummaryName.textContent = checkoutMode === 'test-link' ? 'PayPal Test Checkout' : packageName;
+if (paypalSummaryPrice) paypalSummaryPrice.textContent = checkoutMode === 'test-link' ? '₱0.25 PHP' : `${price} USD`;
 if (paypalEmbed) paypalEmbed.classList.remove('is-ready');
 renderedPaypalHostedId = '';
 if (paypalContainer) paypalContainer.innerHTML = '<p class="paypal-hosted-checkout__loading" data-paypal-loading>Preparing PayPal checkout...</p>';
 if (paypalError) { paypalError.classList.remove('is-visible'); paypalError.textContent = ''; }
-if (paypalFallback) { paypalFallback.classList.remove('is-visible'); paypalFallback.href = paypalLink || '#'; }
+if (paypalFallback) {
+  paypalFallback.classList.remove('is-visible');
+  paypalFallback.href = paypalLink || '#';
+  paypalFallback.innerHTML = checkoutMode === 'test-link'
+    ? 'Open ₱0.25 Test Checkout <span class="btn__arrow">→</span>'
+    : 'Open PayPal Checkout <span class="btn__arrow">→</span>';
+}
 submitButton.disabled = false;
-submitButton.innerHTML = 'Continue to Payment <span class="btn__arrow">→</span>';
+submitButton.innerHTML = checkoutMode === 'test-link'
+  ? 'Send Test + Continue <span class="btn__arrow">→</span>'
+  : 'Continue to Payment <span class="btn__arrow">→</span>';
 clearCheckoutStatus();
 showCheckoutStep('details');
 checkoutModal.classList.add('is-open');
@@ -1009,11 +1054,17 @@ checkoutForm.querySelector('[aria-invalid="true"]')?.focus();
 return;
 }
 
+const checkoutMode = checkoutForm.dataset.checkoutMode || 'hosted';
 const paypalHostedId = checkoutForm.dataset.paypalHostedId?.trim();
 const paypalLink = checkoutForm.dataset.paypalLink?.trim();
-if (!paypalHostedId) {
+if (checkoutMode !== 'test-link' && !paypalHostedId) {
 status.className = 'checkout-status is-visible is-error';
 status.textContent = 'The PayPal hosted button for this package is unavailable. Please choose the package again.';
+return;
+}
+if (checkoutMode === 'test-link' && !paypalLink) {
+status.className = 'checkout-status is-visible is-error';
+status.textContent = 'The PayPal test checkout link is unavailable.';
 return;
 }
 
@@ -1037,7 +1088,8 @@ tier: tierInput.value,
 project_notes: data.notes || 'None provided',
 consent: consent.checked ? 'Confirmed' : 'Not confirmed',
 page: window.location.href,
-submitted_at: new Date().toLocaleString()
+submitted_at: new Date().toLocaleString(),
+test_mode: checkoutMode === 'test-link' ? 'PayPal test checkout' : 'No'
 };
 
 const notificationResponse = await fetch(endpoint, {
@@ -1072,11 +1124,24 @@ price: priceInput.value,
 tier: tierInput.value,
 name: data.name || '',
 email: data.email || '',
+checkoutMode,
 paypalHostedId,
 timestamp: Date.now()
 }));
 showCheckoutStep('payment');
-await renderPaypalHostedButton(paypalHostedId, paypalLink);
+if (checkoutMode === 'test-link') {
+  if (paypalEmbed) paypalEmbed.classList.remove('is-ready');
+  if (paypalContainer) {
+    paypalContainer.innerHTML = '<p class="paypal-hosted-checkout__loading">Worker test passed. Your onboarding email request was accepted. Continue with the ₱0.25 PHP PayPal test checkout below.</p>';
+  }
+  if (paypalFallback) {
+    paypalFallback.href = paypalLink;
+    paypalFallback.innerHTML = 'Open ₱0.25 Test Checkout <span class="btn__arrow">→</span>';
+    paypalFallback.classList.add('is-visible');
+  }
+} else {
+  await renderPaypalHostedButton(paypalHostedId, paypalLink);
+}
 } catch (error) {
 console.error(error);
 status.className = 'checkout-status is-visible is-error';
