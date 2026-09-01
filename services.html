@@ -46,20 +46,103 @@
 @media(prefers-reduced-motion:reduce){.checkout-step{animation:none}}
 </style>
 
-<style id="paypal-hosted-buttons-styles">
-.checkout-payment-actions--hosted{grid-template-columns:1fr;margin-top:14px}
-.paypal-hosted-shell{width:100%;margin:18px 0 8px;padding:16px;border:1px solid rgba(255,255,255,.10);border-radius:16px;background:#f6f7f9;box-shadow:0 14px 34px rgba(0,0,0,.12)}
-.paypal-hosted-container{width:100%;min-height:52px}
-.paypal-hosted-status{display:flex;align-items:center;justify-content:center;gap:9px;min-height:52px;padding:10px;color:#52616c;font-size:.72rem;font-weight:800;text-align:center}
-.paypal-hosted-status::before{content:"";width:15px;height:15px;flex:0 0 15px;border:2px solid #d6dde2;border-top-color:#1f6feb;border-radius:50%;animation:paypalHostedSpin .7s linear infinite}
-.paypal-hosted-status.is-error{color:#b4233c;background:#fff3f5;border:1px solid #ffc6d0;border-radius:10px}
-.paypal-hosted-status.is-error::before{display:none}
-.paypal-hosted-fallback{width:100%;margin-top:10px;background:#ffc439;color:#111;border-radius:8px;box-shadow:none}
-.paypal-hosted-fallback:hover{background:#ffcf5b;box-shadow:none}
-.checkout-back--hosted{width:100%;min-height:46px}
-@keyframes paypalHostedSpin{to{transform:rotate(360deg)}}
-@media(max-width:560px){.paypal-hosted-shell{padding:10px;border-radius:13px}.paypal-hosted-status{font-size:.68rem}}
-@media(prefers-reduced-motion:reduce){.paypal-hosted-status::before{animation:none}}
+<style id="paypal-hosted-button-styles">
+/* PayPal Hosted Buttons render inside a cross-origin iframe.
+   We cannot style PayPal's internal text directly, so the surface surrounding
+   the iframe follows the browser's preferred color scheme. This keeps the
+   PayPal-generated title/price text readable in both light and dark mode. */
+.paypal-hosted-checkout{width:min(100%,560px);margin:18px auto 0;padding:18px;border:1px solid rgba(10,18,32,.10);border-radius:16px;background:#fff;box-shadow:0 18px 44px rgba(0,0,0,.16);color-scheme:light dark}
+.paypal-hosted-checkout__head{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;margin-bottom:14px;padding-bottom:12px;border-bottom:1px solid rgba(10,18,32,.09);text-align:center}
+.paypal-hosted-checkout__head strong{color:#101c25;font-size:.78rem;letter-spacing:-.01em}.paypal-hosted-checkout__head span{color:#667085;font-size:.64rem;font-weight:700}
+.paypal-hosted-checkout__embed{position:relative;overflow:hidden;border-radius:12px}
+.paypal-hosted-checkout__summary-cover{position:absolute;z-index:5;left:0;right:0;top:0;height:92px;display:none;align-content:center;justify-items:center;padding:13px 20px 12px;background:#fff;border-bottom:1px solid rgba(10,18,32,.08);pointer-events:none;text-align:center}
+.paypal-hosted-checkout__embed.is-ready .paypal-hosted-checkout__summary-cover{display:grid}
+.paypal-hosted-checkout__summary-cover span{display:block;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#101c25;font:800 clamp(1.05rem,2.2vw,1.35rem)/1.15 "Manrope","Inter",sans-serif;letter-spacing:-.035em;text-align:center}
+.paypal-hosted-checkout__summary-cover strong{display:block;margin-top:7px;color:#344054;font:800 1.05rem/1.1 "Manrope","Inter",sans-serif;letter-spacing:-.025em;text-align:center}
+.paypal-hosted-checkout__container{width:100%;min-height:92px;background:#fff;color-scheme:light dark;text-align:center}
+.paypal-hosted-checkout__container iframe{display:block!important;width:100%!important;max-width:100%!important;margin-inline:auto!important;background:transparent!important;border:0!important;color-scheme:light dark!important}
+.paypal-hosted-checkout__loading,.paypal-hosted-checkout__error{margin:0;padding:13px 14px;border-radius:10px;font-size:.72rem;line-height:1.5;text-align:center}
+.paypal-hosted-checkout__loading{color:#667085;background:#f7f8f9}.paypal-hosted-checkout__error{display:none;color:#9f2338;background:#fff1f3;border:1px solid #ffd3da}.paypal-hosted-checkout__error.is-visible{display:block}
+.paypal-hosted-checkout__fallback{display:none;width:100%;margin-top:10px}.paypal-hosted-checkout__fallback.is-visible{display:inline-flex}.checkout-payment-actions{grid-template-columns:minmax(145px,.42fr) minmax(0,1fr);align-items:center}.checkout-payment-actions__note{margin:0;color:#6f818c;font-size:.67rem;line-height:1.45}
+
+@media (prefers-color-scheme: dark){
+  .paypal-hosted-checkout{background:#101c25;border-color:rgba(255,255,255,.10);box-shadow:0 18px 44px rgba(0,0,0,.28)}
+  .paypal-hosted-checkout__head{border-bottom-color:rgba(255,255,255,.10)}
+  .paypal-hosted-checkout__head strong{color:#f4f7f8}
+  .paypal-hosted-checkout__head span{color:#9aabb6}
+  .paypal-hosted-checkout__container{background:#101c25}
+  .paypal-hosted-checkout__summary-cover{background:#101c25;border-bottom-color:rgba(255,255,255,.09)}
+  .paypal-hosted-checkout__summary-cover span{color:#f4f7f8}
+  .paypal-hosted-checkout__summary-cover strong{color:#cbd5dc}
+  .paypal-hosted-checkout__loading{color:#a9b7c0;background:#14252f}
+}
+
+@media (max-width: 560px) {
+  .paypal-hosted-checkout {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 14px;
+    border-radius: 13px;
+  }
+
+  .paypal-hosted-checkout__head {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3px;
+    text-align: center;
+  }
+
+  .paypal-hosted-checkout__summary-cover {
+    height: 104px;
+    padding: 16px 14px 12px;
+  }
+
+  .paypal-hosted-checkout__summary-cover span {
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .checkout-payment-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .checkout-payment-actions__note {
+    text-align: center;
+  }
+}
+</style>
+
+
+<style id="paypal-centered-button-column">
+/* Center the actual PayPal hosted-button iframe/summary as one payment column. */
+.paypal-hosted-checkout__embed{
+  width:min(100%,420px) !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
+.paypal-hosted-checkout__container{
+  width:100% !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
+.paypal-hosted-checkout__container iframe{
+  display:block !important;
+  width:100% !important;
+  max-width:420px !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
+@media (max-width:560px){
+  .paypal-hosted-checkout__embed{width:100% !important;}
+  .paypal-hosted-checkout__container iframe{max-width:100% !important;}
+}
 </style>
 
 </head>
@@ -124,7 +207,7 @@
 <div class="package-scope"><strong>Standard pages:</strong> Home, About, Services, Contact, FAQ, Pricing, Portfolio, Team, or similar content pages.</div>
 <div class="package-result"><strong>Result:</strong> Your website. Your code. Your deployment. No page-builder lock-in. Built to launch, convert, and hand over cleanly.</div>
 <div class="service-feature-actions">
-<button class="btn btn--accent checkout-trigger" data-checkout-package="Custom Coded Website" data-checkout-price="$699" data-checkout-tier="Custom Coded Build" data-paypal-link="https://www.paypal.com/ncp/payment/HW55K7WVDQMSL" data-paypal-hosted-button-id="HW55K7WVDQMSL" type="button">Choose Custom Website <span class="btn__arrow">→</span></button>
+<button class="btn btn--accent checkout-trigger" data-checkout-package="Custom Coded Website" data-checkout-price="$699" data-checkout-tier="Custom Coded Build" data-paypal-hosted-id="HW55K7WVDQMSL" data-paypal-link="https://www.paypal.com/ncp/payment/HW55K7WVDQMSL" type="button">Choose Custom Website <span class="btn__arrow">→</span></button>
 <span class="service-feature-note">Best for businesses that want a fast, professional website they fully own.</span>
 </div>
 </div>
@@ -164,7 +247,7 @@
 </ul>
 <div class="package-result"><strong>Result:</strong> A polished GHL system ready to turn new inquiries into organized follow up and booked appointments.</div>
 <div class="service-feature-actions">
-<button class="btn btn--accent checkout-trigger" data-checkout-package="GoHighLevel Setup" data-checkout-price="$799" data-checkout-tier="Foundation" data-paypal-link="https://www.paypal.com/ncp/payment/5HQF6RYYKH6BU" data-paypal-hosted-button-id="5HQF6RYYKH6BU" type="button">Choose GHL Setup <span class="btn__arrow">→</span></button>
+<button class="btn btn--accent checkout-trigger" data-checkout-package="GoHighLevel Setup" data-checkout-price="$799" data-checkout-tier="Foundation" data-paypal-hosted-id="5HQF6RYYKH6BU" data-paypal-link="https://www.paypal.com/ncp/payment/5HQF6RYYKH6BU" type="button">Choose GHL Setup <span class="btn__arrow">→</span></button>
 <span class="service-feature-note">Best for businesses that need the core CRM, follow up, and booking system built correctly.</span>
 </div>
 </div>
@@ -202,7 +285,7 @@
 <div class="package-scope"><strong>Voice AI scope:</strong> Inbound phone calls only. It does not reply to SMS, email, chat, or contact responses inside the CRM.</div>
 <div class="package-result"><strong>Result:</strong> Your business can keep answering, qualifying, and booking inbound callers even when your team cannot pick up.</div>
 <div class="service-feature-actions">
-<button class="btn btn--accent checkout-trigger" data-checkout-package="GHL + AI Receptionist" data-checkout-price="$1,799" data-checkout-tier="Most Popular" data-paypal-link="https://www.paypal.com/ncp/payment/TDYJ68TYKXNXY" data-paypal-hosted-button-id="TDYJ68TYKXNXY" type="button">Choose AI Receptionist <span class="btn__arrow">→</span></button>
+<button class="btn btn--accent checkout-trigger" data-checkout-package="GHL + AI Receptionist" data-checkout-price="$1,799" data-checkout-tier="Most Popular" data-paypal-hosted-id="TDYJ68TYKXNXY" data-paypal-link="https://www.paypal.com/ncp/payment/TDYJ68TYKXNXY" type="button">Choose AI Receptionist <span class="btn__arrow">→</span></button>
 <span class="service-feature-note">Best for businesses losing opportunities because calls are missed, delayed, or handled inconsistently.</span>
 </div>
 </div>
@@ -239,7 +322,7 @@
 </ul>
 <div class="package-result"><strong>Result:</strong> Your system does not wait for leads to come back, it answers, follows up, qualifies interest, and moves more opportunities toward a booking automatically.</div>
 <div class="service-feature-actions">
-<button class="btn btn--accent checkout-trigger" data-checkout-package="GHL AI Revenue System" data-checkout-price="$2,999" data-checkout-tier="Complete System" data-paypal-link="https://www.paypal.com/ncp/payment/PMVSPZPDTR28U" data-paypal-hosted-button-id="PMVSPZPDTR28U" type="button">Choose Revenue System <span class="btn__arrow">→</span></button>
+<button class="btn btn--accent checkout-trigger" data-checkout-package="GHL AI Revenue System" data-checkout-price="$2,999" data-checkout-tier="Complete System" data-paypal-hosted-id="PMVSPZPDTR28U" data-paypal-link="https://www.paypal.com/ncp/payment/PMVSPZPDTR28U" type="button">Choose Revenue System <span class="btn__arrow">→</span></button>
 <span class="service-feature-note">Best for businesses ready to automate both inbound response and proactive outbound follow up.</span>
 </div>
 </div>
@@ -397,8 +480,8 @@
 
 <section class="checkout-step" data-checkout-step="payment" aria-labelledby="checkout-payment-title" hidden>
 <div class="eyebrow">Step 2 of 2</div>
-<h2 id="checkout-payment-title" tabindex="-1">Complete your payment.</h2>
-<p>Your details are ready. Review the package below, then choose a secure PayPal payment option.</p>
+<h2 id="checkout-payment-title">Complete your payment.</h2>
+<p>Your details are ready. Review the package below, then continue to PayPal to complete the secure payment.</p>
 <div class="checkout-payment-card">
 <div class="checkout-payment-card__top">
 <div>
@@ -413,16 +496,26 @@
 <div><span>Billing</span><strong>One-time implementation</strong></div>
 </div>
 </div>
-<div class="checkout-payment-success"><span aria-hidden="true">✓</span><div><strong>Your information has been received.</strong><p>Choose one of the secure payment methods below to finish your order.</p></div></div>
-<div class="paypal-hosted-shell" data-paypal-hosted-shell>
-<div class="paypal-hosted-status" data-paypal-hosted-status aria-live="polite">Loading secure PayPal payment options…</div>
-<div class="paypal-hosted-container" id="paypal-hosted-button-container" data-paypal-hosted-container></div>
-<a class="btn paypal-hosted-fallback" data-paypal-hosted-fallback href="#" target="_blank" rel="noopener noreferrer" hidden>Open secure PayPal checkout <span class="btn__arrow">→</span></a>
+<div class="checkout-payment-success"><span aria-hidden="true">✓</span><div><strong>Your information has been received.</strong><p>Complete the secure PayPal checkout below. PayPal processes the payment; no card details are collected by this website.</p></div></div>
+<div class="checkout-payment-actions">
+<button class="btn checkout-back" data-checkout-back type="button">← Back to details</button>
+<p class="checkout-payment-actions__note">Choose PayPal or an available card/payment option in the secure PayPal checkout.</p>
 </div>
-<div class="checkout-payment-actions checkout-payment-actions--hosted">
-<button class="btn checkout-back checkout-back--hosted" data-checkout-back type="button">← Back to details</button>
+<div class="paypal-hosted-checkout" aria-label="PayPal secure checkout">
+<div class="paypal-hosted-checkout__head"><strong>Secure PayPal checkout</strong><span>One-time payment · USD</span></div>
+<div class="paypal-hosted-checkout__embed" data-paypal-embed>
+  <div class="paypal-hosted-checkout__summary-cover" aria-hidden="true">
+    <span data-paypal-summary-name>GoHighLevel Setup</span>
+    <strong data-paypal-summary-price>$799 USD</strong>
+  </div>
+  <div class="paypal-hosted-checkout__container" data-paypal-hosted-container id="paypal-hosted-checkout">
+    <p class="paypal-hosted-checkout__loading" data-paypal-loading>Preparing PayPal checkout...</p>
+  </div>
 </div>
-<p class="checkout-secure-note checkout-secure-note--payment">Secure payment options are rendered and processed by PayPal. No card details are collected by this website.</p>
+<p class="paypal-hosted-checkout__error" data-paypal-error role="alert"></p>
+<a class="btn btn--accent paypal-hosted-checkout__fallback" data-paypal-fallback href="#" rel="noopener" target="_blank">Open PayPal Checkout <span class="btn__arrow">→</span></a>
+</div>
+<p class="checkout-secure-note checkout-secure-note--payment">Secure payment powered by PayPal. Available payment methods are controlled by PayPal and may vary by buyer.</p>
 </section>
 </div>
 </div>
@@ -483,7 +576,6 @@
 (() => {
 'use strict';
 const body = document.body;
-console.info('JRMRC PayPal checkout build: 2026-09-02-hosted-buttons-1');
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const page = body.dataset.page;
 document.querySelectorAll('[data-nav]').forEach((link) => {
@@ -699,14 +791,15 @@ const paymentPackage = checkoutModal.querySelector('[data-payment-package]');
 const paymentPrice = checkoutModal.querySelector('[data-payment-price]');
 const paymentClient = checkoutModal.querySelector('[data-payment-client]');
 const paymentEmail = checkoutModal.querySelector('[data-payment-email]');
+const paypalContainer = checkoutModal.querySelector('[data-paypal-hosted-container]');
+const paypalEmbed = checkoutModal.querySelector('[data-paypal-embed]');
+const paypalSummaryName = checkoutModal.querySelector('[data-paypal-summary-name]');
+const paypalSummaryPrice = checkoutModal.querySelector('[data-paypal-summary-price]');
+const paypalError = checkoutModal.querySelector('[data-paypal-error]');
+const paypalFallback = checkoutModal.querySelector('[data-paypal-fallback]');
+let renderedPaypalHostedId = '';
 const backButton = checkoutModal.querySelector('[data-checkout-back]');
-const paypalHostedContainer = checkoutModal.querySelector('[data-paypal-hosted-container]');
-const paypalHostedStatus = checkoutModal.querySelector('[data-paypal-hosted-status]');
-const paypalHostedFallback = checkoutModal.querySelector('[data-paypal-hosted-fallback]');
-const paymentTitle = checkoutModal.querySelector('#checkout-payment-title');
-const focusableSelector = 'button:not([disabled]), input:not([disabled]), textarea:not([disabled]), select:not([disabled]), a[href], iframe, [tabindex]:not([tabindex="-1"])';
-let renderedHostedButtonId = '';
-let hostedRenderSequence = 0;
+const focusableSelector = 'button:not([disabled]), input:not([disabled]), textarea:not([disabled]), select:not([disabled]), a[href], [tabindex]:not([tabindex="-1"])';
 
 const clearCheckoutStatus = () => {
 status.className = 'checkout-status';
@@ -735,65 +828,6 @@ return false;
 }
 return true;
 };
-const setHostedStatus = (message, type = 'loading') => {
-if (!paypalHostedStatus) return;
-paypalHostedStatus.textContent = message;
-paypalHostedStatus.hidden = false;
-paypalHostedStatus.classList.toggle('is-error', type === 'error');
-};
-const showHostedFallback = (message) => {
-setHostedStatus(message, 'error');
-if (paypalHostedFallback) {
-paypalHostedFallback.href = checkoutForm.dataset.paypalLink || '#';
-paypalHostedFallback.hidden = !checkoutForm.dataset.paypalLink;
-}
-};
-const resetHostedPaymentUi = (nextHostedButtonId = '') => {
-hostedRenderSequence += 1;
-if (nextHostedButtonId !== renderedHostedButtonId && paypalHostedContainer) {
-paypalHostedContainer.replaceChildren();
-renderedHostedButtonId = '';
-}
-if (paypalHostedFallback) {
-paypalHostedFallback.href = checkoutForm.dataset.paypalLink || '#';
-paypalHostedFallback.hidden = true;
-}
-if (paypalHostedStatus) {
-paypalHostedStatus.classList.remove('is-error');
-paypalHostedStatus.hidden = false;
-paypalHostedStatus.textContent = 'Loading secure PayPal payment options…';
-}
-};
-const renderHostedPayPalButton = async (hostedButtonId) => {
-const renderSequence = ++hostedRenderSequence;
-if (!hostedButtonId) {
-showHostedFallback('The PayPal button for this package is not configured.');
-return;
-}
-if (renderedHostedButtonId === hostedButtonId && paypalHostedContainer?.childElementCount) {
-if (paypalHostedStatus) paypalHostedStatus.hidden = true;
-if (paypalHostedFallback) paypalHostedFallback.hidden = true;
-return;
-}
-if (!window.paypal || typeof window.paypal.HostedButtons !== 'function') {
-showHostedFallback('PayPal payment options could not load. Use the secure checkout link below.');
-return;
-}
-if (!paypalHostedContainer) return;
-setHostedStatus('Loading secure PayPal payment options…');
-paypalHostedContainer.replaceChildren();
-if (paypalHostedFallback) paypalHostedFallback.hidden = true;
-try {
-await window.paypal.HostedButtons({hostedButtonId}).render('#paypal-hosted-button-container');
-if (renderSequence !== hostedRenderSequence) return;
-renderedHostedButtonId = hostedButtonId;
-if (paypalHostedStatus) paypalHostedStatus.hidden = true;
-} catch (error) {
-if (renderSequence !== hostedRenderSequence) return;
-console.error('PayPal Hosted Buttons render error:', error);
-showHostedFallback('PayPal payment options could not load. Use the secure checkout link below.');
-}
-};
 const showCheckoutStep = (step) => {
 const showPayment = step === 'payment';
 detailsStep.hidden = showPayment;
@@ -807,7 +841,7 @@ paymentIndicator?.classList.toggle('is-active', showPayment);
 paymentIndicator?.classList.remove('is-complete');
 if (dialog) dialog.scrollTop = 0;
 window.setTimeout(() => {
-if (showPayment) paymentTitle?.focus();
+if (showPayment) backButton?.focus();
 else checkoutForm.querySelector('#checkout-name')?.focus();
 }, 30);
 };
@@ -822,20 +856,26 @@ checkoutLastFocused = trigger;
 const packageName = trigger.dataset.checkoutPackage || 'Selected Service';
 const price = trigger.dataset.checkoutPrice || '';
 const tier = trigger.dataset.checkoutTier || 'Selected Package';
+const paypalHostedId = trigger.dataset.paypalHostedId || '';
 const paypalLink = trigger.dataset.paypalLink || '';
-const hostedButtonId = trigger.dataset.paypalHostedButtonId || '';
 summaryName.textContent = packageName;
 summaryPrice.textContent = price;
 summaryTier.textContent = tier;
 packageInput.value = packageName;
 priceInput.value = price;
 tierInput.value = tier;
+checkoutForm.dataset.paypalHostedId = paypalHostedId;
 checkoutForm.dataset.paypalLink = paypalLink;
-checkoutForm.dataset.paypalHostedButtonId = hostedButtonId;
 checkoutForm.dataset.notificationSent = 'false';
 if (paymentPackage) paymentPackage.textContent = packageName;
 if (paymentPrice) paymentPrice.textContent = price;
-resetHostedPaymentUi(hostedButtonId);
+if (paypalSummaryName) paypalSummaryName.textContent = packageName;
+if (paypalSummaryPrice) paypalSummaryPrice.textContent = `${price} USD`;
+if (paypalEmbed) paypalEmbed.classList.remove('is-ready');
+renderedPaypalHostedId = '';
+if (paypalContainer) paypalContainer.innerHTML = '<p class="paypal-hosted-checkout__loading" data-paypal-loading>Preparing PayPal checkout...</p>';
+if (paypalError) { paypalError.classList.remove('is-visible'); paypalError.textContent = ''; }
+if (paypalFallback) { paypalFallback.classList.remove('is-visible'); paypalFallback.href = paypalLink || '#'; }
 submitButton.disabled = false;
 submitButton.innerHTML = 'Continue to Payment <span class="btn__arrow">→</span>';
 clearCheckoutStatus();
@@ -855,6 +895,43 @@ if (field.hasAttribute('aria-invalid')) validateCheckoutField(field);
 });
 });
 
+const renderPaypalHostedButton = async (hostedButtonId, fallbackLink) => {
+if (!paypalContainer) return false;
+if (!hostedButtonId) return false;
+if (renderedPaypalHostedId === hostedButtonId && paypalContainer.querySelector('iframe')) return true;
+paypalContainer.innerHTML = '<p class="paypal-hosted-checkout__loading">Loading secure PayPal options...</p>';
+if (paypalEmbed) paypalEmbed.classList.remove('is-ready');
+if (paypalError) { paypalError.classList.remove('is-visible'); paypalError.textContent = ''; }
+if (paypalFallback) { paypalFallback.classList.remove('is-visible'); paypalFallback.href = fallbackLink || '#'; }
+try {
+if (!window.paypal || typeof window.paypal.HostedButtons !== 'function') {
+throw new Error('PayPal SDK did not load.');
+}
+await window.paypal.HostedButtons({ hostedButtonId }).render('#paypal-hosted-checkout');
+const paypalIframe = paypalContainer.querySelector('iframe');
+if (paypalIframe) {
+paypalIframe.style.colorScheme = 'light dark';
+paypalIframe.style.backgroundColor = 'transparent';
+}
+window.setTimeout(() => paypalEmbed?.classList.add('is-ready'), 120);
+renderedPaypalHostedId = hostedButtonId;
+return true;
+} catch (error) {
+console.error('PayPal Hosted Buttons could not render.', error);
+if (paypalEmbed) paypalEmbed.classList.remove('is-ready');
+paypalContainer.innerHTML = '';
+if (paypalError) {
+paypalError.textContent = 'PayPal checkout could not load. You can retry by reopening this package or use the fallback PayPal checkout below.';
+paypalError.classList.add('is-visible');
+}
+if (paypalFallback && fallbackLink) {
+paypalFallback.href = fallbackLink;
+paypalFallback.classList.add('is-visible');
+}
+return false;
+}
+};
+
 checkoutForm.addEventListener('submit', async (event) => {
 event.preventDefault();
 clearCheckoutStatus();
@@ -870,10 +947,11 @@ checkoutForm.querySelector('[aria-invalid="true"]')?.focus();
 return;
 }
 
-const hostedButtonId = checkoutForm.dataset.paypalHostedButtonId?.trim();
-if (!hostedButtonId) {
+const paypalHostedId = checkoutForm.dataset.paypalHostedId?.trim();
+const paypalLink = checkoutForm.dataset.paypalLink?.trim();
+if (!paypalHostedId) {
 status.className = 'checkout-status is-visible is-error';
-status.textContent = 'The PayPal button for this package is unavailable. Please choose the package again.';
+status.textContent = 'The PayPal hosted button for this package is unavailable. Please choose the package again.';
 return;
 }
 
@@ -919,7 +997,6 @@ if (paymentPackage) paymentPackage.textContent = packageInput.value;
 if (paymentPrice) paymentPrice.textContent = priceInput.value;
 if (paymentClient) paymentClient.textContent = data.name || 'Client';
 if (paymentEmail) paymentEmail.textContent = data.email || '';
-if (paypalHostedFallback) paypalHostedFallback.href = checkoutForm.dataset.paypalLink || '#';
 
 sessionStorage.setItem('jrmrcCheckout', JSON.stringify({
 package: packageInput.value,
@@ -927,11 +1004,11 @@ price: priceInput.value,
 tier: tierInput.value,
 name: data.name || '',
 email: data.email || '',
-hostedButtonId,
+paypalHostedId,
 timestamp: Date.now()
 }));
 showCheckoutStep('payment');
-window.requestAnimationFrame(() => renderHostedPayPalButton(hostedButtonId));
+await renderPaypalHostedButton(paypalHostedId, paypalLink);
 } catch (error) {
 console.error(error);
 status.className = 'checkout-status is-visible is-error';
