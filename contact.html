@@ -462,7 +462,7 @@
     }
     .footer-grid {
       display: grid;
-      grid-template-columns: minmax(260px,1.2fr) repeat(2,minmax(140px,.55fr));
+      grid-template-columns: minmax(260px,1.2fr) repeat(3,minmax(140px,.55fr));
       gap: 38px;
       padding-bottom: 28px;
       border-bottom: 1px solid rgba(255,255,255,.08);
@@ -542,6 +542,8 @@
       .availability-card { max-width: 560px; }
       .cta-panel { grid-template-columns: 1fr; }
       .cta-panel .button-row { justify-content: flex-start; }
+      .footer-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+      .footer-brand { grid-column: 1 / -1; }
     }
 
     @media (max-width: 640px) {
@@ -563,6 +565,7 @@
       .cta-panel .button-row { display: grid; grid-template-columns: 1fr; }
       .cta-panel .btn { width: 100%; }
       .footer-grid { grid-template-columns: 1fr; gap: 26px; }
+      .footer-brand { grid-column: auto; }
       .footer-bottom { flex-direction: column; align-items: flex-start; }
     }
 
@@ -908,8 +911,8 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a class="brand" href="/home" aria-label="Jhim Rick Marco home">
-            <img class="brand-logo" src="https://drive.google.com/thumbnail?id=18Glq-cj_eXBsTR_cDMxpQAPw9S0MdmCz&sz=w1200" alt="Jhim Rick Marco logo" loading="lazy" decoding="async">
+          <a class="brand" href="/home" aria-label="JRM home">
+            <img class="brand-logo" src="https://drive.google.com/thumbnail?id=18Glq-cj_eXBsTR_cDMxpQAPw9S0MdmCz&sz=w1200" alt="JRM logo" loading="lazy" decoding="async">
           </a>
           <p>GoHighLevel - Automation - Web Development</p>
         </div>
@@ -926,6 +929,14 @@
         </div>
 
         <div>
+          <div class="footer-title">Legal</div>
+          <div class="footer-links">
+            <a href="/terms-and-conditions">Terms &amp; Conditions</a>
+            <a href="/privacy-policy">Privacy Policy</a>
+          </div>
+        </div>
+
+        <div>
           <div class="footer-title">Connect</div>
           <div class="footer-contact">
             <a href="mailto:Jhimrickofficial@gmail.com">Jhimrickofficial@gmail.com</a>
@@ -938,8 +949,8 @@
       </div>
 
       <div class="footer-bottom">
-        <span>&copy; <span data-year></span> Jhim Rick Marco. All rights reserved.</span>
-        <span>GoHighLevel - Automation - Web Development</span>
+        <span>&copy; <span data-year></span> JRM Digital Solution. All rights reserved.</span>
+        <span>JRM - GoHighLevel - Automation - Web Development</span>
       </div>
     </div>
   </footer>
