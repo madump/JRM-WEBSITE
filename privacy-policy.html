@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#0c151d"/>
+<link rel="icon" href="https://drive.google.com/thumbnail?id=18rOsWTlBwnHzkGXgJlotH5p8oHqeE9Rn&amp;sz=w1200"/>
+<link rel="apple-touch-icon" href="https://drive.google.com/thumbnail?id=18rOsWTlBwnHzkGXgJlotH5p8oHqeE9Rn&amp;sz=w1200"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<title>Privacy Policy | JRM Digital Solution</title>
+<meta name="description" content="Privacy Policy for JRM Digital Solution, explaining how JRM collects, uses, shares, protects, and retains personal data in connection with jrmrc.space and its digital services."/>
+<meta property="og:title" content="Privacy Policy | JRM Digital Solution"/>
+<meta property="og:description" content="How JRM Digital Solution handles personal data across website inquiries, project services, CRM, automation, AI, voice, email, SMS, and third-party platforms."/>
+<meta property="og:type" content="website"/>
+<link rel="canonical" href="https://www.jrmrc.space/privacy-policy"/>
+<style>
+:root{
+  --bg:#05090d;
+  --shell:#0c151d;
+  --shell-2:#0e1a23;
+  --panel:#14252f;
+  --panel-2:#101f28;
+  --panel-3:#172a35;
+  --text:#f4f7f8;
+  --muted:#8d9ca7;
+  --muted-2:#6e808d;
+  --line:rgba(213,229,239,.11);
+  --line-strong:rgba(213,229,239,.18);
+  --lime:#9dff3e;
+  --lime-soft:#b6ff6a;
+  --lime-ink:#102006;
+  --blue:#6f8799;
+  --danger:#e6677b;
+  --header-height:72px;
+  --container:1080px;
+  --radius:18px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--header-height) + 34px);background:var(--bg)}
+body{margin:0;min-width:320px;background:var(--bg);color:var(--text);font-family:"Inter",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:15px;line-height:1.7;letter-spacing:-.01em;overflow-x:hidden;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(circle at 13% 18%,rgba(157,255,62,.035),transparent 24%),radial-gradient(circle at 89% 68%,rgba(111,135,153,.055),transparent 28%)}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit}
+img,svg{display:block;max-width:100%}
+::selection{background:var(--lime);color:var(--lime-ink)}
+h1,h2,h3{font-family:"Manrope","Inter",sans-serif;letter-spacing:-.045em;line-height:1.06}
+p{color:var(--muted)}
+.container{width:min(calc(100% - 64px),var(--container));margin-inline:auto}
+.skip-link{position:fixed;left:16px;top:10px;z-index:9999;transform:translateY(-160%);padding:10px 14px;border-radius:9px;background:var(--lime);color:var(--lime-ink);font-weight:800}
+.skip-link:focus{transform:translateY(0)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:44px;padding:0 18px;border:1px solid transparent;border-radius:999px;font-weight:800;font-size:.76rem;cursor:pointer;transition:.22s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn:focus-visible,.nav-link:focus-visible,.menu-toggle:focus-visible,.scroll-top:focus-visible,.toc-link:focus-visible,.legal-inline-link:focus-visible{outline:3px solid rgba(157,255,62,.42);outline-offset:3px}
+.btn--accent{background:var(--lime);color:var(--lime-ink);box-shadow:0 0 28px rgba(157,255,62,.12)}
+.btn--accent:hover{background:var(--lime-soft);box-shadow:0 0 34px rgba(157,255,62,.20)}
+.progress-track{position:fixed;z-index:1200;left:0;right:0;top:0;height:2px;background:transparent;pointer-events:none}
+.progress-bar{display:block;width:0;height:100%;background:var(--lime);box-shadow:0 0 16px rgba(157,255,62,.55)}
+.site-header{position:sticky;top:0;z-index:900;height:var(--header-height);background:rgba(11,20,28,.97);color:#fff;border-bottom:1px solid rgba(255,255,255,.08);box-shadow:0 16px 48px rgba(0,0,0,.18);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px)}
+.nav-wrap{height:100%;display:flex;align-items:center;gap:26px}
+.brand{display:inline-flex;align-items:center;gap:9px;flex-shrink:0}
+.brand-logo{display:block;width:clamp(180px,15vw,230px);height:auto;max-height:50px;object-fit:contain;object-position:left center}
+.nav-links{margin-left:auto;display:flex;align-items:center;gap:2px}
+.nav-link{position:relative;padding:9px 10px;color:#7f909c;font-size:.72rem;font-weight:700;border-radius:10px;transition:.2s ease}
+.nav-link:hover{color:#fff}
+.nav-cta{margin-left:12px;min-height:38px;padding:0 15px;font-size:.70rem}
+.menu-toggle{display:none;width:46px;height:46px;margin-left:auto;border:1px solid rgba(255,255,255,.09);border-radius:50%;background:#172934;cursor:pointer}
+.menu-toggle span{display:block;width:20px;height:2px;margin:5px auto;border-radius:999px;background:#fff;transition:.25s ease}
+.menu-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.menu-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+.menu-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.legal-hero{position:relative;overflow:hidden;padding:112px 0 76px;background:var(--shell);border-bottom:1px solid var(--line)}
+.legal-hero::before{content:"";position:absolute;width:600px;height:600px;right:-190px;top:-300px;border-radius:50%;background:radial-gradient(circle,rgba(157,255,62,.12),rgba(157,255,62,.03) 42%,transparent 70%);pointer-events:none}
+.legal-hero::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.28;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:54px 54px;mask-image:linear-gradient(to bottom,#000,transparent 92%);-webkit-mask-image:linear-gradient(to bottom,#000,transparent 92%)}
+.legal-hero__inner{position:relative;z-index:2;max-width:870px}
+.eyebrow{display:inline-flex;align-items:center;margin-bottom:18px;color:var(--lime);font-size:.66rem;font-weight:900;letter-spacing:.13em;text-transform:uppercase}
+.legal-hero h1{max-width:760px;margin:0 0 22px;color:#fff;font-size:clamp(3.3rem,7vw,6.4rem);line-height:.92;text-transform:uppercase;letter-spacing:-.06em}
+.legal-hero h1 span{color:var(--lime)}
+.legal-hero p{max-width:720px;margin:0;color:#91a2ad;font-size:clamp(.95rem,1.8vw,1.08rem);line-height:1.7}
+.legal-meta{display:flex;flex-wrap:wrap;gap:9px;margin-top:30px}
+.legal-meta span{display:inline-flex;align-items:center;min-height:34px;padding:0 12px;border:1px solid rgba(255,255,255,.08);border-radius:999px;background:rgba(255,255,255,.035);color:#99aab5;font-size:.67rem;font-weight:800}
+.legal-meta span:first-child{border-color:rgba(157,255,62,.2);background:rgba(157,255,62,.07);color:#c9ffa0}
+.legal-main{padding:74px 0 96px;background:linear-gradient(180deg,var(--shell-2),var(--bg))}
+.mobile-toc{display:none;margin-bottom:24px;border:1px solid var(--line);border-radius:14px;background:var(--panel-2);overflow:hidden}
+.mobile-toc summary{padding:16px 18px;cursor:pointer;list-style:none;color:#fff;font-weight:800;font-size:.78rem}
+.mobile-toc summary::-webkit-details-marker{display:none}
+.mobile-toc summary::after{content:"+";float:right;color:var(--lime);font-size:1rem}
+.mobile-toc[open] summary::after{content:"-"}
+.mobile-toc__links{display:grid;padding:0 18px 16px;gap:7px}
+.mobile-toc__links a{color:#8fa1ac;font-size:.72rem}
+.mobile-toc__links a:hover{color:var(--lime)}
+.legal-layout{display:grid;grid-template-columns:250px minmax(0,1fr);gap:clamp(42px,7vw,86px);align-items:start}
+.legal-toc{position:sticky;top:calc(var(--header-height) + 28px);padding:22px;border:1px solid var(--line);border-radius:16px;background:rgba(16,31,40,.86);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+.legal-toc__label{display:block;margin-bottom:15px;color:#647984;font-size:.58rem;font-weight:900;letter-spacing:.13em;text-transform:uppercase}
+.legal-toc nav{display:grid;gap:4px}
+.toc-link{position:relative;display:block;padding:8px 10px 8px 14px;border-radius:9px;color:#7e919c;font-size:.69rem;font-weight:700;line-height:1.35;transition:.2s ease}
+.toc-link::before{content:"";position:absolute;left:0;top:50%;width:3px;height:0;border-radius:999px;background:var(--lime);transform:translateY(-50%);transition:.2s ease}
+.toc-link:hover{color:#e8eef1;background:rgba(255,255,255,.035)}
+.toc-link.is-active{color:#fff;background:rgba(157,255,62,.055)}
+.toc-link.is-active::before{height:18px}
+.legal-toc__contact{margin-top:18px;padding-top:18px;border-top:1px solid var(--line)}
+.legal-toc__contact p{margin:0 0 8px;color:#667c88;font-size:.63rem;line-height:1.5}
+.legal-toc__contact a{color:var(--lime);font-size:.66rem;font-weight:800;word-break:break-word}
+.legal-content{min-width:0}
+.legal-intro{margin-bottom:22px;padding:24px 26px;border:1px solid rgba(157,255,62,.14);border-radius:16px;background:linear-gradient(135deg,rgba(157,255,62,.07),rgba(20,37,47,.82) 45%,rgba(16,31,40,.92))}
+.legal-intro strong{display:block;margin-bottom:8px;color:#fff;font:800 1rem/1.3 "Manrope",sans-serif}
+.legal-intro p{margin:0;color:#9aabb4;font-size:.78rem}
+.legal-section{scroll-margin-top:calc(var(--header-height) + 32px);padding:36px 0;border-top:1px solid var(--line)}
+.legal-section:first-of-type{border-top:0;padding-top:20px}
+.legal-section__head{display:grid;grid-template-columns:54px minmax(0,1fr);gap:16px;align-items:start;margin-bottom:18px}
+.legal-index{display:grid;place-items:center;width:44px;height:30px;margin-top:1px;border:1px solid rgba(157,255,62,.18);border-radius:999px;background:rgba(157,255,62,.06);color:var(--lime);font-size:.58rem;font-weight:900;letter-spacing:.08em}
+.legal-section h2{margin:0;color:#f5f8f9;font-size:clamp(1.35rem,2.4vw,2rem);line-height:1.18}
+.legal-section p{margin:0 0 14px;color:#93a2ab;font-size:.86rem;line-height:1.78}
+.legal-section p:last-child{margin-bottom:0}
+.legal-section ul{margin:12px 0 16px;padding-left:20px;color:#93a2ab}
+.legal-section li{margin:8px 0;padding-left:5px;font-size:.84rem;line-height:1.72}
+.legal-section li::marker{color:var(--lime)}
+.legal-section strong{color:#dce5e9;font-weight:800}
+.legal-inline-link{color:var(--lime);font-weight:800;text-decoration:underline;text-decoration-color:rgba(157,255,62,.28);text-underline-offset:3px}
+.legal-callout{margin:18px 0;padding:18px 20px;border-left:2px solid var(--lime);border-radius:0 12px 12px 0;background:rgba(157,255,62,.045)}
+.legal-callout p{margin:0;color:#a4b1b9;font-size:.79rem}
+.legal-definition{display:grid;gap:8px;margin:16px 0}
+.legal-definition div{display:grid;grid-template-columns:minmax(130px,.32fr) minmax(0,1fr);gap:18px;padding:13px 0;border-bottom:1px solid rgba(213,229,239,.075)}
+.legal-definition div:last-child{border-bottom:0}
+.legal-definition dt{color:#dbe4e8;font-size:.76rem;font-weight:800}
+.legal-definition dd{margin:0;color:#8799a3;font-size:.76rem;line-height:1.65}
+.legal-final{margin-top:28px;padding:28px;border:1px solid var(--line-strong);border-radius:16px;background:var(--panel)}
+.legal-final h2{margin:0 0 10px;color:#fff;font-size:1.35rem}
+.legal-final p{margin:0 0 14px;font-size:.82rem}
+.legal-final .contact-row{display:flex;flex-wrap:wrap;gap:9px}
+.legal-final .contact-row a{display:inline-flex;align-items:center;min-height:38px;padding:0 13px;border:1px solid rgba(255,255,255,.09);border-radius:999px;background:#0e1c24;color:#dbe5e9;font-size:.68rem;font-weight:800}
+.legal-final .contact-row a:hover{border-color:rgba(157,255,62,.22);color:var(--lime)}
+.site-footer{background:#05090d;color:#fff;padding:46px 0 24px;border-top:1px solid rgba(255,255,255,.06)}
+.site-footer .brand-logo{width:200px;max-width:200px;height:auto;max-height:none}
+.footer-grid{display:grid;grid-template-columns:minmax(260px,1.2fr) repeat(2,minmax(140px,.55fr));gap:38px;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.10)}
+.footer-brand .brand{margin-bottom:18px}
+.footer-brand p{max-width:430px;margin:0;color:rgba(255,255,255,.64);font-size:.82rem}
+.footer-title{margin-bottom:16px;color:rgba(255,255,255,.55);font-size:.69rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
+.footer-links,.footer-contact{display:grid;gap:9px}
+.footer-links a,.footer-contact a{width:fit-content;color:rgba(255,255,255,.72);font-size:.80rem;transition:.2s ease}
+.footer-links a:hover,.footer-contact a:hover{color:var(--lime);transform:translateX(2px)}
+.footer-socials{display:flex;align-items:center;gap:10px;margin-top:18px}
+.footer-socials a{width:40px;height:40px;display:inline-flex;align-items:center;justify-content:center;border-radius:50%;border:1px solid rgba(255,255,255,.14);background:#13242f;color:#f4f7f8;transition:.2s ease}
+.footer-socials a:hover,.footer-socials a:focus-visible{transform:translateY(-3px);background:var(--lime);border-color:var(--lime);color:#071008;box-shadow:0 10px 26px rgba(157,255,62,.16)}
+.footer-socials svg{width:19px;height:19px;fill:currentColor}
+.footer-bottom{display:flex;justify-content:space-between;gap:20px;align-items:center;padding-top:20px;color:#61738c;font-size:.72rem}
+.footer-bottom__legal{display:flex;flex-wrap:wrap;gap:14px}
+.footer-bottom__legal a{color:#7d909d}
+.footer-bottom__legal a:hover{color:var(--lime)}
+.scroll-top{position:fixed;right:22px;bottom:22px;z-index:700;width:46px;height:46px;border:0;border-radius:50%;background:var(--lime);color:#162408;box-shadow:0 18px 38px rgba(0,0,0,.26);cursor:pointer;opacity:0;pointer-events:none;transform:translateY(10px);transition:.2s ease}
+.scroll-top.is-visible{opacity:1;pointer-events:auto;transform:translateY(0)}
+@media (max-width:900px){
+  :root{--header-height:66px}
+  .container{width:min(calc(100% - 40px),760px)}
+  .nav-links{position:fixed;inset:var(--header-height) 0 auto 0;margin:0;padding:18px 16px 22px;display:grid;gap:6px;background:#0c171f;border-bottom:1px solid rgba(255,255,255,.08);transform:translateY(-130%);opacity:0;pointer-events:none;transition:.28s ease}
+  .nav-links.is-open{transform:translateY(0);opacity:1;pointer-events:auto}
+  .nav-link{padding:13px 14px;font-size:.82rem;text-align:center}
+  .nav-cta{margin:7px 0 0;width:100%}
+  .menu-toggle{display:block}
+  .legal-hero{padding:82px 0 58px}
+  .legal-layout{grid-template-columns:1fr;gap:0}
+  .legal-toc{display:none}
+  .mobile-toc{display:block}
+  .legal-main{padding-top:42px}
+}
+@media (max-width:680px){
+  .container{width:min(calc(100% - 28px),620px)}
+  .brand-logo{width:165px;max-height:44px}
+  .legal-hero{padding:70px 0 48px;text-align:center}
+  .legal-hero__inner{margin-inline:auto}
+  .legal-hero h1{font-size:clamp(2.75rem,14vw,4.4rem)}
+  .legal-meta{justify-content:center}
+  .legal-main{padding:34px 0 70px}
+  .legal-intro{text-align:center;padding:22px 20px}
+  .legal-section{padding:30px 0;text-align:left}
+  .legal-section__head{grid-template-columns:1fr;gap:10px;text-align:center;justify-items:center}
+  .legal-index{margin:0 auto}
+  .legal-definition div{grid-template-columns:1fr;gap:5px;text-align:center}
+  .legal-callout{text-align:center;border-left:0;border-top:2px solid var(--lime);border-radius:0 0 12px 12px}
+  .legal-final{text-align:center;padding:24px 20px}
+  .legal-final .contact-row{justify-content:center}
+  .footer-grid{grid-template-columns:1fr;gap:26px;justify-items:center;text-align:center}
+  .footer-brand p{margin-inline:auto}
+  .footer-links,.footer-contact{justify-items:center}
+  .footer-links a,.footer-contact a{width:auto}
+  .footer-socials{justify-content:center}
+  .footer-bottom{flex-direction:column;align-items:center;text-align:center;gap:9px}
+  .footer-bottom__legal{justify-content:center}
+}
+@media (max-width:430px){.container{width:calc(100% - 24px)}.legal-intro{padding:20px 16px}.legal-final{padding:22px 16px}}
+@media print{
+  .site-header,.progress-track,.legal-toc,.mobile-toc,.scroll-top,.site-footer{display:none!important}
+  body,.legal-main,.legal-hero{background:#fff!important;color:#111!important}
+  .container{width:100%;max-width:none}
+  .legal-hero{padding:0 0 24px;border-bottom:2px solid #111}
+  .legal-hero::before,.legal-hero::after{display:none}
+  .legal-hero h1,.legal-section h2,.legal-intro strong,.legal-final h2,.legal-section strong{color:#111!important}
+  .legal-hero p,.legal-section p,.legal-section li,.legal-intro p,.legal-final p{color:#333!important}
+  .legal-meta span,.legal-index{border:1px solid #aaa;background:#fff;color:#111}
+  .legal-main{padding:28px 0}
+  .legal-intro,.legal-final{border:1px solid #bbb;background:#fff}
+  .legal-section{break-inside:avoid}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body data-page="privacy">
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="progress-track" aria-hidden="true"><span class="progress-bar"></span></div>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a aria-label="JRM home" class="brand" href="/home"><img class="brand-logo" src="https://drive.google.com/thumbnail?id=18Glq-cj_eXBsTR_cDMxpQAPw9S0MdmCz&amp;sz=w1200" alt="JRM logo" loading="eager" decoding="async"/></a>
+    <nav aria-label="Primary navigation" class="nav-links" id="primary-navigation">
+      <a class="nav-link" data-nav="home" href="/home">Home</a>
+      <a class="nav-link" data-nav="about" href="/about">About</a>
+      <a class="nav-link" data-nav="services" href="/services">Services</a>
+      <a class="nav-link" data-nav="proof" href="/proof-of-work">Proof of Work</a>
+      <a class="nav-link" data-nav="contact" href="/contact">Contact Us</a>
+      <a class="btn btn--accent nav-cta" href="/services">Let's Work Together</a>
+    </nav>
+    <button aria-controls="primary-navigation" aria-expanded="false" aria-label="Open navigation menu" class="menu-toggle" type="button"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<main id="main">
+  <section class="legal-hero" aria-labelledby="privacy-title">
+    <div class="container">
+      <div class="legal-hero__inner">
+        <div class="eyebrow">Privacy &amp; Data</div>
+        <h1 id="privacy-title">Privacy <span>Policy.</span></h1>
+        <p>This Privacy Policy explains how <strong>JRM Digital Solution</strong>, operating the JRM brand and jrmrc.space, collects, uses, stores, shares, and protects personal data when you visit the website, contact us, book a call, purchase services, or work with us on web development, GoHighLevel, CRM, automation, AI, or related projects.</p>
+        <div class="legal-meta" aria-label="Privacy policy information">
+          <span>Last updated: September 11, 2026</span>
+          <span>JRM Digital Solution</span>
+          <span>Website visitors</span>
+          <span>Clients &amp; prospects</span>
+          <span>AI &amp; automation</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="legal-main">
+    <div class="container">
+      <details class="mobile-toc">
+        <summary>Jump to a section</summary>
+        <div class="mobile-toc__links">
+          <a href="#about">1. About This Policy</a>
+          <a href="#scope">2. Scope</a>
+          <a href="#data-we-collect">3. Personal Data We Collect</a>
+          <a href="#collection">4. How We Collect Data</a>
+          <a href="#use">5. How We Use Personal Data</a>
+          <a href="#legal-bases">6. Lawful Bases</a>
+          <a href="#cookies">7. Cookies &amp; Similar Technologies</a>
+          <a href="#client-data">8. Client &amp; Project Data</a>
+          <a href="#ai">9. AI, Voice AI &amp; Automation Data</a>
+          <a href="#communications">10. Email, SMS &amp; Communications</a>
+          <a href="#sharing">11. Sharing &amp; Service Providers</a>
+          <a href="#transfers">12. International Data Transfers</a>
+          <a href="#retention">13. Data Retention</a>
+          <a href="#security">14. Data Security</a>
+          <a href="#rights">15. Your Privacy Rights</a>
+          <a href="#children">16. Children's Privacy</a>
+          <a href="#links">17. Third-Party Links</a>
+          <a href="#changes">18. Changes to This Policy</a>
+          <a href="#contact">19. Contact &amp; Privacy Requests</a>
+        </div>
+      </details>
+
+      <div class="legal-layout">
+        <aside class="legal-toc" aria-label="Privacy Policy table of contents">
+          <span class="legal-toc__label">On this page</span>
+          <nav>
+            <a class="toc-link is-active" href="#about">01 &nbsp; About</a>
+            <a class="toc-link" href="#scope">02 &nbsp; Scope</a>
+            <a class="toc-link" href="#data-we-collect">03 &nbsp; Data We Collect</a>
+            <a class="toc-link" href="#collection">04 &nbsp; Collection</a>
+            <a class="toc-link" href="#use">05 &nbsp; How We Use Data</a>
+            <a class="toc-link" href="#legal-bases">06 &nbsp; Lawful Bases</a>
+            <a class="toc-link" href="#cookies">07 &nbsp; Cookies</a>
+            <a class="toc-link" href="#client-data">08 &nbsp; Client Data</a>
+            <a class="toc-link" href="#ai">09 &nbsp; AI &amp; Voice</a>
+            <a class="toc-link" href="#communications">10 &nbsp; Communications</a>
+            <a class="toc-link" href="#sharing">11 &nbsp; Sharing</a>
+            <a class="toc-link" href="#transfers">12 &nbsp; Transfers</a>
+            <a class="toc-link" href="#retention">13 &nbsp; Retention</a>
+            <a class="toc-link" href="#security">14 &nbsp; Security</a>
+            <a class="toc-link" href="#rights">15 &nbsp; Your Rights</a>
+            <a class="toc-link" href="#children">16 &nbsp; Children</a>
+            <a class="toc-link" href="#links">17 &nbsp; Third Parties</a>
+            <a class="toc-link" href="#changes">18 &nbsp; Changes</a>
+            <a class="toc-link" href="#contact">19 &nbsp; Contact</a>
+          </nav>
+          <div class="legal-toc__contact">
+            <p>Privacy question or request?</p>
+            <a href="mailto:Jhimrickofficial@gmail.com">Jhimrickofficial@gmail.com</a>
+          </div>
+        </aside>
+
+        <article class="legal-content">
+          <div class="legal-intro">
+            <strong>Your privacy matters</strong>
+            <p>JRM only aims to collect and use personal data that is reasonably necessary for website operation, business communication, project delivery, security, legal obligations, and services you request. The exact data involved depends on how you interact with us.</p>
+          </div>
+
+          <section class="legal-section" id="about">
+            <div class="legal-section__head"><span class="legal-index">01</span><h2>About This Privacy Policy</h2></div>
+            <p>This Privacy Policy describes the privacy practices of <strong>JRM Digital Solution</strong>, operating jrmrc.space under the JRM brand ("JRM," "we," "us," or "our"). It explains how we handle personal data about website visitors, prospective clients, clients, business contacts, and other people who directly interact with JRM.</p>
+            <p>JRM is based in the Philippines. Our handling of personal data is intended to follow applicable privacy and data-protection requirements, including the Philippine Data Privacy Act of 2012 and its implementing rules where applicable.</p>
+            <div class="legal-callout"><p>This policy is about JRM's own privacy practices. When JRM processes information inside a client's CRM, automation, AI, or other system only on that client's instructions, the client may be the organization primarily responsible for that processing and its own privacy notice may also apply.</p></div>
+          </section>
+
+          <section class="legal-section" id="scope">
+            <div class="legal-section__head"><span class="legal-index">02</span><h2>Scope</h2></div>
+            <p>This policy applies when you:</p>
+            <ul>
+              <li>visit or use jrmrc.space;</li>
+              <li>submit an inquiry or contact request;</li>
+              <li>book a discovery call or appointment;</li>
+              <li>request a quote, proposal, consultation, or service;</li>
+              <li>purchase, receive, or discuss JRM services;</li>
+              <li>communicate with JRM by email, phone, SMS, messaging apps, social media, or similar channels;</li>
+              <li>provide information needed for a website, CRM, GoHighLevel, automation, integration, AI, Voice AI, or related project.</li>
+            </ul>
+            <p>This policy does not replace a client's own privacy notice or a separate data-processing agreement that may govern data JRM processes strictly on a client's behalf.</p>
+          </section>
+
+          <section class="legal-section" id="data-we-collect">
+            <div class="legal-section__head"><span class="legal-index">03</span><h2>Personal Data We Collect</h2></div>
+            <p>Depending on your interaction with JRM, we may collect the following categories of personal data:</p>
+            <dl class="legal-definition">
+              <div><dt>Contact data</dt><dd>Name, business name, email address, phone number, messaging handle, and other contact details you provide.</dd></div>
+              <div><dt>Business data</dt><dd>Company, role, industry, business requirements, project goals, budget-related information, service interests, and other information relevant to a proposed or active project.</dd></div>
+              <div><dt>Project data</dt><dd>Brand assets, copy, forms, workflows, calendars, pipeline information, configuration details, account invitations, integration requirements, testing data, support history, and other materials needed to perform agreed services.</dd></div>
+              <div><dt>Communications</dt><dd>Emails, messages, call details, meeting notes, support requests, approvals, feedback, and other correspondence with JRM.</dd></div>
+              <div><dt>Transaction data</dt><dd>Invoice status, service purchased, payment confirmation, billing-related records, and transaction references. Payment-card or banking credentials may be processed directly by a payment provider rather than stored by JRM.</dd></div>
+              <div><dt>Technical data</dt><dd>IP address, browser or device information, referral source, pages viewed, timestamps, basic server logs, security events, and similar technical data that may be generated when you use the website.</dd></div>
+            </dl>
+            <p>Please do not send sensitive personal information, regulated records, passwords, financial credentials, health records, government identifiers, or other high-risk data unless it is genuinely required for an agreed project and an appropriate method of handling it has been established.</p>
+          </section>
+
+          <section class="legal-section" id="collection">
+            <div class="legal-section__head"><span class="legal-index">04</span><h2>How We Collect Personal Data</h2></div>
+            <p>We may collect personal data:</p>
+            <ul>
+              <li><strong>Directly from you</strong> when you contact us, submit a form, book a call, purchase a service, respond to a message, provide project materials, or communicate with us.</li>
+              <li><strong>Automatically</strong> through hosting logs, security tools, cookies, analytics, or similar technologies if those tools are enabled on the website.</li>
+              <li><strong>From third-party services you choose to use</strong> such as scheduling, social-media, messaging, payment, CRM, or integration platforms.</li>
+              <li><strong>From a business or client</strong> when that organization provides information necessary for us to perform work on its behalf.</li>
+            </ul>
+            <p>We do not intentionally collect personal data from unrelated sources merely to build profiles about people who have no reasonable connection to JRM's business or services.</p>
+          </section>
+
+          <section class="legal-section" id="use">
+            <div class="legal-section__head"><span class="legal-index">05</span><h2>How We Use Personal Data</h2></div>
+            <p>JRM may use personal data to:</p>
+            <ul>
+              <li>respond to inquiries and communicate with prospective or existing clients;</li>
+              <li>schedule calls, meetings, consultations, demonstrations, or project reviews;</li>
+              <li>prepare proposals, scopes, estimates, invoices, agreements, and project plans;</li>
+              <li>deliver, test, troubleshoot, document, maintain, and support agreed services;</li>
+              <li>configure websites, CRM systems, GoHighLevel accounts, workflows, integrations, AI systems, Voice AI, forms, calendars, pipelines, and communications;</li>
+              <li>process payments and maintain accounting or business records;</li>
+              <li>protect accounts, systems, users, and JRM from fraud, abuse, unauthorized access, security incidents, or misuse;</li>
+              <li>improve our website, service quality, workflows, documentation, and customer experience;</li>
+              <li>send service-related notices and, where permitted, marketing communications;</li>
+              <li>comply with applicable law, enforce agreements, and establish or defend legal claims.</li>
+            </ul>
+            <p>We do not use personal data for a materially incompatible purpose without taking any notice, consent, or other step required by applicable law.</p>
+          </section>
+
+          <section class="legal-section" id="legal-bases">
+            <div class="legal-section__head"><span class="legal-index">06</span><h2>Lawful Bases for Processing</h2></div>
+            <p>Depending on the circumstances and applicable law, JRM may process personal data because:</p>
+            <ul>
+              <li>you have given <strong>consent</strong> for a specific purpose;</li>
+              <li>processing is necessary to take steps at your request or perform a <strong>contract</strong> with you;</li>
+              <li>processing is necessary to comply with a <strong>legal obligation</strong>;</li>
+              <li>processing is necessary for a <strong>legitimate business interest</strong> that is not overridden by your applicable privacy rights; or</li>
+              <li>another lawful basis recognized by applicable law applies.</li>
+            </ul>
+            <p>Where consent is the appropriate basis, you may withdraw that consent for future processing, subject to legal and contractual limits. Withdrawal does not automatically invalidate processing that was lawful before withdrawal.</p>
+          </section>
+
+          <section class="legal-section" id="cookies">
+            <div class="legal-section__head"><span class="legal-index">07</span><h2>Cookies &amp; Similar Technologies</h2></div>
+            <p>The website or services used with the website may use cookies, local storage, pixels, scripts, server logs, or similar technologies for essential functionality, security, preferences, performance measurement, or analytics.</p>
+            <p>Some browser or device information may be processed automatically when you visit a website, even if you do not submit a form. If JRM enables non-essential analytics or advertising technologies that require consent or an opt-out choice in your jurisdiction, we will provide the controls or notice required by applicable law.</p>
+            <p>You can usually control cookies through your browser settings. Disabling some technologies may affect website functionality.</p>
+            <div class="legal-callout"><p><strong>Important:</strong> If additional advertising pixels, behavioral analytics, session-recording tools, or new tracking technologies are added to jrmrc.space, this Privacy Policy and any cookie/consent controls should be reviewed and updated before or when those tools go live.</p></div>
+          </section>
+
+          <section class="legal-section" id="client-data">
+            <div class="legal-section__head"><span class="legal-index">08</span><h2>Client &amp; Project Data</h2></div>
+            <p>Many JRM services involve configuring systems that a client controls, such as GoHighLevel, CRM platforms, websites, forms, calendars, pipelines, email/SMS workflows, cloud services, integrations, and automation tools.</p>
+            <p>When JRM accesses personal data only to perform work on a client's instructions, JRM may act as a service provider or personal information processor rather than deciding the purpose of that client's data processing. The client remains responsible for determining the lawful purpose of its collection and use of personal data, issuing its own required notices, obtaining required consent, and respecting the rights of its customers, leads, employees, or other data subjects.</p>
+            <p>JRM will use Client Data only as reasonably necessary to perform the agreed services, comply with instructions and applicable law, protect systems, and satisfy legitimate recordkeeping or dispute-resolution needs.</p>
+            <p>Where the nature of a project warrants it, the parties may enter into separate data-processing or security terms.</p>
+          </section>
+
+          <section class="legal-section" id="ai">
+            <div class="legal-section__head"><span class="legal-index">09</span><h2>AI, Voice AI &amp; Automation Data</h2></div>
+            <p>JRM services may include AI-powered chat, AI receptionist, Voice AI, automated qualification, routing, appointment booking, transcription, summarization, lead responses, or other automated workflows.</p>
+            <p>Depending on the client's configuration, these systems may process names, phone numbers, email addresses, appointment details, messages, call audio, call transcripts, business inquiries, or other information submitted during an interaction.</p>
+            <ul>
+              <li>The client is responsible for determining whether notice, consent, recording disclosure, opt-out, or other legal requirements apply to its use of AI, automated communications, call recording, transcription, or profiling.</li>
+              <li>Only data reasonably necessary for the configured purpose should be provided to AI or automation systems.</li>
+              <li>AI outputs may be inaccurate or incomplete and should not be used as the sole basis for high-risk decisions without appropriate human review.</li>
+              <li>Third-party AI, telecommunications, CRM, and automation providers may process data under their own contracts and privacy terms.</li>
+            </ul>
+            <p>JRM does not represent that every AI or automation configuration is automatically lawful in every jurisdiction or industry. Privacy and consent requirements depend on how the client deploys the system.</p>
+          </section>
+
+          <section class="legal-section" id="communications">
+            <div class="legal-section__head"><span class="legal-index">10</span><h2>Email, SMS, Calls &amp; Other Communications</h2></div>
+            <p>We may use the contact information you provide to respond to requests, schedule appointments, provide proposals, deliver services, send project updates, provide support, send billing notices, and otherwise manage our business relationship.</p>
+            <p>Where JRM sends marketing email or SMS, we will use consent or another lawful basis where required and provide a reasonable way to opt out. Transactional or service-related messages may still be sent when necessary to fulfill a request, administer a project, protect an account, or meet legal obligations.</p>
+            <p>If JRM configures email, SMS, calling, or AI outreach on behalf of a client, that client is responsible for the lawfulness of its lists, consent records, messaging content, campaign purpose, call-recording practices, sender registration, and opt-out handling unless a written agreement expressly assigns a specific compliance task to JRM.</p>
+          </section>
+
+          <section class="legal-section" id="sharing">
+            <div class="legal-section__head"><span class="legal-index">11</span><h2>How We Share Personal Data</h2></div>
+            <p>JRM may disclose personal data only when reasonably necessary for legitimate business or legal purposes, including to:</p>
+            <ul>
+              <li>hosting, domain, cloud storage, scheduling, email, messaging, CRM, automation, AI, telecommunications, analytics, payment, accounting, collaboration, and security providers;</li>
+              <li>professional advisers such as accountants, legal advisers, or consultants where reasonably necessary;</li>
+              <li>a client or authorized project stakeholder where the information relates to that client's project;</li>
+              <li>government authorities, regulators, courts, or other parties when disclosure is required by law or reasonably necessary to protect legal rights, safety, systems, or users;</li>
+              <li>a successor or transaction counterparty in connection with a legitimate merger, acquisition, reorganization, financing, or sale of business assets, subject to applicable safeguards.</li>
+            </ul>
+            <p>JRM does not disclose personal data merely because another business would like to market to you. If a practice is legally considered a "sale" or "sharing" of personal information in a jurisdiction that grants an opt-out right, JRM will provide the notice and choice required by that law where applicable.</p>
+          </section>
+
+          <section class="legal-section" id="transfers">
+            <div class="legal-section__head"><span class="legal-index">12</span><h2>International Data Transfers</h2></div>
+            <p>JRM uses internet-based services and may work with clients or vendors in other countries. As a result, personal data may be stored or processed outside the Philippines or outside the country where you live.</p>
+            <p>Where applicable law requires safeguards for an international transfer, JRM will use an appropriate contractual, organizational, or legal mechanism or will rely on another permitted basis for the transfer.</p>
+            <p>Third-party platforms may independently determine where they host or process data. Their privacy and security documentation should be reviewed when location or cross-border processing is material to a project.</p>
+          </section>
+
+          <section class="legal-section" id="retention">
+            <div class="legal-section__head"><span class="legal-index">13</span><h2>Data Retention</h2></div>
+            <p>JRM keeps personal data only for as long as reasonably necessary for the purpose for which it was collected, including to provide services, maintain business and accounting records, manage security, resolve disputes, enforce agreements, and meet legal obligations.</p>
+            <p>Retention periods vary depending on the type of information, the project, the platform involved, contractual requirements, legal obligations, and whether an ongoing business relationship exists. We do not state a single fixed retention period where one would not accurately apply to all categories of information.</p>
+            <p>When personal data is no longer reasonably required, JRM will take appropriate steps to delete, anonymize, securely dispose of, or restrict it, subject to technical limitations and lawful retention requirements.</p>
+          </section>
+
+          <section class="legal-section" id="security">
+            <div class="legal-section__head"><span class="legal-index">14</span><h2>Data Security</h2></div>
+            <p>JRM uses reasonable administrative, technical, and organizational measures designed to protect personal data against unauthorized access, misuse, loss, alteration, or disclosure. Depending on the system and project, safeguards may include access controls, account permissions, authentication, secure cloud services, limited credential access, encrypted connections, backups, and vendor security controls.</p>
+            <p>No website, transmission method, cloud service, or storage system can be guaranteed to be completely secure. You should use strong passwords, multi-factor authentication where available, and secure methods for sharing sensitive access information.</p>
+            <p>If JRM becomes aware of a personal data breach requiring notification under applicable law, we will take reasonable steps to investigate, contain, document, and provide legally required notifications.</p>
+          </section>
+
+          <section class="legal-section" id="rights">
+            <div class="legal-section__head"><span class="legal-index">15</span><h2>Your Privacy Rights</h2></div>
+            <p>Your rights depend on where you live and which law applies. Under the Philippine Data Privacy Act, data subjects may have rights that include being informed, access, objection, correction, erasure or blocking, data portability, damages, and the ability to file a complaint.</p>
+            <p>Other jurisdictions may provide additional rights, such as requesting access, correction, deletion, restriction, portability, withdrawal of consent, objection to certain processing, or an opt-out of certain sale/sharing or targeted-advertising activities.</p>
+            <p>To exercise a privacy right relating to data controlled by JRM, contact us using the details in Section 19. We may need to verify your identity and may ask for information reasonably necessary to locate the relevant records. We will respond within the period required by applicable law.</p>
+            <p>If the data is controlled by one of JRM's clients and JRM only processes it on that client's instructions, we may direct your request to the appropriate client or assist that client as required by our agreement and applicable law.</p>
+            <p>Philippine data subjects can learn more about their rights from the <a class="legal-inline-link" href="https://privacy.gov.ph/data-subject-rights/" target="_blank" rel="noopener noreferrer">National Privacy Commission &nearr;</a>.</p>
+          </section>
+
+          <section class="legal-section" id="children">
+            <div class="legal-section__head"><span class="legal-index">16</span><h2>Children's Privacy</h2></div>
+            <p>JRM's website and professional services are not directed to children. We do not knowingly seek to collect personal data from children through the website for ordinary business inquiries.</p>
+            <p>If you believe a child has submitted personal data to JRM without appropriate authorization, contact us so we can review the situation and take action required by applicable law.</p>
+          </section>
+
+          <section class="legal-section" id="links">
+            <div class="legal-section__head"><span class="legal-index">17</span><h2>Third-Party Websites &amp; Services</h2></div>
+            <p>jrmrc.space may link to or use third-party services such as scheduling tools, social networks, messaging services, payment providers, portfolio storage, CRM platforms, telecommunications providers, automation services, or other external platforms.</p>
+            <p>When you leave JRM's website or directly interact with a third-party service, that provider may collect and process information under its own privacy policy and terms. JRM does not control every independent privacy practice of those providers.</p>
+            <p>Links to third parties are provided for convenience or service functionality and do not by themselves mean JRM is responsible for that third party's independent data practices.</p>
+          </section>
+
+          <section class="legal-section" id="changes">
+            <div class="legal-section__head"><span class="legal-index">18</span><h2>Changes to This Privacy Policy</h2></div>
+            <p>JRM may update this Privacy Policy when our website, services, technologies, vendors, or legal obligations change. The "Last updated" date at the top of the page identifies the current version.</p>
+            <p>When a change materially affects how we use personal data, we will provide any additional notice or consent required by applicable law.</p>
+          </section>
+
+          <section class="legal-section" id="contact">
+            <div class="legal-section__head"><span class="legal-index">19</span><h2>Contact &amp; Privacy Requests</h2></div>
+            <p>For privacy questions, data-subject requests, consent withdrawal, or concerns about how JRM handles personal data, contact us using the information below.</p>
+            <dl class="legal-definition">
+              <div><dt>Legal Business Name</dt><dd>JRM Digital Solution</dd></div>
+              <div><dt>Brand / Website</dt><dd>JRM / jrmrc.space</dd></div>
+              <div><dt>Email</dt><dd><a class="legal-inline-link" href="mailto:Jhimrickofficial@gmail.com">Jhimrickofficial@gmail.com</a></dd></div>
+              <div><dt>Phone</dt><dd><a class="legal-inline-link" href="tel:+639362651815">+63 936 265 1815</a></dd></div>
+              <div><dt>Website</dt><dd><a class="legal-inline-link" href="https://www.jrmrc.space/home">www.jrmrc.space</a></dd></div>
+              <div><dt>Privacy Request</dt><dd>Please include enough information for JRM to understand your request and identify the relevant interaction or records.</dd></div>
+            </dl>
+            <p>You may also have the right to complain to the National Privacy Commission or another competent privacy regulator, depending on your location and the law that applies to your personal data.</p>
+          </section>
+
+          <div class="legal-final">
+            <h2>Need help with your data?</h2>
+            <p>Send JRM a privacy request if you want to ask what personal data we hold about you, correct information, withdraw consent, request deletion where available, or raise a privacy concern.</p>
+            <div class="contact-row">
+              <a href="mailto:Jhimrickofficial@gmail.com?subject=Privacy%20Request">Email a privacy request</a>
+              <a href="https://wa.me/639362651815" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+              <a href="/contact">Contact page</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a aria-label="JRM home" class="brand" href="/home"><img class="brand-logo" src="https://drive.google.com/thumbnail?id=18Glq-cj_eXBsTR_cDMxpQAPw9S0MdmCz&amp;sz=w1200" alt="JRM logo" loading="lazy" decoding="async"/></a>
+        <p>GoHighLevel &bull; Automation &bull; Web Development</p>
+      </div>
+      <div>
+        <div class="footer-title">Navigate</div>
+        <div class="footer-links"><a href="/home">Home</a><a href="/about">About</a><a href="/services">Services</a><a href="/proof-of-work">Proof of Work</a><a href="/contact">Contact Us</a></div>
+      </div>
+      <div>
+        <div class="footer-title">Connect</div>
+        <div class="footer-contact">
+          <a href="mailto:Jhimrickofficial@gmail.com">Jhimrickofficial@gmail.com</a>
+          <a href="tel:+639362651815">+63 936 265 1815</a>
+          <a href="https://www.facebook.com/profile.php?id=61593939272710" rel="noopener noreferrer" target="_blank">Facebook Profile &nearr;</a>
+          <a href="https://www.linkedin.com/in/jhim-rick-marco-b8104a257" rel="noopener noreferrer" target="_blank">LinkedIn Profile &nearr;</a>
+          <a href="https://wa.me/639362651815" rel="noopener noreferrer" target="_blank">WhatsApp &nearr;</a>
+          <a href="https://drive.google.com/drive/folders/1u092gy-B4LW8uMC9OKTmoucCMsCnrTej?usp=sharing" rel="noopener noreferrer" target="_blank">Google Drive Portfolio &nearr;</a>
+        </div>
+        <div class="footer-socials" aria-label="Social media links">
+          <a href="https://www.facebook.com/profile.php?id=61593939272710" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 22v-9h3l.45-3.5H13.5V7.25c0-1.01.28-1.7 1.74-1.7H17.1V2.42A25.1 25.1 0 0 0 14.39 2C11.7 2 9.85 3.64 9.85 6.65V9.5H6.8V13h3.05v9h3.65Z"/></svg></a>
+          <a href="https://www.linkedin.com/in/jhim-rick-marco-b8104a257" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.94 8.5H3.56V19h3.38V8.5ZM5.25 3A1.97 1.97 0 1 0 5.25 6.94 1.97 1.97 0 0 0 5.25 3ZM20.44 12.98c0-3.17-1.69-4.64-3.95-4.64-1.82 0-2.63 1-3.09 1.7V8.5h-3.38V19h3.38v-5.2c0-1.37.26-2.7 1.96-2.7 1.68 0 1.7 1.57 1.7 2.79V19h3.38v-6.02Z"/></svg></a>
+          <a href="https://wa.me/639362651815" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2a9.84 9.84 0 0 0-8.45 14.87L2 22l5.27-1.55A9.98 9.98 0 1 0 12.04 2Zm0 17.95a8.1 8.1 0 0 1-4.13-1.13l-.3-.18-3.13.92.93-3.05-.2-.31a7.83 7.83 0 1 1 6.83 3.75Zm4.43-5.89c-.24-.12-1.44-.7-1.66-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.02-.37-1.94-1.19a7.3 7.3 0 0 1-1.34-1.67c-.14-.24-.01-.37.11-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.47-.4-.4-.54-.41h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2 0 1.18.86 2.32.98 2.48.12.16 1.69 2.58 4.1 3.62.57.25 1.02.4 1.37.51.58.18 1.1.16 1.51.1.46-.07 1.44-.59 1.64-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28Z"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span data-year></span> JRM Digital Solution. All rights reserved.</span>
+      <div class="footer-bottom__legal"><a href="/terms-and-conditions">Terms &amp; Conditions</a><a href="/privacy-policy" aria-current="page">Privacy Policy</a></div>
+    </div>
+  </div>
+</footer>
+<button aria-label="Scroll to top" class="scroll-top" type="button">&uarr;</button>
+<script>
+(() => {
+  'use strict';
+  const menuButton = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  const scrollTopButton = document.querySelector('.scroll-top');
+  const progressBar = document.querySelector('.progress-bar');
+  const tocLinks = [...document.querySelectorAll('.toc-link')];
+  const sections = [...document.querySelectorAll('.legal-section[id]')];
+  const year = document.querySelector('[data-year]');
+  if (year) year.textContent = new Date().getFullYear();
+
+  const closeMenu = () => {
+    if (!menuButton || !navLinks) return;
+    menuButton.setAttribute('aria-expanded', 'false');
+    navLinks.classList.remove('is-open');
+  };
+
+  if (menuButton && navLinks) {
+    menuButton.addEventListener('click', () => {
+      const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
+      menuButton.setAttribute('aria-expanded', String(!isOpen));
+      navLinks.classList.toggle('is-open', !isOpen);
+    });
+    navLinks.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
+    document.addEventListener('keydown', (event) => { if (event.key === 'Escape') closeMenu(); });
+  }
+
+  const updateScrollUI = () => {
+    const y = window.scrollY || document.documentElement.scrollTop;
+    const max = Math.max(document.documentElement.scrollHeight - window.innerHeight, 1);
+    const percent = Math.min(100, Math.max(0, (y / max) * 100));
+    if (progressBar) progressBar.style.width = percent + '%';
+    if (scrollTopButton) scrollTopButton.classList.toggle('is-visible', y > 560);
+  };
+
+  window.addEventListener('scroll', updateScrollUI, {passive:true});
+  updateScrollUI();
+
+  if (scrollTopButton) scrollTopButton.addEventListener('click', () => window.scrollTo({top:0,behavior:'smooth'}));
+
+  const setActive = (id) => {
+    tocLinks.forEach((link) => link.classList.toggle('is-active', link.getAttribute('href') === '#' + id));
+  };
+
+  if ('IntersectionObserver' in window && sections.length) {
+    const observer = new IntersectionObserver((entries) => {
+      const visible = entries.filter((entry) => entry.isIntersecting).sort((a,b) => b.intersectionRatio - a.intersectionRatio);
+      if (visible[0]) setActive(visible[0].target.id);
+    }, {rootMargin:'-18% 0px -64% 0px', threshold:[0,.1,.25,.5]});
+    sections.forEach((section) => observer.observe(section));
+  }
+
+  tocLinks.forEach((link) => link.addEventListener('click', () => setActive(link.getAttribute('href').slice(1))));
+})();
+</script>
+</body>
+</html>
